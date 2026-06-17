@@ -3,7 +3,8 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
-  title: "Silver Point | Premium Creative Studio",
+  metadataBase: new URL("https://onnextweb.in"),
+  title: "ON Next Web | Premium Digital Studio",
   description: "Crafting modern digital products, interactive websites, and premium brand designs.",
 };
 

@@ -1,54 +1,69 @@
 import { MetadataRoute } from "next";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "http://localhost:3000"; // Frontend url
+const BASE_URL = "https://onnextweb.in";
+const API_URL  = "https://api.onnextweb.in";
 
-  // Static URLs
-  const staticUrls = [
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+
+  // ── Static pages ──────────────────────────────────────────────────────────
+  const staticUrls: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/`,
+      url: `${BASE_URL}/`,
       lastModified: new Date(),
-      changeFrequency: "weekly" as const,
+      changeFrequency: "weekly",
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/about-us`,
+      url: `${BASE_URL}/about-us`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${BASE_URL}/services`,
       lastModified: new Date(),
-      changeFrequency: "daily" as const,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/resources`,
+      url: `${BASE_URL}/portfolio`,
       lastModified: new Date(),
-      changeFrequency: "weekly" as const,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/resources`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
       priority: 0.7,
     },
   ];
 
-  // Fetch blogs dynamically from the backend to construct dynamic sitemap routes
-  let blogUrls: any[] = [];
+  // ── Dynamic blog pages ────────────────────────────────────────────────────
+  let blogUrls: MetadataRoute.Sitemap = [];
   try {
-    const res = await fetch("https://api.onnextweb.in/api/blogs", {
-      next: { revalidate: 3600 } // Cache for 1 hour
+    const res = await fetch(`${API_URL}/api/blogs`, {
+      next: { revalidate: 3600 }, // revalidate every hour
     });
     if (res.ok) {
       const blogs = await res.json();
-      blogUrls = blogs.map((blog: any) => ({
-        url: `${baseUrl}/blog/${blog._id}`,
-        lastModified: new Date(blog.updatedAt || blog.createdAt),
+      blogUrls = blogs.map((blog: { _id: string; updatedAt?: string; createdAt?: string }) => ({
+        url: `${BASE_URL}/blog/${blog._id}`,
+        lastModified: new Date(blog.updatedAt || blog.createdAt || Date.now()),
         changeFrequency: "weekly" as const,
         priority: 0.6,
       }));
     }
   } catch (error) {
-    console.error("Sitemap dynamic blog fetching failed:", error);
+    console.error("Sitemap blog fetch failed:", error);
   }
 
   return [...staticUrls, ...blogUrls];
 }
+

@@ -6,11 +6,12 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
       disallow: [
-        "/dashboard", // Disallow search engine crawlers from scanning private dashboard pages
+        "/dashboard",
         "/login",
         "/api/",
       ],
     },
-    sitemap: "http://localhost:3000/sitemap.xml",
+    sitemap: "https://onnextweb.in/sitemap.xml",
   };
 }
+
