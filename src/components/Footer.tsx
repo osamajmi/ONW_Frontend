@@ -6,11 +6,12 @@ import AnimatedSection from "./AnimatedSection";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 const socials = [
-  { name: "Twitter", href: "#" },
-  { name: "LinkedIn", href: "#" },
-  { name: "Dribbble", href: "#" },
-  { name: "Instagram", href: "#" },
+  { name: "Twitter", href: "https://x.com/onnextweb" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/onnextweb" },
+  { name: "Dribbble", href: "https://dribbble.com/onnextweb" },
+  { name: "Instagram", href: "https://www.instagram.com/onnextweb/" },
 ];
+
 
 const Footer = () => (
   <footer className="relative pt-24 md:pt-32 pb-12 bg-surface overflow-hidden">
