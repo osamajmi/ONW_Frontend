@@ -286,3 +286,13 @@ html {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px hsl(var(--background) / 0.4);
 }
+
+/* ── Logo theme switching ───────────────────────────────────────────────────── */
+/* Light mode (default — no .dark class) */
+.dark-logo  { display: none;  }
+.light-logo { display: block; }
+
+/* Dark mode — .dark class on <html> */
+.dark .dark-logo  { display: block; }
+.dark .light-logo { display: none;  }
+
