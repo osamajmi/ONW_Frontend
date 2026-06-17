@@ -2,33 +2,32 @@ import Image from "next/image";
 
 const Logo = () => {
   return (
-    <div className="flex items-center gap-2.5 cursor-pointer">
-      {/* Icon mark — always visible */}
-      <div className="relative w-8 h-8 shrink-0">
+    <div className="flex items-center gap-2.5 cursor-pointer group">
+      {/* Circular icon — always visible */}
+      <div className="relative w-9 h-9 shrink-0 transition-transform duration-300 group-hover:scale-105">
         <Image
           src="/favicon.png"
-          alt="ON Next Web logo icon"
+          alt="ON Next Web icon"
           fill
-          sizes="32px"
+          sizes="36px"
           className="object-contain rounded-full"
           priority
         />
       </div>
 
-      {/* Full wordmark — hidden on very small screens */}
-      <div className="hidden sm:block relative h-7 w-[140px]">
-        <Image
-          src="/dark logo.png"
-          alt="ON Next Web"
-          fill
-          sizes="140px"
-          className="object-contain object-left"
-          priority
-        />
+      {/* Brand text */}
+      <div className="flex flex-col leading-none">
+        <span className="font-display text-base font-bold tracking-tight text-foreground">
+          On<span className="text-primary">Next</span>Web
+        </span>
+        <span className="text-[9px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
+          Think Best Think Next
+        </span>
       </div>
     </div>
   );
 };
 
 export default Logo;
+
 
