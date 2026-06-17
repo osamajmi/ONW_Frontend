@@ -24,10 +24,11 @@ interface AboutData {
 export default function AboutUsClient({ data }: { data: AboutData }) {
   const getIcon = (label: string) => {
     const l = label.toLowerCase();
-    if (l.includes("project")) return <Trophy className="text-primary w-6 h-6 mb-2" />;
-    if (l.includes("client")) return <Star className="text-primary w-6 h-6 mb-2" />;
-    if (l.includes("year") || l.includes("experience")) return <Calendar className="text-primary w-6 h-6 mb-2" />;
-    return <Users className="text-primary w-6 h-6 mb-2" />;
+    const className = "text-primary w-5 h-5";
+    if (l.includes("project")) return <Trophy className={className} />;
+    if (l.includes("client")) return <Star className={className} />;
+    if (l.includes("year") || l.includes("experience")) return <Calendar className={className} />;
+    return <Users className={className} />;
   };
 
   return (
@@ -35,7 +36,11 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
       <GrainOverlay />
       <Navbar />
 
-      <main className="flex-grow pt-32 pb-24 container mx-auto px-6">
+      {/* Ambient background glows */}
+      <div className="absolute top-[20%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-primary/10 blur-[120px] pointer-events-none animate-float-slow" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[35vw] h-[35vw] rounded-full bg-primary/5 blur-[100px] pointer-events-none animate-float-reverse" />
+
+      <main className="flex-grow pt-32 pb-24 container mx-auto px-6 relative z-10">
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
           <motion.div
@@ -75,19 +80,22 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
 
           <AnimatedSection delay={0.2} className="grid grid-cols-2 gap-6">
             {data.stats?.map((stat, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="glass p-6 rounded-2xl border border-border/40 hover-lift flex flex-col items-center text-center"
+                whileHover={{ y: -6 }}
+                className="glow-card p-6 rounded-2xl flex flex-col items-center text-center group cursor-default"
               >
-                {getIcon(stat.label)}
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                  {getIcon(stat.label)}
+                </div>
                 <span className="font-display text-3xl md:text-4xl font-bold text-gradient">
                   {stat.value}
                   {stat.suffix}
                 </span>
-                <span className="text-muted-foreground text-xs font-medium uppercase tracking-wider mt-2">
+                <span className="text-muted-foreground text-xs font-semibold uppercase tracking-wider mt-2 group-hover:text-foreground transition-colors duration-300">
                   {stat.label}
                 </span>
-              </div>
+              </motion.div>
             ))}
           </AnimatedSection>
         </div>
@@ -102,31 +110,31 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
           </AnimatedSection>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <AnimatedSection delay={0.1} className="glass p-8 rounded-2xl border border-border/40 hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
-                <Star size={24} />
+            <AnimatedSection delay={0.1} className="glow-card p-8 rounded-2xl group cursor-default">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                <Star size={22} className="group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <h4 className="font-display text-xl font-bold mb-3">Uncompromising Quality</h4>
+              <h4 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Uncompromising Quality</h4>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 We don't cut corners. We obsess over the details, clean code, design fidelity, and smooth animations.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2} className="glass p-8 rounded-2xl border border-border/40 hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
-                <Sparkles size={24} />
+            <AnimatedSection delay={0.2} className="glow-card p-8 rounded-2xl group cursor-default">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                <Sparkles size={22} className="group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <h4 className="font-display text-xl font-bold mb-3">Constant Innovation</h4>
+              <h4 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Constant Innovation</h4>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Technology moves fast. We continuous evolve our stack and methodologies to build modern experiences.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.3} className="glass p-8 rounded-2xl border border-border/40 hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
-                <Users size={24} />
+            <AnimatedSection delay={0.3} className="glow-card p-8 rounded-2xl group cursor-default">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                <Users size={22} className="group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <h4 className="font-display text-xl font-bold mb-3">Human-Centric Approach</h4>
+              <h4 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Human-Centric Approach</h4>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 At the end of the day, we design for people. User experience is at the core of all our technical decisions.
               </p>

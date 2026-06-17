@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GrainOverlay from "@/components/GrainOverlay";
+import { motion } from "framer-motion";
 import {
   LayoutDashboard,
   FileText,
@@ -19,7 +20,10 @@ import {
   FileCheck,
   Globe,
   Search,
-  Check
+  Check,
+  Briefcase,
+  MessageSquare,
+  Cpu
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -65,9 +69,36 @@ interface SeoConfig {
   ogImage: string;
 }
 
+interface ServiceItem {
+  _id: string;
+  title: string;
+  description: string;
+  icon: string;
+  features: string[];
+}
+
+interface ProjectItem {
+  _id: string;
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+  coverImage?: string;
+  projectUrl: string;
+}
+
+interface TestimonialItem {
+  _id: string;
+  name: string;
+  role: string;
+  company: string;
+  feedback: string;
+  rating: number;
+}
+
 export default function Dashboard() {
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState<"about" | "blogs" | "pdfs" | "seo">("about");
+  const [activeTab, setActiveTab] = useState<"about" | "blogs" | "pdfs" | "seo" | "services" | "projects" | "testimonials">("about");
   const [loading, setLoading] = useState(true);
   const [token, setToken] = useState<string | null>(null);
 
@@ -112,6 +143,45 @@ export default function Dashboard() {
   });
   const [loadingSeo, setLoadingSeo] = useState(false);
   const [savingSeo, setSavingSeo] = useState(false);
+
+  // Services state
+  const [services, setServices] = useState<ServiceItem[]>([]);
+  const [showServiceModal, setShowServiceModal] = useState(false);
+  const [editingServiceId, setEditingServiceId] = useState<string | null>(null);
+  const [serviceForm, setServiceForm] = useState({
+    title: "",
+    description: "",
+    icon: "Globe",
+    features: ""
+  });
+  const [savingService, setSavingService] = useState(false);
+
+  // Projects state
+  const [projects, setProjects] = useState<ProjectItem[]>([]);
+  const [showProjectModal, setShowProjectModal] = useState(false);
+  const [editingProjectId, setEditingProjectId] = useState<string | null>(null);
+  const [projectForm, setProjectForm] = useState({
+    title: "",
+    description: "",
+    category: "Web App",
+    tags: "",
+    coverImage: "",
+    projectUrl: ""
+  });
+  const [savingProject, setSavingProject] = useState(false);
+
+  // Testimonials state
+  const [testimonials, setTestimonials] = useState<TestimonialItem[]>([]);
+  const [showTestimonialModal, setShowTestimonialModal] = useState(false);
+  const [editingTestimonialId, setEditingTestimonialId] = useState<string | null>(null);
+  const [testimonialForm, setTestimonialForm] = useState({
+    name: "",
+    role: "",
+    company: "",
+    feedback: "",
+    rating: 5
+  });
+  const [savingTestimonial, setSavingTestimonial] = useState(false);
 
   useEffect(() => {
     const savedToken = localStorage.getItem("token");
@@ -168,6 +238,24 @@ export default function Dashboard() {
       if (pdfsRes.ok) {
         const pdfsJson = await pdfsRes.json();
         setPdfs(pdfsJson);
+      }
+
+      // Fetch Services
+      const servicesRes = await fetch("http://localhost:5000/api/services");
+      if (servicesRes.ok) {
+        setServices(await servicesRes.json());
+      }
+
+      // Fetch Projects
+      const projectsRes = await fetch("http://localhost:5000/api/projects");
+      if (projectsRes.ok) {
+        setProjects(await projectsRes.json());
+      }
+
+      // Fetch Testimonials
+      const testimonialsRes = await fetch("http://localhost:5000/api/testimonials");
+      if (testimonialsRes.ok) {
+        setTestimonials(await testimonialsRes.json());
       }
     } catch (err) {
       console.error("Error loading dashboard data:", err);
@@ -423,6 +511,280 @@ export default function Dashboard() {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
 
+  // Services CRUD
+  const openNewServiceModal = () => {
+    setEditingServiceId(null);
+    setServiceForm({
+      title: "",
+      description: "",
+      icon: "Globe",
+      features: ""
+    });
+    setShowServiceModal(true);
+  };
+
+  const openEditServiceModal = (service: ServiceItem) => {
+    setEditingServiceId(service._id);
+    setServiceForm({
+      title: service.title,
+      description: service.description,
+      icon: service.icon || "Globe",
+      features: service.features ? service.features.join(", ") : ""
+    });
+    setShowServiceModal(true);
+  };
+
+  const saveService = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!serviceForm.title || !serviceForm.description) {
+      toast.error("Please fill in title and description");
+      return;
+    }
+    setSavingService(true);
+    const url = editingServiceId
+      ? `http://localhost:5000/api/services/${editingServiceId}`
+      : "http://localhost:5000/api/services";
+    const method = editingServiceId ? "PUT" : "POST";
+
+    const featuresArray = serviceForm.features
+      ? serviceForm.features.split(",").map(f => f.trim()).filter(Boolean)
+      : [];
+
+    try {
+      const res = await fetch(url, {
+        method,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          ...serviceForm,
+          features: featuresArray
+        })
+      });
+      if (res.ok) {
+        toast.success(editingServiceId ? "Service updated successfully!" : "Service added successfully!");
+        setShowServiceModal(false);
+        const servicesRes = await fetch("http://localhost:5000/api/services");
+        if (servicesRes.ok) setServices(await servicesRes.json());
+      } else {
+        const errJson = await res.json();
+        throw new Error(errJson.message || "Failed to save service");
+      }
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setSavingService(false);
+    }
+  };
+
+  const deleteService = async (id: string) => {
+    if (!window.confirm("Are you sure you want to delete this service?")) return;
+    try {
+      const res = await fetch(`http://localhost:5000/api/services/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      if (res.ok) {
+        toast.success("Service removed successfully");
+        setServices(services.filter(s => s._id !== id));
+      } else {
+        const errJson = await res.json();
+        throw new Error(errJson.message || "Failed to delete service");
+      }
+    } catch (err: any) {
+      toast.error(err.message);
+    }
+  };
+
+  // Projects CRUD
+  const openNewProjectModal = () => {
+    setEditingProjectId(null);
+    setProjectForm({
+      title: "",
+      description: "",
+      category: "Web App",
+      tags: "",
+      coverImage: "",
+      projectUrl: ""
+    });
+    setShowProjectModal(true);
+  };
+
+  const openEditProjectModal = (project: ProjectItem) => {
+    setEditingProjectId(project._id);
+    setProjectForm({
+      title: project.title,
+      description: project.description,
+      category: project.category || "Web App",
+      tags: project.tags ? project.tags.join(", ") : "",
+      coverImage: project.coverImage || "",
+      projectUrl: project.projectUrl || ""
+    });
+    setShowProjectModal(true);
+  };
+
+  const handleProjectImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProjectForm({ ...projectForm, coverImage: reader.result as string });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const saveProject = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!projectForm.title || !projectForm.description || !projectForm.category) {
+      toast.error("Please fill in title, description and category");
+      return;
+    }
+    setSavingProject(true);
+    const url = editingProjectId
+      ? `http://localhost:5000/api/projects/${editingProjectId}`
+      : "http://localhost:5000/api/projects";
+    const method = editingProjectId ? "PUT" : "POST";
+
+    const tagsArray = projectForm.tags
+      ? projectForm.tags.split(",").map(t => t.trim()).filter(Boolean)
+      : [];
+
+    try {
+      const res = await fetch(url, {
+        method,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          ...projectForm,
+          tags: tagsArray
+        })
+      });
+      if (res.ok) {
+        toast.success(editingProjectId ? "Project updated successfully!" : "Project added successfully!");
+        setShowProjectModal(false);
+        const projectsRes = await fetch("http://localhost:5000/api/projects");
+        if (projectsRes.ok) setProjects(await projectsRes.json());
+      } else {
+        const errJson = await res.json();
+        throw new Error(errJson.message || "Failed to save project");
+      }
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setSavingProject(false);
+    }
+  };
+
+  const deleteProject = async (id: string) => {
+    if (!window.confirm("Are you sure you want to delete this project?")) return;
+    try {
+      const res = await fetch(`http://localhost:5000/api/projects/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      if (res.ok) {
+        toast.success("Project removed successfully");
+        setProjects(projects.filter(p => p._id !== id));
+      } else {
+        const errJson = await res.json();
+        throw new Error(errJson.message || "Failed to delete project");
+      }
+    } catch (err: any) {
+      toast.error(err.message);
+    }
+  };
+
+  // Testimonials CRUD
+  const openNewTestimonialModal = () => {
+    setEditingTestimonialId(null);
+    setTestimonialForm({
+      name: "",
+      role: "",
+      company: "",
+      feedback: "",
+      rating: 5
+    });
+    setShowTestimonialModal(true);
+  };
+
+  const openEditTestimonialModal = (t: TestimonialItem) => {
+    setEditingTestimonialId(t._id);
+    setTestimonialForm({
+      name: t.name,
+      role: t.role,
+      company: t.company || "",
+      feedback: t.feedback,
+      rating: t.rating || 5
+    });
+    setShowTestimonialModal(true);
+  };
+
+  const saveTestimonial = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!testimonialForm.name || !testimonialForm.role || !testimonialForm.feedback) {
+      toast.error("Please fill in name, role, and feedback");
+      return;
+    }
+    setSavingTestimonial(true);
+    const url = editingTestimonialId
+      ? `http://localhost:5000/api/testimonials/${editingTestimonialId}`
+      : "http://localhost:5000/api/testimonials";
+    const method = editingTestimonialId ? "PUT" : "POST";
+
+    try {
+      const res = await fetch(url, {
+        method,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify(testimonialForm)
+      });
+      if (res.ok) {
+        toast.success(editingTestimonialId ? "Testimonial updated successfully!" : "Testimonial added successfully!");
+        setShowTestimonialModal(false);
+        const testimonialsRes = await fetch("http://localhost:5000/api/testimonials");
+        if (testimonialsRes.ok) setTestimonials(await testimonialsRes.json());
+      } else {
+        const errJson = await res.json();
+        throw new Error(errJson.message || "Failed to save testimonial");
+      }
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setSavingTestimonial(false);
+    }
+  };
+
+  const deleteTestimonial = async (id: string) => {
+    if (!window.confirm("Are you sure you want to delete this testimonial?")) return;
+    try {
+      const res = await fetch(`http://localhost:5000/api/testimonials/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      if (res.ok) {
+        toast.success("Testimonial removed successfully");
+        setTestimonials(testimonials.filter(t => t._id !== id));
+      } else {
+        const errJson = await res.json();
+        throw new Error(errJson.message || "Failed to delete testimonial");
+      }
+    } catch (err: any) {
+      toast.error(err.message);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden flex flex-col justify-between">
       <GrainOverlay />
@@ -451,51 +813,35 @@ export default function Dashboard() {
         ) : (
           <div className="grid lg:grid-cols-[240px_1fr] gap-8">
             {/* Sidebar Navigation */}
-            <aside className="space-y-2 lg:border-r lg:border-border/60 lg:pr-8">
-              <button
-                onClick={() => setActiveTab("about")}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === "about"
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-secondary/50 text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                <Settings size={18} />
-                About Us Content
-              </button>
-              <button
-                onClick={() => setActiveTab("blogs")}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === "blogs"
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-secondary/50 text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                <BookOpen size={18} />
-                Manage Blogs
-              </button>
-              <button
-                onClick={() => setActiveTab("pdfs")}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === "pdfs"
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-secondary/50 text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                <FileText size={18} />
-                Upload & PDF Files
-              </button>
-              <button
-                onClick={() => setActiveTab("seo")}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === "seo"
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-secondary/50 text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                <Globe size={18} />
-                SEO Page Settings
-              </button>
+            <aside className="space-y-2 lg:border-r lg:border-border/60 lg:pr-8 relative z-10">
+              {[
+                { id: "about", label: "About Us Content", icon: Settings },
+                { id: "blogs", label: "Manage Blogs", icon: BookOpen },
+                { id: "pdfs", label: "Upload & PDF Files", icon: FileText },
+                { id: "seo", label: "SEO Page Settings", icon: Globe },
+              ].map((tab) => {
+                const Icon = tab.icon;
+                const isActive = activeTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id as any)}
+                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-colors duration-300 relative ${
+                      isActive ? "text-primary-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {isActive && (
+                      <motion.span
+                        layoutId="activeTabPill"
+                        className="absolute inset-0 bg-primary rounded-xl -z-10 shadow-[0_4px_20px_rgba(var(--primary),0.25)]"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                    <Icon size={18} />
+                    {tab.label}
+                  </button>
+                );
+              })}
             </aside>
 
             {/* Main Content Area */}
@@ -646,44 +992,44 @@ export default function Dashboard() {
                       <p className="text-muted-foreground text-sm">No blog posts found. Write your first post!</p>
                     </div>
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                       {blogs.map((blog) => (
                         <div
                           key={blog._id}
-                          className="flex items-center justify-between gap-4 p-4 bg-secondary/10 rounded-xl border border-border/30 hover:border-border/60 transition-colors"
+                          className="flex items-center justify-between gap-4 p-4 bg-secondary/10 hover:bg-secondary/15 rounded-xl border border-border/30 hover:border-primary/20 transition-all duration-300 group"
                         >
                           <div className="flex items-center gap-4 overflow-hidden">
                             {blog.coverImage ? (
                               <img
                                 src={blog.coverImage}
                                 alt={blog.title}
-                                className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
+                                className="w-12 h-12 rounded-lg object-cover flex-shrink-0 group-hover:scale-105 transition-transform duration-300"
                               />
                             ) : (
-                              <div className="w-12 h-12 rounded-lg bg-secondary/80 flex items-center justify-center text-xs font-semibold flex-shrink-0">
+                              <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center text-[10px] font-semibold flex-shrink-0 text-muted-foreground border border-border/50">
                                 No Image
                               </div>
                             )}
                             <div className="overflow-hidden">
-                              <h3 className="font-bold text-sm truncate">{blog.title}</h3>
-                              <p className="text-xs text-muted-foreground truncate">{blog.summary}</p>
+                              <h3 className="font-semibold text-sm truncate text-foreground group-hover:text-primary transition-colors duration-300">{blog.title}</h3>
+                              <p className="text-xs text-muted-foreground truncate mt-0.5">{blog.summary}</p>
                             </div>
                           </div>
 
                           <div className="flex items-center gap-2 flex-shrink-0">
                             <button
                               onClick={() => openEditBlogModal(blog)}
-                              className="w-8 h-8 rounded-lg bg-secondary/80 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 cursor-pointer"
                               title="Edit post"
                             >
-                              <Edit2 size={14} />
+                              <Edit2 size={13} />
                             </button>
                             <button
                               onClick={() => deleteBlog(blog._id)}
-                              className="w-8 h-8 rounded-lg bg-secondary/80 flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-all"
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-destructive hover:text-white hover:border-destructive transition-all duration-300 cursor-pointer"
                               title="Delete post"
                             >
-                              <Trash2 size={14} />
+                              <Trash2 size={13} />
                             </button>
                           </div>
                         </div>
@@ -704,43 +1050,46 @@ export default function Dashboard() {
                   </div>
 
                   {/* Multiple PDF File Upload Form */}
-                  <form onSubmit={handlePdfUpload} className="space-y-4">
-                    <div className="border-2 border-dashed border-border/80 hover:border-primary/50 transition-colors rounded-xl p-8 text-center flex flex-col items-center justify-center relative cursor-pointer group">
+                  <form onSubmit={handlePdfUpload} className="space-y-6">
+                    <div className="border border-dashed border-primary/45 hover:border-primary bg-primary/5 hover:bg-primary/10 transition-all duration-300 rounded-2xl p-10 text-center flex flex-col items-center justify-center relative cursor-pointer group shadow-inner">
                       <input
                         type="file"
                         id="pdf-file-input"
                         multiple
                         accept="application/pdf"
                         onChange={(e) => setSelectedFiles(e.target.files)}
-                        className="absolute inset-0 opacity-0 cursor-pointer"
+                        className="absolute inset-0 opacity-0 cursor-pointer z-20"
                       />
-                      <Upload className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors mb-4" />
-                      <h4 className="font-bold text-sm mb-1">Select multiple PDF files</h4>
-                      <p className="text-xs text-muted-foreground max-w-xs mx-auto">
-                        Drag and drop or click here to browse. (Max 15MB per file)
+                      <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                        <Upload className="w-6 h-6 animate-pulse" />
+                      </div>
+                      <h4 className="font-display font-bold text-base mb-1 text-foreground">Select multiple PDF documents</h4>
+                      <p className="text-xs text-muted-foreground max-w-xs mx-auto leading-relaxed">
+                        Drag & drop or click anywhere in this area to browse files.<br />
+                        <span className="text-primary/70 font-medium">MongoDB direct Binary storage (Max 15MB per file)</span>
                       </p>
                     </div>
 
                     {selectedFiles && selectedFiles.length > 0 && (
-                      <div className="bg-secondary/15 p-4 rounded-xl border border-border/40">
+                      <div className="bg-secondary/15 p-5 rounded-2xl border border-border/40">
                         <h4 className="font-bold text-xs uppercase text-muted-foreground mb-3 tracking-wider">
                           Selected Files ({selectedFiles.length})
                         </h4>
-                        <div className="space-y-2">
+                        <div className="space-y-2.5">
                           {Array.from(selectedFiles).map((file, i) => (
-                            <div key={i} className="flex items-center justify-between text-xs text-foreground">
-                              <span className="truncate max-w-sm flex items-center gap-1.5">
+                            <div key={i} className="flex items-center justify-between text-xs text-foreground bg-secondary/10 py-2 px-3 rounded-lg border border-border/20">
+                              <span className="truncate max-w-sm flex items-center gap-2">
                                 <FileCheck size={14} className="text-primary flex-shrink-0" />
                                 {file.name}
                               </span>
-                              <span className="text-muted-foreground flex-shrink-0">{formatBytes(file.size)}</span>
+                              <span className="text-muted-foreground flex-shrink-0 font-medium">{formatBytes(file.size)}</span>
                             </div>
                           ))}
                         </div>
                         <button
                           type="submit"
                           disabled={uploadingPdfs}
-                          className="w-full bg-primary text-primary-foreground font-semibold py-2 px-4 rounded-xl text-xs hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2 mt-4"
+                          className="w-full bg-primary text-primary-foreground font-semibold py-2.5 px-4 rounded-xl text-xs hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2 mt-5 shadow-lg shadow-primary/20 cursor-pointer"
                         >
                           {uploadingPdfs ? (
                             <>
@@ -756,7 +1105,7 @@ export default function Dashboard() {
                   </form>
 
                   {/* List of PDFs */}
-                  <div className="space-y-4 pt-4 border-t border-border/40">
+                  <div className="space-y-4 pt-6 border-t border-border/40">
                     <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
                       Stored PDF Library ({pdfs.length})
                     </h3>
@@ -770,15 +1119,17 @@ export default function Dashboard() {
                         {pdfs.map((pdf) => (
                           <div
                             key={pdf._id}
-                            className="flex items-center justify-between gap-4 p-3 bg-secondary/10 rounded-xl border border-border/30 text-xs"
+                            className="flex items-center justify-between gap-4 p-4 bg-secondary/10 hover:bg-secondary/15 rounded-xl border border-border/30 hover:border-primary/20 transition-all duration-300 text-xs group"
                           >
                             <div className="flex items-center gap-3 overflow-hidden">
-                              <FileText size={18} className="text-primary flex-shrink-0" />
+                              <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:scale-105 group-hover:bg-primary/10 transition-all duration-300">
+                                <FileText size={16} />
+                              </div>
                               <div className="overflow-hidden">
-                                <h4 className="font-bold truncate" title={pdf.filename}>
+                                <h4 className="font-semibold text-sm truncate text-foreground group-hover:text-primary transition-colors duration-300" title={pdf.filename}>
                                   {pdf.filename}
                                 </h4>
-                                <div className="text-muted-foreground flex gap-3 mt-0.5">
+                                <div className="text-muted-foreground flex gap-3 mt-1">
                                   <span>{formatBytes(pdf.size)}</span>
                                   <span>
                                     {new Date(pdf.createdAt).toLocaleDateString("en-US", {
@@ -796,16 +1147,16 @@ export default function Dashboard() {
                                 href={`http://localhost:5000/api/pdfs/${pdf._id}`}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="py-1.5 px-3 rounded-lg bg-secondary/80 text-foreground hover:bg-secondary transition-colors"
+                                className="py-1.5 px-3 rounded-lg bg-secondary border border-border/40 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all font-semibold cursor-pointer"
                               >
                                 View
                               </a>
                               <button
                                 onClick={() => deletePdf(pdf._id)}
-                                className="w-8 h-8 rounded-lg bg-secondary/80 flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-all"
+                                className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-destructive hover:text-white hover:border-destructive transition-all duration-300 cursor-pointer"
                                 title="Delete document"
                               >
-                                <Trash2 size={14} />
+                                <Trash2 size={13} />
                               </button>
                             </div>
                           </div>

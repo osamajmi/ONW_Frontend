@@ -6,17 +6,30 @@ import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
-const testimonials = [
-  { name: "Sarah Chen", role: "CEO, Luxe Fashion", text: "ON Next Web transformed our online presence. The attention to detail and creative vision exceeded every expectation." },
-  { name: "Marcus Rivera", role: "Founder, FinCore", text: "Working with this team was seamless. They delivered a product that our users genuinely love using every day." },
-  { name: "Amara Osei", role: "CMO, GreenTech", text: "From branding to launch, the quality was impeccable. They truly understand how to build for the modern web." },
+interface TestimonialItem {
+  _id?: string;
+  name: string;
+  role: string;
+  company?: string;
+  feedback?: string;
+  text?: string; // Fallback
+  rating?: number;
+}
+
+const fallbackTestimonials: TestimonialItem[] = [
+  { name: "Sarah Chen", role: "CEO", company: "Luxe Fashion", feedback: "ON Next Web transformed our online presence. The attention to detail and creative vision exceeded every expectation." },
+  { name: "Marcus Rivera", role: "Founder", company: "FinCore", feedback: "Working with this team was seamless. They delivered a product that our users genuinely love using every day." },
+  { name: "Amara Osei", role: "CMO", company: "GreenTech Energy", feedback: "From branding to launch, the quality was impeccable. They truly understand how to build for the modern web." },
 ];
 
-const TestimonialsSection = () => {
+const TestimonialsSection = ({ initialTestimonials }: { initialTestimonials?: TestimonialItem[] }) => {
   const [current, setCurrent] = useState(0);
+  const displayTestimonials = initialTestimonials && initialTestimonials.length > 0 ? initialTestimonials : fallbackTestimonials;
 
-  const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+  const prev = () => setCurrent((c) => (c === 0 ? displayTestimonials.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === displayTestimonials.length - 1 ? 0 : c + 1));
+
+  if (displayTestimonials.length === 0) return null;
 
   return (
     <section className="py-24 md:py-32 bg-gradient-section">
@@ -40,24 +53,27 @@ const TestimonialsSection = () => {
             >
               <Quote className="text-primary/20 mx-auto mb-6" size={40} />
               <p className="text-lg md:text-xl text-foreground/90 leading-relaxed mb-8">
-                "{testimonials[current].text}"
+                "{displayTestimonials[current].feedback || displayTestimonials[current].text}"
               </p>
-              <p className="font-display font-semibold text-foreground">{testimonials[current].name}</p>
-              <p className="text-muted-foreground text-sm">{testimonials[current].role}</p>
+              <p className="font-display font-semibold text-foreground">{displayTestimonials[current].name}</p>
+              <p className="text-muted-foreground text-sm">
+                {displayTestimonials[current].role}
+                {displayTestimonials[current].company ? `, ${displayTestimonials[current].company}` : ""}
+              </p>
             </motion.div>
           </AnimatePresence>
 
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={prev}
-              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors cursor-pointer"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={next}
-              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors cursor-pointer"
               aria-label="Next testimonial"
             >
               <ChevronRight size={18} />

@@ -12,6 +12,8 @@ import Logo from "./Logo";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
 ];
@@ -46,29 +48,39 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass py-3" : "py-6"
+        scrolled ? "glass py-3 border-b border-primary/10 shadow-[0_10px_30px_rgba(var(--primary),0.02)]" : "py-6 border-b border-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6">
         <Link href="/" className="transform hover:scale-105 transition-transform duration-300">
           <Logo />
         </Link>
-
+ 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${
-                pathname === link.href
-                  ? "text-foreground font-medium after:w-full"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors duration-300 relative py-1.5 px-3.5 rounded-full ${
+                  isActive
+                    ? "text-foreground font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {isActive && (
+                  <motion.span
+                    layoutId="activeNavbarIndicator"
+                    className="absolute inset-0 bg-primary/10 border border-primary/20 rounded-full -z-10"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                {link.label}
+              </Link>
+            );
+          })}
           <ThemeToggle />
           
           {isLoggedIn ? (

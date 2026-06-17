@@ -32,7 +32,11 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
       <GrainOverlay />
       <Navbar />
 
-      <main className="flex-grow pt-32 pb-24 container mx-auto px-6 max-w-4xl">
+      {/* Ambient background glows */}
+      <div className="absolute top-[15%] left-[-10%] w-[45vw] h-[45vw] rounded-full bg-primary/10 blur-[130px] pointer-events-none animate-float-slow" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[35vw] h-[35vw] rounded-full bg-primary/5 blur-[110px] pointer-events-none animate-float-reverse" />
+
+      <main className="flex-grow pt-32 pb-24 container mx-auto px-6 max-w-3xl relative z-10">
         <div className="mb-8">
           <Link
             href="/blog"
@@ -70,7 +74,7 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
               <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-border/60 text-sm text-muted-foreground">
                 <div className="flex items-center gap-6">
                   <span className="flex items-center gap-1.5">
-                    <Calendar size={16} />
+                    <Calendar size={16} className="text-primary/70" />
                     {new Date(blog.createdAt).toLocaleDateString("en-US", {
                       month: "long",
                       day: "numeric",
@@ -78,16 +82,16 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
                     })}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <User size={16} />
+                    <User size={16} className="text-primary/70" />
                     {blog.author}
                   </span>
                 </div>
                 <button
                   onClick={handleShare}
-                  className="flex items-center gap-1.5 hover:text-foreground transition-colors text-xs uppercase tracking-wider font-semibold"
+                  className="flex items-center gap-2 hover:text-primary transition-colors text-xs uppercase tracking-wider font-bold group"
                 >
-                  <Share2 size={14} />
-                  Share
+                  <Share2 size={14} className="group-hover:rotate-12 transition-transform" />
+                  Copy Link
                 </button>
               </div>
             </motion.div>
@@ -98,19 +102,54 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mb-12 rounded-2xl overflow-hidden aspect-[21/10] bg-secondary/30 border border-border/40"
+                className="mb-12 rounded-2xl overflow-hidden aspect-[21/10] bg-secondary/30 border border-border/40 shadow-xl"
               >
                 <img src={blog.coverImage} alt={blog.title} className="w-full h-full object-cover" />
               </motion.div>
             )}
 
             {/* Post content */}
-            <AnimatedSection delay={0.2} className="prose dark:prose-invert max-w-none">
+            <AnimatedSection delay={0.2} className="max-w-none">
               {blog.content.split("\n").map((para, idx) => {
-                if (!para.trim()) return null;
+                const text = para.trim();
+                if (!text) return null;
+                
+                // Blockquote
+                if (text.startsWith(">")) {
+                  return (
+                    <blockquote key={idx} className="border-l-4 border-primary bg-primary/5 px-6 py-4 rounded-r-xl my-6 text-foreground italic leading-relaxed text-lg">
+                      {text.replace(/^>\s*/, "")}
+                    </blockquote>
+                  );
+                }
+                
+                // Headings
+                if (text.startsWith("###")) {
+                  return (
+                    <h3 key={idx} className="font-display text-xl font-bold mt-8 mb-4 text-foreground">
+                      {text.replace(/^###\s*/, "")}
+                    </h3>
+                  );
+                }
+                if (text.startsWith("##")) {
+                  return (
+                    <h2 key={idx} className="font-display text-2xl font-bold mt-10 mb-4 text-gradient">
+                      {text.replace(/^##\s*/, "")}
+                    </h2>
+                  );
+                }
+                if (text.startsWith("#")) {
+                  return (
+                    <h2 key={idx} className="font-display text-3xl font-bold mt-12 mb-6 text-gradient">
+                      {text.replace(/^#\s*/, "")}
+                    </h2>
+                  );
+                }
+
+                // Regular paragraphs (lead paragraph style for first element)
                 return (
-                  <p key={idx} className="text-muted-foreground text-lg leading-relaxed mb-6">
-                    {para}
+                  <p key={idx} className={`text-muted-foreground text-lg leading-relaxed mb-6 ${idx === 0 ? "text-foreground font-medium md:text-xl border-b border-border/20 pb-6 mb-8" : ""}`}>
+                    {text}
                   </p>
                 );
               })}
