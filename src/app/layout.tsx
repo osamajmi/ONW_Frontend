@@ -13,12 +13,8 @@ export const metadata: Metadata = {
   authors: [{ name: "ON Next Web", url: "https://onnextweb.in" }],
   creator: "ON Next Web",
   icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png" },
-    ],
-    apple: [
-      { url: "/favicon.png", sizes: "180x180", type: "image/png" },
-    ],
+    icon: "/favicon.png",
+    apple: "/favicon.png",
     shortcut: "/favicon.png",
   },
   openGraph: {

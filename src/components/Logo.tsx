@@ -1,20 +1,34 @@
+"use client";
+
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
 const Logo = () => {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Before mount, show a placeholder to avoid hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="h-10 w-36 rounded-md bg-transparent" aria-label="ON Next Web" />
+    );
+  }
+
+  const logoSrc =
+    resolvedTheme === "light" ? "/light logo.png" : "/dark logo.png";
+
   return (
-    <div className="flex items-center gap-2.5 select-none">
-      {/* Brand icon */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/favicon.png"
-        alt="ONW"
-        width={36}
-        height={36}
-        className="rounded-full ring-1 ring-primary/40"
-      />
-      {/* Brand text */}
-      <span className="font-display text-[15px] font-bold tracking-tight text-foreground">
-        On<span className="text-primary">Next</span>Web
-      </span>
-    </div>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={logoSrc}
+      alt="ON Next Web"
+      height={40}
+      style={{ height: "40px", width: "auto", display: "block" }}
+    />
   );
 };
 
