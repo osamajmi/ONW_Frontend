@@ -1,21 +1,29 @@
+/**
+ * Logo component — CSS-only theme switching.
+ * dark logo.png  → shown when <html> has .dark class  (dark mode)
+ * light logo.png → shown when <html> has no .dark class (light mode)
+ *
+ * The navbar background is fully opaque bg-background so logo backgrounds blend seamlessly.
+ */
 const Logo = () => {
   return (
-    <div>
-      {/* Dark mode logo — shown when .dark class is on <html> */}
+    <div style={{ lineHeight: 0 }}>
+      {/* ── Dark mode logo ── */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/dark logo.png"
         alt="ON Next Web"
-        style={{ height: "40px", width: "auto", display: "none" }}
         className="dark-logo"
+        style={{ height: "38px", width: "auto", display: "none" }}
       />
-      {/* Light mode logo — shown when no .dark class */}
+
+      {/* ── Light mode logo ── */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/light logo.png"
         alt="ON Next Web"
-        style={{ height: "40px", width: "auto", display: "block" }}
         className="light-logo"
+        style={{ height: "38px", width: "auto", display: "block" }}
       />
     </div>
   );
