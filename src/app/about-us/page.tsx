@@ -18,7 +18,7 @@ const defaultAbout = {
 
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("http://localhost:5000/api/seo/about", {
+    const res = await fetch("https://api.onnextweb.in/api/seo/about", {
       cache: "no-store"
     });
     if (res.ok) {
@@ -47,7 +47,7 @@ export default async function AboutUs() {
   let data = defaultAbout;
 
   try {
-    const res = await fetch("http://localhost:5000/api/about", {
+    const res = await fetch("https://api.onnextweb.in/api/about", {
       cache: "no-store"
     });
     if (res.ok) {

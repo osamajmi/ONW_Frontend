@@ -12,7 +12,7 @@ interface ServiceItem {
 
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("http://localhost:5000/api/seo/services", {
+    const res = await fetch("https://api.onnextweb.in/api/seo/services", {
       cache: "no-store"
     });
     if (res.ok) {
@@ -41,7 +41,7 @@ export default async function ServicesPage() {
   let services: ServiceItem[] = [];
 
   try {
-    const res = await fetch("http://localhost:5000/api/services", {
+    const res = await fetch("https://api.onnextweb.in/api/services", {
       cache: "no-store"
     });
     if (res.ok) {

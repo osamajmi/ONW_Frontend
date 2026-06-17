@@ -203,7 +203,7 @@ export default function Dashboard() {
   const fetchSeoForPage = async (pageName: string) => {
     setLoadingSeo(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/seo/${pageName}`);
+      const res = await fetch(`https://api.onnextweb.in/api/seo/${pageName}`);
       if (res.ok) {
         const json = await res.json();
         setSeoForm(json);
@@ -220,40 +220,40 @@ export default function Dashboard() {
     setLoading(true);
     try {
       // Fetch about content
-      const aboutRes = await fetch("http://localhost:5000/api/about");
+      const aboutRes = await fetch("https://api.onnextweb.in/api/about");
       if (aboutRes.ok) {
         const aboutJson = await aboutRes.json();
         setAboutData(aboutJson);
       }
 
       // Fetch blogs
-      const blogsRes = await fetch("http://localhost:5000/api/blogs");
+      const blogsRes = await fetch("https://api.onnextweb.in/api/blogs");
       if (blogsRes.ok) {
         const blogsJson = await blogsRes.json();
         setBlogs(blogsJson);
       }
 
       // Fetch PDFs
-      const pdfsRes = await fetch("http://localhost:5000/api/pdfs");
+      const pdfsRes = await fetch("https://api.onnextweb.in/api/pdfs");
       if (pdfsRes.ok) {
         const pdfsJson = await pdfsRes.json();
         setPdfs(pdfsJson);
       }
 
       // Fetch Services
-      const servicesRes = await fetch("http://localhost:5000/api/services");
+      const servicesRes = await fetch("https://api.onnextweb.in/api/services");
       if (servicesRes.ok) {
         setServices(await servicesRes.json());
       }
 
       // Fetch Projects
-      const projectsRes = await fetch("http://localhost:5000/api/projects");
+      const projectsRes = await fetch("https://api.onnextweb.in/api/projects");
       if (projectsRes.ok) {
         setProjects(await projectsRes.json());
       }
 
       // Fetch Testimonials
-      const testimonialsRes = await fetch("http://localhost:5000/api/testimonials");
+      const testimonialsRes = await fetch("https://api.onnextweb.in/api/testimonials");
       if (testimonialsRes.ok) {
         setTestimonials(await testimonialsRes.json());
       }
@@ -282,7 +282,7 @@ export default function Dashboard() {
     e.preventDefault();
     setSavingAbout(true);
     try {
-      const res = await fetch("http://localhost:5000/api/about", {
+      const res = await fetch("https://api.onnextweb.in/api/about", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -314,7 +314,7 @@ export default function Dashboard() {
     e.preventDefault();
     setSavingSeo(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/seo/${selectedSeoPage}`, {
+      const res = await fetch(`https://api.onnextweb.in/api/seo/${selectedSeoPage}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -382,8 +382,8 @@ export default function Dashboard() {
 
     setSavingBlog(true);
     const url = editingBlogId
-      ? `http://localhost:5000/api/blogs/${editingBlogId}`
-      : "http://localhost:5000/api/blogs";
+      ? `https://api.onnextweb.in/api/blogs/${editingBlogId}`
+      : "https://api.onnextweb.in/api/blogs";
     const method = editingBlogId ? "PUT" : "POST";
 
     try {
@@ -400,7 +400,7 @@ export default function Dashboard() {
         toast.success(editingBlogId ? "Blog updated successfully!" : "Blog created successfully!");
         setShowBlogModal(false);
         // Refresh blogs list
-        const blogsRes = await fetch("http://localhost:5000/api/blogs");
+        const blogsRes = await fetch("https://api.onnextweb.in/api/blogs");
         if (blogsRes.ok) setBlogs(await blogsRes.json());
       } else {
         const errJson = await res.json();
@@ -417,7 +417,7 @@ export default function Dashboard() {
     if (!window.confirm("Are you sure you want to delete this blog post?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/blogs/${id}`, {
+      const res = await fetch(`https://api.onnextweb.in/api/blogs/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -452,7 +452,7 @@ export default function Dashboard() {
 
     setUploadingPdfs(true);
     try {
-      const res = await fetch("http://localhost:5000/api/pdfs/upload", {
+      const res = await fetch("https://api.onnextweb.in/api/pdfs/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`
@@ -469,7 +469,7 @@ export default function Dashboard() {
         if (fileInput) fileInput.value = "";
         
         // Refresh PDFs list
-        const pdfsRes = await fetch("http://localhost:5000/api/pdfs");
+        const pdfsRes = await fetch("https://api.onnextweb.in/api/pdfs");
         if (pdfsRes.ok) setPdfs(await pdfsRes.json());
       } else {
         throw new Error(data.message || "Failed to upload files");
@@ -485,7 +485,7 @@ export default function Dashboard() {
     if (!window.confirm("Are you sure you want to delete this PDF document?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/pdfs/${id}`, {
+      const res = await fetch(`https://api.onnextweb.in/api/pdfs/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -542,8 +542,8 @@ export default function Dashboard() {
     }
     setSavingService(true);
     const url = editingServiceId
-      ? `http://localhost:5000/api/services/${editingServiceId}`
-      : "http://localhost:5000/api/services";
+      ? `https://api.onnextweb.in/api/services/${editingServiceId}`
+      : "https://api.onnextweb.in/api/services";
     const method = editingServiceId ? "PUT" : "POST";
 
     const featuresArray = serviceForm.features
@@ -565,7 +565,7 @@ export default function Dashboard() {
       if (res.ok) {
         toast.success(editingServiceId ? "Service updated successfully!" : "Service added successfully!");
         setShowServiceModal(false);
-        const servicesRes = await fetch("http://localhost:5000/api/services");
+        const servicesRes = await fetch("https://api.onnextweb.in/api/services");
         if (servicesRes.ok) setServices(await servicesRes.json());
       } else {
         const errJson = await res.json();
@@ -581,7 +581,7 @@ export default function Dashboard() {
   const deleteService = async (id: string) => {
     if (!window.confirm("Are you sure you want to delete this service?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/services/${id}`, {
+      const res = await fetch(`https://api.onnextweb.in/api/services/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -645,8 +645,8 @@ export default function Dashboard() {
     }
     setSavingProject(true);
     const url = editingProjectId
-      ? `http://localhost:5000/api/projects/${editingProjectId}`
-      : "http://localhost:5000/api/projects";
+      ? `https://api.onnextweb.in/api/projects/${editingProjectId}`
+      : "https://api.onnextweb.in/api/projects";
     const method = editingProjectId ? "PUT" : "POST";
 
     const tagsArray = projectForm.tags
@@ -668,7 +668,7 @@ export default function Dashboard() {
       if (res.ok) {
         toast.success(editingProjectId ? "Project updated successfully!" : "Project added successfully!");
         setShowProjectModal(false);
-        const projectsRes = await fetch("http://localhost:5000/api/projects");
+        const projectsRes = await fetch("https://api.onnextweb.in/api/projects");
         if (projectsRes.ok) setProjects(await projectsRes.json());
       } else {
         const errJson = await res.json();
@@ -684,7 +684,7 @@ export default function Dashboard() {
   const deleteProject = async (id: string) => {
     if (!window.confirm("Are you sure you want to delete this project?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/projects/${id}`, {
+      const res = await fetch(`https://api.onnextweb.in/api/projects/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -735,8 +735,8 @@ export default function Dashboard() {
     }
     setSavingTestimonial(true);
     const url = editingTestimonialId
-      ? `http://localhost:5000/api/testimonials/${editingTestimonialId}`
-      : "http://localhost:5000/api/testimonials";
+      ? `https://api.onnextweb.in/api/testimonials/${editingTestimonialId}`
+      : "https://api.onnextweb.in/api/testimonials";
     const method = editingTestimonialId ? "PUT" : "POST";
 
     try {
@@ -751,7 +751,7 @@ export default function Dashboard() {
       if (res.ok) {
         toast.success(editingTestimonialId ? "Testimonial updated successfully!" : "Testimonial added successfully!");
         setShowTestimonialModal(false);
-        const testimonialsRes = await fetch("http://localhost:5000/api/testimonials");
+        const testimonialsRes = await fetch("https://api.onnextweb.in/api/testimonials");
         if (testimonialsRes.ok) setTestimonials(await testimonialsRes.json());
       } else {
         const errJson = await res.json();
@@ -767,7 +767,7 @@ export default function Dashboard() {
   const deleteTestimonial = async (id: string) => {
     if (!window.confirm("Are you sure you want to delete this testimonial?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/testimonials/${id}`, {
+      const res = await fetch(`https://api.onnextweb.in/api/testimonials/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -1144,7 +1144,7 @@ export default function Dashboard() {
 
                             <div className="flex items-center gap-2">
                               <a
-                                href={`http://localhost:5000/api/pdfs/${pdf._id}`}
+                                href={`https://api.onnextweb.in/api/pdfs/${pdf._id}`}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="py-1.5 px-3 rounded-lg bg-secondary border border-border/40 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all font-semibold cursor-pointer"

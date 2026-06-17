@@ -5,7 +5,7 @@ import ResourcesClient from "@/components/ResourcesClient";
 
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("http://localhost:5000/api/seo/resources", {
+    const res = await fetch("https://api.onnextweb.in/api/seo/resources", {
       cache: "no-store"
     });
     if (res.ok) {
@@ -34,7 +34,7 @@ export default async function Resources() {
   let pdfs = [];
 
   try {
-    const res = await fetch("http://localhost:5000/api/pdfs", {
+    const res = await fetch("https://api.onnextweb.in/api/pdfs", {
       cache: "no-store"
     });
     if (res.ok) {

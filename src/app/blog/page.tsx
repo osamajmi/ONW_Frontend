@@ -5,7 +5,7 @@ import BlogClient from "@/components/BlogClient";
 
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("http://localhost:5000/api/seo/blog", {
+    const res = await fetch("https://api.onnextweb.in/api/seo/blog", {
       cache: "no-store"
     });
     if (res.ok) {
@@ -34,7 +34,7 @@ export default async function Blog() {
   let blogs = [];
 
   try {
-    const res = await fetch("http://localhost:5000/api/blogs", {
+    const res = await fetch("https://api.onnextweb.in/api/blogs", {
       cache: "no-store"
     });
     if (res.ok) {

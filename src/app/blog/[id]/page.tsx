@@ -11,7 +11,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
   try {
-    const res = await fetch(`http://localhost:5000/api/blogs/${id}`, {
+    const res = await fetch(`https://api.onnextweb.in/api/blogs/${id}`, {
       cache: "no-store"
     });
     if (res.ok) {
@@ -40,7 +40,7 @@ export default async function BlogDetail({ params }: PageProps) {
   let blog = null;
 
   try {
-    const res = await fetch(`http://localhost:5000/api/blogs/${id}`, {
+    const res = await fetch(`https://api.onnextweb.in/api/blogs/${id}`, {
       cache: "no-store"
     });
     if (res.ok) {

@@ -14,7 +14,7 @@ interface ProjectItem {
 
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("http://localhost:5000/api/seo/portfolio", {
+    const res = await fetch("https://api.onnextweb.in/api/seo/portfolio", {
       cache: "no-store"
     });
     if (res.ok) {
@@ -43,7 +43,7 @@ export default async function PortfolioPage() {
   let projects: ProjectItem[] = [];
 
   try {
-    const res = await fetch("http://localhost:5000/api/projects", {
+    const res = await fetch("https://api.onnextweb.in/api/projects", {
       cache: "no-store"
     });
     if (res.ok) {

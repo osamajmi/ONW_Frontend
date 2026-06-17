@@ -176,7 +176,7 @@ export default function ResourcesClient({ pdfs }: { pdfs: PdfFile[] }) {
 
                 <div className="grid grid-cols-2 gap-4 mt-auto">
                   <a
-                    href={`http://localhost:5000/api/pdfs/${pdf._id}`}
+                    href={`https://api.onnextweb.in/api/pdfs/${pdf._id}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center justify-center gap-1.5 text-xs font-semibold py-2.5 px-4 rounded-xl bg-secondary/60 hover:bg-secondary text-foreground border border-border/80 transition-all"
@@ -185,7 +185,7 @@ export default function ResourcesClient({ pdfs }: { pdfs: PdfFile[] }) {
                     View PDF
                   </a>
                   <a
-                    href={`http://localhost:5000/api/pdfs/${pdf._id}`}
+                    href={`https://api.onnextweb.in/api/pdfs/${pdf._id}`}
                     download={pdf.filename}
                     className="flex items-center justify-center gap-1.5 text-xs font-semibold py-2.5 px-4 rounded-xl bg-primary hover:opacity-90 text-primary-foreground transition-all shadow-md hover:shadow-[0_4px_12px_rgba(var(--primary),0.25)]"
                   >

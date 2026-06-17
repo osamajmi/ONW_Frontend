@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch blogs dynamically from the backend to construct dynamic sitemap routes
   let blogUrls: any[] = [];
   try {
-    const res = await fetch("http://localhost:5000/api/blogs", {
+    const res = await fetch("https://api.onnextweb.in/api/blogs", {
       next: { revalidate: 3600 } // Cache for 1 hour
     });
     if (res.ok) {
