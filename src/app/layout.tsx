@@ -4,8 +4,46 @@ import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://onnextweb.in"),
-  title: "ON Next Web | Premium Digital Studio",
-  description: "Crafting modern digital products, interactive websites, and premium brand designs.",
+  title: {
+    default: "ON Next Web | Premium Digital Studio",
+    template: "%s | ON Next Web",
+  },
+  description: "We craft modern websites, custom software, and premium brand designs engineered for ambitious brands. Think Best, Think Next.",
+  keywords: ["web development", "UI/UX design", "custom software", "Next.js", "branding", "digital studio", "India"],
+  authors: [{ name: "ON Next Web", url: "https://onnextweb.in" }],
+  creator: "ON Next Web",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://onnextweb.in",
+    siteName: "ON Next Web",
+    title: "ON Next Web | Premium Digital Studio",
+    description: "We craft modern websites, custom software, and premium brand designs. Think Best, Think Next.",
+    images: [
+      {
+        url: "/dark logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ON Next Web — Premium Digital Studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ON Next Web | Premium Digital Studio",
+    description: "We craft modern websites, custom software, and premium brand designs.",
+    images: ["/dark logo.png"],
+    creator: "@onnextweb",
+  },
 };
 
 export default function RootLayout({
@@ -21,4 +59,3 @@ export default function RootLayout({
     </html>
   );
 }
-
