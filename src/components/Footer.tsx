@@ -51,7 +51,8 @@ const navLinks = [
   { name: "Our Services", href: "/services" },
   { name: "Case Studies", href: "/portfolio" },
   { name: "Resource Library", href: "/resources" },
-  { name: "Latest Blog", href: "/blog" }
+  { name: "Latest Blog", href: "/blog" },
+  { name: "Contact Us", href: "/contact" }
 ];
 
 const Footer = () => {

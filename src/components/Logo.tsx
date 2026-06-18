@@ -14,7 +14,7 @@ const Logo = () => {
         src="/dark logo.png"
         alt="ON Next Web"
         className="dark-logo"
-        style={{ height: "38px", width: "auto", display: "none" }}
+        style={{ height: "38px", width: "auto" }}
       />
 
       {/* ── Light mode logo ── */}
@@ -23,7 +23,7 @@ const Logo = () => {
         src="/light logo.png"
         alt="ON Next Web"
         className="light-logo"
-        style={{ height: "38px", width: "auto", display: "block" }}
+        style={{ height: "38px", width: "auto" }}
       />
     </div>
   );

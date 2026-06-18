@@ -119,7 +119,7 @@ export default function ServicesClient({ services }: { services: ServiceItem[] }
           </p>
           <div className="flex justify-center">
             <MagneticButton
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-medium text-lg glow-accent hover:glow-accent-strong transition-all duration-300 group cursor-pointer"
             >
               Start a Project

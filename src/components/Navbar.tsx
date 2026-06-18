@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, LayoutDashboard, LogIn, LogOut } from "lucide-react";
+import { Menu, X, LayoutDashboard, LogOut } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import MagneticButton from "./MagneticButton";
 import Link from "next/link";
@@ -16,6 +16,7 @@ const navLinks = [
   { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -85,7 +86,7 @@ const Navbar = () => {
           })}
           <ThemeToggle />
           
-          {isLoggedIn ? (
+          {isLoggedIn && (
             <div className="flex items-center gap-4">
               <Link
                 href="/dashboard"
@@ -102,18 +103,10 @@ const Navbar = () => {
                 Logout
               </button>
             </div>
-          ) : (
-            <Link
-              href="/login"
-              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground font-medium transition-colors"
-            >
-              <LogIn size={16} />
-              Login
-            </Link>
           )}
 
           <MagneticButton
-            href="/#contact"
+            href="/contact"
             className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300"
           >
             Start a Project
@@ -158,7 +151,7 @@ const Navbar = () => {
                 </Link>
               ))}
 
-              {isLoggedIn ? (
+              {isLoggedIn && (
                 <>
                   <Link
                     href="/dashboard"
@@ -179,24 +172,15 @@ const Navbar = () => {
                     Logout
                   </button>
                 </>
-              ) : (
-                <Link
-                  href="/login"
-                  onClick={() => setMobileOpen(false)}
-                  className="text-lg text-muted-foreground hover:text-foreground font-semibold flex items-center gap-2"
-                >
-                  <LogIn size={20} />
-                  Login
-                </Link>
               )}
 
-              <a
-                href="/#contact"
+              <Link
+                href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-center font-medium mt-2"
               >
                 Start a Project
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

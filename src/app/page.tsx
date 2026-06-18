@@ -6,7 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
-import PortfolioSection from "@/components/PortfolioSection";
+// import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -81,7 +81,7 @@ export default async function Home() {
       <AboutSection />
       <ServicesSection initialServices={services} />
       <ProcessSection />
-      <PortfolioSection initialProjects={projects} />
+      {/* <PortfolioSection initialProjects={projects} /> */}
       <TestimonialsSection initialTestimonials={testimonials} />
       <ContactSection />
       <Footer />

@@ -98,7 +98,7 @@ interface TestimonialItem {
 
 export default function Dashboard() {
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState<"about" | "blogs" | "pdfs" | "seo" | "services" | "projects" | "testimonials">("about");
+  const [activeTab, setActiveTab] = useState<"about" | "blogs" | "pdfs" | "seo" | "services" | "projects" | "testimonials" | "contacts">("about");
   const [loading, setLoading] = useState(true);
   const [token, setToken] = useState<string | null>(null);
 
@@ -183,6 +183,9 @@ export default function Dashboard() {
   });
   const [savingTestimonial, setSavingTestimonial] = useState(false);
 
+  // Contacts state
+  const [contacts, setContacts] = useState<any[]>([]);
+
   useEffect(() => {
     const savedToken = localStorage.getItem("token");
     if (!savedToken) {
@@ -256,6 +259,16 @@ export default function Dashboard() {
       const testimonialsRes = await fetch("https://api.onnextweb.in/api/testimonials");
       if (testimonialsRes.ok) {
         setTestimonials(await testimonialsRes.json());
+      }
+
+      // Fetch Contacts
+      const contactsRes = await fetch("https://api.onnextweb.in/api/contact", {
+        headers: {
+          Authorization: `Bearer ${authToken}`
+        }
+      });
+      if (contactsRes.ok) {
+        setContacts(await contactsRes.json());
       }
     } catch (err) {
       console.error("Error loading dashboard data:", err);
@@ -819,6 +832,7 @@ export default function Dashboard() {
                 { id: "blogs", label: "Manage Blogs", icon: BookOpen },
                 { id: "pdfs", label: "Upload & PDF Files", icon: FileText },
                 { id: "seo", label: "SEO Page Settings", icon: Globe },
+                { id: "contacts", label: "Contact Messages", icon: MessageSquare },
               ].map((tab) => {
                 const Icon = tab.icon;
                 const isActive = activeTab === tab.id;
@@ -1316,6 +1330,83 @@ export default function Dashboard() {
                     </div>
                   )}
                 </form>
+              )}
+
+              {/* TAB 5: CONTACT MESSAGES */}
+              {activeTab === "contacts" && (
+                <div className="space-y-6">
+                  <div className="border-b border-border/40 pb-3 mb-4">
+                    <h2 className="text-xl font-bold font-display">Contact Messages & Leads</h2>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      View and manage lead submissions from the website contact page.
+                    </p>
+                  </div>
+
+                  {contacts.length === 0 ? (
+                    <div className="text-center py-12 bg-secondary/10 rounded-xl border border-dashed border-border/60">
+                      <p className="text-muted-foreground text-sm">No contact messages received yet.</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      {contacts.map((contact) => (
+                        <div
+                          key={contact._id}
+                          className="p-5 bg-secondary/10 hover:bg-secondary/15 rounded-xl border border-border/30 transition-all duration-300 relative group"
+                        >
+                          <div className="flex justify-between items-start gap-4">
+                            <div>
+                              <h3 className="font-semibold text-base text-foreground">{contact.name}</h3>
+                              <a
+                                href={`mailto:${contact.email}`}
+                                className="text-xs text-primary hover:underline font-medium block mt-1"
+                              >
+                                {contact.email}
+                              </a>
+                              <span className="text-[10px] text-muted-foreground block mt-1.5">
+                                Submitted on: {new Date(contact.createdAt).toLocaleString("en-US", {
+                                  month: "short",
+                                  day: "numeric",
+                                  year: "numeric",
+                                  hour: "2-digit",
+                                  minute: "2-digit"
+                                })}
+                              </span>
+                            </div>
+                            <button
+                              onClick={async () => {
+                                if (!window.confirm("Are you sure you want to delete this message?")) return;
+                                try {
+                                  const res = await fetch(`https://api.onnextweb.in/api/contact/${contact._id}`, {
+                                    method: "DELETE",
+                                    headers: {
+                                      Authorization: `Bearer ${token}`
+                                    }
+                                  });
+                                  if (res.ok) {
+                                    toast.success("Message deleted successfully");
+                                    setContacts(contacts.filter((c) => c._id !== contact._id));
+                                  } else {
+                                    const errJson = await res.json();
+                                    throw new Error(errJson.message || "Failed to delete message");
+                                  }
+                                } catch (err: any) {
+                                  toast.error(err.message);
+                                }
+                              }}
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-destructive hover:text-white hover:border-destructive transition-all duration-300 cursor-pointer"
+                              title="Delete message"
+                            >
+                              <Trash2 size={13} />
+                            </button>
+                          </div>
+                          <div className="mt-4 bg-background/50 border border-border/40 p-4 rounded-lg text-sm text-foreground leading-relaxed whitespace-pre-wrap">
+                            {contact.message}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               )}
             </div>
           </div>
