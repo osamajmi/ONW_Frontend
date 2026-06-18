@@ -25,7 +25,8 @@ const ContactSection = () => {
       document.body.appendChild(script);
     }
   }, []);
-
+  const data = "hello"
+  console.log(data)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -142,7 +143,7 @@ const ContactSection = () => {
 
             <form ref={formRef} className="space-y-5" onSubmit={handleSubmit}>
               {[
-                { id: "name",  label: "Name",  type: "text"  },
+                { id: "name", label: "Name", type: "text" },
                 { id: "email", label: "Email", type: "email" },
               ].map((field) => (
                 <div key={field.id} className="relative">
@@ -192,7 +193,7 @@ const ContactSection = () => {
               </div>
 
               {/* Google reCAPTCHA v2 */}
-              <div 
+              <div
                 className="g-recaptcha flex justify-center py-2"
                 data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6Le73CUtAAAAAJ-wdkBaX2hdIBrzjC7ZNvze0kk1"}
                 data-theme="dark"
