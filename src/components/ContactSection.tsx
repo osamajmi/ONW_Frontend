@@ -1,18 +1,9 @@
 "use client";
 
-import { useState, useRef } from "react";
-
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import AnimatedSection from "./AnimatedSection";
 import { Send, Mail, Phone, MapPin, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-
-// ─── EmailJS Config ───────────────────────────────────────────────────────────
-// Yahan apni EmailJS credentials daalo (setup steps neeche hain)
-const EMAILJS_SERVICE_ID  = "service_tv63nkk";
-const EMAILJS_TEMPLATE_ID = "template_slv876o";
-const EMAILJS_PUBLIC_KEY  = "XiJ31W47d7R4jZy1x";
-// ─────────────────────────────────────────────────────────────────────────────
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -21,6 +12,19 @@ const ContactSection = () => {
   const [focused, setFocused] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    // Dynamically load Google reCAPTCHA v2 script
+    if (!document.getElementById("recaptcha-script-home")) {
+      const script = document.createElement("script");
+      script.id = "recaptcha-script-home";
+      script.src = "https://www.google.com/recaptcha/api.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -30,20 +34,46 @@ const ContactSection = () => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
-    setStatus("loading");
-    try {
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        formRef.current!,
-        EMAILJS_PUBLIC_KEY
-      );
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus("idle"), 5000);
-    } catch {
+    // Get reCAPTCHA response token
+    const recaptchaToken = (window as any).grecaptcha?.getResponse();
+    if (!recaptchaToken) {
+      setErrorMessage("Please complete the reCAPTCHA verification.");
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 4000);
+      setTimeout(() => setStatus("idle"), 5000);
+      return;
+    }
+
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+      const res = await fetch(`${baseUrl}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...formData, recaptchaToken }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        // Reset reCAPTCHA widget
+        (window as any).grecaptcha?.reset();
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        const errorData = await res.json();
+        setErrorMessage(errorData.message || "Failed to submit message");
+        setStatus("error");
+        (window as any).grecaptcha?.reset();
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch (error: any) {
+      setErrorMessage("Network error. Please try again later.");
+      setStatus("error");
+      (window as any).grecaptcha?.reset();
+      setTimeout(() => setStatus("idle"), 5000);
     }
   };
 
@@ -105,7 +135,7 @@ const ContactSection = () => {
                   className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 text-red-400 rounded-xl px-5 py-4 mb-5"
                 >
                   <AlertCircle size={20} />
-                  <span className="font-medium">Something went wrong. Please try again.</span>
+                  <span className="font-medium">{errorMessage || "Something went wrong. Please try again."}</span>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -160,12 +190,20 @@ const ContactSection = () => {
                   />
                 )}
               </div>
+
+              {/* Google reCAPTCHA v2 */}
+              <div 
+                className="g-recaptcha flex justify-center py-2"
+                data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6Le73CUtAAAAAJ-wdkBaX2hdIBrzjC7ZNvze0kk1"}
+                data-theme="dark"
+              />
+
               <motion.button
                 whileHover={{ scale: status === "loading" ? 1 : 1.02 }}
                 whileTap={{ scale: status === "loading" ? 1 : 0.98 }}
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-medium text-lg flex items-center justify-center gap-2 hover:glow-accent transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-medium text-lg flex items-center justify-center gap-2 hover:glow-accent transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
               >
                 {status === "loading" ? (
                   <>
