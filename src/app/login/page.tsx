@@ -138,11 +138,7 @@ export default function Login() {
               </button>
             </form>
 
-            <div className="mt-8 pt-6 border-t border-border/40 text-center">
-              <span className="text-[10px] text-muted-foreground/50 italic">
-                Development credentials: <strong className="text-muted-foreground/80">admin</strong> / <strong className="text-muted-foreground/80">admin123</strong>
-              </span>
-            </div>
+
           </div>
         </motion.div>
       </main>
