@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GrainOverlay from "@/components/GrainOverlay";
@@ -102,9 +103,16 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mb-12 rounded-2xl overflow-hidden aspect-[21/10] bg-secondary/30 border border-border/40 shadow-xl"
+                className="mb-12 rounded-2xl overflow-hidden aspect-[21/10] bg-secondary/30 border border-border/40 shadow-xl relative"
               >
-                <img src={blog.coverImage} alt={blog.title} className="w-full h-full object-cover" />
+                <Image
+                  src={blog.coverImage}
+                  alt={blog.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  priority
+                />
               </motion.div>
             )}
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -112,10 +113,12 @@ export default function BlogClient({ initialBlogs }: { initialBlogs: BlogPost[] 
                   {/* Image Container */}
                   <div className="relative aspect-[16/10] overflow-hidden bg-secondary/50">
                     {blog.coverImage ? (
-                      <img
+                      <Image
                         src={blog.coverImage}
                         alt={blog.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent flex items-center justify-center p-6 text-center">

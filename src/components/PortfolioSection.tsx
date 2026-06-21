@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import Image from "next/image";
 
 interface ProjectItem {
   _id?: string;
@@ -64,10 +65,12 @@ const PortfolioSection = ({ initialProjects }: { initialProjects?: ProjectItem[]
                 >
                   {/* Image or Gradient */}
                   {project.coverImage ? (
-                    <img 
+                    <Image 
                       src={project.coverImage} 
                       alt={project.title} 
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   ) : (
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.color || fallbackGrad} opacity-80`} />

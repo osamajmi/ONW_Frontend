@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GrainOverlay from "@/components/GrainOverlay";
@@ -126,10 +127,12 @@ export default function PortfolioClient({ projects }: { projects: ProjectItem[] 
                   >
                     {/* Cover image or fallback gradient */}
                     {project.coverImage ? (
-                      <img
+                      <Image
                         src={project.coverImage}
                         alt={project.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     ) : (
                       <div className={`absolute inset-0 bg-gradient-to-br ${fallbackGrad} opacity-85`} />
