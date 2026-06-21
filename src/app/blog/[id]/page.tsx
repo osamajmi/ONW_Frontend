@@ -19,6 +19,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       return {
         title: `${blog.title} | OnNextWeb Blog`,
         description: blog.summary,
+        alternates: {
+          canonical: `https://onnextweb.in/blog/${id}`,
+        },
         openGraph: {
           title: blog.title,
           description: blog.summary,
@@ -32,6 +35,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: "Blog Post | OnNextWeb",
     description: "Read the article details.",
+    alternates: {
+      canonical: `https://onnextweb.in/blog/${id}`,
+    },
   };
 }
 

@@ -5,6 +5,9 @@ import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://onnextweb.in"),
+  alternates: {
+    canonical: "https://onnextweb.in",
+  },
   title: {
     default: "ON Next Web | Premium Digital Studio",
     template: "%s | ON Next Web",

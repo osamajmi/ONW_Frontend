@@ -14,6 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
         title: seo.title,
         description: seo.description,
         keywords: seo.keywords,
+        alternates: {
+          canonical: "https://onnextweb.in/resources",
+        },
         openGraph: {
           title: seo.ogTitle || seo.title,
           description: seo.ogDescription || seo.description,
@@ -27,6 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Resource Library & Downloads | OnNextWeb",
     description: "Download templates, pricing lists, contracts, and guideline PDF documents from OnNextWeb.",
+    alternates: {
+      canonical: "https://onnextweb.in/resources",
+    },
   };
 }
 
