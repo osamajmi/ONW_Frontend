@@ -3,15 +3,13 @@ export const dynamic = "force-dynamic";
 import BlogDetailClient from "@/components/BlogDetailClient";
 
 interface PageProps {
-
-
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { id } = await params;
+  const { slug } = await params;
   try {
-    const res = await fetch(`https://api.onnextweb.in/api/blogs/${id}`, {
+    const res = await fetch(`https://api.onnextweb.in/api/blogs/${slug}`, {
       cache: "no-store"
     });
     if (res.ok) {
@@ -20,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         title: `${blog.title} | OnNextWeb Blog`,
         description: blog.summary,
         alternates: {
-          canonical: `https://www.onnextweb.in/blog/${id}`,
+          canonical: `https://www.onnextweb.in/blog/${blog.slug || blog._id}`,
         },
         openGraph: {
           title: blog.title,
@@ -36,17 +34,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: "Blog Post | OnNextWeb",
     description: "Read the article details.",
     alternates: {
-      canonical: `https://www.onnextweb.in/blog/${id}`,
+      canonical: `https://www.onnextweb.in/blog/${slug}`,
     },
   };
 }
 
 export default async function BlogDetail({ params }: PageProps) {
-  const { id } = await params;
+  const { slug } = await params;
   let blog = null;
 
   try {
-    const res = await fetch(`https://api.onnextweb.in/api/blogs/${id}`, {
+    const res = await fetch(`https://api.onnextweb.in/api/blogs/${slug}`, {
       cache: "no-store"
     });
     if (res.ok) {

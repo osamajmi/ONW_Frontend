@@ -13,6 +13,7 @@ import { Search, Calendar, User, ArrowUpRight, BookOpen, Clock, Mail, Sparkles }
 interface BlogPost {
   _id: string;
   title: string;
+  slug?: string;
   summary: string;
   content: string;
   coverImage?: string;
@@ -158,10 +159,9 @@ export default function BlogClient({ initialBlogs }: { initialBlogs: BlogPost[] 
         ) : (
           <div className="max-w-6xl mx-auto">
             
-            {/* ================= FEATURED POST (Top Item) ================= */}
             {featuredBlog && activeCategory === "All" && searchQuery === "" && (
               <AnimatedSection className="mb-16">
-                <Link href={`/blog/${featuredBlog._id}`} className="group">
+                <Link href={`/blog/${featuredBlog.slug || featuredBlog._id}`} className="group">
                   <div className="grid lg:grid-cols-12 gap-8 items-center bg-card/25 hover:bg-card/45 border border-white/5 rounded-3xl p-6 md:p-8 transition-all duration-500 shadow-2xl backdrop-blur-sm relative overflow-hidden">
                     
                     {/* Glow effect on hover */}
@@ -253,7 +253,7 @@ export default function BlogClient({ initialBlogs }: { initialBlogs: BlogPost[] 
                     transition={{ duration: 0.4 }}
                     key={blog._id}
                   >
-                    <Link href={`/blog/${blog._id}`} className="group flex flex-col h-full">
+                    <Link href={`/blog/${blog.slug || blog._id}`} className="group flex flex-col h-full">
                       <div className="flex flex-col h-full bg-card/20 hover:bg-card/35 border border-white/5 hover:border-white/10 rounded-2xl overflow-hidden transition-all duration-400 shadow-xl backdrop-blur-sm relative">
                         
                         {/* Image Frame */}

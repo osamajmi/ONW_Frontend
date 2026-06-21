@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://onnextweb.in";
+const BASE_URL = "https://www.onnextweb.in";
 const API_URL  = "https://api.onnextweb.in";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -53,8 +53,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
     if (res.ok) {
       const blogs = await res.json();
-      blogUrls = blogs.map((blog: { _id: string; updatedAt?: string; createdAt?: string }) => ({
-        url: `${BASE_URL}/blog/${blog._id}`,
+      blogUrls = blogs.map((blog: { _id: string; slug?: string; updatedAt?: string; createdAt?: string }) => ({
+        url: `${BASE_URL}/blog/${blog.slug || blog._id}`,
         lastModified: new Date(blog.updatedAt || blog.createdAt || Date.now()),
         changeFrequency: "weekly" as const,
         priority: 0.6,
