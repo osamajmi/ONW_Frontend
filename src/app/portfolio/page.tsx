@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
         description: seo.description,
         keywords: seo.keywords,
         alternates: {
-          canonical: "https://onnextweb.in/portfolio",
+          canonical: "https://www.onnextweb.in/portfolio",
         },
         openGraph: {
           title: seo.ogTitle || seo.title,
@@ -40,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Our Portfolio & Case Studies | OnNextWeb",
     description: "Explore our premium web development projects, custom software engineering case studies, and mobile apps built to scale.",
     alternates: {
-      canonical: "https://onnextweb.in/portfolio",
+      canonical: "https://www.onnextweb.in/portfolio",
     },
   };
 }

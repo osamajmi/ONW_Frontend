@@ -54,7 +54,7 @@ export async function generateMetadata(): Promise<Metadata> {
         description: seo.description,
         keywords: seo.keywords,
         alternates: {
-          canonical: "https://onnextweb.in",
+          canonical: "https://www.onnextweb.in",
         },
         openGraph: {
           title: seo.ogTitle || seo.title,
@@ -70,7 +70,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "ON Next Web | Premium Web Development & Mobile App Agency",
     description: "Bespoke website design, custom software engineering, and mobile app development (iOS & Android) in Gurgaon & Delhi NCR. Build speed-optimized digital solutions today.",
     alternates: {
-      canonical: "https://onnextweb.in",
+      canonical: "https://www.onnextweb.in",
     },
   };
 }

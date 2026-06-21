@@ -4,13 +4,13 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://onnextweb.in"),
+  metadataBase: new URL("https://www.onnextweb.in"),
   alternates: {
-    canonical: "https://onnextweb.in",
+    canonical: "https://www.onnextweb.in",
   },
   title: {
     default: "ON Next Web | Premium Digital Studio",
-    template: "%s | ON Next Web",
+    template: "%s",
   },
   description: "We craft modern websites, custom software, and premium brand designs engineered for ambitious brands. Think Best, Think Next.",
   keywords: ["web development", "UI/UX design", "custom software", "Next.js", "branding", "digital studio", "India"],

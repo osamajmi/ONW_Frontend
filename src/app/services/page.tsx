@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
         description: seo.description,
         keywords: seo.keywords,
         alternates: {
-          canonical: "https://onnextweb.in/services",
+          canonical: "https://www.onnextweb.in/services",
         },
         openGraph: {
           title: seo.ogTitle || seo.title,
@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Web Development Company in Gurgaon | Custom Web Design Services",
     description: "Looking for web developers in Gurgaon? OnNextWeb builds custom web applications, Next.js setups, and enterprise software designed to convert visitors into clients.",
     alternates: {
-      canonical: "https://onnextweb.in/services",
+      canonical: "https://www.onnextweb.in/services",
     },
   };
 }
