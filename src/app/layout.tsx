@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Providers from "@/components/Providers";
 
@@ -51,6 +52,18 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased dark">
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Providers>{children}</Providers>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6R61262N0W"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6R61262N0W');
+          `}
+        </Script>
       </body>
     </html>
   );
