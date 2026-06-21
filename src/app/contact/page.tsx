@@ -24,8 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading contact page SEO:", error);
   }
   return {
-    title: "Contact Us | ON Next Web",
-    description: "Get in touch with ON Next Web. Let's discuss your next project, custom website, or custom software requirements.",
+    title: "Contact OnNextWeb | Project Consultation & Quote",
+    description: "Get in touch with OnNextWeb. Let's discuss your next project, custom website, or custom software requirements.",
   };
 }
 
