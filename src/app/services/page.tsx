@@ -51,5 +51,94 @@ export default async function ServicesPage() {
     console.error("Error loading services page content:", error);
   }
 
-  return <ServicesClient services={services} />;
+  return (
+    <>
+      <ServicesClient services={services} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Web & Mobile App Development Services",
+            "serviceType": "Software Development & Digital Marketing Services",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "ON Next Web",
+              "url": "https://onnextweb.in"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "IN"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "OnNextWeb Agency Catalog",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Website Design & Development",
+                    "description": "Bespoke Next.js, React, and WordPress website development tailored for business scaling."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile App Development",
+                    "description": "Cross-platform Flutter & React Native mobile app development for Android & iOS."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Search Engine Optimization (SEO)",
+                    "description": "Organic SEO, keyword research, local citation building, and conversion optimization."
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the cost of website development in Gurgaon?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Website development costs depend on project scope, custom design requirements, and technology stack. Typically, a custom Next.js website design at OnNextWeb starts from ₹50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does it take to develop a custom mobile application?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standard cross-platform apps (React Native/Flutter) take 8 to 16 weeks depending on complex features like API integrations, user accounts, and real-time functions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you provide customized SEO services?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, OnNextWeb offers customized SEO packages focusing on local SEO, technical audits, on-page optimization, and generating high-intent leads for startups and SMEs."
+                }
+              }
+            ]
+          })
+        }}
+      />
+    </>
+  );
 }

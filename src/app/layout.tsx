@@ -73,6 +73,63 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-5Z5FXQZG');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "ON Next Web",
+              "alternateName": "OnNextWeb",
+              "url": "https://onnextweb.in",
+              "logo": "https://onnextweb.in/dark%20logo.png",
+              "sameAs": [
+                "https://www.linkedin.com/company/onnextweb",
+                "https://twitter.com/onnextweb"
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "ON Next Web",
+              "image": "https://onnextweb.in/dark%20logo.png",
+              "@id": "https://onnextweb.in/#localbusiness",
+              "url": "https://onnextweb.in",
+              "telephone": "+91-XXXXXXXXXX",
+              "priceRange": "$$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Golf Course Road, Sector 54",
+                "addressLocality": "Gurgaon",
+                "addressRegion": "Haryana",
+                "postalCode": "122002",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 28.4389,
+                "longitude": 77.1054
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            })
+          }}
+        />
       </body>
     </html>
   );
