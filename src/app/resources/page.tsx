@@ -25,8 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading resources page SEO:", error);
   }
   return {
-    title: "Resource Library | Silver Point",
-    description: "Download templates, presentation decks, contracts, and guideline PDF documents.",
+    title: "Resource Library & Downloads | OnNextWeb",
+    description: "Download templates, pricing lists, contracts, and guideline PDF documents from OnNextWeb.",
   };
 }
 

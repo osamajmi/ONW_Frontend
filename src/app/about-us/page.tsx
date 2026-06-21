@@ -38,8 +38,8 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading about page SEO:", error);
   }
   return {
-    title: "About Us | Silver Point",
-    description: "Learn about our creative process, our expert team, and how we deliver digital excellence.",
+    title: "About OnNextWeb | Premium Digital Studio & Tech Partners",
+    description: "Learn about our development process, creative designers, and how we deliver high-performance digital solutions at OnNextWeb.",
   };
 }
 

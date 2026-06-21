@@ -64,8 +64,8 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading home page SEO:", error);
   }
   return {
-    title: "Silver Point | Premium Creative Studio",
-    description: "Crafting modern digital products, interactive websites, and premium brand designs.",
+    title: "ON Next Web | Premium Web Development & Mobile App Agency",
+    description: "Bespoke website design, custom software engineering, and mobile app development (iOS & Android) in Gurgaon & Delhi NCR. Build speed-optimized digital solutions today.",
   };
 }
 

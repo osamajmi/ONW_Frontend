@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (res.ok) {
       const blog = await res.json();
       return {
-        title: `${blog.title} | Silver Point Blog`,
+        title: `${blog.title} | OnNextWeb Blog`,
         description: blog.summary,
         openGraph: {
           title: blog.title,
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     console.error("Error loading dynamic blog post SEO:", error);
   }
   return {
-    title: "Blog Post | Silver Point",
+    title: "Blog Post | OnNextWeb",
     description: "Read the article details.",
   };
 }

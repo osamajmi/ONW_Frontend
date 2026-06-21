@@ -32,8 +32,8 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading services page SEO:", error);
   }
   return {
-    title: "Our Services | Silver Point",
-    description: "Explore our smart web development, mobile apps, UI/UX design, custom software engineering, and SEO solutions.",
+    title: "Web Development Company in Gurgaon | Custom Web Design Services",
+    description: "Looking for web developers in Gurgaon? OnNextWeb builds custom web applications, Next.js setups, and enterprise software designed to convert visitors into clients.",
   };
 }
 

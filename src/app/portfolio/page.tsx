@@ -34,8 +34,8 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading portfolio page SEO:", error);
   }
   return {
-    title: "Our Portfolio | Silver Point",
-    description: "Check out our premium creative case studies, custom web development, and digital applications.",
+    title: "Our Portfolio & Case Studies | OnNextWeb",
+    description: "Explore our premium web development projects, custom software engineering case studies, and mobile apps built to scale.",
   };
 }
 

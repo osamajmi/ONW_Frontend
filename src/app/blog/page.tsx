@@ -25,8 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading blog page SEO:", error);
   }
   return {
-    title: "Blog & Insights | Silver Point",
-    description: "Read our articles, design trends, development best practices, and agency news.",
+    title: "Blog & Tech Insights | OnNextWeb",
+    description: "Read industry-leading articles, design trends, development best practices, and agency news from OnNextWeb.",
   };
 }
 
