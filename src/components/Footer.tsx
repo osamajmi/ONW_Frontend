@@ -50,7 +50,6 @@ const navLinks = [
   { name: "About Us", href: "/about-us" },
   { name: "Our Services", href: "/services" },
   { name: "Case Studies", href: "/portfolio" },
-  { name: "Resource Library", href: "/resources" },
   { name: "Latest Blog", href: "/blog" },
   { name: "Contact Us", href: "/contact" }
 ];

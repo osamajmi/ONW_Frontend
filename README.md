@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ON Next Web - Premium Frontend
 
-## Getting Started
+This is the frontend component of **ON Next Web** built using [Next.js](https://nextjs.org).
+
+## 🚀 Getting Started
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Updated Navigation & Layout
 
-## Learn More
+We have removed the static **Resource Library** page from the frontend layout. The links have been removed from:
+- Header Navigation Menu ([Navbar.tsx](file:///e:/New%20folder/onw/src/components/Navbar.tsx))
+- Footer Directory Menu ([Footer.tsx](file:///e:/New%20folder/onw/src/components/Footer.tsx))
+- XML Sitemap Configurator ([sitemap.ts](file:///e:/New%20folder/onw/src/app/sitemap.ts))
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧠 AI Search, Recommendations & SEO Integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project has been updated with premium AI search and recommendation capabilities powered by the backend API:
 
-## Deploy on Vercel
+### 1. NLP AI Search
+- **Endpoint**: `GET /api/search?q=<query>`
+- **Features**: Performs Natural Language Processing (NLP) tokenization, filters stop-words, expands queries with domain synonyms (e.g. searching "web" matches "website", "nextjs", "react"), and ranks all services, projects, and blog items by similarity score.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Adaptive Recommendation System
+- **Endpoint**: `GET /api/recommendations?itemId=<id>&userId=<userId>`
+- **Algorithms**: Combines content-based filtering (tag overlap & textual cosine similarity) and collaborative filtering (user history intersection similarity) to suggest the most relevant content.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Online Feedback Loop (Reinforcement Learning)
+- **Endpoint**: `POST /api/feedback`
+- **Body**: `{ "userId": "user123", "currentId": "itemIdA", "nextId": "itemIdB", "action": "click"|"view"|"like"|"dislike" }`
+- **Mechanism**: Implements online Q-learning updates to build a transition probability matrix. Actions yield dynamic rewards (`like` = +1.5, `click` = +1.0, `dislike` = -0.5) that adjust recommendation rankings in real-time based on user behaviors.
+
+### 4. Search Crawler & AI Discovery Optimization
+- **Endpoint**: `GET /api/seo/ai-capabilities`
+- **Objective**: Returns a structured `ProfessionalService` JSON-LD schema. Perfect for Google search rankings and ingestion by AI web agents (ChatGPT, Claude, Perplexity) to recommend ON Next Web for digital agency services.
