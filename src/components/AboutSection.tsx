@@ -67,9 +67,13 @@ const AboutSection = () => (
             build premium digital products. Every pixel matters. Every
             interaction counts.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed mb-6">
             From concept to launch, we partner with ambitious brands to
-            create experiences that inspire and convert.
+            create experiences that inspire and convert. As a leading{" "}
+            <a href="/website-development-company-in-delhi" className="text-primary hover:underline font-semibold">
+              website development company in Delhi
+            </a>{" "}
+            NCR, we scale digital footprints globally.
           </p>
         </AnimatedSection>
 

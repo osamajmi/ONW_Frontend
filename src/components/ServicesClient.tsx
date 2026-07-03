@@ -62,7 +62,11 @@ export default function ServicesClient({ services }: { services: ServiceItem[] }
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-muted-foreground text-lg max-w-2xl mx-auto"
           >
-            We design, develop, and scale high-performance digital products engineered to solve business challenges.
+            We design, develop, and scale high-performance digital products engineered to solve business challenges. Explore our regional hubs to see how we deliver premium{" "}
+            <Link href="/website-development-company-in-delhi" className="text-primary hover:underline font-semibold">
+              website development services in Delhi
+            </Link>{" "}
+            NCR.
           </motion.p>
         </div>
 
