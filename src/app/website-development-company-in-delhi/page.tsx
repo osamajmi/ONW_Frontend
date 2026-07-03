@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import GrainOverlay from "@/components/GrainOverlay";
 import Link from "next/link";
+import LandingPageForm from "@/components/LandingPageForm";
 import { 
   Phone, 
   Mail, 
@@ -141,65 +142,13 @@ export default function DelhiLandingPage() {
             <div className="lg:col-span-5">
               <div className="bg-surface-elevated/40 border border-border/80 backdrop-blur-md rounded-2xl p-8 relative overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none" />
-                
-                <h3 className="font-display text-xl font-bold mb-2">Discuss Your Web Project</h3>
-                <p className="text-muted-foreground text-sm mb-6">
-                  Fill details and get a customized proposal with detailed pricing breakdown within 2 hours.
-                </p>
-                
-                <form action="https://api.onnextweb.in/api/contact" method="POST" className="space-y-4">
-                  <div>
-                    <label htmlFor="hero-name" className="block text-xs font-semibold text-muted-foreground mb-1.5 uppercase tracking-wider">Your Name</label>
-                    <input 
-                      type="text" 
-                      id="hero-name" 
-                      name="name" 
-                      placeholder="e.g. Rahul Sharma" 
-                      required
-                      className="w-full bg-background/50 border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="hero-email" className="block text-xs font-semibold text-muted-foreground mb-1.5 uppercase tracking-wider">Email Address</label>
-                    <input 
-                      type="email" 
-                      id="hero-email" 
-                      name="email" 
-                      placeholder="e.g. rahul@business.com" 
-                      required
-                      className="w-full bg-background/50 border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="hero-phone" className="block text-xs font-semibold text-muted-foreground mb-1.5 uppercase tracking-wider">Phone Number</label>
-                    <input 
-                      type="tel" 
-                      id="hero-phone" 
-                      name="phone" 
-                      placeholder="e.g. 9876543210" 
-                      required
-                      className="w-full bg-background/50 border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="hero-message" className="block text-xs font-semibold text-muted-foreground mb-1.5 uppercase tracking-wider">Requirements</label>
-                    <textarea 
-                      id="hero-message" 
-                      name="message" 
-                      rows={3} 
-                      placeholder="Kya business website banana hai ya ecommerce store?"
-                      required
-                      className="w-full bg-background/50 border border-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
-                    ></textarea>
-                  </div>
-                  <button 
-                    type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 rounded-lg hover:glow-accent transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
-                  >
-                    Submit Quote Request
-                    <ArrowRight size={16} />
-                  </button>
-                </form>
+                <LandingPageForm
+                  title="Discuss Your Web Project"
+                  subtitle="Fill details and get a customized proposal with detailed pricing breakdown within 2 hours."
+                  buttonText="Submit Quote Request"
+                  placeholderMessage="Kya business website banana hai ya ecommerce store?"
+                  sourcePage="Delhi Hero Form"
+                />
               </div>
             </div>
 
@@ -810,53 +759,12 @@ export default function DelhiLandingPage() {
 
             {/* Direct Form */}
             <div className="bg-surface-elevated/40 border border-border/80 p-8 rounded-2xl space-y-6">
-              <h4 className="font-display text-xl font-bold">Request a Free Proposal</h4>
-              <form action="https://api.onnextweb.in/api/contact" method="POST" className="space-y-4">
-                <div>
-                  <input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Aapka Naam" 
-                    required 
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-300"
-                  />
-                </div>
-                <div>
-                  <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Aapka Email" 
-                    required 
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-300"
-                  />
-                </div>
-                <div>
-                  <input 
-                    type="tel" 
-                    name="phone" 
-                    placeholder="Aapka Phone / WhatsApp Number" 
-                    required 
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-300"
-                  />
-                </div>
-                <div>
-                  <textarea 
-                    name="message" 
-                    rows={4} 
-                    placeholder="Apne project details likhein (e.g. ecommerce site, medical portfolio, budget, deadlines, custom designs)" 
-                    required 
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-300 resize-none"
-                  ></textarea>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3.5 rounded-xl hover:glow-accent transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
-                >
-                  Send Proposal Request
-                  <ArrowRight size={16} />
-                </button>
-              </form>
+              <LandingPageForm
+                title="Request a Free Proposal"
+                buttonText="Send Proposal Request"
+                placeholderMessage="Apne project details likhein (e.g. ecommerce site, medical portfolio, budget, deadlines, custom designs)"
+                sourcePage="Delhi Bottom Form"
+              />
             </div>
 
           </div>
