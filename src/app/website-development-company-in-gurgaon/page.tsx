@@ -462,7 +462,7 @@ export default function GurgaonLandingPage() {
             </p>
           </div>
 
-          <div className="overflow-x-auto border border-border rounded-xl">
+          <div className="overflow-x-auto border border-border rounded-xl" data-lenis-prevent>
             <table className="w-full text-left border-collapse text-sm">
               <thead>
                 <tr className="bg-surface-elevated border-b border-border text-foreground font-bold font-display">
