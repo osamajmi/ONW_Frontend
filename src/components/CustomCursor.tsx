@@ -60,11 +60,6 @@ const CustomCursor = () => {
   return (
     <>
       <div
-        ref={cursorRef}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary z-[9999] pointer-events-none mix-blend-difference"
-        style={{ willChange: "transform" }}
-      />
-      <div
         ref={followerRef}
         className="fixed top-0 left-0 rounded-full border border-primary/50 z-[9998] pointer-events-none mix-blend-difference transition-[width,height] duration-300"
         style={{
