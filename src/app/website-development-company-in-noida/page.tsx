@@ -91,7 +91,7 @@ export default function NoidaLandingPage() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                Slow design templates aur complex maintenance plans se ho pareshan? OnNextWeb Noida me high converting, SEO-ready, aur dynamic business layouts constructs karta hai starting at just <span className="text-foreground font-semibold">₹19,999</span>! Noida and Greater Noida IT zone ka complete web engineering partner.
+                Tired of slow templates and complex website maintenance plans? OnNextWeb designs high-converting, SEO-ready, and dynamic custom business layouts in Noida starting at just <span className="text-foreground font-semibold">₹19,999</span>! We are the ultimate web engineering partner across the Noida and Greater Noida IT zones.
               </p>
               
               {/* Trust Badges */}
@@ -102,7 +102,7 @@ export default function NoidaLandingPage() {
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">4.9/5</h4>
-                  <p className="text-xs text-muted-foreground">Google Review</p>
+                  <p className="text-xs text-muted-foreground">Google Reviews</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">100%</h4>
@@ -162,20 +162,20 @@ export default function NoidaLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Noida Digital Space</span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-              Kyun Aapke Noida Business Ko Chahiye Ek Top-Ranked Web Page?
+              Why Does Your Noida Business Need a Top-Ranked Website?
             </h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
           </div>
 
           <div className="prose prose-invert max-w-none text-muted-foreground space-y-6 text-base md:text-lg leading-relaxed">
             <p>
-              Noida aur Greater Noida (including Noida Expressway) India ke leading industrial aur IT zones me se ek hain. Yahan Sector 62, Sector 63, Sector 18, aur Film City me base hazaron corporate houses, export manufacturing units, real estate companies, aur educational groups operate hote hain. Lekin standard design optimization guidelines na hone se inme se bahut saare business direct local search traffic loose kar dete hain.
+              Noida and Greater Noida (including the Noida Expressway) stand among India&apos;s leading industrial and IT corridors. Thousands of corporate offices, export manufacturing units, real estate firms, and educational institutes operate across Sector 62, Sector 63, Sector 18, and Film City. However, without optimized web structures, many of these businesses lose massive amounts of direct local search traffic.
             </p>
             <p>
-              Log aksar search engines par dynamic query inputs use karte hain jaise &quot;<em>website development company in Noida near me</em>&quot; aur &quot;<em>best web development company in Noida</em>&quot;. Agar aapka brand local directories aur map indexes par visibility setup nahi kar pata, toh organic conversions seedhe competitors ko redirect ho jati hain. OnNextWeb ek expert <strong>website development company in Noida</strong> ke roop me customized layouts code karti hai jo high visual rendering speed targets pass karte hain.
+              Customers routinely search for services with high-intent localized search terms like &quot;<em>website development company in Noida near me</em>&quot; and &quot;<em>best web development company in Noida</em>&quot;. If your brand does not rank on local directories and search indexes, you lose organic conversions directly to competitors. As an expert <strong>website development company in Noida</strong>, OnNextWeb codes custom layouts that load instantly and perform flawlessly.
             </p>
             <p>
-              Noida Sector 62-63 base businesses ke liye dynamic payment processors mapping support aur multi-level CRM forms integrate kiye jate hain. Hum clunky templates completely ignore karte hain aur customized engineering standards layout setups build karte hain complete search values index optimization ke sath.
+              For businesses based in Noida Sector 62 and 63, we integrate secure payment processors and robust CRM capture forms. We avoid heavy pre-built templates, choosing instead to write clean code that ranks at the top of Google search results for local queries.
             </p>
           </div>
         </div>
@@ -187,10 +187,10 @@ export default function NoidaLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Performance Factors</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              OnNextWeb Hi Kyun? (Our Quality Benchmarks)
+              Why Choose OnNextWeb? (Our Quality Benchmarks)
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Noida me local agencies cheap price par basic WordPress page setup banati hain. Hum business conversion layout framework par code likhte hain.
+              While local agencies build basic template websites, we craft custom, conversion-driven web architectures designed to scale your business.
             </p>
           </div>
 
@@ -199,22 +199,22 @@ export default function NoidaLandingPage() {
               {
                 icon: <Zap className="text-primary" size={24} />,
                 title: "Next.js Static Generation",
-                desc: "Server-side rendering framework dynamic modules loading lag eliminate karte hain. 1.2s load speeds bounce rates reduce karti hain."
+                desc: "Modern frameworks eliminate loading lags. Our sub-1.5s load speeds significantly reduce bounce rates and improve user retention."
               },
               {
                 icon: <Globe className="text-primary" size={24} />,
                 title: "Local SEO & Tags Integration",
-                desc: "Primary aur LSI keyword patterns jaise 'web design company in Noida' ko layout hierarchy tags config modules check."
+                desc: "We align high-intent keywords like 'web design company in Noida' directly with HTML tags and JSON-LD schema layouts."
               },
               {
                 icon: <Laptop className="text-primary" size={24} />,
                 title: "Fluid Responsive Visuals",
-                desc: "Clean grids, customized gradient colors, visual typography aur elements. Mobiles, laptops aur tablet layouts adjustments."
+                desc: "Custom typography, vibrant gradients, and fluid grid systems optimized for mobile, desktop, and tablet displays."
               },
               {
                 icon: <ShieldCheck className="text-primary" size={24} />,
                 title: "100% Repository Access",
-                desc: "Git source codes and login setup configurations handover details. Hum client platforms logic details locked block structures lock systems build nahi."
+                desc: "Complete Git source code and login credentials handover. We never lock you into proprietary platforms or monthly retainers."
               }
             ].map((usp, idx) => (
               <div key={idx} className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-6 rounded-2xl transition-all duration-300 group">
@@ -248,7 +248,7 @@ export default function NoidaLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Export & Corporates</span>
               <h3 className="font-display text-2xl font-bold">Business Portfolios & Catalogs</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Noida manufacturing units aur trading companies ke liye interactive product catalog portfolios. Hum detailed gallery layouts, dynamic product search models, query submission logs, call mappings system aur sleek animations configure karte hain complete branding aesthetics layout standard rules.
+                Interactive product catalog portfolios engineered for Noida&apos;s manufacturing units and trading companies. We build detailed galleries, search filters, automated lead logs, and smooth animations that reflect your corporate brand.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Dynamic product sorting arrays</li>
@@ -262,7 +262,7 @@ export default function NoidaLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Online Selling</span>
               <h3 className="font-display text-2xl font-bold">Ecommerce Website Development Noida</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Apna self hosted store platform scale karein. OnNextWeb scale ready <strong className="text-foreground font-semibold">ecommerce website development Noida</strong> systems setups develop karti hai jo automated invoices configuration, multiple payment gateway support details options check tools integrate.
+                Scale your independent digital store. We build robust <strong className="text-foreground font-semibold">ecommerce website development Noida</strong> setups featuring secure shopping carts, automated invoices, payment gateway syncs, and custom admin inventories.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Fast loading cart checkouts pipelines</li>
@@ -276,7 +276,7 @@ export default function NoidaLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Tailored Coding</span>
               <h3 className="font-display text-2xl font-bold">Custom Web Application Setups</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Unique algorithms systems jisme specific workflows models required hain. Real estate properties systems list filters, institutional student data routers. Hum MERN or Next.js configurations write karte hain standard clean variables support frameworks rules patterns logic details.
+                Bespoke dashboards and web tools built with React, Node.js, or Next.js. Perfect for real estate listing engines, interactive portal platforms, and complex corporate CRM syncs.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Secure authentication modules JWT</li>
@@ -290,7 +290,7 @@ export default function NoidaLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">CMS Updates</span>
               <h3 className="font-display text-2xl font-bold">WordPress & Headless CMS Setups</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Dynamic portal setups, dynamic property listings ya normal updates panels. Hum custom coding components config setup inject karte hain taaki template load values speed slow na ho dynamic page index options configurations support.
+                Flexible content management systems tailored to your needs. We optimize WordPress and headless CMS architectures (like Sanity or Strapi) to maintain fast page speed metrics while allowing easy content updates.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Elementor / Custom builders configuration</li>
@@ -309,7 +309,7 @@ export default function NoidaLandingPage() {
       {/* MIDDLE PAGE CALLOUT */}
       <section className="py-16 bg-gradient-to-r from-primary/10 via-purple-600/5 to-primary/5 border-t border-b border-border/40 relative">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h3 className="font-display text-2xl sm:text-3xl font-bold">Apne Noida Business Ke Liye Website Rank Aur Leads badhana Chahte Hain?</h3>
+          <h3 className="font-display text-2xl sm:text-3xl font-bold">Want to Boost Your Website Rankings and Leads in Noida?</h3>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             Directly connect with our Noida developer team. Get a customized website blueprint and SEO recommendation sheet without any upfront charges.
           </p>
@@ -337,10 +337,10 @@ export default function NoidaLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Workflow Roadmap</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Hamara Website Development Process Noida
+              Our Website Development Process in Noida
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Hum requirements analysis ko real live systems interfaces me break karte hain complete timeline track benchmarks ke sath.
+              We convert your business requirements into fully functional custom interfaces with strict timeline milestones.
             </p>
           </div>
 
@@ -349,27 +349,27 @@ export default function NoidaLandingPage() {
               {
                 num: "01",
                 phase: "Consultation & Goals Mapping",
-                desc: "Noida Sector 62/63 space me target buyers intent explore kiya jata hai. Scope documentation finalise details check parameters."
+                desc: "We analyze competitor dynamics and search trends in the Noida Sector 62/63 market to map project scope and features."
               },
               {
                 num: "02",
                 phase: "UI Figma Framework",
-                desc: "Fluid prototypes design visual assets select color palette options configuration details elements layouts tools sync setup."
+                desc: "We craft modern Figma prototypes, curate color palettes, and organize user flows tailored to your brand identity."
               },
               {
                 num: "03",
                 phase: "Custom Coding Pipeline",
-                desc: "Hum project design metrics systems copy elements code custom parameters transform framework check variables setup rules."
+                desc: "We translate approved designs into semantic code utilizing Next.js/React frameworks with clean styling."
               },
               {
                 num: "04",
                 phase: "SEO Target Injection Noida",
-                desc: "Keywords configurations clusters tags maps setup keyword 'website development company in Noida' structural patterns rules inject."
+                desc: "We integrate targeted local schemas and keywords like 'website development company in Noida' into page hierarchies."
               },
               {
                 num: "05",
                 phase: "Production Launch Support",
-                desc: "Domain sync configurations server setup validation checks optimization analytics monitoring and post launch support structures."
+                desc: "We configure domain mappings, launch analytics tracking, and establish continuous maintenance systems."
               }
             ].map((step, idx) => (
               <div key={idx} className="bg-surface-elevated/20 border border-border/60 p-6 rounded-xl relative space-y-4 hover:border-primary/20 transition-all duration-300">
@@ -381,8 +381,6 @@ export default function NoidaLandingPage() {
           </div>
         </div>
       </section>
-
-
 
       {/* CASE STUDIES */}
       <section className="py-20 relative">
@@ -404,7 +402,7 @@ export default function NoidaLandingPage() {
                 <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">300% Lead Growth</span>
                 <h3 className="font-display text-xl font-bold">Noida Manufacturing Export Unit (Sector 63)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Export manufacturer client jo outdated clunky template website use kar rahe the jisme global query forms properly redirect nahi ho rahe the. OnNextWeb custom code layout setups design kiya Next.js variables framework patterns control dashboards options key parameters checks. Result show 250% increment in organic qualified conversions from overseas clients.
+                  An export client in Noida Sector 63 was using an outdated, slow template site that failed to convert global visitors. OnNextWeb built a custom React frontend linked to automated query routing. The result was a 250% increase in qualified overseas leads within 3 months.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
@@ -429,7 +427,7 @@ export default function NoidaLandingPage() {
                 <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">Top 5 Rankings</span>
                 <h3 className="font-display text-xl font-bold">Regional E-Commerce Store (Sector 18, Noida)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Noida apparel retail store client ko custom catalog framework sync setups required thin. Humne React modules deployment configure kiya static schema integration logic endpoints target keywords setup details indicators checks. Page ranks high target queries &quot;best web development company in Noida&quot; systems me Top 5 indexes range values index targets.
+                  A boutique retail brand in Sector 18 needed a dynamic, lightning-fast product catalog. We engineered a static-site generated store using Next.js, fully optimized with structured local schemas. The site now ranks in Google&apos;s top 5 search results for Noida web development queries.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
@@ -457,7 +455,7 @@ export default function NoidaLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Competitor Comparison</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Hum Baki Noida Web Agencies Se Alag Kyun Hain?
+              How Do We Compare to Other Noida Web Agencies?
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
               Compare key quality metrics directly before deciding your digital agency partner.
@@ -547,24 +545,24 @@ export default function NoidaLandingPage() {
           <div className="space-y-4">
             {[
               {
-                q: "1. Noida me website development cost kitna rehta hai?",
-                a: "Hamari dynamic local packages ₹19,999 se start hoti hain. Custom React/Next.js frameworks, complex API configurations, enterprise portals aur custom CMS setups ₹39,999 starting brackets me design hote hain depend on technical scopes."
+                q: "1. How much does a website cost in Noida?",
+                a: "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex API integrations, and corporate portals are quoted dynamically based on the project scope."
               },
               {
-                q: "2. Noida web design company ke roop me aap standard SEO optimization modules kaise set karte hain?",
-                a: "Hum standard coding structures follow karte hain. Next/Image optimization hooks render speed reduce karte hain. Metatags mapping system, SEO configurations templates and local terms like 'best web development company in Noida' structural layout me integrate kiye jate hain."
+                q: "2. How do you implement SEO for Noida businesses?",
+                a: "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Noida' naturally to maximize search engine discovery."
               },
               {
-                q: "3. Delivery time estimates kya rehte hain?",
-                a: "Custom corporate web pages hum 7-10 working days me completely scale-ready delivered kar dete hain. SaaS dashboards development aur dynamic platforms require 15-20 days validation checks ke sath."
+                q: "3. What is the typical project delivery timeline?",
+                a: "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
               },
               {
-                q: "4. Kya hum design updates backend panel se control kar sakte hain?",
-                a: "Yes. Hum dynamic admin layouts (like WordPress custom setup, sanity CMS or custom Next.js admin dashboards) design karte hain jahan content templates modify, blog articles add or portfolio list manage easily parameters adjust system framework control panels."
+                q: "4. Can I manage website updates from a dashboard?",
+                a: "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
               },
               {
-                q: "5. Setup support packages me updates parameters options kya rehte hain?",
-                a: "Hum initial stage validation launch details me 60-days support credentials absolute values dynamic edits options maps checks framework system integrations rules verify."
+                q: "5. Do you provide post-launch technical support?",
+                a: "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle any minor adjustments."
               }
             ].map((faq, idx) => (
               <details 
@@ -597,8 +595,8 @@ export default function NoidaLandingPage() {
             <div className="space-y-6">
               <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Locations Contact</span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Chaliye Aapke <br />
-                <span className="text-gradient">Next Project</span> Par Kaam Shuru Karein!
+                Let&apos;s Build Your <br />
+                <span className="text-gradient">Next Project</span> Together!
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                 Connect with our local Noida developer team. Direct coordination is active across Noida & Greater Noida. Get a high-converting layout roadmap.
@@ -655,7 +653,7 @@ export default function NoidaLandingPage() {
                   </span>
                   Limited Slot Offers Noida:
                 </p>
-                <p>Register query and get a **Free Technical On-Page SEO Consultation worth ₹9,999** for absolute high conversions performance. Weeks limits: 2 spots left!</p>
+                <p>Submit your inquiry today and receive a **Free Technical On-Page SEO Consultation (worth ₹9,999)** to maximize organic conversions. Only 2 slots left this week!</p>
               </div>
 
               {/* Action Links */}
@@ -693,42 +691,42 @@ export default function NoidaLandingPage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Noida me website development cost kitna rehta hai?",
+                "name": "How much does a website cost in Noida?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hamari dynamic local packages ₹19,999 se start hoti hain. Custom React/Next.js frameworks, complex API configurations, enterprise portals aur custom CMS setups ₹39,999 starting brackets me design hote hain depend on technical scopes."
+                  "text": "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex API integrations, and corporate portals are quoted dynamically based on the project scope."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Noida web design company ke roop me aap standard SEO optimization modules kaise set karte hain?",
+                "name": "How do you implement SEO for Noida businesses?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hum standard coding structures follow karte hain. Next/Image optimization hooks render speed reduce karte hain. Metatags mapping system, SEO configurations templates and local terms like 'best web development company in Noida' structural layout me integrate kiye jate hain."
+                  "text": "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Noida' naturally to maximize search engine discovery."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Delivery time estimates kya rehte hain?",
+                "name": "What is the typical project delivery timeline?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Custom corporate web pages hum 7-10 working days me completely scale-ready delivered kar dete hain. SaaS dashboards development aur dynamic platforms require 15-20 days validation checks ke sath."
+                  "text": "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Kya hum design updates backend panel se control kar sakte hain?",
+                "name": "Can I manage website updates from a dashboard?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Hum dynamic admin layouts design karte hain jahan content templates modify, blog articles add or portfolio list manage easily."
+                  "text": "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Setup support packages me updates parameters options kya rehte hain?",
+                "name": "Do you provide post-launch technical support?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hum initial stage validation launch details me 60-days support credentials absolute values dynamic edits options maps checks framework system integrations rules verify."
+                  "text": "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle any minor adjustments."
                 }
               }
             ]

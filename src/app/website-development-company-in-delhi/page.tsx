@@ -91,7 +91,7 @@ export default function DelhiLandingPage() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                Slow templates aur low leads se ho pareshan? OnNextWeb hai aapka professional tech partner. Hum design karte hain super-fast, responsive, aur Google rankings-ready websites starting at just <span className="text-foreground font-semibold">₹19,999</span>! Delhi NCR ke businesses ko digitalize karne ka hamara success rate 98% raha hai.
+                Tired of slow templates and low lead conversion? OnNextWeb is your professional technology partner. We design super-fast, responsive, and Google-rankings-ready websites starting at just <span className="text-foreground font-semibold">₹19,999</span>! We maintain a 98% success rate in digitalizing brands across Delhi NCR.
               </p>
               
               {/* Trust Badges */}
@@ -102,7 +102,7 @@ export default function DelhiLandingPage() {
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">4.9/5</h4>
-                  <p className="text-xs text-muted-foreground">Google Review</p>
+                  <p className="text-xs text-muted-foreground">Google Reviews</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">100%</h4>
@@ -162,20 +162,20 @@ export default function DelhiLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">About Delhi Web Ecosystem</span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-              Kyun Aapke Business Ko Chahiye Ek Top-Class Website?
+              Why Does Your Business Need a Top-Class Website?
             </h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
           </div>
 
           <div className="prose prose-invert max-w-none text-muted-foreground space-y-6 text-base md:text-lg leading-relaxed">
             <p>
-              Delhi NCR (including Gurgaon, Noida, and Faridabad) India ka sabse tezi se grow karne wala business hub ban chuka hai. Yahan daily hazaron naye startups aur local services register hoti hain. Lekin kya aap jante hain ki <strong>85% businesses digital presence na hone ki wajah se start hone ke 2 saal ke andar close ho jate hain?</strong> Agar aap Google par search karein to aapko hazaron competitors milenge jo local customers ko drag kar rahe hain. Aise competitive market me sirf ek random, slow WordPress website rakhna kaafi nahi hai.
+              Delhi NCR (including Gurgaon, Noida, and Faridabad) stands as India&apos;s fastest-growing business hub, with thousands of startups registering daily. Yet, research shows that 85% of businesses without a robust digital presence shut down within their first two years. If you search Google, you will find hundreds of competitors capturing local customers. In such a competitive market, a slow, generic template website is simply not enough.
             </p>
             <p>
-              Log aksar Google par search karte hain "<em>website development company in Delhi near me</em>" ya "<em>best web development company in Delhi</em>". Agar aapka business us list me top rankings par nahi dikh raha hai, toh aap directly apne potential customers competitors ko gift kar rahe hain. OnNextWeb ek expert <strong>website development company in Delhi</strong> ke roop me aapke business ko aisi premium layout deta hai jo na sirf fast load hoti hai balki visitors ko direct client me convert karti hai.
+              Customers frequently search Google with high-intent queries like &quot;<em>website development company in Delhi near me</em>&quot; and &quot;<em>best web development company in Delhi</em>&quot;. If your brand does not show up on the first page, you are handing customers directly to your competitors. OnNextWeb, as an expert <strong>website development company in Delhi</strong>, delivers premium custom layouts that load in under a second and convert casual visitors into paying clients.
             </p>
             <p>
-              Hum visual design system par focus karte hain jo premium feel de. Hum outdated layout templates use nahi karte, balki React, Next.js, tailwind aur custom clean coding use karke solid web application framework taiyar karte hain. Aapka business Delhi ke Okhla, Connaught Place, Saket ya Dwarka me ho—hamari services pure NCR me customized growth lane ke liye optimized hain.
+              We build custom visual interfaces that project a premium brand image. Bypassing slow page templates, we code layouts utilizing React, Next.js, and clean CSS code to establish a highly reliable web framework. Whether your business is based in Okhla, Connaught Place, Saket, or Dwarka, our services are optimized to drive regional conversions.
             </p>
           </div>
         </div>
@@ -187,10 +187,10 @@ export default function DelhiLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Our Unique Selling Proposition</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              OnNextWeb Hi Kyun? (Our Trust Factors)
+              Why Choose OnNextWeb? (Our Trust Factors)
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Delhi me bahut saari agencies hain jo normal web templates sell karti hain. Par hum client success ko technical parameters se evaluate karte hain.
+              While many agencies in Delhi sell generic templates, we measure client success through precise technical parameters and search performance.
             </p>
           </div>
 
@@ -199,22 +199,22 @@ export default function DelhiLandingPage() {
               {
                 icon: <Zap className="text-primary" size={24} />,
                 title: "100/100 PageSpeed Rating",
-                desc: "Hamari designs modern frameworks par build hoti hain. Site open hone me 1 second se kam ka time lagta hai, jisse bounce rate decrease hota hai."
+                desc: "Our designs are built on modern frontend frameworks. Sites load in under a second, dropping bounce rates and maximizing retention."
               },
               {
                 icon: <Globe className="text-primary" size={24} />,
                 title: "In-Built SEO Architecture",
-                desc: "Primary aur LSI keywords jaise 'best web development company in Delhi' ko custom tag hierarchy me inject karte hain, jisse Google crawler aapko priority deta hai."
+                desc: "We integrate high-intent keywords like 'best web development company in Delhi' naturally into semantic HTML tags to ensure search engines rank you quickly."
               },
               {
                 icon: <Laptop className="text-primary" size={24} />,
                 title: "Vibrant UI/UX Layouts",
-                desc: "Glassmorphism, dynamic elements, aur interactive visual modules se build design. Client ko wowed aur trust feel hota hai."
+                desc: "Modern glassmorphic interfaces, rich micro-interactions, and beautiful transitions designed to capture user trust instantly."
               },
               {
                 icon: <ShieldCheck className="text-primary" size={24} />,
                 title: "Zero Hidden Maintenance Fee",
-                desc: "Hum absolute transparency me build karte hain. Hosting credentials aur code source file aapko return karte hain. Koi monthly code lock setup nahi."
+                desc: "100% code ownership and direct hosting access handed over upon launch. We do not lock you into hidden monthly maintenance retainers."
               }
             ].map((usp, idx) => (
               <div key={idx} className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-6 rounded-2xl transition-all duration-300 group">
@@ -235,7 +235,7 @@ export default function DelhiLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Our Expertise</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Hamari Website Development Services
+              Website Development Services in Delhi
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
               Small business se lekar enterprise ecommerce portals tak—hum har model ke liye custom solutions create karte hain.
@@ -248,7 +248,7 @@ export default function DelhiLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Lead Generation</span>
               <h3 className="font-display text-2xl font-bold">Corporate & Business Websites</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Delhi NCR me consultancies, clinics, builder firms, aur service providers ke liye ideal landing pages aur websites. Hum local search filters aur optimized lead forms embed karte hain jo customers direct call aur WhatsApp enquiry generate karte hain. Core Web Vitals pass rating ke saath rankings guarantee hoti hai.
+                Ideal lead generation landing pages and portals for consultancies, clinics, real estate builders, and service firms in Delhi NCR. We integrate optimized contact forms, call-to-actions, and WhatsApp quick-chats to drive high conversion rates.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Integrated CRM Lead Router</li>
@@ -262,7 +262,7 @@ export default function DelhiLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">E-Commerce Boost</span>
               <h3 className="font-display text-2xl font-bold">Ecommerce Website Development Delhi</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Apna khud ka online brand store open karein. Hum scale-ready <strong className="text-foreground font-semibold">ecommerce website development Delhi</strong> services offer karte hain. Zero loading lag checkout pipeline, customized payment gateway (UPI, Cards, Netbanking), automated inventory systems, and beautiful product collections to drive sales.
+                Establish your custom online storefront. We offer scale-ready <strong className="text-foreground font-semibold">ecommerce website development Delhi</strong> services featuring zero-lag checkout funnels, secure payment gateways (Razorpay, Paytm), and automated inventory management.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> High-speed catalog search engine</li>
@@ -276,7 +276,7 @@ export default function DelhiLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Pure Customized Code</span>
               <h3 className="font-display text-2xl font-bold">Custom Web App Development</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Standard WordPress templates se alag custom logic require karne wale platforms—jaise real estate portal matching algorithms, specialized student databases, ya proprietary SaaS dashboards. Hum clean MERN (MongoDB, Express, React, Node) ya Next.js setups code karte hain complete client ownership ke sath.
+                Bespoke database solutions and web applications that require complex business logic, such as property directory systems, customized customer dashboards, and custom REST/GraphQL APIs built using Next.js and MERN.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> REST & GraphQL API structure</li>
@@ -290,7 +290,7 @@ export default function DelhiLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">CMS Simplicity</span>
               <h3 className="font-display text-2xl font-bold">WordPress & Headless CMS Services</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Agar aapko aisi site chahiye jiska content aap daily khud dynamic tarike se update kar sakein—jaise news portal, tech blog, ya dynamic product lists. WordPress development code ko hum visually optimization ke sath customize karte hain taaki speed me koi delay na ho. Custom element designs aur drag-drop builders support configuration setup.
+                WordPress and headless CMS setups tailored to editorial blogs, service directories, and portfolios. We optimize theme files to prevent bloated script load, allowing you to manage content easily without sacrificing page speed.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Elementor / Divi customized layouts</li>
@@ -309,9 +309,9 @@ export default function DelhiLandingPage() {
       {/* MIDDLE PAGE CONTACT & TRUST SECTION */}
       <section className="py-16 bg-gradient-to-r from-primary/10 via-purple-600/5 to-primary/5 border-t border-b border-border/40 relative">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h3 className="font-display text-2xl sm:text-3xl font-bold">Apne Business Ke Liye Website Rank Aur Leads badhana Chahte Hain?</h3>
+          <h3 className="font-display text-2xl sm:text-3xl font-bold">Want to Boost Your Website Rankings and Leads in Delhi?</h3>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            Abhi call karein ya WhatsApp par message drop karein. Hamari expert tech team aapke business domain ka absolute audit karke free recommendations blueprint ready karegi.
+            Reach out via call or WhatsApp. Our developer team will analyze your business domain and prepare a free technical SEO and design blueprint for your brand.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 pt-4 text-sm font-semibold">
@@ -326,7 +326,7 @@ export default function DelhiLandingPage() {
           </div>
           
           <p className="text-xs text-muted-foreground pt-2">
-            Average response time on WhatsApp: <strong>5 minutes</strong>. Let's start!
+            Average response time on WhatsApp: <strong>5 minutes</strong>. Let&apos;s start!
           </p>
         </div>
       </section>
@@ -337,10 +337,10 @@ export default function DelhiLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Workflow Roadmap</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Hamara Website Development Process
+              Our Website Development Process
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Hum raw requirements ko high converting, premium systems me step-by-step convert karte hain.
+              We convert your initial project vision into a highly optimized, high-converting digital platform.
             </p>
           </div>
 
@@ -349,27 +349,27 @@ export default function DelhiLandingPage() {
               {
                 num: "01",
                 phase: "Planning & Strategy",
-                desc: "Hum aapke industry competitors aur buyer intent ko deep evaluate karte hain. Target search metrics aur layout framework finalize hota hai."
+                desc: "We analyze competitor dynamics and user search intent to map out features, keywords, and semantic structures."
               },
               {
                 num: "02",
                 phase: "Premium Figma UI/UX",
-                desc: "Hum user interface (UI) mockups create karte hain jo modern web templates se different ho. Visual design, elements aur smooth grid animations finalize hote hain."
+                desc: "We craft bespoke UI/UX mockups in Figma, ensuring a modern look with smooth layouts and clean brand patterns."
               },
               {
                 num: "03",
                 phase: "High-Speed Coding",
-                desc: "Hum project design code ko custom dynamic parameters me translate karte hain. HTML5, React structure, Tailwind CSS classes, clean configurations."
+                desc: "We write clean, semantic code utilizing React, Next.js, and lightweight CSS components tailored for performance."
               },
               {
                 num: "04",
                 phase: "SEO Tag & FAQ Injection",
-                desc: "Aapke keyword clusters jaise 'affordable website development Delhi' ko header layers me naturally write karte hain taaki SEO output complete organic rank de."
+                desc: "We incorporate local schema maps and search queries like 'affordable website development Delhi' directly into page layouts."
               },
               {
                 num: "05",
                 phase: "Launch & Support",
-                desc: "Site domain setup, high speed hosting server mapping aur launch. Hamari support process launch ke baad 60-days free updates control offer karti hai."
+                desc: "We configure server mappings, launch analytics trackers, and offer 60 days of complimentary technical support post-deployment."
               }
             ].map((step, idx) => (
               <div key={idx} className="bg-surface-elevated/20 border border-border/60 p-6 rounded-xl relative space-y-4 hover:border-primary/20 transition-all duration-300">
@@ -381,8 +381,6 @@ export default function DelhiLandingPage() {
           </div>
         </div>
       </section>
-
-
 
       {/* CASE STUDIES / RESULTS */}
       <section className="py-20 relative">
@@ -404,7 +402,7 @@ export default function DelhiLandingPage() {
                 <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">3.5x Conversions</span>
                 <h3 className="font-display text-xl font-bold">Delhi Tour & Travel Startup (Dynamic Platform)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Ek travel operator client jo traditional slow WordPress theme use kar rahe the unke paas traffic tha par lead submit rate 1% se kam tha. Humne unki site ko Next.js dynamic routing par code kiya, fast queries lagayi aur 'affordable website development Delhi' tags setup kiye. Google speed index improve hone se bounce rate 70% se drop hokar 25% reh gaya, aur digital inquiries 250% increase hui.
+                  A Delhi-based tour operator was driving traffic to a slow template site, achieving a conversion rate under 1%. We rebuilt the site using Next.js static rendering and local keyword optimization. Bounce rates dropped from 70% to 25%, and qualified leads jumped by 250%.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
@@ -429,7 +427,7 @@ export default function DelhiLandingPage() {
                 <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">Top 5 Rankings</span>
                 <h3 className="font-display text-xl font-bold">Premium Fashion E-Commerce Brand (Okhla, Delhi)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Okhla-based high-end clothing brand ko custom retail web page setup chahiye tha jahan speed aur micro-animations premium experience offer karein. Humne glassmorphic custom Tailwind CSS layout deploy kiya. High density images ko Next/Image dynamic optimization ke sath store kiya. Launch hone ke 3 months ke andar keyword tracking 'ecommerce website development Delhi' local filters me client brand rank ho raha hai.
+                  An Okhla-based premium fashion brand required a high-performance custom store with rich micro-animations. We implemented a Next.js e-commerce architecture with visual image optimization. Within 3 months of launch, the brand ranked in Google&apos;s top 5 search queries for local apparel e-commerce.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
@@ -457,7 +455,7 @@ export default function DelhiLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Head To Head Comparison</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Hum Baki Delhi Web Agencies Se Alag Kyun Hain?
+              How Do We Compare to Other Delhi Web Agencies?
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
               Saste packages ke naam par copy-paste designs provide karne wali agencies se savdhan rahein.
@@ -553,24 +551,24 @@ export default function DelhiLandingPage() {
           <div className="space-y-4">
             {[
               {
-                q: "1. Website development in Delhi cost kitna hota hai?",
-                a: "OnNextWeb par website development ka cost hum features aur scale ke basis par decide karte hain. Hamari dynamic startup plans ₹19,999 se start hoti hain jo local businesses ke liye best hain. Custom web app setups aur enterprise stores ka standard structure ₹39,999 se starting hota hai. Hamari transparent quotes me koi hidden charges nahi hote."
+                q: "1. How much does a website cost in Delhi?",
+                a: "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex e-commerce portals, and enterprise CMS setups are quoted based on the project scope."
               },
               {
-                q: "2. Kya aap website design company in Delhi ke roop me SEO optimization karke dete hain?",
-                a: "Yes, absolutely! Hamare code systems modular framework me deploy kiye jate hain. Hum development stage me hi search engine optimization algorithms integrate karte hain. Isme auto-meta tags config, dynamic header hierarchy, target keyword 'best web development company in Delhi' and local schema implementation already included hota hai, jisse launch hote hi fast Google index range milti hai."
+                q: "2. How do you implement SEO for Delhi businesses?",
+                a: "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Delhi' naturally to maximize search engine discovery."
               },
               {
-                q: "3. Website ready hone me kitna time lagta hai?",
-                a: "Standard landing pages aur business portfolios hum 7-10 business days ke andar delivered kar dete hain. Medium-sized custom apps aur multi-page configurations me 15-20 business days lagte hain. Custom requirements ke basis par complete code scheduling map share kiya jata hai."
+                q: "3. What is the typical project delivery timeline?",
+                a: "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
               },
               {
-                q: "4. Kya aap ecommerce website development Delhi ke liye payment gateways integration provide karte hain?",
-                a: "Yes! Ecommerce store development systems me hum standard secure payment layers integrates karte hain. Isme Google Pay, PhonePe, Paytm, Credit/Debit cards, UPI configurations Razorpay aur Paytm APIs ke through secure format me build kiye jate hain."
+                q: "4. Can I manage website updates from a dashboard?",
+                a: "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
               },
               {
-                q: "5. Website launch ke baad updates aur error fix kon karega?",
-                a: "Launch ke baad hum custom packages me 60-days se lekar 6 months tak ki free support guarantee offer karte hain. Code management system, basic maintenance tasks, aur server configurations setup me hum directly guides aur updates provide karte hain."
+                q: "5. Do you provide post-launch technical support?",
+                a: "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle any minor adjustments."
               }
             ].map((faq, idx) => (
               <details 
@@ -601,13 +599,13 @@ export default function DelhiLandingPage() {
             
             {/* Info details */}
             <div className="space-y-6">
-              <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Let's Connect</span>
+              <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Let&apos;s Connect</span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Chaliye Aapke <br />
-                <span className="text-gradient">Next Project</span> Par Kaam Shuru Karein!
+                Let&apos;s Build Your <br />
+                <span className="text-gradient">Next Project</span> Together!
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                Delhi, Gurgaon, aur Noida me custom growth drives build karne ke liye hamara office hours active hai. Drop a line, hum call back karenge with complete design framework options.
+                Our office coordinates projects across Delhi, Gurgaon, and Noida. Drop us a line, and our tech team will reach out with customized layout blueprints.
               </p>
 
               {/* Direct Details */}
@@ -661,7 +659,7 @@ export default function DelhiLandingPage() {
                   </span>
                   Limited Slot Offer:
                 </p>
-                <p>Abhi contract sign karne par <strong>Free SEO Audit + Core Performance tuning worth ₹9,999</strong> bilkul free included milti hai. Weekly limits left: 2 Slots!</p>
+                <p>Submit your inquiry today and receive a **Free Site Speed Optimization Consultation (worth ₹9,999)** to maximize page conversions. Only 2 slots left this week!</p>
               </div>
 
               {/* CTAs */}
@@ -680,7 +678,7 @@ export default function DelhiLandingPage() {
               <LandingPageForm
                 title="Request a Free Proposal"
                 buttonText="Send Proposal Request"
-                placeholderMessage="Apne project details likhein (e.g. ecommerce site, medical portfolio, budget, deadlines, custom designs)"
+                placeholderMessage="Describe your project details (e.g. static pages, custom database scaling, or dynamic CMS systems)"
                 sourcePage="Delhi Bottom Form"
               />
             </div>
@@ -699,42 +697,42 @@ export default function DelhiLandingPage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Website development in Delhi cost kitna hota hai?",
+                "name": "How much does a website cost in Delhi?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "OnNextWeb par website development ka cost hum features aur scale ke basis par decide karte hain. Hamari dynamic startup plans ₹19,999 se start hoti hain jo local businesses ke liye best hain. Custom web app setups aur enterprise stores ka standard structure ₹39,999 se starting hota hai. Hamari transparent quotes me koi hidden charges nahi hote."
+                  "text": "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex e-commerce portals, and enterprise CMS setups are quoted based on the project scope."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Kya aap website design company in Delhi ke roop me SEO optimization karke dete hain?",
+                "name": "How do you implement SEO for Delhi businesses?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, absolutely! Hamare code systems modular framework me deploy kiye jate hain. Hum development stage me hi search engine optimization algorithms integrate karte hain. Isme auto-meta tags config, dynamic header hierarchy, target keyword 'best web development company in Delhi' and local schema implementation already included hota, jisse launch hote hi fast Google index range milti hai."
+                  "text": "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Delhi' naturally to maximize search engine discovery."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Website ready hone me kitna time lagta?",
+                "name": "What is the typical project delivery timeline?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Standard landing pages aur business portfolios hum 7-10 business days ke andar delivered kar dete hain. Medium-sized custom apps aur multi-page configurations me 15-20 business days lagte hain."
+                  "text": "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Kya aap ecommerce website development Delhi ke liye payment gateways integration provide karte hain?",
+                "name": "Can I manage website updates from a dashboard?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes! Ecommerce store development systems me hum standard secure payment layers integrates karte hain. Isme Google Pay, PhonePe, Paytm, Credit/Debit cards, UPI configurations Razorpay aur Paytm APIs ke through secure format me build kiye jate hain."
+                  "text": "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Website launch ke baad updates aur error fix kon karega?",
+                "name": "Do you provide post-launch technical support?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Launch ke baad hum custom packages me 60-days se lekar 6 months tak ki free support guarantee offer karte hain. Code management system, basic maintenance tasks, aur server configurations setup me hum directly guides aur updates provide karte hain."
+                  "text": "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle any minor adjustments."
                 }
               }
             ]

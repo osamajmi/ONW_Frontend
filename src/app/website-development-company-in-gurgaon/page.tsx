@@ -91,7 +91,7 @@ export default function GurgaonLandingPage() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                Gurgaon ke fast-paced startup aur corporate environment me speed hi sab kuch hai. Slow templates aur low conversions se bahar niklein. Hum design karte hain super-fast, scale-ready websites starting at just <span className="text-foreground font-semibold">₹19,999</span>! Cyber City aur Golf Course Road ke businesses ka trusted choice.
+                In Gurgaon&apos;s fast-paced startup and corporate environment, speed is everything. Break free from slow templates and low conversion rates. We design super-fast, scale-ready websites starting at just <span className="text-foreground font-semibold">₹19,999</span>! The trusted choice for businesses in Cyber City and Golf Course Road.
               </p>
               
               {/* Trust Badges */}
@@ -162,20 +162,20 @@ export default function GurgaonLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Gurgaon Web Ecosystem</span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-              Kyun Aapke Brand Ko Chahiye Ek Dynamic High-Performance Website?
+              Why Does Your Brand Need a Dynamic, High-Performance Website?
             </h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
           </div>
 
           <div className="prose prose-invert max-w-none text-muted-foreground space-y-6 text-base md:text-lg leading-relaxed">
             <p>
-              Gurgaon (Gurugram) India ka digital center point ban chuka hai. Cyber City, DLF Phase 1-5, aur Golf Course Road par base multi-national businesses, real estate giants, aur venture-funded tech startups digital space me top visual footprint chahte hain. Is global landscape me sustain karne ke liye normal drag-and-drop templates se code kiye website architectures work nahi karte. Slow design flow visitors ko direct exit routes dete hain, jisse bounce rates up hote hain.
+              Gurgaon (Gurugram) has evolved into India&apos;s preeminent digital center point. Multinational enterprises, real estate giants, and venture-funded tech startups across Cyber City, DLF Phases 1-5, and Golf Course Road demand a top-tier visual footprint. In this global landscape, generic drag-and-drop templates fail to perform. Slow load speeds and poorly optimized structures lead directly to high bounce rates and lost opportunities.
             </p>
             <p>
-              Log aksar search engines par target queries search karte hain jaise &quot;<em>website development company in Gurgaon near me</em>&quot; aur &quot;<em>best web development company in Gurgaon</em>&quot;. Agar aapka business top visibility bracket me rank nahi kar raha hai, toh leads loss automatic high hota hai. OnNextWeb ek pioneer <strong>website development company in Gurgaon</strong> ke roop me custom development architectures setup karti hai jo React, Next.js, Django, aur clean tailwind module setups par based hain, jo aapko extreme speeds aur organic user acquisition leverage provide karte hain.
+              Customers frequently search using localized queries like &quot;<em>website development company in Gurgaon near me</em>&quot; and &quot;<em>best web development company in Gurgaon</em>&quot;. If your brand does not rank in these top search results, you lose valuable leads. OnNextWeb, as a pioneer <strong>website development company in Gurgaon</strong>, engineers custom development architectures built on Next.js, React, Node, and tailwind configurations, providing you with rapid load speeds and a distinct competitive edge.
             </p>
             <p>
-              Hamara core office Gurgaon Sector 54 me base hone ki wajah se local client coordination absolute fast aur secure rehta hai. Custom business portfolios se lekar scaling e-commerce platforms tak—hum pure Gurgaon NCR, Sohna Road, aur DLF hubs me fast-loading designs delivered karte hain jo sales convert karti hain.
+              With our presence in Gurgaon Sector 54, local client communication and coordination remain fast and secure. From bespoke corporate portfolios to scaling e-commerce platforms, we deliver high-performance layouts that drive sales across Gurgaon NCR, Sohna Road, and DLF hubs.
             </p>
           </div>
         </div>
@@ -187,10 +187,10 @@ export default function GurgaonLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">The Corporate Edge</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              OnNextWeb Hi Kyun? (Premium Trust Benchmarks)
+              Why Choose OnNextWeb? (Premium Trust Benchmarks)
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Hum software engineering standards use karte hain taaki aapka brand digital assets me leading visual parameters set kare.
+              We implement strict software engineering standards to ensure your brand establishes a dominant digital presence.
             </p>
           </div>
 
@@ -199,22 +199,22 @@ export default function GurgaonLandingPage() {
               {
                 icon: <Zap className="text-primary" size={24} />,
                 title: "Next.js Static Generation",
-                desc: "Server-side rendering aur static generation setups. Pages milliseconds me open hote hain, search crawler index optimization score boost karte hain."
+                desc: "Server-side rendering and static-site generation. Pages load in milliseconds, boosting search engine crawl optimization scores."
               },
               {
                 icon: <Globe className="text-primary" size={24} />,
                 title: "Local Schema & SEO Layout",
-                desc: "Primary aur LSI phrases jaise 'web design company in Gurgaon' ko meta structure me configure karte hain taaki rankings immediate start ho sakein."
+                desc: "We weave high-intent keywords like 'web design company in Gurgaon' directly into your page's metadata structure for quick search engine indexing."
               },
               {
                 icon: <Laptop className="text-primary" size={24} />,
                 title: "Responsive Glassmorphic UI",
-                desc: "Fluid layouts, smooth interactive states, custom sliders aur sleek dark/light theme systems visual conversions double karte hain."
+                desc: "Fluid layouts, glassmorphic interfaces, smooth interaction states, and dark/light themes designed to double your visual conversions."
               },
               {
                 icon: <ShieldCheck className="text-primary" size={24} />,
                 title: "Full Code Repository Transfer",
-                desc: "GitHub source access aur absolute ownership transfer credentials. Hum dynamic control limits ya mandatory monthly retention layers design nahi karte."
+                desc: "100% GitHub source code access and absolute ownership transfer. We never tie you down to monthly retainers or locked-in platforms."
               }
             ].map((usp, idx) => (
               <div key={idx} className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-6 rounded-2xl transition-all duration-300 group">
@@ -248,7 +248,7 @@ export default function GurgaonLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Startups & Corporates</span>
               <h3 className="font-display text-2xl font-bold">Premium Business Portfolios</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Gurgaon start-up community aur corporate giants ke liye scale-ready websites. Interactive dynamic portfolios, smooth navigation layouts, customized query routing aur call-to-actions setup. Hum fully custom tailwind CSS elements aur animations render karte hain jo global design systems follow karte hain.
+                High-performing, scale-ready portfolios built for Gurgaon&apos;s startups and corporate leaders. We integrate smooth navigations, customized lead query routing, and clear call-to-actions. All designs utilize modern CSS styles and custom micro-interactions.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Multi-language dynamic translations</li>
@@ -262,7 +262,7 @@ export default function GurgaonLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Ecommerce Scale</span>
               <h3 className="font-display text-2xl font-bold">Ecommerce Website Development Gurgaon</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Apna self-hosted ecommerce brand store construct karein. OnNextWeb custom <strong className="text-foreground font-semibold">ecommerce website development Gurgaon</strong> systems offer karti hai jo high conversion features maps, direct dashboard management, dynamic analytics track, discount coupons system, aur high-speed database layers run karte hain.
+                Build your independent, self-hosted e-commerce store. OnNextWeb provides custom <strong className="text-foreground font-semibold">ecommerce website development Gurgaon</strong> setups featuring rapid checkouts, Stripe/Razorpay gateway integrations, inventory dashboards, and promo engines.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Checkout load optimization under 0.8s</li>
@@ -276,7 +276,7 @@ export default function GurgaonLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">SaaS & MVPs</span>
               <h3 className="font-display text-2xl font-bold">SaaS Products & Dynamic Dashboards</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Agar aap koi SaaS model application startup design kar rahe hain jisme client portals, detailed analytical widgets, dashboard setups, database queries, aur REST APIs mapping needed hain—hamari expert developers team Next.js, Node.js, Express framework, GraphQL aur secure cloud storage systems use karke build karti hai.
+                Designing a SaaS platform or tech startup MVP? We engineer secure client portals, data dashboards, database queries, and custom REST/GraphQL APIs utilizing Next.js, Node.js, Express, and cloud storage systems.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Secure authentication architectures (JWT, OAuth)</li>
@@ -290,7 +290,7 @@ export default function GurgaonLandingPage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">WordPress Customization</span>
               <h3 className="font-display text-2xl font-bold">Headless WordPress & CMS Setups</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Sleek editorial blogs, properties listing interfaces ya simple client manageable dynamic pages. Hum regular bloated themes avoid karte hain. Custom code structure mapping dynamic blocks create karta hai jo easily editable hote hain. Dynamic pages performance score speed pass setup systems logic parameters.
+                Flexible content management systems tailored to your needs. We optimize WordPress and headless CMS architectures (like Sanity or Strapi) to maintain fast page speed metrics while allowing easy content updates.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> High-speed GraphQL content delivery pipelines</li>
@@ -309,9 +309,9 @@ export default function GurgaonLandingPage() {
       {/* MIDDLE PAGE CALLOUT */}
       <section className="py-16 bg-gradient-to-r from-primary/10 via-purple-600/5 to-primary/5 border-t border-b border-border/40 relative">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h3 className="font-display text-2xl sm:text-3xl font-bold">Launch Your Premium High-Converting Site in Gurgaon!</h3>
+          <h3 className="font-display text-2xl sm:text-3xl font-bold">Launch Your Premium, High-Converting Website in Gurgaon!</h3>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            Directly connect with our Gurgaon developer team. Hum provide karenge ek comprehensive technical and design blueprint without any fees.
+            Connect directly with our Gurgaon developer team. We will provide a comprehensive technical design blueprint for your project completely free.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 pt-4 text-sm font-semibold">
@@ -337,10 +337,10 @@ export default function GurgaonLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Agile Workflow</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Website Development Process (Step-by-Step)
+              Our Website Development Process (Step-by-Step)
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Hum pure design pipeline ko detail planning parameters me break karte hain complete quality deliverables focus ke sath.
+              We structure the design and development pipeline into clear Agile sprints focused on quality deliverables.
             </p>
           </div>
 
@@ -349,27 +349,27 @@ export default function GurgaonLandingPage() {
               {
                 num: "01",
                 phase: "Consultation & Discovery",
-                desc: "Hum Gurgaon office me meeting or online call par parameters discuss karte hain. Competitive strategy scale define ki jati hai."
+                desc: "We discuss requirements during meetings at our Gurgaon office or over video calls to define your competitive digital strategy."
               },
               {
                 num: "02",
                 phase: "UI/UX Prototyping",
-                desc: "Visual designs and layout maps design custom style framework tools me set kiya jata hai jisse interface structure clarity milti hai."
+                desc: "We draft visual prototypes and user journeys in Figma to establish design clarity before writing code."
               },
               {
                 num: "03",
                 phase: "Modern Code Integration",
-                desc: "Hum Next.js, React modules ya complex dynamic code stacks par clean configurations deploy karte hain without delay."
+                desc: "We develop your platform utilizing clean, production-grade Next.js, React, or Node.js configurations."
               },
               {
                 num: "04",
                 phase: "Core SEO & Schema Audit",
-                desc: "Page optimization rules tags mapping aur primary keyword clusters 'website development company in Gurgaon' inject kiya jata hai."
+                desc: "We perform tags mapping and inject keyword clusters like 'website development company in Gurgaon' into semantic page elements."
               },
               {
                 num: "05",
                 phase: "Production Deploy & Support",
-                desc: "Live system hosting environment configurations setup, domain sync operations, launch checks and post launch update plans."
+                desc: "We configure domain mappings, launch analytics tracking, and establish continuous maintenance systems."
               }
             ].map((step, idx) => (
               <div key={idx} className="bg-surface-elevated/20 border border-border/60 p-6 rounded-xl relative space-y-4 hover:border-primary/20 transition-all duration-300">
@@ -381,8 +381,6 @@ export default function GurgaonLandingPage() {
           </div>
         </div>
       </section>
-
-
 
       {/* CASE STUDIES */}
       <section className="py-20 relative">
@@ -404,7 +402,7 @@ export default function GurgaonLandingPage() {
                 <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">300% Lead Growth</span>
                 <h3 className="font-display text-xl font-bold">Premium Real Estate Portal (Golf Course Road)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Real Estate firm in Gurgaon jo expensive PPC ads drive kar rahe the par generic slow loading pages ki wajah se bounce rate 65% tha. Humne static generation design deploy kiya, interactive home calculator system inject kiya, and localized local keyword optimization keys setup kiye. Results show 4.5x page speed boost, dropping load lag down to 0.7s, leading to a 3x increment in organic qualified conversions.
+                  A prominent real estate agency on Golf Course Road was running expensive PPC ads but suffered from a 65% bounce rate due to a slow template site. We developed a custom static Next.js site, integrated an interactive calculator tool, and optimized local search schema. Page speeds boosted by 4.5x (loading under 0.8 seconds), resulting in a 3x increase in qualified leads.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
@@ -429,7 +427,7 @@ export default function GurgaonLandingPage() {
                 <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">Top 3 Rankings</span>
                 <h3 className="font-display text-xl font-bold">High-End SaaS Platform (Sohna Road, Gurgaon)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  SaaS customer relations firm ko visual revamp + speed optimization support required thi. OnNextWeb React custom architecture build kiya complete backend API framework configuration integrations ke sath. Local SEO content structure mappings inject ki gayi, jisse client target local search rankings &quot;best web development company in Gurgaon&quot; systems me Top 3 brackets me rank ho raha hai.
+                  A tech SaaS startup on Sohna Road required a modern visual revamp and codebase speed optimization. We developed a custom React application linked to backend API systems and optimized the local search architecture. The site now ranks in Google&apos;s top 3 search results for Gurgaon web development keywords.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
@@ -457,7 +455,7 @@ export default function GurgaonLandingPage() {
           <div className="text-center space-y-4 mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Competitor Comparison</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Hum Baki Gurgaon Web Agencies Se Alag Kyun Hain?
+              How Do We Compare to Other Gurgaon Web Agencies?
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
               Quality engineering vs simple template layouts. Compare key trust parameters head to head.
@@ -547,24 +545,24 @@ export default function GurgaonLandingPage() {
           <div className="space-y-4">
             {[
               {
-                q: "1. Gurgaon me website development cost kitna rehta hai?",
-                a: "Hamari dynamic local packages ₹19,999 se start hoti hain. Custom React/Next.js frameworks, complex API configurations, enterprise portals aur custom CMS setups ₹39,999 starting brackets me design hote hain depend on technical scopes."
+                q: "1. How much does a website cost in Gurgaon?",
+                a: "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex API integrations, and corporate portals are quoted dynamically based on the project scope."
               },
               {
-                q: "2. Gurgaon web design company ke roop me aap standard SEO optimization modules kaise set karte hain?",
-                a: "Hum standard coding structures follow karte hain. Next/Image optimization hooks render speed reduce karte hain. Metatags mapping system, SEO configurations templates and local terms like 'best web development company in Gurgaon' structural layout me integrate kiye jate hain."
+                q: "2. How do you implement SEO for Gurgaon businesses?",
+                a: "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Gurgaon' naturally to maximize search engine discovery."
               },
               {
-                q: "3. Delivery time estimates kya rehte hain?",
-                a: "Custom corporate web pages hum 7-10 working days me completely scale-ready delivered kar dete hain. SaaS dashboards development aur dynamic platforms require 15-20 days validation checks ke sath."
+                q: "3. What is the typical project delivery timeline?",
+                a: "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
               },
               {
-                q: "4. Kya hum design updates backend panel se control kar sakte hain?",
-                a: "Yes. Hum dynamic admin layouts (like customized WordPress dashboards, sanity CMS or custom Next.js admin dashboards) design karte hain jahan content templates modify, blog articles add or portfolio list manage easily parameters adjust system framework control panels."
+                q: "4. Can I manage website updates from a dashboard?",
+                a: "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
               },
               {
-                q: "5. Gurgaon office visit schedule kaise kiya jata hai?",
-                a: "OnNextWeb core tech workspace Sector 54 Golf Course Road Gurgaon me base hai. Call (+91 8765077474) or email helpdesk setup par contact details forward karke custom physical meeting block schedules build."
+                q: "5. How do I schedule a meeting at your Gurgaon office?",
+                a: "Our core workspace is located on Golf Course Road, Sector 54, Gurgaon. You can reach out via call (+91 8765077474) or email, and we will schedule an in-person session to discuss your project requirements."
               }
             ].map((faq, idx) => (
               <details 
@@ -653,9 +651,9 @@ export default function GurgaonLandingPage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                   </span>
-                  Limited Slot Offers Gurgaon:
+                  Limited Gurgaon Offer:
                 </p>
-                <p>Register query and get a **Free Site Speed Optimization Consultation worth ₹9,999** for absolute high conversions performance. Weeks limits: 2 spots left!</p>
+                <p>Submit your inquiry today and receive a **Free Site Speed Optimization Consultation (worth ₹9,999)** to maximize page conversions. Only 2 slots left this week!</p>
               </div>
 
               {/* Action Links */}
@@ -693,42 +691,42 @@ export default function GurgaonLandingPage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Gurgaon me website development cost kitna rehta hai?",
+                "name": "How much does a website cost in Gurgaon?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hamari dynamic local packages ₹19,999 se start hoti hain. Custom React/Next.js frameworks, complex API configurations, enterprise portals aur custom CMS setups ₹39,999 starting brackets me design hote hain depend on technical scopes."
+                  "text": "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex API integrations, and corporate portals are quoted dynamically based on the project scope."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Gurgaon web design company ke roop me aap standard SEO optimization modules kaise set karte hain?",
+                "name": "How do you implement SEO for Gurgaon businesses?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hum standard coding structures follow karte hain. Next/Image optimization hooks render speed reduce karte hain. Metatags mapping system, SEO configurations templates and local terms like 'best web development company in Gurgaon' structural layout me integrate kiye jate hain."
+                  "text": "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Gurgaon' naturally to maximize search engine discovery."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Delivery time estimates kya rehte hain?",
+                "name": "What is the typical project delivery timeline?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Custom corporate web pages hum 7-10 working days me completely scale-ready delivered kar dete hain. SaaS dashboards development aur dynamic platforms require 15-20 days validation checks ke sath."
+                  "text": "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Kya hum design updates backend panel se control kar sakte hain?",
+                "name": "Can I manage website updates from a dashboard?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Hum dynamic admin layouts design karte hain jahan content templates modify, blog articles add or portfolio list manage easily."
+                  "text": "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Gurgaon office visit schedule kaise kiya jata hai?",
+                "name": "How do I schedule a meeting at your Gurgaon office?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "OnNextWeb core tech workspace Sector 54 Golf Course Road Gurgaon me base hai. Call (+91 8765077474) or email helpdesk setup par contact details forward karke custom physical meeting block schedules build."
+                  "text": "Our core workspace is located on Golf Course Road, Sector 54, Gurgaon. You can reach out via call (+91 8765077474) or email, and we will schedule an in-person session to discuss your project requirements."
                 }
               }
             ]

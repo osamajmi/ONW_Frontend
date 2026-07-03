@@ -91,7 +91,7 @@ export default function IndiaCustomSoftwarePage() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                Outdated systems aur template packages se ho pareshan? OnNextWeb build karta hai custom-engineered SaaS, CRM, ERP, and bespoke applications jo highly secure, fast loading, aur agile framework logic par deploy hote hain. India ke leading offshore engineering hub se scale layouts.
+                Tired of outdated systems and rigid template packages? OnNextWeb builds custom-engineered SaaS, CRM, ERP, and bespoke applications deployed on highly secure, fast-loading, and agile frameworks. Scale your software from India&apos;s leading offshore engineering hub.
               </p>
               
               {/* Trust Badges */}
@@ -169,13 +169,13 @@ export default function IndiaCustomSoftwarePage() {
 
           <div className="prose prose-invert max-w-none text-muted-foreground space-y-6 text-base md:text-lg leading-relaxed">
             <p>
-              Modern digital ecosystem me basic ready-made software setups business automation process support nahi kar paate. Startups, e-commerce networks, logistics groups, aur financial operations units ko target custom layouts, API microservices, cloud deployments, aur robust relational databases synchronization settings coordinate karni padti hain. Traditional template packages business custom requirements values align nahi karte, jisse workflows duplicate data issues create karte hain.
+              In a modern digital ecosystem, basic pre-built software setups fail to support complex business automation workflows. Scaling startups, e-commerce networks, logistics systems, and financial units require custom layouts, API microservices, cloud deployments, and robust database synchronizations. Generic template packages rarely align with unique operational requirements, resulting in manual double-entry and system silos.
             </p>
             <p>
-              Log aksar global offshore search targets parameters search karte hain jaise &quot;<em>custom software development company in India</em>&quot; aur &quot;<em>best software development company in India</em>&quot; to outsource systems. Google crawlers systems rank search checks target inputs me client brands value verify karte hain. OnNextWeb ek pioneer <strong>custom software development company in India</strong> ke roop me bespoke products design karti hai using Next.js, Node.js, Express, Django frameworks aur secure cloud networks, jo target systems processing time drop down aur workflow performance optimization coordinate setup system.
+              Outsourcing clients search with high-intent terms like &quot;<em>custom software development company in India</em>&quot; and &quot;<em>best software development company in India</em>&quot; to locate reliable technology partners. As a premier <strong>custom software development company in India</strong>, OnNextWeb designs and codes bespoke products using Next.js, Node.js, Express, Python, and secure cloud environments, dropping processing latency and maximizing operational efficiency.
             </p>
             <p>
-              India (Delhi NCR office locations) se operational hub setup coordination systems clean aur fast delivery sprint cycles complete agile mechanisms ensure. Custom logic frameworks, payment processors arrays aur data dashboards features details parameters settings.
+              From our offshore delivery center in India, we ensure seamless communication and rapid delivery cycles utilizing Agile methodologies. We provide clear sprint transparency, payment integrations, custom dashboard setups, and continuous support.
             </p>
           </div>
         </div>
@@ -190,7 +190,7 @@ export default function IndiaCustomSoftwarePage() {
               Why Outsource to OnNextWeb India? (Quality Standards)
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Hum engineering values maps construct karte hain jo standard offshore development guidelines logic coordinate maps set targets values checks.
+              We implement world-class software engineering standards to align with international offshore development guidelines and timelines.
             </p>
           </div>
 
@@ -199,22 +199,22 @@ export default function IndiaCustomSoftwarePage() {
               {
                 icon: <Zap className="text-primary" size={24} />,
                 title: "Agile Development Sprint",
-                desc: "Weekly sprint cycles parameters client demos sync checks. Bi-weekly progress updates systems visual reports tracker models checks."
+                desc: "Weekly sprint cycles and client review calls. You receive bi-weekly progress updates, visual dashboards, and code integration logs."
               },
               {
                 icon: <Globe className="text-primary" size={24} />,
                 title: "Outsourcing India Cost Edge",
-                desc: "Offshore software development India cost benefits values sync check. 100% transparent rates without hidden logic layers setups."
+                desc: "Maximize your ROI with offshore software engineering rates in India. We offer 100% transparent pricing with zero hidden fees or license markups."
               },
               {
                 icon: <Laptop className="text-primary" size={24} />,
                 title: "Modern Tech Frameworks",
-                desc: "React, Next.js, Python, Django, REST/GraphQL APIs, secure tokens setups, JWT models. Fast visual speeds parameters validation."
+                desc: "React, Next.js, Python, Django, REST/GraphQL, and JWT. We leverage cutting-edge technology stacks optimized for speed and security."
               },
               {
                 icon: <ShieldCheck className="text-primary" size={24} />,
                 title: "IP Protection & NDAs",
-                desc: "Absolute source codes safety mapping, standard NDA policies frameworks mapping. Git ownership setups handover configurations."
+                desc: "100% IP protection with robust NDA agreements. We hand over full Git repository ownership and credentials upon release."
               }
             ].map((usp, idx) => (
               <div key={idx} className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-6 rounded-2xl transition-all duration-300 group">
@@ -248,7 +248,7 @@ export default function IndiaCustomSoftwarePage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Business Management</span>
               <h3 className="font-display text-2xl font-bold">Custom Enterprise CRM & ERP</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Aapke team metrics aur leads routing configurations ke liye tailored customer relations databases. Automated notification systems, lead assignment algorithms, secure invoice logs, multiple reporting layers integrations coordinate systems logic details check.
+                Bespoke customer relationship and resource planning systems configured for your specific operational metrics. We build automated lead routers, notifications, invoice loggers, and secure reporting layers.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Dynamic data tables with Excel exporters</li>
@@ -262,7 +262,7 @@ export default function IndiaCustomSoftwarePage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Outsourcing Solutions</span>
               <h3 className="font-display text-2xl font-bold">Offshore Software Outsourcing India</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Outsource custom systems directly. OnNextWeb custom software outsourcing India setups develop karti hai jo automated delivery pipelines, dedicated remote developers teams, daily sync calls, clear sprints updates tracking configurations.
+                Outsource your custom development needs with ease. OnNextWeb handles end-to-end delivery pipelines, dedicated remote engineer configurations, daily syncs, and clear milestone tracking.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Clear sprint scope definitions (Jira/Trello)</li>
@@ -276,7 +276,7 @@ export default function IndiaCustomSoftwarePage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Startups Launch</span>
               <h3 className="font-display text-2xl font-bold">SaaS MVPs & Database Platforms</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Unique algorithms systems required for scaling SaaS models. Custom data metrics configurations, complex relational databases synchronization logic, dynamic dashboard widgets setups. Clean code parameters standard rules frameworks logic.
+                End-to-end MVP and SaaS product engineering. We build secure authentication, custom API layers, relational/non-relational database synchronizations, and interactive dashboard widgets utilizing clean, maintainable code.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Robust API pipelines setup REST/GraphQL</li>
@@ -290,7 +290,7 @@ export default function IndiaCustomSoftwarePage() {
               <span className="text-xs font-bold text-primary tracking-widest uppercase">Cloud Architecture</span>
               <h3 className="font-display text-2xl font-bold">Cloud Deployment & Server Sync</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                AWS, Microsoft Azure, Google Cloud setups configurations mapping. Docker containers setups, Kubernetes cluster monitoring services, auto-scaling options setups. Server logic optimization details check variables.
+                AWS, Microsoft Azure, and Google Cloud setups. We configure Docker containers, CI/CD deployment pipelines, automated database backups, and Kubernetes clustering to manage traffic spikes.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground pt-2">
                 <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Continuous integration pipelines (CI/CD)</li>
@@ -382,8 +382,6 @@ export default function IndiaCustomSoftwarePage() {
         </div>
       </section>
 
-
-
       {/* CASE STUDIES */}
       <section className="py-20 relative">
         <div className="container mx-auto px-6">
@@ -404,7 +402,7 @@ export default function IndiaCustomSoftwarePage() {
                 <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">300% Processing Boost</span>
                 <h3 className="font-display text-xl font-bold">Custom Logistics ERP (Global Cargo Client)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Logistics operator client jo traditional manual sheet updates utilize kar rahe the jiske metrics dashboard load times slow indicators loop configurations logic errors create. OnNextWeb custom software development company in India team bespoke ERP database structures configurations deploy kiya using React, Node, PostgreSQL. Results show 4.5x processing operations efficiency boost.
+                  A global logistics provider was using manual spreadsheets that caused inventory sync delays and data inconsistencies. Our custom software engineering team in India built a custom React dashboard backed by Node.js and PostgreSQL. The ERP system boosted supply-chain processing efficiency by 4.5x.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
@@ -429,7 +427,7 @@ export default function IndiaCustomSoftwarePage() {
                 <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">SaaS Launch Success</span>
                 <h3 className="font-display text-xl font-bold">Financial Analytical Dashboard SaaS (US Client)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  US-based fintech startup client required robust MVP development support targets. OnNextWeb MERN custom codes deployment parameters configure kiya complete analytics pipelines database configurations sets target. Page ranks top target SEO queries &quot;best software development company in India&quot; offshore index validations search checks parameters.
+                  A US-based financial technology startup needed a secure dashboard MVP to present to investors. We delivered a robust MERN application featuring secure authentication, real-time charts, and clean cloud integrations. The product compiled on time and helped secure seed funding.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
@@ -481,13 +479,13 @@ export default function IndiaCustomSoftwarePage() {
                 </tr>
                 <tr className="hover:bg-white/[0.02] transition-colors">
                   <td className="p-4 font-semibold text-foreground">Code Standards</td>
-                  <td className="p-4 text-emerald-400 font-medium">Bespoke dynamic modular structures, clean logic variables</td>
-                  <td className="p-4">Raw bloated blocks with zero logic patterns verification</td>
+                  <td className="p-4 text-emerald-400 font-medium">Bespoke modular architectures, clean logic variables, and comments</td>
+                  <td className="p-4">Bloated template blocks with zero performance validation</td>
                 </tr>
                 <tr className="hover:bg-white/[0.02] transition-colors">
                   <td className="p-4 font-semibold text-foreground">Communications channels</td>
-                  <td className="p-4 text-emerald-400 font-medium">Direct Slack channels, daily sync calls, native English managers</td>
-                  <td className="p-4">Laggy ticketing systems or email alerts</td>
+                  <td className="p-4 text-emerald-400 font-medium">Direct Slack channels, daily sync calls, and native English-speaking managers</td>
+                  <td className="p-4">Slow ticketing systems or email alerts</td>
                 </tr>
                 <tr className="hover:bg-white/[0.02] transition-colors">
                   <td className="p-4 font-semibold text-foreground">IP Protection</td>
@@ -547,24 +545,24 @@ export default function IndiaCustomSoftwarePage() {
           <div className="space-y-4">
             {[
               {
-                q: "1. India me custom software development cost kitna rehta hai?",
-                a: "Hamari dynamic custom software MVP packages $1,500 se start hoti hain. Bespoke custom solutions details structures aur SaaS platforms $4,500 starting brackets configurations me design hotey hain depend on system scopes details."
+                q: "1. How much does custom software development cost in India?",
+                a: "Our offshore startup MVP builds start at $1,500. Complex enterprise systems, custom CRM/ERP builds, and SaaS platforms are quoted dynamically based on features and scope."
               },
               {
-                q: "2. Custom software development company in India ke roop me aap standard IP ownership validation kaise execute karte hain?",
-                a: "Hum standard non-disclosure agreements sign karte hain. Handover parameters stage me hum direct repositories source code key credentials configurations client assets transfer complete logic options configurations."
+                q: "2. How do you handle IP protection and source code ownership?",
+                a: "We sign standard NDAs to protect your intellectual property. Upon project launch, full Git repository ownership and configuration credentials are handed over directly to your team."
               },
               {
-                q: "3. Project delivery timeline parameters estimates kya rehte hain?",
-                a: "Bespoke corporate products custom apps hum 8-12 weeks design sprints me completely launch-ready delivered kar dete hain. Dedicated teams setups immediate launch sprints structures updates checks."
+                q: "3. What is the typical project delivery timeline?",
+                a: "Bespoke applications are typically delivered within 8 to 12 weeks. Dedicated remote developer setups can start sprints immediately to support ongoing product iterations."
               },
               {
-                q: "4. Kya aap database security systems configurations monitor coordinate karte hain?",
-                a: "Yes. Hum JWT authentication pipelines, database encryption layouts and SSL endpoints synchronization frameworks target settings execute verify models checks."
+                q: "4. Do you configure cloud servers and database backups?",
+                a: "Yes. We configure hosting setups on AWS, Azure, or Google Cloud, establish automated daily database backups, and secure server environments with SSL firewalls."
               },
               {
-                q: "5. India core engineering delivery center location coordination address details parameters kya hain?",
-                a: "OnNextWeb core tech workspace Sector 54 Golf Course Road Gurgaon me base hai (Delhi NCR office regional). Contact (+91 8765077474) or email support desk setups."
+                q: "5. Where is your team located and how do we coordinate?",
+                a: "Our delivery center is based in Sector 54, Golf Course Road, Gurgaon (Delhi NCR). You can contact us via call (+91 8765077474) or email, and we will set up dedicated Slack channels for daily syncs."
               }
             ].map((faq, idx) => (
               <details 
@@ -597,11 +595,11 @@ export default function IndiaCustomSoftwarePage() {
             <div className="space-y-6">
               <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Offshore Tech Delivery</span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Chaliye Aapke <br />
-                <span className="text-gradient">Custom Platform</span> Par Kaam Shuru Karein!
+                Let&apos;s Build Your <br />
+                <span className="text-gradient">Custom Platform</span> Today!
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                Connect with our local custom software developers. Complete design roadmap documents, direct sprint scheduling support systems, SLA agreements.
+                Connect with our custom software developers in India. We will map out project scopes, set up dedicated sprint boards, and draft support agreements.
               </p>
 
               {/* Direct Details */}
@@ -655,7 +653,7 @@ export default function IndiaCustomSoftwarePage() {
                   </span>
                   Limited Slot Offshore:
                 </p>
-                <p>Register query and get a **Free Technical Code Scoping Audit worth $499** for absolute high conversions performance. Weeks limits: 2 spots left!</p>
+                <p>Submit your inquiry today and receive a **Free Technical Code Scoping Audit (worth $499)** for your software architecture. Only 2 slots left this week!</p>
               </div>
 
               {/* Action Links */}
@@ -693,42 +691,42 @@ export default function IndiaCustomSoftwarePage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "India me custom software development cost kitna rehta hai?",
+                "name": "How much does custom software development cost in India?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hamari dynamic custom software MVP packages $1,500 se start hoti hain. Bespoke custom solutions details structures aur SaaS platforms $4,500 starting brackets configurations me design hotey hain depend on system scopes details."
+                  "text": "Our offshore startup MVP builds start at $1,500. Complex enterprise systems, custom CRM/ERP builds, and SaaS platforms are quoted dynamically based on features and scope."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Custom software development company in India ke roop me aap standard IP ownership validation kaise execute karte hain?",
+                "name": "How do you handle IP protection and source code ownership?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hum standard non-disclosure agreements sign karte hain. Handover parameters stage me hum direct repositories source code key credentials configurations client assets transfer complete logic options configurations."
+                  "text": "We sign standard NDAs to protect your intellectual property. Upon project launch, full Git repository ownership and configuration credentials are handed over directly to your team."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Project delivery timeline parameters estimates kya rehte hain?",
+                "name": "What is the typical project delivery timeline?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Bespoke corporate products custom apps hum 8-12 weeks design sprints me completely launch-ready delivered kar dete hain. Dedicated teams setups immediate launch sprints structures updates checks."
+                  "text": "Bespoke applications are typically delivered within 8 to 12 weeks. Dedicated remote developer setups can start sprints immediately to support ongoing product iterations."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Kya aap database security systems configurations monitor coordinate karte hain?",
+                "name": "Do you configure cloud servers and database backups?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Hum JWT authentication pipelines, database encryption layouts and SSL endpoints synchronization frameworks target settings execute verify models checks."
+                  "text": "Yes. We configure hosting setups on AWS, Azure, or Google Cloud, establish automated daily database backups, and secure server environments with SSL firewalls."
                 }
               },
               {
                 "@type": "Question",
-                "name": "India core engineering delivery center location coordination address details parameters kya hain?",
+                "name": "Where is your team located and how do we coordinate?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "OnNextWeb core tech workspace Sector 54 Golf Course Road Gurgaon me base hai (Delhi NCR office regional). Call (+91 8765077474) or email support desk setups."
+                  "text": "Our delivery center is based in Sector 54, Golf Course Road, Gurgaon (Delhi NCR). You can contact us via call (+91 8765077474) or email, and we will set up dedicated Slack channels for daily syncs."
                 }
               }
             ]
