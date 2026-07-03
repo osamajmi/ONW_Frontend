@@ -54,6 +54,13 @@ const navLinks = [
   { name: "Contact Us", href: "/contact" }
 ];
 
+const locations = [
+  { name: "Web Development Delhi", href: "/website-development-company-in-delhi" },
+  { name: "Web Development Gurgaon", href: "/website-development-company-in-gurgaon" },
+  { name: "Web Development Noida", href: "/website-development-company-in-noida" },
+  { name: "Custom Software India", href: "/custom-software-development-company-in-india" }
+];
+
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -141,12 +148,33 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               A premium digital studio crafting modern interactive websites, customized software systems, and branding designs engineered for scaling ambitious brands.
             </p>
-            <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-2 rounded-full w-fit">
+            <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-2 rounded-full w-fit mb-6">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               Available for new projects
+            </div>
+            
+            {/* Socials embedded directly in Brand Column */}
+            <div className="flex flex-wrap gap-2.5">
+              {socials.map((s) => {
+                const SocialIcon = s.icon;
+                return (
+                  <motion.a
+                    key={s.name}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={s.name}
+                    className="w-9 h-9 rounded-lg border border-border/80 bg-surface-elevated/20 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/45 hover:bg-primary/5 transition-all duration-300 relative group"
+                    whileHover={{ scale: 1.05, y: -1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <SocialIcon size={15} className="transition-transform group-hover:rotate-6" />
+                  </motion.a>
+                );
+              })}
             </div>
           </AnimatedSection>
 
@@ -168,30 +196,21 @@ const Footer = () => {
             </div>
           </AnimatedSection>
 
-          {/* Socials */}
+          {/* Locations */}
           <AnimatedSection delay={0.2}>
-            <p className="font-display text-lg font-bold mb-4 text-foreground border-l-2 border-primary pl-3">Connect With Us</p>
-            <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-              Stay in touch with our social channels for news and project updates.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {socials.map((s) => {
-                const SocialIcon = s.icon;
-                return (
-                  <motion.a
-                    key={s.name}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={s.name}
-                    className="w-11 h-11 rounded-xl border border-border/80 bg-surface-elevated/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 relative group"
-                    whileHover={{ scale: 1.08, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <SocialIcon size={18} className="transition-transform group-hover:rotate-6" />
-                  </motion.a>
-                );
-              })}
+            <p className="font-display text-lg font-bold mb-4 text-foreground border-l-2 border-primary pl-3">Our Locations</p>
+            <div className="space-y-3">
+              {locations.map((loc) => (
+                <Link
+                  key={loc.name}
+                  href={loc.href}
+                  className="group flex items-center text-muted-foreground text-sm hover:text-primary transition-all duration-300"
+                >
+                  <span className="transition-transform duration-300 group-hover:translate-x-1.5 text-left">
+                    {loc.name}
+                  </span>
+                </Link>
+              ))}
             </div>
           </AnimatedSection>
 

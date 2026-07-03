@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,6 +21,171 @@ interface BlogPost {
   createdAt: string;
 }
 
+interface Block {
+  type: "p" | "h1" | "h2" | "h3" | "blockquote" | "hr" | "ul" | "ol";
+  items?: string[];
+  text?: string;
+}
+
+const parseMarkdownBlocks = (content: string): Block[] => {
+  const lines = content.split("\n");
+  const blocks: Block[] = [];
+  let currentList: Block | null = null;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if (!trimmed) {
+      if (currentList) {
+        blocks.push(currentList);
+        currentList = null;
+      }
+      continue;
+    }
+
+    if (trimmed === "---" || trimmed === "***" || trimmed === "___") {
+      if (currentList) {
+        blocks.push(currentList);
+        currentList = null;
+      }
+      blocks.push({ type: "hr" });
+      continue;
+    }
+
+    if (trimmed.startsWith("###")) {
+      if (currentList) {
+        blocks.push(currentList);
+        currentList = null;
+      }
+      blocks.push({ type: "h3", text: trimmed.replace(/^###\s*/, "") });
+      continue;
+    }
+    if (trimmed.startsWith("##")) {
+      if (currentList) {
+        blocks.push(currentList);
+        currentList = null;
+      }
+      blocks.push({ type: "h2", text: trimmed.replace(/^##\s*/, "") });
+      continue;
+    }
+    if (trimmed.startsWith("#")) {
+      if (currentList) {
+        blocks.push(currentList);
+        currentList = null;
+      }
+      blocks.push({ type: "h1", text: trimmed.replace(/^#\s*/, "") });
+      continue;
+    }
+
+    if (trimmed.startsWith(">")) {
+      if (currentList) {
+        blocks.push(currentList);
+        currentList = null;
+      }
+      blocks.push({ type: "blockquote", text: trimmed.replace(/^>\s*/, "") });
+      continue;
+    }
+
+    const listMatch = line.match(/^(\s*)[-*]\s+(.*)/);
+    if (listMatch) {
+      const itemContent = listMatch[2];
+      if (currentList && currentList.type === "ul") {
+        currentList.items?.push(itemContent);
+      } else {
+        if (currentList) {
+          blocks.push(currentList);
+        }
+        currentList = { type: "ul", items: [itemContent] };
+      }
+      continue;
+    }
+
+    const orderedListMatch = line.match(/^(\s*)\d+\.\s+(.*)/);
+    if (orderedListMatch) {
+      const itemContent = orderedListMatch[2];
+      if (currentList && currentList.type === "ol") {
+        currentList.items?.push(itemContent);
+      } else {
+        if (currentList) {
+          blocks.push(currentList);
+        }
+        currentList = { type: "ol", items: [itemContent] };
+      }
+      continue;
+    }
+
+    if (currentList) {
+      blocks.push(currentList);
+      currentList = null;
+    }
+
+    blocks.push({ type: "p", text: trimmed });
+  }
+
+  if (currentList) {
+    blocks.push(currentList);
+  }
+
+  return blocks;
+};
+
+const parseInlineMarkdown = (text: string): React.ReactNode => {
+  const parts: React.ReactNode[] = [];
+  const regex = /(\*\*(.*?)\*\*|\[(.*?)\]\((.*?)\))/g;
+  let match;
+  let lastIndex = 0;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+
+    if (match[1].startsWith("**")) {
+      parts.push(
+        <strong key={match.index} className="font-semibold text-foreground">
+          {match[2]}
+        </strong>
+      );
+    } else if (match[1].startsWith("[")) {
+      const url = match[4];
+      const linkText = match[3];
+      const isExternal = url.startsWith("http") || url.startsWith("//");
+      if (isExternal) {
+        parts.push(
+          <a
+            key={match.index}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline font-medium"
+          >
+            {linkText}
+          </a>
+        );
+      } else {
+        parts.push(
+          <Link
+            key={match.index}
+            href={url}
+            className="text-primary hover:underline font-medium"
+          >
+            {linkText}
+          </Link>
+        );
+      }
+    }
+
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? <>{parts}</> : text;
+};
+
 export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
   const handleShare = () => {
     if (typeof window !== "undefined") {
@@ -33,7 +199,6 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
       <GrainOverlay />
       <Navbar />
 
-      {/* Ambient background glows */}
       <div className="absolute top-[15%] left-[-10%] w-[45vw] h-[45vw] rounded-full bg-primary/10 blur-[130px] pointer-events-none animate-float-slow" />
       <div className="absolute bottom-[20%] right-[-10%] w-[35vw] h-[35vw] rounded-full bg-primary/5 blur-[110px] pointer-events-none animate-float-reverse" />
 
@@ -61,7 +226,6 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
           </div>
         ) : (
           <article>
-            {/* Header metadata */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -97,7 +261,6 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
               </div>
             </motion.div>
 
-            {/* Cover image */}
             {blog.coverImage && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
@@ -116,50 +279,65 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
               </motion.div>
             )}
 
-            {/* Post content */}
             <AnimatedSection delay={0.2} className="max-w-none">
-              {blog.content.split("\n").map((para, idx) => {
-                const text = para.trim();
-                if (!text) return null;
-                
-                // Blockquote
-                if (text.startsWith(">")) {
-                  return (
-                    <blockquote key={idx} className="border-l-4 border-primary bg-primary/5 px-6 py-4 rounded-r-xl my-6 text-foreground italic leading-relaxed text-lg">
-                      {text.replace(/^>\s*/, "")}
-                    </blockquote>
-                  );
+              {blog.content && parseMarkdownBlocks(blog.content).map((block, idx) => {
+                switch (block.type) {
+                  case "hr":
+                    return <hr key={idx} className="my-8 border-t border-border/60" />;
+                  case "h1":
+                    return (
+                      <h1 key={idx} className="font-display text-3xl md:text-4xl font-bold mt-12 mb-6 text-gradient">
+                        {parseInlineMarkdown(block.text || "")}
+                      </h1>
+                    );
+                  case "h2":
+                    return (
+                      <h2 key={idx} className="font-display text-2xl md:text-3xl font-bold mt-10 mb-4 text-gradient">
+                        {parseInlineMarkdown(block.text || "")}
+                      </h2>
+                    );
+                  case "h3":
+                    return (
+                      <h3 key={idx} className="font-display text-xl md:text-2xl font-bold mt-8 mb-4 text-foreground">
+                        {parseInlineMarkdown(block.text || "")}
+                      </h3>
+                    );
+                  case "blockquote":
+                    return (
+                      <blockquote key={idx} className="border-l-4 border-primary bg-primary/5 px-6 py-4 rounded-r-xl my-6 text-foreground italic leading-relaxed text-lg">
+                        {parseInlineMarkdown(block.text || "")}
+                      </blockquote>
+                    );
+                  case "ul":
+                    return (
+                      <ul key={idx} className="list-disc pl-6 my-6 space-y-2 text-muted-foreground text-lg leading-relaxed">
+                        {block.items?.map((item, i) => (
+                          <li key={i}>{parseInlineMarkdown(item)}</li>
+                        ))}
+                      </ul>
+                    );
+                  case "ol":
+                    return (
+                      <ol key={idx} className="list-decimal pl-6 my-6 space-y-2 text-muted-foreground text-lg leading-relaxed">
+                        {block.items?.map((item, i) => (
+                          <li key={i}>{parseInlineMarkdown(item)}</li>
+                        ))}
+                      </ol>
+                    );
+                  case "p":
+                  default:
+                    const isLead = idx === 0;
+                    return (
+                      <p
+                        key={idx}
+                        className={`text-muted-foreground text-lg leading-relaxed mb-6 ${
+                          isLead ? "text-foreground font-medium md:text-xl border-b border-border/20 pb-6 mb-8" : ""
+                        }`}
+                      >
+                        {parseInlineMarkdown(block.text || "")}
+                      </p>
+                    );
                 }
-                
-                // Headings
-                if (text.startsWith("###")) {
-                  return (
-                    <h3 key={idx} className="font-display text-xl font-bold mt-8 mb-4 text-foreground">
-                      {text.replace(/^###\s*/, "")}
-                    </h3>
-                  );
-                }
-                if (text.startsWith("##")) {
-                  return (
-                    <h2 key={idx} className="font-display text-2xl font-bold mt-10 mb-4 text-gradient">
-                      {text.replace(/^##\s*/, "")}
-                    </h2>
-                  );
-                }
-                if (text.startsWith("#")) {
-                  return (
-                    <h2 key={idx} className="font-display text-3xl font-bold mt-12 mb-6 text-gradient">
-                      {text.replace(/^#\s*/, "")}
-                    </h2>
-                  );
-                }
-
-                // Regular paragraphs (lead paragraph style for first element)
-                return (
-                  <p key={idx} className={`text-muted-foreground text-lg leading-relaxed mb-6 ${idx === 0 ? "text-foreground font-medium md:text-xl border-b border-border/20 pb-6 mb-8" : ""}`}>
-                    {text}
-                  </p>
-                );
               })}
             </AnimatedSection>
           </article>
