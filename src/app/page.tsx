@@ -89,7 +89,7 @@ export default async function Home() {
       <AboutSection />
       <ServicesSection initialServices={services} />
       <ProcessSection />
-      <PortfolioSection initialProjects={projects} />
+      {/* <PortfolioSection initialProjects={projects} /> */}
       <TestimonialsSection initialTestimonials={testimonials} />
       <ContactSection />
       <Footer />

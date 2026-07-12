@@ -20,11 +20,17 @@ const fallbackTestimonials: TestimonialItem[] = [
   { name: "Sarah Chen", role: "CEO", company: "Luxe Fashion", feedback: "ON Next Web transformed our online presence. The attention to detail and creative vision exceeded every expectation." },
   { name: "Marcus Rivera", role: "Founder", company: "FinCore", feedback: "Working with this team was seamless. They delivered a product that our users genuinely love using every day." },
   { name: "Amara Osei", role: "CMO", company: "GreenTech Energy", feedback: "From branding to launch, the quality was impeccable. They truly understand how to build for the modern web." },
+  { name: "Martin", role: "Co-Founder & Product Lead", company: "portal360.ai", feedback: "ON Next Web delivered an outstanding AI analytics portal. Their engineering precision, quick execution, and Next.js development expertise took our platform launch to the next level." },
+  { name: "Rasim Khan", role: "Tech Lead", company: "revoft.com", feedback: "The team at ON Next Web built a robust custom accounting portal that optimized our invoice workflows. Their technical clarity and clean code architecture are commendable." },
+  { name: "Lawrence", role: "Operations Director", company: "importexporttv.com", feedback: "Excellent streaming platform execution! ON Next Web solved our latency bottlenecks using AWS Cloudfront configurations. Lawrence and the logistics team are highly satisfied." },
+  { name: "Kai Chain", role: "Managing Director", company: "MPC Markets Mosaic", feedback: "Our clients love the new Mosaic platform interface. The speed of the live price updates and clean charts designed by ON Next Web have doubled our platform engagement." },
+  { name: "Paul", role: "Founder", company: "FitFlow: Home Workouts App", feedback: "We hired ON Next Web to build our workout app on iOS and Android. Paul and the user base have been absolutely wowed by the smooth Framer Native animations and secure firebase authentication." },
+  { name: "David", role: "Growth Manager", company: "SaaS Growth Co", feedback: "Their local marketing and Google Ads optimization strategy doubled our lead pipeline. A highly data-driven approach that is rare among digital marketing agencies." }
 ];
 
 const TestimonialsSection = ({ initialTestimonials }: { initialTestimonials?: TestimonialItem[] }) => {
   const [current, setCurrent] = useState(0);
-  const displayTestimonials = initialTestimonials && initialTestimonials.length > 0 ? initialTestimonials : fallbackTestimonials;
+  const displayTestimonials = initialTestimonials && initialTestimonials.length >= 9 ? initialTestimonials : fallbackTestimonials;
 
   const prev = () => setCurrent((c) => (c === 0 ? displayTestimonials.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === displayTestimonials.length - 1 ? 0 : c + 1));
