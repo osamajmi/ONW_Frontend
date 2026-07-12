@@ -12,8 +12,11 @@ const Logo = () => {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/dark logo.png"
-        alt="ON Next Web"
+        alt="ON Next Web Logo (Dark)"
         className="dark-logo"
+        width={150}
+        height={38}
+        loading="eager"
         style={{ height: "38px", width: "auto" }}
       />
 
@@ -21,8 +24,11 @@ const Logo = () => {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/light logo.png"
-        alt="ON Next Web"
+        alt="ON Next Web Logo (Light)"
         className="light-logo"
+        width={150}
+        height={38}
+        loading="eager"
         style={{ height: "38px", width: "auto" }}
       />
     </div>

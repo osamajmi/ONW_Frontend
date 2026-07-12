@@ -114,7 +114,7 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                 <Star size={22} className="group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <h4 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Uncompromising Quality</h4>
+              <h3 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Uncompromising Quality</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 We don't cut corners. We obsess over the details, clean code, design fidelity, and smooth animations.
               </p>
@@ -124,7 +124,7 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                 <Sparkles size={22} className="group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <h4 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Constant Innovation</h4>
+              <h3 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Constant Innovation</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Technology moves fast. We continuous evolve our stack and methodologies to build modern experiences.
               </p>
@@ -134,10 +134,56 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                 <Users size={22} className="group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <h4 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Human-Centric Approach</h4>
+              <h3 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">Human-Centric Approach</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 At the end of the day, we design for people. User experience is at the core of all our technical decisions.
               </p>
+            </AnimatedSection>
+          </div>
+        </div>
+
+        {/* Leadership & Credentials (E-E-A-T) */}
+        <div className="max-w-6xl mx-auto mt-24 border-t border-border/40 pt-20">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <AnimatedSection className="space-y-6">
+              <span className="text-primary text-xs uppercase font-bold tracking-widest">Our Leadership</span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient">Founder's Story</h2>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                ON Next Web was founded by **Priyanshu Sharma**, a seasoned systems architect and technology consultant with a vision to build high-performance web systems for ambitious startups. Having spent years fixing sluggish template-based websites that failed under high traffic, Priyanshu set out to build an agency focused entirely on custom, clean-coded Next.js systems.
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Today, our engineers combine deep technical capabilities in React, Node.js, and cloud deployments with custom organic search strategies. We do not build throwaway templates; we code resilient digital assets from the ground up, guaranteeing speed, security, and full ownership access.
+              </p>
+              <div className="flex items-center gap-4 bg-secondary/10 p-5 rounded-2xl border border-border/60 mt-6">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-display font-bold text-primary shrink-0">
+                  PS
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-foreground">Priyanshu Sharma</h4>
+                  <p className="text-xs text-muted-foreground">Chief Technologist & Architect, ON Next Web</p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2} className="space-y-6">
+              <span className="text-primary text-xs uppercase font-bold tracking-widest">Credentials & Trust</span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold">Certifications & Standards</h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  { title: "Next.js Partner Network", desc: "Certified partners specializing in Next.js speed configurations.", icon: <Sparkles className="w-5 h-5 text-primary" /> },
+                  { title: "AWS Solutions Architect", desc: "Engineers certified in secure cloud hosting setup.", icon: <Trophy className="w-5 h-5 text-primary" /> },
+                  { title: "ISO 9001:2015 Quality", desc: "International standard for digital delivery systems.", icon: <Users className="w-5 h-5 text-primary" /> },
+                  { title: "Google Analytics Certified", desc: "Qualified search engine analysts monitoring user retention.", icon: <Star className="w-5 h-5 text-primary" /> }
+                ].map((cred, i) => (
+                  <div key={i} className="bg-secondary/15 border border-border/60 hover:border-primary/20 p-5 rounded-xl transition-all duration-300">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                      {cred.icon}
+                    </div>
+                    <h4 className="text-xs font-bold text-foreground mb-1">{cred.title}</h4>
+                    <p className="text-[11px] text-muted-foreground leading-relaxed">{cred.desc}</p>
+                  </div>
+                ))}
+              </div>
             </AnimatedSection>
           </div>
         </div>

@@ -19,6 +19,7 @@ interface BlogPost {
   coverImage?: string;
   author: string;
   createdAt: string;
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
 interface Block {
@@ -286,9 +287,9 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
                     return <hr key={idx} className="my-8 border-t border-border/60" />;
                   case "h1":
                     return (
-                      <h1 key={idx} className="font-display text-3xl md:text-4xl font-bold mt-12 mb-6 text-gradient">
+                      <h2 key={idx} className="font-display text-3xl md:text-4xl font-bold mt-12 mb-6 text-gradient">
                         {parseInlineMarkdown(block.text || "")}
-                      </h1>
+                      </h2>
                     );
                   case "h2":
                     return (
@@ -339,6 +340,32 @@ export default function BlogDetailClient({ blog }: { blog: BlogPost | null }) {
                     );
                 }
               })}
+
+              {blog.faqs && blog.faqs.length > 0 && (
+                <div className="mt-16 border-t border-border/60 pt-12">
+                  <h2 className="font-display text-2xl md:text-3xl font-bold mb-8 text-gradient">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-4">
+                    {blog.faqs.map((faq, idx) => (
+                      <details
+                        key={idx}
+                        className="group border border-border bg-secondary/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden cursor-pointer"
+                      >
+                        <summary className="flex items-center justify-between p-5 text-sm sm:text-base font-bold text-foreground select-none outline-none group-open:bg-primary/5 transition-colors">
+                          <span>{faq.question}</span>
+                          <span className="transition-transform duration-300 group-open:rotate-180 text-primary">
+                            <ArrowLeft size={16} className="-rotate-90 group-open:rotate-90" />
+                          </span>
+                        </summary>
+                        <div className="p-5 border-t border-border/60 text-xs sm:text-sm text-muted-foreground leading-relaxed bg-surface-elevated/10">
+                          <p>{faq.answer}</p>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </div>
+              )}
             </AnimatedSection>
           </article>
         )}

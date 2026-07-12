@@ -151,9 +151,9 @@ export default function PortfolioClient({ projects }: { projects: ProjectItem[] 
                           {project.category}
                         </span>
                         
-                        <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-1.5 group-hover:text-primary transition-colors duration-300">
+                        <h2 className="font-display text-xl md:text-2xl font-bold text-white mb-1.5 group-hover:text-primary transition-colors duration-300">
                           {project.title}
-                        </h3>
+                        </h2>
 
                         <p className="text-xs text-white/80 line-clamp-2 mt-1 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-75 leading-relaxed">
                           {project.description}

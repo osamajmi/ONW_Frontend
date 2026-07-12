@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GrainOverlay from "@/components/GrainOverlay";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Send, Mail, Phone, MapPin, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { Send, Mail, Phone, MapPin, CheckCircle, AlertCircle, Loader2, ShieldCheck } from "lucide-react";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -163,8 +163,48 @@ export default function ContactClient() {
                 </div>
               </div>
 
+              {/* Google Maps Location Embed */}
+              <div className="mt-8 overflow-hidden rounded-xl border border-border/80 shadow-md">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.2818987483017!2d77.28003667631333!3d28.561309575704044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3f46f3a388b%3A0xe54d6faeeec5845c!2sAbul%20Fazal%20Enclave%20Part%201%2C%20Okhla%20Vihar%2C%20Jamia%20Nagar%2C%20Okhla%2C%20New%20Delhi%2C%20Delhi%20110025!5e0!3m2!1sen!2sin!4v1716500000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="180"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale invert opacity-70 hover:opacity-100 transition-opacity duration-350"
+                  title="ON Next Web Delhi Office Location"
+                ></iframe>
+              </div>
+
+              {/* Security & Compliance Trust Badges */}
+              <div className="mt-8 border-t border-border/40 pt-6">
+                <p className="text-[10px] uppercase font-bold text-muted-foreground/60 tracking-wider mb-4">
+                  Security & Compliance Assurances
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck size={16} className="text-primary shrink-0" />
+                    <span className="text-[11px] font-medium text-foreground">SSL Encrypted Portal</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck size={16} className="text-primary shrink-0" />
+                    <span className="text-[11px] font-medium text-foreground">GDPR & PDP Compliant</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck size={16} className="text-primary shrink-0" />
+                    <span className="text-[11px] font-medium text-foreground">NDA Terms Enforced</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck size={16} className="text-primary shrink-0" />
+                    <span className="text-[11px] font-medium text-foreground">Secure reCAPTCHA v2</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Decorative Subtle Line */}
-              <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent rounded-full mt-12" />
+              <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent rounded-full mt-8" />
             </AnimatedSection>
 
             {/* Contact Form */}

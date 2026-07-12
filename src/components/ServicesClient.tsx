@@ -85,9 +85,9 @@ export default function ServicesClient({ services }: { services: ServiceItem[] }
                     <Icon size={24} className="group-hover:rotate-12 transition-transform duration-300" />
                   </div>
 
-                  <h3 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h2 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
                     {service.title}
-                  </h3>
+                  </h2>
 
                   <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                     {service.description}

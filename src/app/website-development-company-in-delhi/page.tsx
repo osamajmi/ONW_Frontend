@@ -27,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Website Development Company in Delhi | OnNextWeb",
-  description: "Looking for the best website development company in Delhi? OnNextWeb builds custom, speed-optimized & affordable business & ecommerce websites to grow sales.",
+  description: "Best website development company in Delhi. Custom, speed-optimized & affordable business & ecommerce websites engineered to rank and grow sales.",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-delhi",
   },
@@ -309,7 +309,7 @@ export default function DelhiLandingPage() {
       {/* MIDDLE PAGE CONTACT & TRUST SECTION */}
       <section className="py-16 bg-gradient-to-r from-primary/10 via-purple-600/5 to-primary/5 border-t border-b border-border/40 relative">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h3 className="font-display text-2xl sm:text-3xl font-bold">Want to Boost Your Website Rankings and Leads in Delhi?</h3>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold">Want to Boost Your Website Rankings and Leads in Delhi?</h2>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             Reach out via call or WhatsApp. Our developer team will analyze your business domain and prepare a free technical SEO and design blueprint for your brand.
           </p>
@@ -374,7 +374,7 @@ export default function DelhiLandingPage() {
             ].map((step, idx) => (
               <div key={idx} className="bg-surface-elevated/20 border border-border/60 p-6 rounded-xl relative space-y-4 hover:border-primary/20 transition-all duration-300">
                 <span className="font-display text-3xl font-extrabold text-primary/30 block">{step.num}</span>
-                <h4 className="font-display text-base font-bold text-foreground">{step.phase}</h4>
+                <h3 className="font-display text-base font-bold text-foreground">{step.phase}</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">{step.desc}</p>
               </div>
             ))}

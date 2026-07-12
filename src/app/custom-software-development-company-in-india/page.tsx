@@ -27,7 +27,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Custom Software Development Company in India | OnNextWeb",
-  description: "Looking for the best custom software development company in India? OnNextWeb builds bespoke CRM, ERP, SaaS products & mobile apps with global engineering standards.",
+  description: "Top custom software development company in India. We design bespoke CRM, ERP, SaaS products & mobile apps with global engineering standards.",
   alternates: {
     canonical: "https://www.onnextweb.in/custom-software-development-company-in-india",
   },
@@ -309,7 +309,7 @@ export default function IndiaCustomSoftwarePage() {
       {/* MIDDLE PAGE CALLOUT */}
       <section className="py-16 bg-gradient-to-r from-primary/10 via-purple-600/5 to-primary/5 border-t border-b border-border/40 relative">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h3 className="font-display text-2xl sm:text-3xl font-bold">Launch Your Bespoke Software Platform with India Offshore Advantage</h3>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold">Launch Your Bespoke Software Platform with India Offshore Advantage</h2>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             Directly connect with our software architect team in India. Get a technical scoping blueprint and NDA setup options without any initial charges.
           </p>
@@ -374,7 +374,7 @@ export default function IndiaCustomSoftwarePage() {
             ].map((step, idx) => (
               <div key={idx} className="bg-surface-elevated/20 border border-border/60 p-6 rounded-xl relative space-y-4 hover:border-primary/20 transition-all duration-300">
                 <span className="font-display text-3xl font-extrabold text-primary/30 block">{step.num}</span>
-                <h4 className="font-display text-base font-bold text-foreground">{step.phase}</h4>
+                <h3 className="font-display text-base font-bold text-foreground">{step.phase}</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">{step.desc}</p>
               </div>
             ))}
