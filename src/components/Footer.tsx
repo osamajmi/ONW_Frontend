@@ -58,7 +58,8 @@ const locations = [
   { name: "Web Development Delhi", href: "/website-development-company-in-delhi" },
   { name: "Web Development Gurgaon", href: "/website-development-company-in-gurgaon" },
   { name: "Web Development Noida", href: "/website-development-company-in-noida" },
-  { name: "Custom Software India", href: "/custom-software-development-company-in-india" }
+  { name: "Custom Software India", href: "/custom-software-development-company-in-india" },
+  { name: "Digital Marketing Delhi", href: "/digital-marketing-company-in-delhi" }
 ];
 
 const Footer = () => {
