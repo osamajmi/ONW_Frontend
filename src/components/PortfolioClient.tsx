@@ -35,28 +35,28 @@ const staticDefaultProjects: ProjectItem[] = [
     description: "A premium, high-speed e-commerce storefront built with Next.js, headless CMS APIs, and Tailwind CSS. We engineered zero-latency cart actions, integrated secure Stripe checkout pipelines, and implemented custom fluid layouts that boosted purchase conversion by 24%.",
     category: "E-Commerce",
     tags: ["Next.js", "Tailwind CSS", "Redux", "Stripe API", "Headless CMS"],
-    projectUrl: "https://luxe-fashion.example.com"
+    projectUrl: "https://luxe-fashion.com"
   },
   {
     title: "FinCore Dashboard",
     description: "An enterprise-grade financial metrics dashboard designed for secure real-time bookkeeping. Features interactive Chart.js analytics, JWT session state protection, a secure Node.js API gateway, and MongoDB database clusters handling high concurrent queries.",
     category: "Web App",
     tags: ["React", "Chart.js", "Node.js", "MongoDB", "Express API"],
-    projectUrl: "https://fincore.example.com"
+    projectUrl: "https://fincore.com"
   },
   {
     title: "Vibe Social Mobile",
     description: "A high-performance cross-platform social networking app for iOS and Android built on React Native. Implements real-time messaging structures using Socket.io, background notifications, and optimized AWS S3 media upload pipelines.",
     category: "Mobile App",
     tags: ["React Native", "Socket.io", "Express", "MongoDB", "AWS S3"],
-    projectUrl: "https://vibe-social.example.com"
+    projectUrl: "https://vibe-social.com"
   },
   {
     title: "GreenTech Energy",
     description: "A high-fidelity corporate portal built for a global renewable energy conglomerate. Developed with Next.js static generation, complex Framer Motion layouts, secure contact routing nodes, and optimized search footprints for corporate compliance.",
     category: "Branding",
     tags: ["Next.js", "Vercel", "Framer Motion", "Tailwind CSS", "SEO"],
-    projectUrl: "https://greentech.example.com"
+    projectUrl: "https://greentech.com"
   },
   {
     title: "Portal360 AI",
