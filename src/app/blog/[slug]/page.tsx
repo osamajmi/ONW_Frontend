@@ -7,10 +7,12 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   try {
-    const res = await fetch(`https://api.onnextweb.in/api/blogs/${slug}`, {
+    const res = await fetch(`${API_URL}/api/blogs/${slug}`, {
       cache: "no-store"
     });
     if (res.ok) {
@@ -45,7 +47,7 @@ export default async function BlogDetail({ params }: PageProps) {
   let blog = null;
 
   try {
-    const res = await fetch(`https://api.onnextweb.in/api/blogs/${slug}`, {
+    const res = await fetch(`${API_URL}/api/blogs/${slug}`, {
       cache: "no-store"
     });
     if (res.ok) {

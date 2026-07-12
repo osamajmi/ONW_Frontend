@@ -1,5 +1,7 @@
 "use client";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "${API_URL}";
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
@@ -206,7 +208,7 @@ export default function DashboardClient() {
   const fetchSeoForPage = async (pageName: string) => {
     setLoadingSeo(true);
     try {
-      const res = await fetch(`https://api.onnextweb.in/api/seo/${pageName}`);
+      const res = await fetch(`${API_URL}/api/seo/${pageName}`);
       if (res.ok) {
         const json = await res.json();
         setSeoForm(json);
@@ -223,46 +225,46 @@ export default function DashboardClient() {
     setLoading(true);
     try {
       // Fetch about content
-      const aboutRes = await fetch("https://api.onnextweb.in/api/about");
+      const aboutRes = await fetch("${API_URL}/api/about");
       if (aboutRes.ok) {
         const aboutJson = await aboutRes.json();
         setAboutData(aboutJson);
       }
 
       // Fetch blogs
-      const blogsRes = await fetch("https://api.onnextweb.in/api/blogs");
+      const blogsRes = await fetch("${API_URL}/api/blogs");
       if (blogsRes.ok) {
         const blogsJson = await blogsRes.json();
         setBlogs(blogsJson);
       }
 
       // Fetch PDFs
-      const pdfsRes = await fetch("https://api.onnextweb.in/api/pdfs");
+      const pdfsRes = await fetch("${API_URL}/api/pdfs");
       if (pdfsRes.ok) {
         const pdfsJson = await pdfsRes.json();
         setPdfs(pdfsJson);
       }
 
       // Fetch Services
-      const servicesRes = await fetch("https://api.onnextweb.in/api/services");
+      const servicesRes = await fetch("${API_URL}/api/services");
       if (servicesRes.ok) {
         setServices(await servicesRes.json());
       }
 
       // Fetch Projects
-      const projectsRes = await fetch("https://api.onnextweb.in/api/projects");
+      const projectsRes = await fetch("${API_URL}/api/projects");
       if (projectsRes.ok) {
         setProjects(await projectsRes.json());
       }
 
       // Fetch Testimonials
-      const testimonialsRes = await fetch("https://api.onnextweb.in/api/testimonials");
+      const testimonialsRes = await fetch("${API_URL}/api/testimonials");
       if (testimonialsRes.ok) {
         setTestimonials(await testimonialsRes.json());
       }
 
       // Fetch Contacts
-      const contactsRes = await fetch("https://api.onnextweb.in/api/contact", {
+      const contactsRes = await fetch("${API_URL}/api/contact", {
         headers: {
           Authorization: `Bearer ${authToken}`
         }
@@ -295,7 +297,7 @@ export default function DashboardClient() {
     e.preventDefault();
     setSavingAbout(true);
     try {
-      const res = await fetch("https://api.onnextweb.in/api/about", {
+      const res = await fetch("${API_URL}/api/about", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -327,7 +329,7 @@ export default function DashboardClient() {
     e.preventDefault();
     setSavingSeo(true);
     try {
-      const res = await fetch(`https://api.onnextweb.in/api/seo/${selectedSeoPage}`, {
+      const res = await fetch(`${API_URL}/api/seo/${selectedSeoPage}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -395,8 +397,8 @@ export default function DashboardClient() {
 
     setSavingBlog(true);
     const url = editingBlogId
-      ? `https://api.onnextweb.in/api/blogs/${editingBlogId}`
-      : "https://api.onnextweb.in/api/blogs";
+      ? `${API_URL}/api/blogs/${editingBlogId}`
+      : "${API_URL}/api/blogs";
     const method = editingBlogId ? "PUT" : "POST";
 
     try {
@@ -413,7 +415,7 @@ export default function DashboardClient() {
         toast.success(editingBlogId ? "Blog updated successfully!" : "Blog created successfully!");
         setShowBlogModal(false);
         // Refresh blogs list
-        const blogsRes = await fetch("https://api.onnextweb.in/api/blogs");
+        const blogsRes = await fetch("${API_URL}/api/blogs");
         if (blogsRes.ok) setBlogs(await blogsRes.json());
       } else {
         const errJson = await res.json();
@@ -430,7 +432,7 @@ export default function DashboardClient() {
     if (!window.confirm("Are you sure you want to delete this blog post?")) return;
 
     try {
-      const res = await fetch(`https://api.onnextweb.in/api/blogs/${id}`, {
+      const res = await fetch(`${API_URL}/api/blogs/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -465,7 +467,7 @@ export default function DashboardClient() {
 
     setUploadingPdfs(true);
     try {
-      const res = await fetch("https://api.onnextweb.in/api/pdfs/upload", {
+      const res = await fetch("${API_URL}/api/pdfs/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`
@@ -482,7 +484,7 @@ export default function DashboardClient() {
         if (fileInput) fileInput.value = "";
         
         // Refresh PDFs list
-        const pdfsRes = await fetch("https://api.onnextweb.in/api/pdfs");
+        const pdfsRes = await fetch("${API_URL}/api/pdfs");
         if (pdfsRes.ok) setPdfs(await pdfsRes.json());
       } else {
         throw new Error(data.message || "Failed to upload files");
@@ -498,7 +500,7 @@ export default function DashboardClient() {
     if (!window.confirm("Are you sure you want to delete this PDF document?")) return;
 
     try {
-      const res = await fetch(`https://api.onnextweb.in/api/pdfs/${id}`, {
+      const res = await fetch(`${API_URL}/api/pdfs/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -555,8 +557,8 @@ export default function DashboardClient() {
     }
     setSavingService(true);
     const url = editingServiceId
-      ? `https://api.onnextweb.in/api/services/${editingServiceId}`
-      : "https://api.onnextweb.in/api/services";
+      ? `${API_URL}/api/services/${editingServiceId}`
+      : "${API_URL}/api/services";
     const method = editingServiceId ? "PUT" : "POST";
 
     const featuresArray = serviceForm.features
@@ -578,7 +580,7 @@ export default function DashboardClient() {
       if (res.ok) {
         toast.success(editingServiceId ? "Service updated successfully!" : "Service added successfully!");
         setShowServiceModal(false);
-        const servicesRes = await fetch("https://api.onnextweb.in/api/services");
+        const servicesRes = await fetch("${API_URL}/api/services");
         if (servicesRes.ok) setServices(await servicesRes.json());
       } else {
         const errJson = await res.json();
@@ -594,7 +596,7 @@ export default function DashboardClient() {
   const deleteService = async (id: string) => {
     if (!window.confirm("Are you sure you want to delete this service?")) return;
     try {
-      const res = await fetch(`https://api.onnextweb.in/api/services/${id}`, {
+      const res = await fetch(`${API_URL}/api/services/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -658,8 +660,8 @@ export default function DashboardClient() {
     }
     setSavingProject(true);
     const url = editingProjectId
-      ? `https://api.onnextweb.in/api/projects/${editingProjectId}`
-      : "https://api.onnextweb.in/api/projects";
+      ? `${API_URL}/api/projects/${editingProjectId}`
+      : "${API_URL}/api/projects";
     const method = editingProjectId ? "PUT" : "POST";
 
     const tagsArray = projectForm.tags
@@ -681,7 +683,7 @@ export default function DashboardClient() {
       if (res.ok) {
         toast.success(editingProjectId ? "Project updated successfully!" : "Project added successfully!");
         setShowProjectModal(false);
-        const projectsRes = await fetch("https://api.onnextweb.in/api/projects");
+        const projectsRes = await fetch("${API_URL}/api/projects");
         if (projectsRes.ok) setProjects(await projectsRes.json());
       } else {
         const errJson = await res.json();
@@ -697,7 +699,7 @@ export default function DashboardClient() {
   const deleteProject = async (id: string) => {
     if (!window.confirm("Are you sure you want to delete this project?")) return;
     try {
-      const res = await fetch(`https://api.onnextweb.in/api/projects/${id}`, {
+      const res = await fetch(`${API_URL}/api/projects/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -748,8 +750,8 @@ export default function DashboardClient() {
     }
     setSavingTestimonial(true);
     const url = editingTestimonialId
-      ? `https://api.onnextweb.in/api/testimonials/${editingTestimonialId}`
-      : "https://api.onnextweb.in/api/testimonials";
+      ? `${API_URL}/api/testimonials/${editingTestimonialId}`
+      : "${API_URL}/api/testimonials";
     const method = editingTestimonialId ? "PUT" : "POST";
 
     try {
@@ -764,7 +766,7 @@ export default function DashboardClient() {
       if (res.ok) {
         toast.success(editingTestimonialId ? "Testimonial updated successfully!" : "Testimonial added successfully!");
         setShowTestimonialModal(false);
-        const testimonialsRes = await fetch("https://api.onnextweb.in/api/testimonials");
+        const testimonialsRes = await fetch("${API_URL}/api/testimonials");
         if (testimonialsRes.ok) setTestimonials(await testimonialsRes.json());
       } else {
         const errJson = await res.json();
@@ -780,7 +782,7 @@ export default function DashboardClient() {
   const deleteTestimonial = async (id: string) => {
     if (!window.confirm("Are you sure you want to delete this testimonial?")) return;
     try {
-      const res = await fetch(`https://api.onnextweb.in/api/testimonials/${id}`, {
+      const res = await fetch(`${API_URL}/api/testimonials/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -1158,7 +1160,7 @@ export default function DashboardClient() {
 
                             <div className="flex items-center gap-2">
                               <a
-                                href={`https://api.onnextweb.in/api/pdfs/${pdf._id}`}
+                                href={`${API_URL}/api/pdfs/${pdf._id}`}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="py-1.5 px-3 rounded-lg bg-secondary border border-border/40 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all font-semibold cursor-pointer"
@@ -1376,7 +1378,7 @@ export default function DashboardClient() {
                               onClick={async () => {
                                 if (!window.confirm("Are you sure you want to delete this message?")) return;
                                 try {
-                                  const res = await fetch(`https://api.onnextweb.in/api/contact/${contact._id}`, {
+                                  const res = await fetch(`${API_URL}/api/contact/${contact._id}`, {
                                     method: "DELETE",
                                     headers: {
                                       Authorization: `Bearer ${token}`

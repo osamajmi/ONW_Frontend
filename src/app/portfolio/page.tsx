@@ -12,9 +12,11 @@ interface ProjectItem {
   projectUrl?: string;
 }
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("https://api.onnextweb.in/api/seo/portfolio", {
+    const res = await fetch(`${API_URL}/api/seo/portfolio`, {
       cache: "no-store"
     });
     if (res.ok) {
@@ -49,7 +51,7 @@ export default async function PortfolioPage() {
   let projects: ProjectItem[] = [];
 
   try {
-    const res = await fetch("https://api.onnextweb.in/api/projects", {
+    const res = await fetch(`${API_URL}/api/projects`, {
       cache: "no-store"
     });
     if (res.ok) {

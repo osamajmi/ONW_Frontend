@@ -10,9 +10,11 @@ interface ServiceItem {
   features?: string[];
 }
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("https://api.onnextweb.in/api/seo/services", {
+    const res = await fetch(`${API_URL}/api/seo/services`, {
       cache: "no-store"
     });
     if (res.ok) {
@@ -47,7 +49,7 @@ export default async function ServicesPage() {
   let services: ServiceItem[] = [];
 
   try {
-    const res = await fetch("https://api.onnextweb.in/api/services", {
+    const res = await fetch(`${API_URL}/api/services`, {
       cache: "no-store"
     });
     if (res.ok) {

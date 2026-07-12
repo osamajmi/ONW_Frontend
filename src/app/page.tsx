@@ -13,27 +13,29 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import GrainOverlay from "@/components/GrainOverlay";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+
 async function getHomeData() {
   let services = [];
   let projects = [];
   let testimonials = [];
 
   try {
-    const sRes = await fetch("https://api.onnextweb.in/api/services", { cache: "no-store" });
+    const sRes = await fetch(`${API_URL}/api/services`, { cache: "no-store" });
     if (sRes.ok) services = await sRes.json();
   } catch (error) {
     console.error("Error loading services for home:", error);
   }
 
   try {
-    const pRes = await fetch("https://api.onnextweb.in/api/projects", { cache: "no-store" });
+    const pRes = await fetch(`${API_URL}/api/projects`, { cache: "no-store" });
     if (pRes.ok) projects = await pRes.json();
   } catch (error) {
     console.error("Error loading projects for home:", error);
   }
 
   try {
-    const tRes = await fetch("https://api.onnextweb.in/api/testimonials", { cache: "no-store" });
+    const tRes = await fetch(`${API_URL}/api/testimonials`, { cache: "no-store" });
     if (tRes.ok) testimonials = await tRes.json();
   } catch (error) {
     console.error("Error loading testimonials for home:", error);
@@ -44,7 +46,7 @@ async function getHomeData() {
 
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("https://api.onnextweb.in/api/seo/home", {
+    const res = await fetch(`${API_URL}/api/seo/home`, {
       cache: "no-store"
     });
     if (res.ok) {

@@ -9,6 +9,8 @@ import GrainOverlay from "@/components/GrainOverlay";
 import { Lock, User, Loader2, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+
 export default function LoginClient() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +32,7 @@ export default function LoginClient() {
 
     setLoading(true);
     try {
-      const res = await fetch("https://api.onnextweb.in/api/auth/login", {
+      const res = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

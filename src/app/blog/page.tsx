@@ -3,9 +3,11 @@ export const dynamic = "force-dynamic";
 import BlogClient from "@/components/BlogClient";
 
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("https://api.onnextweb.in/api/seo/blog", {
+    const res = await fetch(`${API_URL}/api/seo/blog`, {
       cache: "no-store"
     });
     if (res.ok) {
@@ -40,7 +42,7 @@ export default async function Blog() {
   let blogs = [];
 
   try {
-    const res = await fetch("https://api.onnextweb.in/api/blogs", {
+    const res = await fetch(`${API_URL}/api/blogs`, {
       cache: "no-store"
     });
     if (res.ok) {

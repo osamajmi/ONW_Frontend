@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.onnextweb.in";
-const API_URL  = "https://api.onnextweb.in";
+const API_URL  = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 

@@ -16,9 +16,11 @@ const defaultAbout = {
   ]
 };
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const res = await fetch("https://api.onnextweb.in/api/seo/about", {
+    const res = await fetch(`${API_URL}/api/seo/about`, {
       cache: "no-store"
     });
     if (res.ok) {
@@ -53,7 +55,7 @@ export default async function AboutUs() {
   let data = defaultAbout;
 
   try {
-    const res = await fetch("https://api.onnextweb.in/api/about", {
+    const res = await fetch(`${API_URL}/api/about`, {
       cache: "no-store"
     });
     if (res.ok) {
