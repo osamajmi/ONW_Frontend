@@ -27,6 +27,26 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.onnextweb.in/digital-marketing-company-in-delhi",
   },
+  openGraph: {
+    title: "Digital Marketing Company in Delhi | OnNextWeb",
+    description: "Best digital marketing company in Delhi. Scale your business with customized SEO, PPC campaigns, social media marketing, and data-backed growth strategies.",
+    url: "https://www.onnextweb.in/digital-marketing-company-in-delhi",
+    type: "website",
+    images: [
+      {
+        url: "https://www.onnextweb.in/dark-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Digital Marketing Company in Delhi | OnNextWeb",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Marketing Company in Delhi | OnNextWeb",
+    description: "Scale your business with customized SEO, PPC campaigns, social media marketing in Delhi.",
+    images: ["https://www.onnextweb.in/dark-logo.png"],
+  },
 };
 
 export default function DelhiDigitalMarketing() {
@@ -350,6 +370,31 @@ export default function DelhiDigitalMarketing() {
 
         <Footer />
       </div>
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.onnextweb.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Digital Marketing Company in Delhi",
+                "item": "https://www.onnextweb.in/digital-marketing-company-in-delhi"
+              }
+            ]
+          })
+        }}
+      />
     </>
   );
 }

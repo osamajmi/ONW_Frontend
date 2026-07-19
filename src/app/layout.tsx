@@ -13,9 +13,36 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: "We craft modern websites, custom software, and premium brand designs engineered for ambitious brands. Think Best, Think Next.",
-  keywords: ["web development", "UI/UX design", "custom software", "Next.js", "branding", "digital studio", "India"],
-  authors: [{ name: "ON Next Web", url: "https://onnextweb.in" }],
+  keywords: [
+    "web development company in India",
+    "custom software development India",
+    "website development company in Delhi",
+    "website development company in Gurgaon",
+    "website development company in Noida",
+    "digital marketing company in Delhi",
+    "Next.js development company",
+    "UI/UX design India",
+    "offshore software development India",
+    "SaaS development company India",
+    "ecommerce website development India",
+    "React development agency",
+    "branding agency Gurgaon",
+    "premium digital studio India",
+    "OnNextWeb",
+  ],
+  authors: [{ name: "ON Next Web", url: "https://www.onnextweb.in" }],
   creator: "ON Next Web",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
@@ -24,13 +51,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://onnextweb.in",
+    url: "https://www.onnextweb.in",
     siteName: "ON Next Web",
     title: "ON Next Web | Premium Digital Studio",
     description: "We craft modern websites, custom software, and premium brand designs. Think Best, Think Next.",
     images: [
       {
-        url: "/dark logo.png",
+        url: "/dark-logo.png",
         width: 1200,
         height: 630,
         alt: "ON Next Web — Premium Digital Studio",
@@ -41,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ON Next Web | Premium Digital Studio",
     description: "We craft modern websites, custom software, and premium brand designs.",
-    images: ["/dark logo.png"],
+    images: ["/dark-logo.png"],
     creator: "@onnextweb",
   },
 };
@@ -52,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased dark">
+    <html lang="en-IN" className="h-full antialiased dark">
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Providers>{children}</Providers>
         <Script
@@ -85,7 +112,7 @@ export default function RootLayout({
               "name": "ON Next Web",
               "alternateName": "OnNextWeb",
               "url": "https://onnextweb.in",
-              "logo": "https://onnextweb.in/dark%20logo.png",
+              "logo": "https://www.onnextweb.in/dark-logo.png",
               "sameAs": [
                 "https://www.linkedin.com/company/onnextweb",
                 "https://twitter.com/onnextweb"
@@ -100,10 +127,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "ON Next Web",
-              "image": "https://onnextweb.in/dark%20logo.png",
-              "@id": "https://onnextweb.in/#localbusiness",
-              "url": "https://onnextweb.in",
-              "telephone": "+91-XXXXXXXXXX",
+              "image": "https://www.onnextweb.in/dark-logo.png",
+              "@id": "https://www.onnextweb.in/#localbusiness",
+              "url": "https://www.onnextweb.in",
+              "telephone": "+91-8765077474",
               "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
@@ -129,6 +156,25 @@ export default function RootLayout({
                 ],
                 "opens": "09:00",
                 "closes": "18:00"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "ON Next Web",
+              "url": "https://www.onnextweb.in",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.onnextweb.in/blog?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
               }
             })
           }}

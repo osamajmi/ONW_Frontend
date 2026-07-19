@@ -36,7 +36,21 @@ export const metadata: Metadata = {
     description: "Get custom, speed-optimized and premium websites in Delhi NCR. Affordable web development services tailored to rank and generate high-intent leads.",
     url: "https://www.onnextweb.in/website-development-company-in-delhi",
     type: "website",
-  }
+    images: [
+      {
+        url: "https://www.onnextweb.in/dark-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Website Development Company in Delhi | OnNextWeb",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development Company in Delhi | OnNextWeb",
+    description: "Get custom, speed-optimized and premium websites in Delhi NCR.",
+    images: ["https://www.onnextweb.in/dark-logo.png"],
+  },
 };
 
 export default function DelhiLandingPage() {
@@ -734,6 +748,31 @@ export default function DelhiLandingPage() {
                   "@type": "Answer",
                   "text": "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle any minor adjustments."
                 }
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.onnextweb.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Development Company in Delhi",
+                "item": "https://www.onnextweb.in/website-development-company-in-delhi"
               }
             ]
           })

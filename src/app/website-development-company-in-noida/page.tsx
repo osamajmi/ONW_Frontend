@@ -36,7 +36,21 @@ export const metadata: Metadata = {
     description: "Get affordable website design and custom software development services in Noida NCR. Drive leads and scale your brand digital presence with speed-optimized setups.",
     url: "https://www.onnextweb.in/website-development-company-in-noida",
     type: "website",
-  }
+    images: [
+      {
+        url: "https://www.onnextweb.in/dark-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Website Development Company in Noida | OnNextWeb",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development Company in Noida | OnNextWeb",
+    description: "Get affordable website design and custom software development services in Noida NCR.",
+    images: ["https://www.onnextweb.in/dark-logo.png"],
+  },
 };
 
 export default function NoidaLandingPage() {
@@ -728,6 +742,31 @@ export default function NoidaLandingPage() {
                   "@type": "Answer",
                   "text": "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle any minor adjustments."
                 }
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.onnextweb.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Development Company in Noida",
+                "item": "https://www.onnextweb.in/website-development-company-in-noida"
               }
             ]
           })

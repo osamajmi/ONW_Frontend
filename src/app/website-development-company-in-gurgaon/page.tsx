@@ -36,7 +36,21 @@ export const metadata: Metadata = {
     description: "Get premium, speed-optimized website design and custom software development services in Gurgaon NCR. Drive leads and scale your brand digital presence.",
     url: "https://www.onnextweb.in/website-development-company-in-gurgaon",
     type: "website",
-  }
+    images: [
+      {
+        url: "https://www.onnextweb.in/dark-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Website Development Company in Gurgaon | OnNextWeb",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development Company in Gurgaon | OnNextWeb",
+    description: "Get premium, speed-optimized website design in Gurgaon NCR.",
+    images: ["https://www.onnextweb.in/dark-logo.png"],
+  },
 };
 
 export default function GurgaonLandingPage() {
@@ -728,6 +742,31 @@ export default function GurgaonLandingPage() {
                   "@type": "Answer",
                   "text": "Our core workspace is located on Golf Course Road, Sector 54, Gurgaon. You can reach out via call (+91 8765077474) or email, and we will schedule an in-person session to discuss your project requirements."
                 }
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.onnextweb.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Website Development Company in Gurgaon",
+                "item": "https://www.onnextweb.in/website-development-company-in-gurgaon"
               }
             ]
           })

@@ -73,7 +73,7 @@ export default async function BlogDetail({ params }: PageProps) {
       "@type": "BlogPosting",
       "headline": blog.title,
       "description": blog.summary,
-      "image": blog.coverImage || "https://www.onnextweb.in/dark logo.png",
+      "image": blog.coverImage || "https://www.onnextweb.in/dark-logo.png",
       "datePublished": blog.createdAt,
       "dateModified": blog.updatedAt || blog.createdAt,
       "author": {
@@ -86,7 +86,7 @@ export default async function BlogDetail({ params }: PageProps) {
         "name": "ON Next Web",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.onnextweb.in/dark logo.png"
+          "url": "https://www.onnextweb.in/dark-logo.png"
         }
       },
       "mainEntityOfPage": {

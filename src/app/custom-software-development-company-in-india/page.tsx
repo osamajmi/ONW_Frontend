@@ -36,7 +36,21 @@ export const metadata: Metadata = {
     description: "Get premium custom software engineering, SaaS MVP development, and cloud solutions in India. Modern technology stacks designed to scale ambitious global brands.",
     url: "https://www.onnextweb.in/custom-software-development-company-in-india",
     type: "website",
-  }
+    images: [
+      {
+        url: "https://www.onnextweb.in/dark-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Custom Software Development Company in India | OnNextWeb",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom Software Development Company in India | OnNextWeb",
+    description: "Get premium custom software engineering, SaaS MVP development, and cloud solutions in India.",
+    images: ["https://www.onnextweb.in/dark-logo.png"],
+  },
 };
 
 export default function IndiaCustomSoftwarePage() {
@@ -728,6 +742,31 @@ export default function IndiaCustomSoftwarePage() {
                   "@type": "Answer",
                   "text": "Our delivery center is based in Sector 54, Golf Course Road, Gurgaon (Delhi NCR). You can contact us via call (+91 8765077474) or email, and we will set up dedicated Slack channels for daily syncs."
                 }
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.onnextweb.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Custom Software Development Company in India",
+                "item": "https://www.onnextweb.in/custom-software-development-company-in-india"
               }
             ]
           })
