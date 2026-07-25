@@ -26,14 +26,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Website Development Company in Delhi | OnNextWeb",
-  description: "Best website development company in Delhi. Custom, speed-optimized & affordable business & ecommerce websites engineered to rank and grow sales.",
+  title: "Web Development Company in Delhi | ON Next Web",
+  description: "Accelerate business growth with the best website development company in Delhi. High-speed custom Next.js websites built to rank and convert. Contact us!",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-delhi",
   },
   openGraph: {
-    title: "Website Development Company in Delhi | OnNextWeb",
-    description: "Get custom, speed-optimized and premium websites in Delhi NCR. Affordable web development services tailored to rank and generate high-intent leads.",
+    title: "Web Development Company in Delhi | ON Next Web",
+    description: "Accelerate business growth with the best website development company in Delhi. High-speed custom Next.js websites built to rank and convert. Contact us!",
     url: "https://www.onnextweb.in/website-development-company-in-delhi",
     type: "website",
     images: [
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
         url: "https://www.onnextweb.in/dark-logo.png",
         width: 1200,
         height: 630,
-        alt: "Website Development Company in Delhi | OnNextWeb",
+        alt: "Web Development Company in Delhi | ON Next Web",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Company in Delhi | OnNextWeb",
-    description: "Get custom, speed-optimized and premium websites in Delhi NCR.",
+    title: "Web Development Company in Delhi | ON Next Web",
+    description: "Accelerate business growth with the best website development company in Delhi.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
@@ -137,7 +137,7 @@ export default function DelhiLandingPage() {
                 <a 
                   href="https://wa.me/918765077474?text=Hi%20OnNextWeb,%20I%20am%20looking%20for%20website%20development%20services%20in%20Delhi." 
                   target="_blank" 
-                  rel="noopener noreferrer" 
+                  rel="nofollow noopener noreferrer" 
                   className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-2 cursor-pointer text-base"
                 >
                   <MessageSquare size={18} />
@@ -333,7 +333,7 @@ export default function DelhiLandingPage() {
               <Phone size={16} className="text-primary" />
               Direct Call: +91 8765077474
             </a>
-            <a href="https://wa.me/918765077474" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-emerald-600/10 hover:bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 px-6 py-3.5 rounded-xl transition-all duration-300">
+            <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="flex items-center gap-2 bg-emerald-600/10 hover:bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 px-6 py-3.5 rounded-xl transition-all duration-300">
               <MessageSquare size={16} />
               WhatsApp: Chat Now
             </a>
@@ -681,7 +681,7 @@ export default function DelhiLandingPage() {
                 <a href="tel:+918765077474" className="bg-primary text-primary-foreground text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg hover:glow-accent transition-all duration-300">
                   Call Now
                 </a>
-                <a href="https://wa.me/918765077474" target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-300">
+                <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-300">
                   Chat on WhatsApp
                 </a>
               </div>

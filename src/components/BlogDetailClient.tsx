@@ -158,7 +158,7 @@ const parseInlineMarkdown = (text: string): React.ReactNode => {
             key={match.index}
             href={url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="text-primary hover:underline font-medium"
           >
             {linkText}

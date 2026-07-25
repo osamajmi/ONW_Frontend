@@ -26,14 +26,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Company in India | OnNextWeb",
-  description: "Top custom software development company in India. We design bespoke CRM, ERP, SaaS products & mobile apps with global engineering standards.",
+  title: "Custom Software Development Company in India | ON Next Web",
+  description: "Build premium digital products with India's top custom software development company. Custom ERP, SaaS solutions, and mobile apps built to scale. Hire us!",
   alternates: {
     canonical: "https://www.onnextweb.in/custom-software-development-company-in-india",
   },
   openGraph: {
-    title: "Custom Software Development Company in India | OnNextWeb",
-    description: "Get premium custom software engineering, SaaS MVP development, and cloud solutions in India. Modern technology stacks designed to scale ambitious global brands.",
+    title: "Custom Software Development Company in India | ON Next Web",
+    description: "Build premium digital products with India's top custom software development company. Custom ERP, SaaS solutions, and mobile apps built to scale. Hire us!",
     url: "https://www.onnextweb.in/custom-software-development-company-in-india",
     type: "website",
     images: [
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
         url: "https://www.onnextweb.in/dark-logo.png",
         width: 1200,
         height: 630,
-        alt: "Custom Software Development Company in India | OnNextWeb",
+        alt: "Custom Software Development Company in India | ON Next Web",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Software Development Company in India | OnNextWeb",
-    description: "Get premium custom software engineering, SaaS MVP development, and cloud solutions in India.",
+    title: "Custom Software Development Company in India | ON Next Web",
+    description: "Build premium digital products with India's top custom software development company.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
@@ -137,7 +137,7 @@ export default function IndiaCustomSoftwarePage() {
                 <a 
                   href="https://wa.me/918765077474?text=Hi%20OnNextWeb,%20I%20am%20looking%20for%20custom%20software%20development%20services%20in%20India." 
                   target="_blank" 
-                  rel="noopener noreferrer" 
+                  rel="nofollow noopener noreferrer" 
                   className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-2 cursor-pointer text-base"
                 >
                   <MessageSquare size={18} />
@@ -333,7 +333,7 @@ export default function IndiaCustomSoftwarePage() {
               <Phone size={16} className="text-primary" />
               Call India Office: +91 8765077474
             </a>
-            <a href="https://wa.me/918765077474" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-emerald-600/10 hover:bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 px-6 py-3.5 rounded-xl transition-all duration-300">
+            <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="flex items-center gap-2 bg-emerald-600/10 hover:bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 px-6 py-3.5 rounded-xl transition-all duration-300">
               <MessageSquare size={16} />
               WhatsApp: Connect Instantly
             </a>
@@ -675,7 +675,7 @@ export default function IndiaCustomSoftwarePage() {
                 <a href="tel:+918765077474" className="bg-primary text-primary-foreground text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg hover:glow-accent transition-all duration-300">
                   Call Now
                 </a>
-                <a href="https://wa.me/918765077474" target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-300">
+                <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-300">
                   WhatsApp Chat
                 </a>
               </div>

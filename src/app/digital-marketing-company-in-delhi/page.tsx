@@ -22,14 +22,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Company in Delhi | OnNextWeb",
-  description: "Best digital marketing company in Delhi. Scale your business with customized SEO, PPC campaigns, social media marketing, and data-backed growth strategies.",
+  title: "Digital Marketing Company in Delhi | ON Next Web",
+  description: "Grow your traffic & revenue with the top digital marketing company in Delhi. Premium SEO, ROI-driven PPC, and content strategies. Request a free audit!",
   alternates: {
     canonical: "https://www.onnextweb.in/digital-marketing-company-in-delhi",
   },
   openGraph: {
-    title: "Digital Marketing Company in Delhi | OnNextWeb",
-    description: "Best digital marketing company in Delhi. Scale your business with customized SEO, PPC campaigns, social media marketing, and data-backed growth strategies.",
+    title: "Digital Marketing Company in Delhi | ON Next Web",
+    description: "Grow your traffic & revenue with the top digital marketing company in Delhi. Premium SEO, ROI-driven PPC, and content strategies. Request a free audit!",
     url: "https://www.onnextweb.in/digital-marketing-company-in-delhi",
     type: "website",
     images: [
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
         url: "https://www.onnextweb.in/dark-logo.png",
         width: 1200,
         height: 630,
-        alt: "Digital Marketing Company in Delhi | OnNextWeb",
+        alt: "Digital Marketing Company in Delhi | ON Next Web",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing Company in Delhi | OnNextWeb",
-    description: "Scale your business with customized SEO, PPC campaigns, social media marketing in Delhi.",
+    title: "Digital Marketing Company in Delhi | ON Next Web",
+    description: "Grow your traffic & revenue with the top digital marketing company in Delhi.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
@@ -318,7 +318,7 @@ export default function DelhiDigitalMarketing() {
                     <Phone size={14} className="text-primary group-hover:scale-105 transition-transform" />
                     <span className="font-medium text-foreground">Call Delhi Office: +91 8765077474</span>
                   </a>
-                  <a href="https://wa.me/918765077474" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-emerald-600/10 border border-emerald-500/30 text-emerald-400 px-5 py-3 rounded-xl text-xs hover:bg-emerald-600/20 transition-all">
+                  <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="flex items-center gap-4 bg-emerald-600/10 border border-emerald-500/30 text-emerald-400 px-5 py-3 rounded-xl text-xs hover:bg-emerald-600/20 transition-all">
                     <MessageSquare size={14} />
                     <span>WhatsApp: Connect Instantly</span>
                   </a>

@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     canonical: "https://www.onnextweb.in",
   },
   title: {
-    default: "ON Next Web | Premium Digital Studio",
+    default: "ON Next Web | Premium Web Development & Software Studio",
     template: "%s",
   },
-  description: "We craft modern websites, custom software, and premium brand designs engineered for ambitious brands. Think Best, Think Next.",
+  description: "We build custom software, premium Next.js websites, and high-converting SEO strategies for ambitious global brands. Think Best, Think Next. Connect now!",
   keywords: [
     "web development company in India",
     "custom software development India",
@@ -114,7 +114,7 @@ export default function RootLayout({
               "url": "https://onnextweb.in",
               "logo": "https://www.onnextweb.in/dark-logo.png",
               "sameAs": [
-                "https://www.linkedin.com/company/onnextweb",
+                "https://www.linkedin.com/company/onnext-web/",
                 "https://twitter.com/onnextweb"
               ]
             })

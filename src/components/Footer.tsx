@@ -41,7 +41,7 @@ const InstagramIcon = ({ size = 18, ...props }: CustomIconProps) => (
 
 const socials = [
   { name: "Twitter", href: "https://x.com/onnextweb", icon: TwitterIcon },
-  { name: "LinkedIn", href: "https://www.linkedin.com/company/onnextweb", icon: LinkedinIcon },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/onnext-web/", icon: LinkedinIcon },
   { name: "Dribbble", href: "https://dribbble.com/onnextweb", icon: DribbbleIcon },
   { name: "Instagram", href: "https://www.instagram.com/onnextweb/", icon: InstagramIcon },
 ];
@@ -166,7 +166,7 @@ const Footer = () => {
                     key={s.name}
                     href={s.href}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow noopener noreferrer"
                     title={s.name}
                     className="w-9 h-9 rounded-lg border border-border/80 bg-surface-elevated/20 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/45 hover:bg-primary/5 transition-all duration-300 relative group"
                     whileHover={{ scale: 1.05, y: -1 }}

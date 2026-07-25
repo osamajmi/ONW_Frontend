@@ -26,14 +26,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Website Development Company in Noida | OnNextWeb",
-  description: "Best website development company in Noida. Custom, affordable Next.js business websites & ecommerce storefronts engineered for fast sales growth.",
+  title: "Web Development Company in Noida | ON Next Web",
+  description: "Partner with the leading website development company in Noida. We engineer custom, fast, and SEO-friendly Next.js sites that scale sales. Call today!",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-noida",
   },
   openGraph: {
-    title: "Website Development Company in Noida | OnNextWeb",
-    description: "Get affordable website design and custom software development services in Noida NCR. Drive leads and scale your brand digital presence with speed-optimized setups.",
+    title: "Web Development Company in Noida | ON Next Web",
+    description: "Partner with the leading website development company in Noida. We engineer custom, fast, and SEO-friendly Next.js sites that scale sales. Call today!",
     url: "https://www.onnextweb.in/website-development-company-in-noida",
     type: "website",
     images: [
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
         url: "https://www.onnextweb.in/dark-logo.png",
         width: 1200,
         height: 630,
-        alt: "Website Development Company in Noida | OnNextWeb",
+        alt: "Web Development Company in Noida | ON Next Web",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Company in Noida | OnNextWeb",
-    description: "Get affordable website design and custom software development services in Noida NCR.",
+    title: "Web Development Company in Noida | ON Next Web",
+    description: "Partner with the leading website development company in Noida.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
@@ -137,7 +137,7 @@ export default function NoidaLandingPage() {
                 <a 
                   href="https://wa.me/918765077474?text=Hi%20OnNextWeb,%20I%20am%20looking%20for%20website%20development%20services%20in%20Noida." 
                   target="_blank" 
-                  rel="noopener noreferrer" 
+                  rel="nofollow noopener noreferrer" 
                   className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-2 cursor-pointer text-base"
                 >
                   <MessageSquare size={18} />
@@ -333,7 +333,7 @@ export default function NoidaLandingPage() {
               <Phone size={16} className="text-primary" />
               Call Noida Office: +91 8765077474
             </a>
-            <a href="https://wa.me/918765077474" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-emerald-600/10 hover:bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 px-6 py-3.5 rounded-xl transition-all duration-300">
+            <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="flex items-center gap-2 bg-emerald-600/10 hover:bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 px-6 py-3.5 rounded-xl transition-all duration-300">
               <MessageSquare size={16} />
               WhatsApp: Connect Now
             </a>
@@ -675,7 +675,7 @@ export default function NoidaLandingPage() {
                 <a href="tel:+918765077474" className="bg-primary text-primary-foreground text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg hover:glow-accent transition-all duration-300">
                   Call Now
                 </a>
-                <a href="https://wa.me/918765077474" target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-300">
+                <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-300">
                   WhatsApp Chat
                 </a>
               </div>
