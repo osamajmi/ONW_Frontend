@@ -78,7 +78,7 @@ export default async function BlogDetail({ params }: PageProps) {
       "dateModified": blog.updatedAt || blog.createdAt,
       "author": {
         "@type": "Person",
-        "name": blog.author || "Priyanshu Sharma",
+        "name": blog.author || "MD Osama Khan",
         "url": "https://www.onnextweb.in/about-us"
       },
       "publisher": {

@@ -149,17 +149,17 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
               <span className="text-primary text-xs uppercase font-bold tracking-widest">Our Leadership</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient">Founder's Story</h2>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                ON Next Web was founded by **Priyanshu Sharma**, a seasoned systems architect and technology consultant with a vision to build high-performance web systems for ambitious startups. Having spent years fixing sluggish template-based websites that failed under high traffic, Priyanshu set out to build an agency focused entirely on custom, clean-coded Next.js systems.
+                ON Next Web was founded by **MD Osama Khan**, a seasoned systems architect and technology consultant with a vision to build high-performance web systems for ambitious startups. Having spent years fixing sluggish template-based websites that failed under high traffic, Osama set out to build an agency focused entirely on custom, clean-coded Next.js systems.
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Today, our engineers combine deep technical capabilities in React, Node.js, and cloud deployments with custom organic search strategies. We do not build throwaway templates; we code resilient digital assets from the ground up, guaranteeing speed, security, and full ownership access.
               </p>
               <div className="flex items-center gap-4 bg-secondary/10 p-5 rounded-2xl border border-border/60 mt-6">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-display font-bold text-primary shrink-0">
-                  PS
+                  OK
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-foreground">Priyanshu Sharma</h4>
+                  <h4 className="text-sm font-bold text-foreground">MD Osama Khan</h4>
                   <p className="text-xs text-muted-foreground">Chief Technologist & Architect, ON Next Web</p>
                 </div>
               </div>

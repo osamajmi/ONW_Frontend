@@ -291,17 +291,17 @@ export default function DelhiDigitalMarketing() {
                 <span className="text-primary text-xs uppercase font-bold tracking-widest">E-E-A-T Leadership</span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient">Search Optimizers You Can Trust</h2>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Our digital marketing campaigns are audited directly by **Priyanshu Sharma** and our team of senior conversion analysts. We have spent years fine-tuning search crawler rules, structuring data layers, and lowering advertising costs for businesses in Delhi NCR.
+                  Our digital marketing campaigns are audited directly by **MD Osama Khan** and our team of senior conversion analysts. We have spent years fine-tuning search crawler rules, structuring data layers, and lowering advertising costs for businesses in Delhi NCR.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   We don't buy low-quality links or write artificial, thin content. Every article seeded on your domain is structured to pass Core Web Vitals checks and provide factual density that search engine AI agents (Gemini, ChatGPT) parse as authority sources.
                 </p>
                 <div className="flex items-center gap-4 bg-secondary/15 p-5 rounded-2xl border border-border/60">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-display font-bold text-primary shrink-0">
-                    PS
+                    OK
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-foreground">Priyanshu Sharma</h4>
+                    <h4 className="text-sm font-bold text-foreground">MD Osama Khan</h4>
                     <p className="text-xs text-muted-foreground">Chief Technologist & Marketing Scoping Architect</p>
                   </div>
                 </div>
