@@ -42,7 +42,7 @@ const InstagramIcon = ({ size = 18, ...props }: CustomIconProps) => (
 const socials = [
   { name: "Twitter", href: "https://x.com/onnextweb", icon: TwitterIcon },
   { name: "LinkedIn", href: "https://www.linkedin.com/company/onnext-web/", icon: LinkedinIcon },
-  { name: "Dribbble", href: "https://dribbble.com/onnextweb", icon: DribbbleIcon },
+  { name: "Dribbble", href: "https://dribbble.com/onnext-web", icon: DribbbleIcon },
   { name: "Instagram", href: "https://www.instagram.com/onnextweb/", icon: InstagramIcon },
 ];
 
