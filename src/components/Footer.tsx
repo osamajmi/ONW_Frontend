@@ -287,15 +287,15 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary text-xs transition-colors duration-300">
+            <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary text-xs transition-colors duration-300">
               Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary text-xs transition-colors duration-300">
+            </Link>
+            <Link href="/terms-of-service" className="text-muted-foreground hover:text-primary text-xs transition-colors duration-300">
               Terms of Service
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary text-xs transition-colors duration-300">
+            </Link>
+            <Link href="/sitemap" className="text-muted-foreground hover:text-primary text-xs transition-colors duration-300">
               Sitemap
-            </a>
+            </Link>
           </div>
         </div>
       </div>
