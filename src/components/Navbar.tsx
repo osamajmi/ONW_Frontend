@@ -54,7 +54,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6">
-        <Link href="/" className="transform hover:scale-105 transition-transform duration-300">
+        <Link href="/" className="flex items-center shrink-0 hover:opacity-90 transition-opacity duration-300 py-1">
           <Logo />
         </Link>
  

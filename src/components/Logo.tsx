@@ -7,17 +7,17 @@
  */
 const Logo = () => {
   return (
-    <div style={{ lineHeight: 0 }}>
+    <div className="flex items-center py-1">
       {/* ── Dark mode logo ── */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/dark-logo.png"
         alt="ON Next Web — Web Development & Custom Software Agency Logo"
-        className="dark-logo"
-        width={150}
-        height={38}
+        className="dark-logo object-contain"
+        width={140}
+        height={34}
         loading="eager"
-        style={{ height: "38px", width: "auto" }}
+        style={{ height: "34px", width: "auto" }}
       />
 
       {/* ── Light mode logo ── */}
@@ -25,11 +25,11 @@ const Logo = () => {
       <img
         src="/light-logo.png"
         alt="ON Next Web — Web Development & Custom Software Agency Logo"
-        className="light-logo"
-        width={150}
-        height={38}
+        className="light-logo object-contain"
+        width={140}
+        height={34}
         loading="eager"
-        style={{ height: "38px", width: "auto" }}
+        style={{ height: "34px", width: "auto" }}
       />
     </div>
   );
