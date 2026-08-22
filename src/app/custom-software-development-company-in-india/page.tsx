@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import GrainOverlay from "@/components/GrainOverlay";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import LandingPageForm from "@/components/LandingPageForm";
 import { 
   Phone, 
@@ -60,37 +61,15 @@ export default function IndiaCustomSoftwarePage() {
       <GrainOverlay />
       <Navbar />
 
-      {/* Top Quick Contact Bar */}
-      <div className="bg-primary/10 border-b border-primary/20 text-foreground py-2 text-xs sm:text-sm relative z-50 mt-[72px] md:mt-[80px]">
-        <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div className="flex items-center gap-2 font-medium">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span>Global Delivery Centre (India): Available for New Outsourcing Contracts!</span>
-          </div>
-          <div className="flex items-center gap-4 text-muted-foreground">
-            <a href="tel:+918765077474" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
-              <Phone size={13} className="text-primary" />
-              +91 8765077474
-            </a>
-            <span className="hidden sm:inline">|</span>
-            <a href="mailto:info.onnextweb@gmail.com" className="hover:text-primary transition-colors flex items-center gap-1.5">
-              <Mail size={13} />
-              info.onnextweb@gmail.com
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* HERO SECTION */}
-      <section className="relative pt-12 pb-24 md:py-32 overflow-hidden">
+      <section className="relative pt-24 pb-24 md:py-32 overflow-hidden">
         {/* Glow Effects */}
         <div className="absolute top-[20%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-primary/10 blur-[130px] pointer-events-none" />
         <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto px-6 relative z-10">
+          <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Custom Software Development India" }]} />
+
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content */}
@@ -111,12 +90,12 @@ export default function IndiaCustomSoftwarePage() {
               {/* Trust Badges */}
               <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border/50 max-w-md">
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">150+</h4>
-                  <p className="text-xs text-muted-foreground">Deliveries Completed</p>
+                  <h4 className="text-2xl font-bold text-foreground">Custom Code</h4>
+                  <p className="text-xs text-muted-foreground">Tailored Architecture</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">4.9/5</h4>
-                  <p className="text-xs text-muted-foreground">Global Reviews</p>
+                  <h4 className="text-2xl font-bold text-foreground">Top Rated</h4>
+                  <p className="text-xs text-muted-foreground">Client Satisfaction</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">Agile</h4>
@@ -661,10 +640,6 @@ export default function IndiaCustomSoftwarePage() {
               {/* Urgency Callout */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-xs text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground flex items-center gap-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                  </span>
                   Limited Slot Offshore:
                 </p>
                 <p>Submit your inquiry today and receive a **Free Technical Code Scoping Audit (worth $499)** for your software architecture. Only 2 slots left this week!</p>

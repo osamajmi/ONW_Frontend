@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 import ContactClient from "@/components/ContactClient";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
@@ -7,7 +7,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
 export async function generateMetadata(): Promise<Metadata> {
   try {
     const res = await fetch(`${API_URL}/api/seo/contact`, {
-      cache: "no-store"
+      next: { revalidate: 3600 }
     });
     if (res.ok) {
       const seo = await res.json();

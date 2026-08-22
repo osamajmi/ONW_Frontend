@@ -28,11 +28,10 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[0.95] tracking-tight mb-8"
+        className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight mb-8"
       >
-        We Build
-        <br />
-        <span className="text-gradient">Digital</span> Experiences.
+        Website Development & <br className="hidden sm:inline" />
+        <span className="text-gradient">Custom Software Company</span> in India
       </motion.h1>
 
       <motion.p

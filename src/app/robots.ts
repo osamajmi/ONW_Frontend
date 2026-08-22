@@ -11,7 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         "/api/",
       ],
     },
-    sitemap: "https://onnextweb.in/sitemap.xml",
+    sitemap: "https://www.onnextweb.in/sitemap.xml",
   };
 }
 

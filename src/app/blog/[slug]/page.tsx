@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 import BlogDetailClient from "@/components/BlogDetailClient";
 import { permanentRedirect } from "next/navigation";
 
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   try {
     const res = await fetch(`${API_URL}/api/blogs/${slug}`, {
-      cache: "no-store"
+      next: { revalidate: 3600 }
     });
     if (res.ok) {
       const blog = await res.json();
@@ -48,7 +48,7 @@ export default async function BlogDetail({ params }: PageProps) {
 
   try {
     const res = await fetch(`${API_URL}/api/blogs/${slug}`, {
-      cache: "no-store"
+      next: { revalidate: 3600 }
     });
     if (res.ok) {
       blog = await res.json();
@@ -66,8 +66,34 @@ export default async function BlogDetail({ params }: PageProps) {
   // ─── JSON-LD Structured Data Schema Generation ───────────────────────────────
   let blogPostingSchema = null;
   let faqSchema = null;
+  let breadcrumbSchema = null;
 
   if (blog) {
+    breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.onnextweb.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.onnextweb.in/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": blog.title,
+          "item": `https://www.onnextweb.in/blog/${blog.slug || blog._id}`
+        }
+      ]
+    };
+
     blogPostingSchema = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
@@ -113,6 +139,12 @@ export default async function BlogDetail({ params }: PageProps) {
 
   return (
     <>
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
       {blogPostingSchema && (
         <script
           type="application/ld+json"

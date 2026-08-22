@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import GrainOverlay from "@/components/GrainOverlay";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import LandingPageForm from "@/components/LandingPageForm";
 import { 
   Phone, 
@@ -64,11 +65,7 @@ export default function NoidaLandingPage() {
       <div className="bg-primary/10 border-b border-primary/20 text-foreground py-2 text-xs sm:text-sm relative z-50 mt-[72px] md:mt-[80px]">
         <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 font-medium">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span>Noida Regional Setup: Sector 62 & Sector 63 IT Hub!</span>
+            <span>Serving Businesses Across Noida & Greater Noida IT Corridor!</span>
           </div>
           <div className="flex items-center gap-4 text-muted-foreground">
             <a href="tel:+918765077474" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
@@ -91,12 +88,14 @@ export default function NoidaLandingPage() {
         <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto px-6 relative z-10">
+          <Breadcrumbs items={[{ label: "Locations", href: "/#locations" }, { label: "Noida" }]} />
+
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm">
-                ⚙️ Best Web Development Agency in Noida / Sector 62 & 63
+                ⚙️ Web Development Services for Noida / Sector 62 & 63
               </span>
               
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
@@ -111,16 +110,16 @@ export default function NoidaLandingPage() {
               {/* Trust Badges */}
               <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border/50 max-w-md">
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">150+</h4>
-                  <p className="text-xs text-muted-foreground">Projects Live</p>
+                  <h4 className="text-2xl font-bold text-foreground">Custom</h4>
+                  <p className="text-xs text-muted-foreground">Web Engineering</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">4.9/5</h4>
-                  <p className="text-xs text-muted-foreground">Google Reviews</p>
+                  <h4 className="text-2xl font-bold text-foreground">Top Rated</h4>
+                  <p className="text-xs text-muted-foreground">Client Focused</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">100%</h4>
-                  <p className="text-xs text-muted-foreground">Clean Coding</p>
+                  <p className="text-xs text-muted-foreground">Clean Stack</p>
                 </div>
               </div>
 
@@ -315,7 +314,7 @@ export default function NoidaLandingPage() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground text-sm mb-4">Internal Link: Want to see our live product designs? View our comprehensive <Link href="/portfolio" className="text-primary underline font-semibold">Case Studies Portfolio</Link>.</p>
+            <p className="text-muted-foreground text-sm mb-4">Want to see our live product designs? View our comprehensive <Link href="/portfolio" className="text-primary underline font-semibold">Web Development Portfolio & Case Studies</Link> or explore our regional services in <Link href="/website-development-company-in-delhi" className="text-primary underline font-semibold">Delhi</Link> and <Link href="/website-development-company-in-gurgaon" className="text-primary underline font-semibold">Gurgaon</Link>.</p>
           </div>
         </div>
       </section>
@@ -413,23 +412,23 @@ export default function NoidaLandingPage() {
             {/* Case Study 1 */}
             <div className="bg-surface-elevated/40 border border-border/80 rounded-2xl overflow-hidden group">
               <div className="p-8 space-y-4">
-                <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">300% Lead Growth</span>
+                <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">High Lead Conversion</span>
                 <h3 className="font-display text-xl font-bold">Noida Manufacturing Export Unit (Sector 63)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  An export client in Noida Sector 63 was using an outdated, slow template site that failed to convert global visitors. OnNextWeb built a custom React frontend linked to automated query routing. The result was a 250% increase in qualified overseas leads within 3 months.
+                  An export client in Noida Sector 63 was using an outdated template site that failed to convert global visitors. OnNextWeb built a custom React frontend linked to automated query routing, delivering a significant increase in qualified overseas lead inquiries.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
-                    <span className="block text-foreground font-bold">Old Conversion</span>
-                    <span>1.1% rate</span>
+                    <span className="block text-foreground font-bold">Core Stack</span>
+                    <span>Next.js + Tailwind</span>
                   </div>
                   <div>
-                    <span className="block text-emerald-400 font-bold">New Conversion</span>
-                    <span className="text-emerald-400 font-semibold">4.5% rate</span>
+                    <span className="block text-emerald-400 font-bold">Performance</span>
+                    <span className="text-emerald-400 font-semibold">Fast Sub-Second Load</span>
                   </div>
                   <div>
                     <span className="block text-foreground font-bold">Visual Design</span>
-                    <span>Premium dark grid layouts</span>
+                    <span>Custom grid layout</span>
                   </div>
                 </div>
               </div>
@@ -438,23 +437,23 @@ export default function NoidaLandingPage() {
             {/* Case Study 2 */}
             <div className="bg-surface-elevated/40 border border-border/80 rounded-2xl overflow-hidden group">
               <div className="p-8 space-y-4">
-                <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">Top 5 Rankings</span>
+                <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">Organic Search Growth</span>
                 <h3 className="font-display text-xl font-bold">Regional E-Commerce Store (Sector 18, Noida)</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  A boutique retail brand in Sector 18 needed a dynamic, lightning-fast product catalog. We engineered a static-site generated store using Next.js, fully optimized with structured local schemas. The site now ranks in Google&apos;s top 5 search results for Noida web development queries.
+                  A boutique retail brand in Sector 18 needed a dynamic, lightning-fast product catalog. We engineered a static-site generated store using Next.js, fully optimized with structured local schemas to maximize local organic search visibility.
                 </p>
                 <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
                   <div>
-                    <span className="block text-foreground font-bold">Old sales load</span>
-                    <span>4.1 seconds</span>
-                  </div>
-                  <div>
-                    <span className="block text-emerald-400 font-bold">Optimized load</span>
-                    <span className="text-emerald-400 font-semibold">0.9 seconds</span>
+                    <span className="block text-foreground font-bold">Optimized Load</span>
+                    <span className="text-emerald-400 font-semibold">Sub-1 second</span>
                   </div>
                   <div>
                     <span className="block text-foreground font-bold">Tech Stack</span>
-                    <span>Next.js + Tailwind + Node</span>
+                    <span>Next.js + Node API</span>
+                  </div>
+                  <div>
+                    <span className="block text-foreground font-bold">SEO Architecture</span>
+                    <span>Structured JSON-LD</span>
                   </div>
                 </div>
               </div>
@@ -613,7 +612,7 @@ export default function NoidaLandingPage() {
                 <span className="text-gradient">Next Project</span> Together!
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                Connect with our local Noida developer team. Direct coordination is active across Noida & Greater Noida. Get a high-converting layout roadmap.
+                Connect with our tech team. We provide full development support across Noida & Greater Noida. Get a high-converting layout roadmap.
               </p>
 
               {/* Direct Details */}
@@ -649,10 +648,9 @@ export default function NoidaLandingPage() {
                     <MapPin size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Visit Noida Regional Desk</p>
+                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Serving Noida & Greater Noida</p>
                     <p className="font-semibold text-foreground leading-relaxed">
-                      Sector 62 IT Block, Noida, <br />
-                      Uttar Pradesh – 201301
+                      Dedicated Service Coverage Across Sector 62, 63 & Noida Expressway
                     </p>
                   </div>
                 </div>
@@ -661,10 +659,6 @@ export default function NoidaLandingPage() {
               {/* Urgency Callout */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-xs text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground flex items-center gap-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                  </span>
                   Limited Slot Offers Noida:
                 </p>
                 <p>Submit your inquiry today and receive a **Free Technical On-Page SEO Consultation (worth ₹9,999)** to maximize organic conversions. Only 2 slots left this week!</p>

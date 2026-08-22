@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GrainOverlay from "@/components/GrainOverlay";
 import AnimatedSection from "@/components/AnimatedSection";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import * as Icons from "lucide-react";
 import { Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -35,6 +36,7 @@ export default function ServicesClient({ services }: { services: ServiceItem[] }
       <div className="absolute bottom-[20%] right-[-10%] w-[35vw] h-[35vw] rounded-full bg-primary/5 blur-[110px] pointer-events-none animate-float-reverse" />
 
       <main className="flex-grow pt-32 pb-24 container mx-auto px-6 relative z-10">
+        <Breadcrumbs items={[{ label: "Services" }]} />
         {/* Header Section */}
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
           <motion.div

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import GrainOverlay from "@/components/GrainOverlay";
 import AnimatedSection from "@/components/AnimatedSection";
 import LandingPageForm from "@/components/LandingPageForm";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { 
   TrendingUp, 
   Award, 
@@ -129,6 +130,7 @@ export default function DelhiDigitalMarketing() {
         <main className="pt-32 pb-20 relative z-10">
           {/* HERO SECTION */}
           <section className="container mx-auto px-6 max-w-6xl mb-24">
+            <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Digital Marketing Company in Delhi" }]} />
             <div className="grid lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 space-y-6">
                 <AnimatedSection className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[10px] text-primary font-bold uppercase tracking-widest">
@@ -370,6 +372,43 @@ export default function DelhiDigitalMarketing() {
 
         <Footer />
       </div>
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How fast can an SEO company in Delhi improve Google search positions?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Organic search ranking timelines vary depending on keyword competition and site history. Typically, low-hanging technical fixes deliver momentum within 3 to 6 weeks, while competitive local key terms achieve Top 10 rankings in 3 to 6 months."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between PPC advertising and organic SEO?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "PPC (Google Ads/Meta) provides instant visibility by paying per click. Organic SEO builds long-term domain authority and free organic traffic that accumulates over time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you provide custom reporting dashboards for marketing campaigns?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, ON Next Web provides transparent bi-weekly reports tracking real keyword ranking positions, impression metrics, conversion rates, and ROAS directly from Google Search Console and GA4."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* BreadcrumbList Schema */}
       <script

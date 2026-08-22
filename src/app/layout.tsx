@@ -111,7 +111,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "ON Next Web",
               "alternateName": "OnNextWeb",
-              "url": "https://onnextweb.in",
+              "url": "https://www.onnextweb.in",
               "logo": "https://www.onnextweb.in/dark-logo.png",
               "sameAs": [
                 "https://www.linkedin.com/company/onnext-web/",
@@ -134,16 +134,16 @@ export default function RootLayout({
               "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Golf Course Road, Sector 54",
-                "addressLocality": "Gurgaon",
-                "addressRegion": "Haryana",
-                "postalCode": "122002",
+                "streetAddress": "C-25 Abul Fazal, Jamia Nagar, Okhla",
+                "addressLocality": "New Delhi",
+                "addressRegion": "Delhi",
+                "postalCode": "110025",
                 "addressCountry": "IN"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 28.4389,
-                "longitude": 77.1054
+                "latitude": 28.5615,
+                "longitude": 77.2842
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -152,10 +152,11 @@ export default function RootLayout({
                   "Tuesday",
                   "Wednesday",
                   "Thursday",
-                  "Friday"
+                  "Friday",
+                  "Saturday"
                 ],
                 "opens": "09:00",
-                "closes": "18:00"
+                "closes": "19:00"
               }
             })
           }}

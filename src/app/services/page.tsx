@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 import ServicesClient from "@/components/ServicesClient";
 
 interface ServiceItem {
@@ -15,7 +15,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
 export async function generateMetadata(): Promise<Metadata> {
   try {
     const res = await fetch(`${API_URL}/api/seo/services`, {
-      cache: "no-store"
+      next: { revalidate: 3600 }
     });
     if (res.ok) {
       const seo = await res.json();
@@ -37,8 +37,8 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading services page SEO:", error);
   }
   return {
-    title: "Web Development Company in Gurgaon | Custom Web Design Services",
-    description: "Looking for web developers in Gurgaon? OnNextWeb builds custom web applications, Next.js setups, and enterprise software designed to convert visitors into clients.",
+    title: "Web Development & Custom Software Services | ON Next Web",
+    description: "Full-service web development, custom software engineering, mobile apps, and digital marketing services in Delhi NCR & India. Speed-optimized digital builds.",
     alternates: {
       canonical: "https://www.onnextweb.in/services",
     },
@@ -50,7 +50,7 @@ export default async function ServicesPage() {
 
   try {
     const res = await fetch(`${API_URL}/api/services`, {
-      cache: "no-store"
+      next: { revalidate: 3600 }
     });
     if (res.ok) {
       services = await res.json();
@@ -67,13 +67,36 @@ export default async function ServicesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.onnextweb.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://www.onnextweb.in/services"
+              }
+            ]
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Service",
             "name": "Web & Mobile App Development Services",
             "serviceType": "Software Development & Digital Marketing Services",
             "provider": {
               "@type": "LocalBusiness",
               "name": "ON Next Web",
-              "url": "https://onnextweb.in"
+              "url": "https://www.onnextweb.in"
             },
             "areaServed": {
               "@type": "Country",
@@ -121,10 +144,10 @@ export default async function ServicesPage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What is the cost of website development in Gurgaon?",
+                "name": "What is the cost of website development in Delhi NCR?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Website development costs depend on project scope, custom design requirements, and technology stack. Typically, a custom Next.js website design at OnNextWeb starts from ₹50,000."
+                  "text": "Website development costs depend on project scope, custom design requirements, and technology stack. Typically, a custom Next.js website design at OnNextWeb starts from ₹19,999."
                 }
               },
               {

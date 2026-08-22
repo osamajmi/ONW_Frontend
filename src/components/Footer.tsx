@@ -150,10 +150,6 @@ const Footer = () => {
               A premium digital studio crafting modern interactive websites, customized software systems, and branding designs engineered for scaling ambitious brands.
             </p>
             <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-2 rounded-full w-fit mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
               Available for new projects
             </div>
             

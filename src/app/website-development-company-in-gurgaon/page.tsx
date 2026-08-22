@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import GrainOverlay from "@/components/GrainOverlay";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import LandingPageForm from "@/components/LandingPageForm";
 import { 
   Phone, 
@@ -64,10 +65,6 @@ export default function GurgaonLandingPage() {
       <div className="bg-primary/10 border-b border-primary/20 text-foreground py-2 text-xs sm:text-sm relative z-50 mt-[72px] md:mt-[80px]">
         <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 font-medium">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
             <span>Gurgaon Corporate Office: Sector 54, Golf Course Road!</span>
           </div>
           <div className="flex items-center gap-4 text-muted-foreground">
@@ -91,6 +88,8 @@ export default function GurgaonLandingPage() {
         <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto px-6 relative z-10">
+          <Breadcrumbs items={[{ label: "Locations", href: "/#locations" }, { label: "Gurgaon" }]} />
+
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content */}
@@ -111,12 +110,12 @@ export default function GurgaonLandingPage() {
               {/* Trust Badges */}
               <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border/50 max-w-md">
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">150+</h4>
-                  <p className="text-xs text-muted-foreground">Sites Built</p>
+                  <h4 className="text-2xl font-bold text-foreground">Custom</h4>
+                  <p className="text-xs text-muted-foreground">Web Engineering</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">4.9/5</h4>
-                  <p className="text-xs text-muted-foreground">Client Reviews</p>
+                  <h4 className="text-2xl font-bold text-foreground">Top Rated</h4>
+                  <p className="text-xs text-muted-foreground">Client Focused</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">Next.js</h4>
@@ -315,7 +314,7 @@ export default function GurgaonLandingPage() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground text-sm mb-4">Internal Link: Want to see our live product designs? View our comprehensive <Link href="/portfolio" className="text-primary underline font-semibold">Case Studies Portfolio</Link>.</p>
+            <p className="text-muted-foreground text-sm mb-4">Want to see our live product designs? View our comprehensive <Link href="/portfolio" className="text-primary underline font-semibold">Web Development Portfolio & Case Studies</Link> or explore our agency hubs in <Link href="/website-development-company-in-delhi" className="text-primary underline font-semibold">Delhi</Link> and <Link href="/website-development-company-in-noida" className="text-primary underline font-semibold">Noida</Link>.</p>
           </div>
         </div>
       </section>
@@ -661,10 +660,6 @@ export default function GurgaonLandingPage() {
               {/* Urgency Callout */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-xs text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground flex items-center gap-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                  </span>
                   Limited Gurgaon Offer:
                 </p>
                 <p>Submit your inquiry today and receive a **Free Site Speed Optimization Consultation (worth ₹9,999)** to maximize page conversions. Only 2 slots left this week!</p>
@@ -744,6 +739,48 @@ export default function GurgaonLandingPage() {
                 }
               }
             ]
+          })
+        }}
+      />
+
+      {/* LocalBusiness Schema for Gurgaon Office */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "ON Next Web — Web Development Company in Gurgaon",
+            "image": "https://www.onnextweb.in/dark-logo.png",
+            "@id": "https://www.onnextweb.in/website-development-company-in-gurgaon#localbusiness",
+            "url": "https://www.onnextweb.in/website-development-company-in-gurgaon",
+            "telephone": "+91-8765077474",
+            "priceRange": "₹19999 - ₹150000",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Golf Course Road, Sector 54",
+              "addressLocality": "Gurgaon",
+              "addressRegion": "Haryana",
+              "postalCode": "122002",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.4389,
+              "longitude": 77.1054
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
           })
         }}
       />

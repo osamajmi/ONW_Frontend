@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import GrainOverlay from "@/components/GrainOverlay";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import LandingPageForm from "@/components/LandingPageForm";
 import { 
   Phone, 
@@ -64,11 +65,7 @@ export default function DelhiLandingPage() {
       <div className="bg-primary/10 border-b border-primary/20 text-foreground py-2 text-xs sm:text-sm relative z-50 mt-[72px] md:mt-[80px]">
         <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 font-medium">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span>Delhi NCR Office is Active: Get Your Free SEO Audit Report!</span>
+            <span>Delhi NCR Office is Active: Get Your Free Technical SEO Blueprint!</span>
           </div>
           <div className="flex items-center gap-4 text-muted-foreground">
             <a href="tel:+918765077474" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
@@ -91,6 +88,8 @@ export default function DelhiLandingPage() {
         <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto px-6 relative z-10">
+          <Breadcrumbs items={[{ label: "Locations", href: "/#locations" }, { label: "Delhi" }]} />
+
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content */}
@@ -105,22 +104,22 @@ export default function DelhiLandingPage() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                Tired of slow templates and low lead conversion? OnNextWeb is your professional technology partner. We design super-fast, responsive, and Google-rankings-ready websites starting at just <span className="text-foreground font-semibold">₹19,999</span>! We maintain a 98% success rate in digitalizing brands across Delhi NCR.
+                Tired of slow templates and low lead conversion? OnNextWeb is your professional technology partner. We design super-fast, responsive, and Google-rankings-ready websites starting at just <span className="text-foreground font-semibold">₹19,999</span>! We deliver high-performing digital platforms across Delhi NCR.
               </p>
               
               {/* Trust Badges */}
               <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border/50 max-w-md">
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">150+</h4>
-                  <p className="text-xs text-muted-foreground">Sites Live</p>
+                  <h4 className="text-2xl font-bold text-foreground">Custom</h4>
+                  <p className="text-xs text-muted-foreground">Web Engineering</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">4.9/5</h4>
-                  <p className="text-xs text-muted-foreground">Google Reviews</p>
+                  <h4 className="text-2xl font-bold text-foreground">Top Rated</h4>
+                  <p className="text-xs text-muted-foreground">Client Focused</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">100%</h4>
-                  <p className="text-xs text-muted-foreground">Custom Coding</p>
+                  <p className="text-xs text-muted-foreground">Custom Stack</p>
                 </div>
               </div>
 
@@ -315,7 +314,7 @@ export default function DelhiLandingPage() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground text-sm mb-4">Internal Link: Want to see our previous deliverables? Explore our full <Link href="/portfolio" className="text-primary underline font-semibold">Portfolio page</Link>.</p>
+            <p className="text-muted-foreground text-sm mb-4">Want to see our previous deliverables? Explore our full <Link href="/portfolio" className="text-primary underline font-semibold">Web Development Portfolio & Case Studies</Link> or check out our tech services in <Link href="/website-development-company-in-gurgaon" className="text-primary underline font-semibold">Gurgaon</Link> and <Link href="/website-development-company-in-noida" className="text-primary underline font-semibold">Noida</Link>.</p>
           </div>
         </div>
       </section>
@@ -667,10 +666,6 @@ export default function DelhiLandingPage() {
               {/* Urgency Trigger */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-xs text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground flex items-center gap-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                  </span>
                   Limited Slot Offer:
                 </p>
                 <p>Submit your inquiry today and receive a **Free Site Speed Optimization Consultation (worth ₹9,999)** to maximize page conversions. Only 2 slots left this week!</p>
@@ -750,6 +745,49 @@ export default function DelhiLandingPage() {
                 }
               }
             ]
+          })
+        }}
+      />
+
+      {/* LocalBusiness Schema for Delhi Office */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "ON Next Web — Web Development Company in Delhi",
+            "image": "https://www.onnextweb.in/dark-logo.png",
+            "@id": "https://www.onnextweb.in/website-development-company-in-delhi#localbusiness",
+            "url": "https://www.onnextweb.in/website-development-company-in-delhi",
+            "telephone": "+91-8765077474",
+            "priceRange": "₹19999 - ₹150000",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "C-25 Abul Fazal, Jamia Nagar, Okhla",
+              "addressLocality": "New Delhi",
+              "addressRegion": "Delhi",
+              "postalCode": "110025",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.5615,
+              "longitude": 77.2842
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "09:00",
+              "closes": "19:00"
+            }
           })
         }}
       />
