@@ -301,12 +301,18 @@ html.lenis, html.lenis body {
   box-shadow: 0 20px 40px hsl(var(--background) / 0.4);
 }
 
-/* ── Logo theme switching ───────────────────────────────────────────────────── */
+/* ── Logo theme switching & transparent blending ────────────────────────────── */
 /* Light mode (default — no .dark class) */
 .dark-logo  { display: none;  }
-.light-logo { display: block; }
+.light-logo { 
+  display: block; 
+  mix-blend-mode: multiply; 
+}
 
 /* Dark mode — .dark class on <html> */
-.dark .dark-logo  { display: block; }
+.dark .dark-logo  { 
+  display: block; 
+  mix-blend-mode: screen; 
+}
 .dark .light-logo { display: none;  }
 
