@@ -12,7 +12,7 @@ const Logo = () => {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/dark-logo.png"
-        alt="ON Next Web — Web Development & Custom Software Agency Logo"
+        alt="ON Next Web"
         className="dark-logo object-contain h-11 sm:h-12 md:h-13 w-auto"
         width={180}
         height={48}
@@ -24,7 +24,7 @@ const Logo = () => {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/light-logo.png"
-        alt="ON Next Web — Web Development & Custom Software Agency Logo"
+        alt="ON Next Web"
         className="light-logo object-contain h-11 sm:h-12 md:h-13 w-auto"
         width={180}
         height={48}

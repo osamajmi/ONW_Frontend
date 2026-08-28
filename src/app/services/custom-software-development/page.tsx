@@ -156,12 +156,15 @@ export default function CustomSoftwareServicePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://www.onnextweb.in/services/custom-software-development#service",
             "name": "Custom Software Development Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.onnextweb.in/#organization",
               "name": "ON Next Web",
               "url": "https://www.onnextweb.in"
             },
+            "serviceType": "Custom Software Engineering",
             "areaServed": "India",
             "description": "Bespoke SaaS, ERP, and enterprise software development services."
           })

@@ -304,7 +304,7 @@ export default function DelhiDigitalMarketing() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-foreground">MD Osama Khan</h4>
-                    <p className="text-xs text-muted-foreground">Chief Technologist & Marketing Scoping Architect</p>
+                    <p className="text-xs text-muted-foreground">Founder &amp; CEO, ON Next Web</p>
                   </div>
                 </div>
               </AnimatedSection>

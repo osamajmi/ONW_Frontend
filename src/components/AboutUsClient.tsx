@@ -160,7 +160,7 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-foreground">MD Osama Khan</h4>
-                  <p className="text-xs text-muted-foreground">Chief Technologist & Architect, ON Next Web</p>
+                  <p className="text-xs text-muted-foreground">Founder &amp; CEO, ON Next Web</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -187,6 +187,45 @@ export default function AboutUsClient({ data }: { data: AboutData }) {
             </AnimatedSection>
           </div>
         </div>
+        {/* Schema Injection */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "@id": "https://www.onnextweb.in/about-us#webpage",
+              "url": "https://www.onnextweb.in/about-us",
+              "name": "About ON Next Web",
+              "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://www.onnextweb.in/#website",
+                "name": "ON Next Web",
+                "url": "https://www.onnextweb.in"
+              },
+              "about": {
+                "@type": "Organization",
+                "@id": "https://www.onnextweb.in/#organization",
+                "name": "ON Next Web",
+                "url": "https://www.onnextweb.in",
+                "logo": "https://www.onnextweb.in/dark-logo.png",
+                "founder": {
+                  "@type": "Person",
+                  "name": "MD Osama Khan",
+                  "jobTitle": "Founder & CEO"
+                },
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "C-25 Abul Fazal, Jamia Nagar, Okhla",
+                  "addressLocality": "New Delhi",
+                  "addressRegion": "Delhi",
+                  "postalCode": "110025",
+                  "addressCountry": "IN"
+                }
+              }
+            })
+          }}
+        />
       </main>
 
       <Footer />

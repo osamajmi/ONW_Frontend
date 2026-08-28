@@ -190,12 +190,15 @@ export default function WebDevelopmentServicePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://www.onnextweb.in/services/web-development#service",
             "name": "Web Development Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.onnextweb.in/#organization",
               "name": "ON Next Web",
               "url": "https://www.onnextweb.in"
             },
+            "serviceType": "Web Development",
             "areaServed": "India",
             "description": "Custom Next.js and React website development services in India."
           })

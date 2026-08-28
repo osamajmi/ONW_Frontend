@@ -156,12 +156,15 @@ export default function SeoServicesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "SEO Services",
+            "@id": "https://www.onnextweb.in/services/seo-services#service",
+            "name": "SEO & Technical Search Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.onnextweb.in/#organization",
               "name": "ON Next Web",
               "url": "https://www.onnextweb.in"
             },
+            "serviceType": "Search Engine Optimization",
             "areaServed": "India",
             "description": "Technical and commercial Search Engine Optimization services in India."
           })
