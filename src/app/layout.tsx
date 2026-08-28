@@ -109,13 +109,18 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://www.onnextweb.in/#organization",
               "name": "ON Next Web",
               "alternateName": "OnNextWeb",
               "url": "https://www.onnextweb.in",
               "logo": "https://www.onnextweb.in/dark-logo.png",
+              "email": "info.onnextweb@gmail.com",
+              "telephone": "+91-8765077474",
               "sameAs": [
                 "https://www.linkedin.com/company/onnext-web/",
-                "https://twitter.com/onnextweb"
+                "https://x.com/onnextweb",
+                "https://www.instagram.com/onnextweb/",
+                "https://dribbble.com/onnext-web"
               ]
             })
           }}
@@ -126,12 +131,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
+              "@id": "https://www.onnextweb.in/#service",
               "name": "ON Next Web",
               "image": "https://www.onnextweb.in/dark-logo.png",
-              "@id": "https://www.onnextweb.in/#localbusiness",
               "url": "https://www.onnextweb.in",
               "telephone": "+91-8765077474",
-              "priceRange": "$$",
+              "email": "info.onnextweb@gmail.com",
+              "priceRange": "₹19999 - ₹150000",
+              "parentOrganization": {
+                "@id": "https://www.onnextweb.in/#organization"
+              },
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "C-25 Abul Fazal, Jamia Nagar, Okhla",

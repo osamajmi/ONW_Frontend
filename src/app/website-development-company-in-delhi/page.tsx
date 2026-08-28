@@ -28,13 +28,13 @@ import {
 
 export const metadata: Metadata = {
   title: "Web Development Company in Delhi | ON Next Web",
-  description: "Accelerate business growth with the best website development company in Delhi. High-speed custom Next.js websites built to rank and convert. Contact us!",
+  description: "Website development company serving businesses in Delhi & Delhi NCR. High-speed custom Next.js websites built for performance and SEO.",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-delhi",
   },
   openGraph: {
     title: "Web Development Company in Delhi | ON Next Web",
-    description: "Accelerate business growth with the best website development company in Delhi. High-speed custom Next.js websites built to rank and convert. Contact us!",
+    description: "Website development company serving businesses in Delhi & Delhi NCR. High-speed custom Next.js websites built for performance and SEO.",
     url: "https://www.onnextweb.in/website-development-company-in-delhi",
     type: "website",
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Web Development Company in Delhi | ON Next Web",
-    description: "Accelerate business growth with the best website development company in Delhi.",
+    description: "Website development company serving businesses in Delhi.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
@@ -65,7 +65,7 @@ export default function DelhiLandingPage() {
       <div className="bg-primary/10 border-b border-primary/20 text-foreground py-2 text-xs sm:text-sm relative z-50 mt-[72px] md:mt-[80px]">
         <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 font-medium">
-            <span>Delhi NCR Office is Active: Get Your Free Technical SEO Blueprint!</span>
+            <span>ON Next Web — Web Engineering &amp; Digital Agency in Delhi NCR</span>
           </div>
           <div className="flex items-center gap-4 text-muted-foreground">
             <a href="tel:+918765077474" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
@@ -95,7 +95,7 @@ export default function DelhiLandingPage() {
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm">
-                🏆 Best Web Design Company in Delhi NCR
+                🏆 Web Development Agency in Delhi NCR
               </span>
               
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
@@ -104,7 +104,7 @@ export default function DelhiLandingPage() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                Tired of slow templates and low lead conversion? OnNextWeb is your professional technology partner. We design super-fast, responsive, and Google-rankings-ready websites starting at just <span className="text-foreground font-semibold">₹19,999</span>! We deliver high-performing digital platforms across Delhi NCR.
+                ON Next Web provides custom website development services for businesses in Delhi and across Delhi NCR. We build responsive corporate websites, e-commerce stores, and custom web applications using modern web technologies like Next.js, React, Node.js, and TypeScript.
               </p>
               
               {/* Trust Badges */}
@@ -114,8 +114,8 @@ export default function DelhiLandingPage() {
                   <p className="text-xs text-muted-foreground">Web Engineering</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">Top Rated</h4>
-                  <p className="text-xs text-muted-foreground">Client Focused</p>
+                  <h4 className="text-2xl font-bold text-foreground">Client Focused</h4>
+                  <p className="text-xs text-muted-foreground">Dedicated Support</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">100%</h4>
@@ -211,13 +211,13 @@ export default function DelhiLandingPage() {
             {[
               {
                 icon: <Zap className="text-primary" size={24} />,
-                title: "100/100 PageSpeed Rating",
-                desc: "Our designs are built on modern frontend frameworks. Sites load in under a second, dropping bounce rates and maximizing retention."
+                title: "Core Web Vitals Optimization",
+                desc: "Our web applications are engineered on Next.js and React. Fast page load performance reduces bounce rates and maximizes user engagement."
               },
               {
                 icon: <Globe className="text-primary" size={24} />,
                 title: "In-Built SEO Architecture",
-                desc: "We integrate high-intent keywords like 'best web development company in Delhi' naturally into semantic HTML tags to ensure search engines rank you quickly."
+                desc: "We integrate search terms naturally into semantic HTML tags and JSON-LD schemas to ensure search engines index your business accurately."
               },
               {
                 icon: <Laptop className="text-primary" size={24} />,
@@ -663,12 +663,12 @@ export default function DelhiLandingPage() {
                 </div>
               </div>
 
-              {/* Urgency Trigger */}
+              {/* Consultation Evaluation Callout */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-xs text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground flex items-center gap-2">
-                  Limited Slot Offer:
+                  Technical Performance Consultation:
                 </p>
-                <p>Submit your inquiry today and receive a **Free Site Speed Optimization Consultation (worth ₹9,999)** to maximize page conversions. Only 2 slots left this week!</p>
+                <p>Submit your project inquiry today for a website speed evaluation and technical code audit tailored to your business requirements.</p>
               </div>
 
               {/* CTAs */}
@@ -709,7 +709,7 @@ export default function DelhiLandingPage() {
                 "name": "How much does a website cost in Delhi?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex e-commerce portals, and enterprise CMS setups are quoted based on the project scope."
+                  "text": "Our web development solutions start at ₹19,999 for foundational business websites. Custom Next.js applications, complex e-commerce portals, and enterprise web applications are quoted dynamically based on project scope."
                 }
               },
               {
@@ -717,7 +717,7 @@ export default function DelhiLandingPage() {
                 "name": "How do you implement SEO for Delhi businesses?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Delhi' naturally to maximize search engine discovery."
+                  "text": "We deploy search-engine friendly semantic HTML layouts, optimize Core Web Vitals, and structure JSON-LD metadata tags. We ensure search engines can easily discover and index your services for Delhi and regional markets."
                 }
               },
               {
@@ -725,7 +725,7 @@ export default function DelhiLandingPage() {
                 "name": "What is the typical project delivery timeline?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
+                  "text": "Standard corporate web layouts are completed within 7 to 10 working days. Custom SaaS dashboard builds and complex e-commerce structures usually require 15 to 25 days, inclusive of QA testing."
                 }
               },
               {
@@ -733,7 +733,7 @@ export default function DelhiLandingPage() {
                 "name": "Can I manage website updates from a dashboard?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
+                  "text": "Yes. We integrate easy-to-use content dashboards allowing you to post blogs, update services, and manage form submissions independently."
                 }
               },
               {
@@ -741,7 +741,7 @@ export default function DelhiLandingPage() {
                 "name": "Do you provide post-launch technical support?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle any minor adjustments."
+                  "text": "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle minor adjustments."
                 }
               }
             ]
@@ -755,12 +755,13 @@ export default function DelhiLandingPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": "ProfessionalService",
             "name": "ON Next Web — Web Development Company in Delhi",
             "image": "https://www.onnextweb.in/dark-logo.png",
-            "@id": "https://www.onnextweb.in/website-development-company-in-delhi#localbusiness",
+            "@id": "https://www.onnextweb.in/#organization",
             "url": "https://www.onnextweb.in/website-development-company-in-delhi",
             "telephone": "+91-8765077474",
+            "email": "info.onnextweb@gmail.com",
             "priceRange": "₹19999 - ₹150000",
             "address": {
               "@type": "PostalAddress",

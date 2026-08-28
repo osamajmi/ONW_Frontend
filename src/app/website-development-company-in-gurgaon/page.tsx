@@ -28,13 +28,13 @@ import {
 
 export const metadata: Metadata = {
   title: "Web Development Company in Gurgaon | ON Next Web",
-  description: "Hire the top-rated website development company in Gurgaon. We build custom, high-speed Next.js web applications to boost your business. Get a free quote!",
+  description: "Website development company serving businesses in Gurgaon & Delhi NCR. We build custom, high-speed Next.js web applications to scale your digital presence.",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-gurgaon",
   },
   openGraph: {
     title: "Web Development Company in Gurgaon | ON Next Web",
-    description: "Hire the top-rated website development company in Gurgaon. We build custom, high-speed Next.js web applications to boost your business. Get a free quote!",
+    description: "Website development company serving businesses in Gurgaon & Delhi NCR. We build custom, high-speed Next.js web applications to scale your digital presence.",
     url: "https://www.onnextweb.in/website-development-company-in-gurgaon",
     type: "website",
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Web Development Company in Gurgaon | ON Next Web",
-    description: "Hire the top-rated website development company in Gurgaon.",
+    description: "Website development company serving businesses in Gurgaon.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
@@ -65,7 +65,7 @@ export default function GurgaonLandingPage() {
       <div className="bg-primary/10 border-b border-primary/20 text-foreground py-2 text-xs sm:text-sm relative z-50 mt-[72px] md:mt-[80px]">
         <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 font-medium">
-            <span>Gurgaon Corporate Office: Sector 54, Golf Course Road!</span>
+            <span>Serving Businesses Across Gurgaon &amp; Golf Course Road IT Corridor!</span>
           </div>
           <div className="flex items-center gap-4 text-muted-foreground">
             <a href="tel:+918765077474" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
@@ -95,7 +95,7 @@ export default function GurgaonLandingPage() {
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm">
-                💼 Top Tech & Web Agency in Cyber City / Sector 54
+                💼 Web Development Services for Gurgaon &amp; Cyber City
               </span>
               
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
@@ -104,7 +104,7 @@ export default function GurgaonLandingPage() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                In Gurgaon&apos;s fast-paced startup and corporate environment, speed is everything. Break free from slow templates and low conversion rates. We design super-fast, scale-ready websites starting at just <span className="text-foreground font-semibold">₹19,999</span>! The trusted choice for businesses in Cyber City and Golf Course Road.
+                ON Next Web provides custom website development services for businesses in Gurgaon, Cyber City, Golf Course Road, and the wider Delhi NCR region. We build corporate websites, e-commerce platforms, and custom web applications using modern technologies such as Next.js, React, Node.js, and TypeScript.
               </p>
               
               {/* Trust Badges */}
@@ -114,8 +114,8 @@ export default function GurgaonLandingPage() {
                   <p className="text-xs text-muted-foreground">Web Engineering</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">Top Rated</h4>
-                  <p className="text-xs text-muted-foreground">Client Focused</p>
+                  <h4 className="text-2xl font-bold text-foreground">Client Focused</h4>
+                  <p className="text-xs text-muted-foreground">Dedicated Support</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">Next.js</h4>
@@ -648,21 +648,21 @@ export default function GurgaonLandingPage() {
                     <MapPin size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Gurgaon Office Address</p>
+                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Service Coverage</p>
                     <p className="font-semibold text-foreground leading-relaxed">
-                      Golf Course Road, Sector 54, <br />
-                      Gurugram, Haryana – 122002
+                      Serving Businesses Across Gurgaon, <br />
+                      Cyber City, Golf Course Road &amp; Delhi NCR
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Urgency Callout */}
+              {/* Consultation Evaluation Callout */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-xs text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground flex items-center gap-2">
-                  Limited Gurgaon Offer:
+                  Technical Performance Consultation:
                 </p>
-                <p>Submit your inquiry today and receive a **Free Site Speed Optimization Consultation (worth ₹9,999)** to maximize page conversions. Only 2 slots left this week!</p>
+                <p>Submit your project inquiry today for a technical code audit and website speed evaluation tailored to your business requirements.</p>
               </div>
 
               {/* Action Links */}
@@ -703,7 +703,7 @@ export default function GurgaonLandingPage() {
                 "name": "How much does a website cost in Gurgaon?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex API integrations, and corporate portals are quoted dynamically based on the project scope."
+                  "text": "Our web development solutions start at ₹19,999 for foundational business websites. Custom Next.js applications, complex API integrations, and enterprise web portals are quoted dynamically based on technical scope."
                 }
               },
               {
@@ -711,7 +711,7 @@ export default function GurgaonLandingPage() {
                 "name": "How do you implement SEO for Gurgaon businesses?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Gurgaon' naturally to maximize search engine discovery."
+                  "text": "We deploy search-engine friendly semantic HTML layouts, optimize Core Web Vitals, and structure JSON-LD metadata. We ensure search engines can easily index your services for Gurgaon and regional markets."
                 }
               },
               {
@@ -719,7 +719,7 @@ export default function GurgaonLandingPage() {
                 "name": "What is the typical project delivery timeline?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
+                  "text": "Standard corporate web layouts are completed within 7 to 10 working days. Custom SaaS platforms and complex e-commerce builds usually require 15 to 25 days, inclusive of rigorous QA testing."
                 }
               },
               {
@@ -727,15 +727,15 @@ export default function GurgaonLandingPage() {
                 "name": "Can I manage website updates from a dashboard?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
+                  "text": "Yes. We integrate easy-to-use content dashboards allowing you to post blogs, update services, and manage form submissions independently."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How do I schedule a meeting at your Gurgaon office?",
+                "name": "How do I get started with website development in Gurgaon?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our core workspace is located on Golf Course Road, Sector 54, Gurgaon. You can reach out via call (+91 8765077474) or email, and we will schedule an in-person session to discuss your project requirements."
+                  "text": "You can get started by calling us (+91 8765077474), emailing info.onnextweb@gmail.com, or submitting a project inquiry. Our technical team will review your requirements and provide a detailed architecture proposal."
                 }
               }
             ]
@@ -743,44 +743,26 @@ export default function GurgaonLandingPage() {
         }}
       />
 
-      {/* LocalBusiness Schema for Gurgaon Office */}
+      {/* Service Schema for Gurgaon */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "ON Next Web — Web Development Company in Gurgaon",
-            "image": "https://www.onnextweb.in/dark-logo.png",
-            "@id": "https://www.onnextweb.in/website-development-company-in-gurgaon#localbusiness",
-            "url": "https://www.onnextweb.in/website-development-company-in-gurgaon",
-            "telephone": "+91-8765077474",
-            "priceRange": "₹19999 - ₹150000",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Golf Course Road, Sector 54",
-              "addressLocality": "Gurgaon",
-              "addressRegion": "Haryana",
-              "postalCode": "122002",
-              "addressCountry": "IN"
+            "@type": "Service",
+            "name": "Website Development Services in Gurgaon",
+            "provider": {
+              "@type": "Organization",
+              "@id": "https://www.onnextweb.in/#organization",
+              "name": "ON Next Web",
+              "url": "https://www.onnextweb.in"
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 28.4389,
-              "longitude": 77.1054
+            "areaServed": {
+              "@type": "City",
+              "name": "Gurgaon"
             },
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-              ],
-              "opens": "09:00",
-              "closes": "18:00"
-            }
+            "serviceType": "Web Development & Custom Software Engineering",
+            "url": "https://www.onnextweb.in/website-development-company-in-gurgaon"
           })
         }}
       />

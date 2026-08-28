@@ -311,14 +311,14 @@ export default function DelhiDigitalMarketing() {
 
               {/* Local Contact Badges */}
               <AnimatedSection delay={0.2} className="space-y-6 bg-secondary/10 border border-border/60 rounded-3xl p-8 relative overflow-hidden">
-                <h3 className="font-display text-2xl font-bold">Delhi NCR Office</h3>
+                <h3 className="font-display text-2xl font-bold">Delhi Office &amp; Marketing Hub</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">
-                  Connect with our Delhi marketing experts via call or WhatsApp. We will run a complete crawlers audit of your site and mail you a 15-point report entirely free.
+                  Connect with our digital marketing specialists via call or WhatsApp. We will run a complete crawlers audit of your site and provide a technical growth report.
                 </p>
                 <div className="space-y-4 pt-2">
                   <a href="tel:+918765077474" className="flex items-center gap-4 bg-background border border-border px-5 py-3 rounded-xl text-xs hover:border-primary/20 transition-all group">
                     <Phone size={14} className="text-primary group-hover:scale-105 transition-transform" />
-                    <span className="font-medium text-foreground">Call Delhi Office: +91 8765077474</span>
+                    <span className="font-medium text-foreground">Call ON Next Web: +91 8765077474</span>
                   </a>
                   <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="flex items-center gap-4 bg-emerald-600/10 border border-emerald-500/30 text-emerald-400 px-5 py-3 rounded-xl text-xs hover:bg-emerald-600/20 transition-all">
                     <MessageSquare size={14} />

@@ -94,8 +94,8 @@ export default function IndiaCustomSoftwarePage() {
                   <p className="text-xs text-muted-foreground">Tailored Architecture</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">Top Rated</h4>
-                  <p className="text-xs text-muted-foreground">Client Satisfaction</p>
+                  <h4 className="text-2xl font-bold text-foreground">Clean Code</h4>
+                  <p className="text-xs text-muted-foreground">Maintainable Stack</p>
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-foreground">Agile</h4>
@@ -628,21 +628,21 @@ export default function IndiaCustomSoftwarePage() {
                     <MapPin size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">India Workspace Address</p>
+                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Primary Office Address</p>
                     <p className="font-semibold text-foreground leading-relaxed">
-                      Golf Course Road, Sector 54, <br />
-                      Gurugram, Haryana – 122002
+                      C-25 Abul Fazal, Jamia Nagar, <br />
+                      Okhla, New Delhi – 110025
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Urgency Callout */}
+              {/* Consultation Callout */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-xs text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground flex items-center gap-2">
-                  Limited Slot Offshore:
+                  Technical Scoping Consultation:
                 </p>
-                <p>Submit your inquiry today and receive a **Free Technical Code Scoping Audit (worth $499)** for your software architecture. Only 2 slots left this week!</p>
+                <p>Submit your project inquiry today for a custom software architecture proposal tailored to your application requirements.</p>
               </div>
 
               {/* Action Links */}

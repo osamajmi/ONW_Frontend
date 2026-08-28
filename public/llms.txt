@@ -1,0 +1,38 @@
+# ON Next Web (https://www.onnextweb.in)
+
+> ON Next Web is a website development, custom software engineering, and digital services agency based in New Delhi, India. We design and build modern, high-performance web applications, enterprise software solutions, e-commerce storefronts, and digital search campaigns for businesses across Delhi NCR and globally.
+
+## Core Capabilities & Services
+
+- **Web Development**: Next.js, React, Node.js, TypeScript, Headless CMS integration, responsive UX, semantic HTML5, and Core Web Vitals optimization.
+- **Custom Software Development**: Enterprise web portals, RESTful API architecture, database design (MongoDB, PostgreSQL), internal workflow automation, and SaaS platforms.
+- **Digital Marketing & Technical SEO**: Technical website audits, semantic schema indexation, Google Search Console optimization, and local organic visibility strategies.
+
+## Verified Company Entity
+
+- **Brand Name**: ON Next Web (also known as OnNextWeb)
+- **Primary Website**: https://www.onnextweb.in
+- **Physical Address**: C-25 Abul Fazal, Jamia Nagar, Okhla, New Delhi – 110025, India
+- **Phone**: +91 8765077474
+- **Email**: info.onnextweb@gmail.com
+- **Leadership**: MD Osama Khan (Chief Technologist & Systems Architect)
+
+## Key Public Landing Pages
+
+- **Homepage**: https://www.onnextweb.in/
+- **About Us**: https://www.onnextweb.in/about-us
+- **Services Overview**: https://www.onnextweb.in/services
+- **Web Development Services**: https://www.onnextweb.in/services/web-development
+- **Custom Software Development**: https://www.onnextweb.in/services/custom-software-development
+- **SEO Services**: https://www.onnextweb.in/services/seo-services
+- **Portfolio & Capabilities**: https://www.onnextweb.in/portfolio
+- **Blog**: https://www.onnextweb.in/blog
+- **Contact**: https://www.onnextweb.in/contact
+
+## Regional Service Coverage Areas
+
+- **Delhi & Delhi NCR**: https://www.onnextweb.in/website-development-company-in-delhi
+- **Noida & Greater Noida**: https://www.onnextweb.in/website-development-company-in-noida
+- **Gurgaon & Cyber City**: https://www.onnextweb.in/website-development-company-in-gurgaon
+- **India & Global Software Development**: https://www.onnextweb.in/custom-software-development-company-in-india
+- **Digital Marketing Delhi**: https://www.onnextweb.in/digital-marketing-company-in-delhi

@@ -105,7 +105,13 @@ export default async function BlogDetail({ params }: PageProps) {
       "author": {
         "@type": "Person",
         "name": blog.author || "MD Osama Khan",
-        "url": "https://www.onnextweb.in/about-us"
+        "jobTitle": "Chief Technologist & Architect",
+        "url": "https://www.onnextweb.in/about-us",
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://www.onnextweb.in/#organization",
+          "name": "ON Next Web"
+        }
       },
       "publisher": {
         "@type": "Organization",

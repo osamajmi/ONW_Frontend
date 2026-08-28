@@ -13,11 +13,11 @@ const Logo = () => {
       <img
         src="/dark-logo.png"
         alt="ON Next Web — Web Development & Custom Software Agency Logo"
-        className="dark-logo object-contain"
-        width={140}
-        height={34}
+        className="dark-logo object-contain h-11 sm:h-12 md:h-13 w-auto"
+        width={180}
+        height={48}
         loading="eager"
-        style={{ height: "34px", width: "auto" }}
+        style={{ height: "48px", width: "auto" }}
       />
 
       {/* ── Light mode logo ── */}
@@ -25,11 +25,11 @@ const Logo = () => {
       <img
         src="/light-logo.png"
         alt="ON Next Web — Web Development & Custom Software Agency Logo"
-        className="light-logo object-contain"
-        width={140}
-        height={34}
+        className="light-logo object-contain h-11 sm:h-12 md:h-13 w-auto"
+        width={180}
+        height={48}
         loading="eager"
-        style={{ height: "34px", width: "auto" }}
+        style={{ height: "48px", width: "auto" }}
       />
     </div>
   );
