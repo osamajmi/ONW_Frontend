@@ -29,83 +29,55 @@ const fallbackColors = [
   "from-cyan-900/40 to-primary/30"
 ];
 
-const staticDefaultProjects: ProjectItem[] = [
+const capabilityProjects: ProjectItem[] = [
   {
-    title: "Luxe Fashion",
-    description: "A premium, high-speed e-commerce storefront built with Next.js, headless CMS APIs, and Tailwind CSS. We engineered zero-latency cart actions, integrated secure Stripe checkout pipelines, and implemented custom fluid layouts that boosted purchase conversion by 24%.",
-    category: "E-Commerce",
-    tags: ["Next.js", "Tailwind CSS", "Redux", "Stripe API", "Headless CMS"],
-    projectUrl: "https://luxe-fashion.com"
+    title: "High-Performance Corporate Websites",
+    description: "Bespoke corporate websites engineered with Next.js static generation, clean semantic HTML5, Core Web Vitals optimization, and structured metadata schema indexation.",
+    category: "Web Development",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "SEO"],
+    projectUrl: "/services/web-development"
   },
   {
-    title: "FinCore Dashboard",
-    description: "An enterprise-grade financial metrics dashboard designed for secure real-time bookkeeping. Features interactive Chart.js analytics, JWT session state protection, a secure Node.js API gateway, and MongoDB database clusters handling high concurrent queries.",
-    category: "Web App",
-    tags: ["React", "Chart.js", "Node.js", "MongoDB", "Express API"],
-    projectUrl: "https://fincore.com"
+    title: "Conversion-Optimized Ecommerce Storefronts",
+    description: "Custom e-commerce platforms featuring zero-latency page transitions, fluid shopping cart management, secure payment gateway integrations, and mobile-first UX.",
+    category: "Ecommerce",
+    tags: ["Next.js", "React", "Node.js", "Stripe API", "Tailwind CSS"],
+    projectUrl: "/services/web-development"
   },
   {
-    title: "Vibe Social Mobile",
-    description: "A high-performance cross-platform social networking app for iOS and Android built on React Native. Implements real-time messaging structures using Socket.io, background notifications, and optimized AWS S3 media upload pipelines.",
-    category: "Mobile App",
-    tags: ["React Native", "Socket.io", "Express", "MongoDB", "AWS S3"],
-    projectUrl: "https://vibe-social.com"
-  },
-  {
-    title: "GreenTech Energy",
-    description: "A high-fidelity corporate portal built for a global renewable energy conglomerate. Developed with Next.js static generation, complex Framer Motion layouts, secure contact routing nodes, and optimized search footprints for corporate compliance.",
-    category: "Branding",
-    tags: ["Next.js", "Vercel", "Framer Motion", "Tailwind CSS", "SEO"],
-    projectUrl: "https://greentech.com"
-  },
-  {
-    title: "Portal360 AI",
-    description: "An advanced, OpenAI-integrated behavioral analytics dashboard built for portal360.ai. We engineered custom real-time funnel visualizations, user journey tracking matrices, and secure multi-tenant admin views using Next.js and FastAPI.",
-    category: "Web App",
-    tags: ["Next.js", "FastAPI", "OpenAI API", "Tailwind CSS", "MongoDB"],
-    projectUrl: "https://portal360.ai"
-  },
-  {
-    title: "Revoft Platform",
-    description: "A secure, enterprise-level digital accounting and invoice management workspace engineered for revoft.com. Implements automated client invoice cycles, custom ledger tracking dashboards, and robust database backups.",
+    title: "Enterprise Custom Software & Portals",
+    description: "Tailored web applications, internal management tools, and workflow automation portals designed with secure RESTful APIs, JWT session security, and relational databases.",
     category: "Custom Software",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    projectUrl: "https://revoft.com"
+    tags: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
+    projectUrl: "/services/custom-software-development"
   },
   {
-    title: "ImportExportTV Portal",
-    description: "A specialized global logistics video streaming platform built for importexporttv.com. Engineered with adaptive HLS video streaming, automated geo-routing via AWS Cloudfront CDNs, and custom layout transition modules.",
-    category: "Web App",
-    tags: ["Next.js", "AWS Cloudfront", "HLS Streaming", "PostgreSQL", "Tailwind CSS"],
-    projectUrl: "https://importexporttv.com"
+    title: "Cross-Platform Mobile Applications",
+    description: "Native-feel mobile apps built with React Native for iOS and Android, featuring offline sync, background push notifications, and intuitive mobile UI design.",
+    category: "Mobile Apps",
+    tags: ["React Native", "TypeScript", "REST APIs", "Mobile UX"],
+    projectUrl: "/services/custom-software-development"
   },
   {
-    title: "MPC Markets Mosaic",
-    description: "A premium stock trading and investment advisory interface designed for mpcmarkets.com.au/mosaic. Integrates rapid live price updates via secure web sockets, responsive chart rendering, and automated alerts.",
-    category: "Custom Software",
-    tags: ["React", "TypeScript", "D3.js Charts", "WebSockets", "Financial APIs"],
-    projectUrl: "https://www.mpcmarkets.com.au/mosaic/"
+    title: "SaaS Application Infrastructure",
+    description: "Cloud-native Software-as-a-Service platforms built on multi-tenant architecture, automated subscription billing pipelines, and scalable database clusters.",
+    category: "SaaS Platforms",
+    tags: ["Next.js", "AWS", "PostgreSQL", "Tailwind CSS"],
+    projectUrl: "/services/custom-software-development"
   },
   {
-    title: "FitFlow Mobile App",
-    description: "A high-performance cross-platform home workouts and fitness tracking app compiled using React Native. Features apple HealthKit API synchronization, personalized daily routines generator, and secure authentication schemas.",
-    category: "Mobile App",
-    tags: ["React Native", "HealthKit API", "Firebase", "Redux", "Tailwind Native"],
-    projectUrl: "https://apps.apple.com/us/app/fitflow"
-  },
-  {
-    title: "SaaS Growth Marketing",
-    description: "A comprehensive organic visibility and conversion rate scaling campaign for a leading enterprise CRM. Developed customized high-intent landing pages, configured advanced GA4 event mapping, and executed local search citation campaigns.",
-    category: "SEO & Marketing",
-    tags: ["Technical SEO", "Google Ads PPC", "Conversion Audits", "GA4 Analytics"],
-    projectUrl: "https://www.onnextweb.in/services"
+    title: "Technical SEO & Organic Growth Campaigns",
+    description: "Data-driven organic search strategy incorporating technical SEO audits, Core Web Vitals optimization, semantic schema mapping, and local search footprint expansion.",
+    category: "Digital Marketing",
+    tags: ["Technical SEO", "GA4 Analytics", "Core Web Vitals", "Local Search"],
+    projectUrl: "/services/seo-services"
   }
 ];
 
 export default function PortfolioClient({ projects }: { projects: ProjectItem[] }) {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const displayProjects = projects && projects.length >= 10 ? projects : staticDefaultProjects;
+  const displayProjects = projects && projects.length > 0 ? projects : capabilityProjects;
 
   const categories = ["All", ...Array.from(new Set(displayProjects.map((p) => p.category)))];
 
