@@ -11,7 +11,7 @@ const defaultAbout = {
   stats: [
     { value: 150, suffix: "+", label: "Projects Delivered" },
     { value: 50, suffix: "+", label: "Happy Clients" },
-    { value: 8, suffix: "+", label: "Years Experience" },
+    { value: 8, suffix: "+", label: "Years of Experience" },
     { value: 12, suffix: "", label: "Team Members" },
   ]
 };

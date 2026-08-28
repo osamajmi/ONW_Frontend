@@ -7,12 +7,12 @@ import { useEffect, useRef, useState } from "react";
 const stats = [
   { value: 150, suffix: "+", label: "Projects Delivered" },
   { value: 50, suffix: "+", label: "Happy Clients" },
-  { value: 8, suffix: "+", label: "Years Experience" },
+  { value: 8, suffix: "+", label: "Years of Experience" },
   { value: 12, suffix: "", label: "Team Members" },
 ];
 
 const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(target);
   const ref = useRef<HTMLDivElement>(null);
   const started = useRef(false);
 
@@ -25,6 +25,7 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
           const steps = 40;
           const increment = target / steps;
           let current = 0;
+          setCount(0);
           const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
@@ -69,7 +70,7 @@ const AboutSection = () => (
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             From concept to launch, we partner with ambitious brands to
-            create experiences that inspire and convert. As a leading{" "}
+            create experiences that inspire and convert. As a{" "}
             <a href="/website-development-company-in-delhi" className="text-primary hover:underline font-semibold">
               website development company in Delhi
             </a>{" "}
