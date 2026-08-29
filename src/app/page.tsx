@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const revalidate = 3600;
+export const revalidate = 0;
 import Navbar from "@/components/Navbar";
 
 import HeroSection from "@/components/HeroSection";
@@ -22,21 +22,21 @@ async function getHomeData() {
   let testimonials = [];
 
   try {
-    const sRes = await fetch(`${API_URL}/api/services`, { next: { revalidate: 3600 } });
+    const sRes = await fetch(`${API_URL}/api/services`, { cache: "no-store" });
     if (sRes.ok) services = await sRes.json();
   } catch (error) {
     console.error("Error loading services for home:", error);
   }
 
   try {
-    const pRes = await fetch(`${API_URL}/api/projects`, { next: { revalidate: 3600 } });
+    const pRes = await fetch(`${API_URL}/api/projects`, { cache: "no-store" });
     if (pRes.ok) projects = await pRes.json();
   } catch (error) {
     console.error("Error loading projects for home:", error);
   }
 
   try {
-    const tRes = await fetch(`${API_URL}/api/testimonials`, { next: { revalidate: 3600 } });
+    const tRes = await fetch(`${API_URL}/api/testimonials`, { cache: "no-store" });
     if (tRes.ok) testimonials = await tRes.json();
   } catch (error) {
     console.error("Error loading testimonials for home:", error);

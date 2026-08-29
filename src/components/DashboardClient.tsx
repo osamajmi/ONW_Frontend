@@ -1,6 +1,6 @@
 "use client";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "${API_URL}";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -225,46 +225,46 @@ export default function DashboardClient() {
     setLoading(true);
     try {
       // Fetch about content
-      const aboutRes = await fetch("${API_URL}/api/about");
+      const aboutRes = await fetch(`${API_URL}/api/about`);
       if (aboutRes.ok) {
         const aboutJson = await aboutRes.json();
         setAboutData(aboutJson);
       }
 
       // Fetch blogs
-      const blogsRes = await fetch("${API_URL}/api/blogs");
+      const blogsRes = await fetch(`${API_URL}/api/blogs`);
       if (blogsRes.ok) {
         const blogsJson = await blogsRes.json();
         setBlogs(blogsJson);
       }
 
       // Fetch PDFs
-      const pdfsRes = await fetch("${API_URL}/api/pdfs");
+      const pdfsRes = await fetch(`${API_URL}/api/pdfs`);
       if (pdfsRes.ok) {
         const pdfsJson = await pdfsRes.json();
         setPdfs(pdfsJson);
       }
 
       // Fetch Services
-      const servicesRes = await fetch("${API_URL}/api/services");
+      const servicesRes = await fetch(`${API_URL}/api/services`);
       if (servicesRes.ok) {
         setServices(await servicesRes.json());
       }
 
       // Fetch Projects
-      const projectsRes = await fetch("${API_URL}/api/projects");
+      const projectsRes = await fetch(`${API_URL}/api/projects`);
       if (projectsRes.ok) {
         setProjects(await projectsRes.json());
       }
 
       // Fetch Testimonials
-      const testimonialsRes = await fetch("${API_URL}/api/testimonials");
+      const testimonialsRes = await fetch(`${API_URL}/api/testimonials`);
       if (testimonialsRes.ok) {
         setTestimonials(await testimonialsRes.json());
       }
 
       // Fetch Contacts
-      const contactsRes = await fetch("${API_URL}/api/contact", {
+      const contactsRes = await fetch(`${API_URL}/api/contact`, {
         headers: {
           Authorization: `Bearer ${authToken}`
         }
@@ -297,7 +297,7 @@ export default function DashboardClient() {
     e.preventDefault();
     setSavingAbout(true);
     try {
-      const res = await fetch("${API_URL}/api/about", {
+      const res = await fetch(`${API_URL}/api/about`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -398,7 +398,7 @@ export default function DashboardClient() {
     setSavingBlog(true);
     const url = editingBlogId
       ? `${API_URL}/api/blogs/${editingBlogId}`
-      : "${API_URL}/api/blogs";
+      : `${API_URL}/api/blogs`;
     const method = editingBlogId ? "PUT" : "POST";
 
     try {
@@ -415,7 +415,7 @@ export default function DashboardClient() {
         toast.success(editingBlogId ? "Blog updated successfully!" : "Blog created successfully!");
         setShowBlogModal(false);
         // Refresh blogs list
-        const blogsRes = await fetch("${API_URL}/api/blogs");
+        const blogsRes = await fetch(`${API_URL}/api/blogs`);
         if (blogsRes.ok) setBlogs(await blogsRes.json());
       } else {
         const errJson = await res.json();
@@ -467,7 +467,7 @@ export default function DashboardClient() {
 
     setUploadingPdfs(true);
     try {
-      const res = await fetch("${API_URL}/api/pdfs/upload", {
+      const res = await fetch(`${API_URL}/api/pdfs/upload`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`
@@ -484,7 +484,7 @@ export default function DashboardClient() {
         if (fileInput) fileInput.value = "";
         
         // Refresh PDFs list
-        const pdfsRes = await fetch("${API_URL}/api/pdfs");
+        const pdfsRes = await fetch(`${API_URL}/api/pdfs`);
         if (pdfsRes.ok) setPdfs(await pdfsRes.json());
       } else {
         throw new Error(data.message || "Failed to upload files");
@@ -558,7 +558,7 @@ export default function DashboardClient() {
     setSavingService(true);
     const url = editingServiceId
       ? `${API_URL}/api/services/${editingServiceId}`
-      : "${API_URL}/api/services";
+      : `${API_URL}/api/services`;
     const method = editingServiceId ? "PUT" : "POST";
 
     const featuresArray = serviceForm.features
@@ -580,7 +580,7 @@ export default function DashboardClient() {
       if (res.ok) {
         toast.success(editingServiceId ? "Service updated successfully!" : "Service added successfully!");
         setShowServiceModal(false);
-        const servicesRes = await fetch("${API_URL}/api/services");
+        const servicesRes = await fetch(`${API_URL}/api/services`);
         if (servicesRes.ok) setServices(await servicesRes.json());
       } else {
         const errJson = await res.json();
@@ -661,7 +661,7 @@ export default function DashboardClient() {
     setSavingProject(true);
     const url = editingProjectId
       ? `${API_URL}/api/projects/${editingProjectId}`
-      : "${API_URL}/api/projects";
+      : `${API_URL}/api/projects`;
     const method = editingProjectId ? "PUT" : "POST";
 
     const tagsArray = projectForm.tags
@@ -683,7 +683,7 @@ export default function DashboardClient() {
       if (res.ok) {
         toast.success(editingProjectId ? "Project updated successfully!" : "Project added successfully!");
         setShowProjectModal(false);
-        const projectsRes = await fetch("${API_URL}/api/projects");
+        const projectsRes = await fetch(`${API_URL}/api/projects`);
         if (projectsRes.ok) setProjects(await projectsRes.json());
       } else {
         const errJson = await res.json();
@@ -751,7 +751,7 @@ export default function DashboardClient() {
     setSavingTestimonial(true);
     const url = editingTestimonialId
       ? `${API_URL}/api/testimonials/${editingTestimonialId}`
-      : "${API_URL}/api/testimonials";
+      : `${API_URL}/api/testimonials`;
     const method = editingTestimonialId ? "PUT" : "POST";
 
     try {
@@ -766,7 +766,7 @@ export default function DashboardClient() {
       if (res.ok) {
         toast.success(editingTestimonialId ? "Testimonial updated successfully!" : "Testimonial added successfully!");
         setShowTestimonialModal(false);
-        const testimonialsRes = await fetch("${API_URL}/api/testimonials");
+        const testimonialsRes = await fetch(`${API_URL}/api/testimonials`);
         if (testimonialsRes.ok) setTestimonials(await testimonialsRes.json());
       } else {
         const errJson = await res.json();
@@ -831,6 +831,9 @@ export default function DashboardClient() {
             <aside className="space-y-2 lg:border-r lg:border-border/60 lg:pr-8 relative z-10">
               {[
                 { id: "about", label: "About Us Content", icon: Settings },
+                { id: "projects", label: "Manage Portfolio", icon: Briefcase },
+                { id: "services", label: "Manage Services", icon: Cpu },
+                { id: "testimonials", label: "Manage Testimonials", icon: MessageSquare },
                 { id: "blogs", label: "Manage Blogs", icon: BookOpen },
                 { id: "pdfs", label: "Upload & PDF Files", icon: FileText },
                 { id: "seo", label: "SEO Page Settings", icon: Globe },
@@ -1410,6 +1413,223 @@ export default function DashboardClient() {
                   )}
                 </div>
               )}
+
+              {/* TAB: MANAGE PORTFOLIO PROJECTS */}
+              {activeTab === "projects" && (
+                <div className="space-y-6">
+                  <div className="flex justify-between items-center border-b border-border/40 pb-3 mb-4">
+                    <div>
+                      <h2 className="text-xl font-bold font-display">Manage Portfolio & Case Studies</h2>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        Add, edit or remove project items displayed on the Live Portfolio page.
+                      </p>
+                    </div>
+                    <button
+                      onClick={openNewProjectModal}
+                      className="bg-primary text-primary-foreground flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-semibold hover:opacity-90 transition-opacity cursor-pointer"
+                    >
+                      <Plus size={14} />
+                      Add Project
+                    </button>
+                  </div>
+
+                  {projects.length === 0 ? (
+                    <div className="text-center py-12 bg-secondary/10 rounded-xl border border-dashed border-border/60">
+                      <p className="text-muted-foreground text-sm">No portfolio projects found. Add your first client case study!</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      {projects.map((project) => (
+                        <div
+                          key={project._id}
+                          className="flex items-center justify-between gap-4 p-4 bg-secondary/10 hover:bg-secondary/15 rounded-xl border border-border/30 hover:border-primary/20 transition-all duration-300 group"
+                        >
+                          <div className="flex items-center gap-4 overflow-hidden">
+                            {project.coverImage ? (
+                              <img
+                                src={project.coverImage}
+                                alt={project.title}
+                                className="w-14 h-14 rounded-lg object-cover flex-shrink-0 group-hover:scale-105 transition-transform duration-300"
+                              />
+                            ) : (
+                              <div className="w-14 h-14 rounded-lg bg-secondary/20 flex items-center justify-center text-[10px] font-semibold flex-shrink-0 text-muted-foreground border border-border/50">
+                                No Cover
+                              </div>
+                            )}
+                            <div className="overflow-hidden">
+                              <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">
+                                  {project.category}
+                                </span>
+                                {project.projectUrl && (
+                                  <a href={project.projectUrl} target="_blank" rel="noreferrer" className="text-[10px] text-muted-foreground hover:text-primary underline">
+                                    {project.projectUrl}
+                                  </a>
+                                )}
+                              </div>
+                              <h3 className="font-semibold text-sm truncate text-foreground group-hover:text-primary transition-colors duration-300 mt-1">
+                                {project.title}
+                              </h3>
+                              <p className="text-xs text-muted-foreground truncate mt-0.5">{project.description}</p>
+                              {project.tags && project.tags.length > 0 && (
+                                <div className="flex flex-wrap gap-1 mt-1.5">
+                                  {project.tags.map((t, idx) => (
+                                    <span key={idx} className="text-[8px] bg-secondary/40 text-muted-foreground px-1.5 py-0.5 rounded border border-border/40">
+                                      {t}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-2 flex-shrink-0">
+                            <button
+                              onClick={() => openEditProjectModal(project)}
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 cursor-pointer"
+                              title="Edit Project"
+                            >
+                              <Edit2 size={13} />
+                            </button>
+                            <button
+                              onClick={() => deleteProject(project._id)}
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-destructive hover:text-white hover:border-destructive transition-all duration-300 cursor-pointer"
+                              title="Delete Project"
+                            >
+                              <Trash2 size={13} />
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* TAB: MANAGE SERVICES */}
+              {activeTab === "services" && (
+                <div className="space-y-6">
+                  <div className="flex justify-between items-center border-b border-border/40 pb-3 mb-4">
+                    <div>
+                      <h2 className="text-xl font-bold font-display">Manage Services</h2>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        Create, edit, or remove service offerings listed on the homepage and services section.
+                      </p>
+                    </div>
+                    <button
+                      onClick={openNewServiceModal}
+                      className="bg-primary text-primary-foreground flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-semibold hover:opacity-90 transition-opacity cursor-pointer"
+                    >
+                      <Plus size={14} />
+                      Add Service
+                    </button>
+                  </div>
+
+                  {services.length === 0 ? (
+                    <div className="text-center py-12 bg-secondary/10 rounded-xl border border-dashed border-border/60">
+                      <p className="text-muted-foreground text-sm">No services found. Add your first service offering!</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      {services.map((service) => (
+                        <div
+                          key={service._id}
+                          className="flex items-center justify-between gap-4 p-4 bg-secondary/10 hover:bg-secondary/15 rounded-xl border border-border/30 hover:border-primary/20 transition-all duration-300 group"
+                        >
+                          <div className="overflow-hidden">
+                            <h3 className="font-semibold text-sm truncate text-foreground group-hover:text-primary transition-colors duration-300">
+                              {service.title}
+                            </h3>
+                            <p className="text-xs text-muted-foreground truncate mt-0.5">{service.description}</p>
+                            {service.features && service.features.length > 0 && (
+                              <p className="text-[10px] text-primary/80 mt-1 font-medium">
+                                Deliverables: {service.features.join(", ")}
+                              </p>
+                            )}
+                          </div>
+
+                          <div className="flex items-center gap-2 flex-shrink-0">
+                            <button
+                              onClick={() => openEditServiceModal(service)}
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 cursor-pointer"
+                              title="Edit Service"
+                            >
+                              <Edit2 size={13} />
+                            </button>
+                            <button
+                              onClick={() => deleteService(service._id)}
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-destructive hover:text-white hover:border-destructive transition-all duration-300 cursor-pointer"
+                              title="Delete Service"
+                            >
+                              <Trash2 size={13} />
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* TAB: MANAGE TESTIMONIALS */}
+              {activeTab === "testimonials" && (
+                <div className="space-y-6">
+                  <div className="flex justify-between items-center border-b border-border/40 pb-3 mb-4">
+                    <div>
+                      <h2 className="text-xl font-bold font-display">Manage Client Testimonials</h2>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        Add and update client feedback & reviews.
+                      </p>
+                    </div>
+                    <button
+                      onClick={openNewTestimonialModal}
+                      className="bg-primary text-primary-foreground flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-semibold hover:opacity-90 transition-opacity cursor-pointer"
+                    >
+                      <Plus size={14} />
+                      Add Testimonial
+                    </button>
+                  </div>
+
+                  {testimonials.length === 0 ? (
+                    <div className="text-center py-12 bg-secondary/10 rounded-xl border border-dashed border-border/60">
+                      <p className="text-muted-foreground text-sm">No client testimonials found. Add your first testimonial!</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      {testimonials.map((t) => (
+                        <div
+                          key={t._id}
+                          className="flex items-center justify-between gap-4 p-4 bg-secondary/10 hover:bg-secondary/15 rounded-xl border border-border/30 hover:border-primary/20 transition-all duration-300 group"
+                        >
+                          <div className="overflow-hidden">
+                            <h3 className="font-semibold text-sm truncate text-foreground group-hover:text-primary transition-colors duration-300">
+                              {t.name} <span className="text-xs text-muted-foreground font-normal">({t.role}{t.company ? `, ${t.company}` : ""})</span>
+                            </h3>
+                            <p className="text-xs text-muted-foreground truncate mt-0.5">"{t.feedback}"</p>
+                          </div>
+
+                          <div className="flex items-center gap-2 flex-shrink-0">
+                            <button
+                              onClick={() => openEditTestimonialModal(t)}
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 cursor-pointer"
+                              title="Edit Testimonial"
+                            >
+                              <Edit2 size={13} />
+                            </button>
+                            <button
+                              onClick={() => deleteTestimonial(t._id)}
+                              className="w-8 h-8 rounded-lg bg-secondary border border-border/40 flex items-center justify-center text-muted-foreground hover:bg-destructive hover:text-white hover:border-destructive transition-all duration-300 cursor-pointer"
+                              title="Delete Testimonial"
+                            >
+                              <Trash2 size={13} />
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -1524,6 +1744,280 @@ export default function DashboardClient() {
                   ) : (
                     "Save Article"
                   )}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* PROJECT CREATE/EDIT MODAL */}
+      {showProjectModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm">
+          <div className="w-full max-w-2xl bg-background border border-border/60 rounded-2xl shadow-2xl p-6 overflow-y-auto max-h-[85vh] relative">
+            <button
+              onClick={() => setShowProjectModal(false)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground cursor-pointer"
+            >
+              <X size={20} />
+            </button>
+
+            <h2 className="font-display text-xl font-bold mb-6">
+              {editingProjectId ? "Edit Portfolio Project" : "Add New Portfolio Project"}
+            </h2>
+
+            <form onSubmit={saveProject} className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Project Title</label>
+                  <input
+                    type="text"
+                    value={projectForm.title}
+                    onChange={(e) => setProjectForm({ ...projectForm, title: e.target.value })}
+                    placeholder="e.g. Luxe Fashion"
+                    className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none transition-colors"
+                    required
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Category</label>
+                  <select
+                    value={projectForm.category}
+                    onChange={(e) => setProjectForm({ ...projectForm, category: e.target.value })}
+                    className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none transition-colors cursor-pointer"
+                    required
+                  >
+                    <option value="Web App">Web App</option>
+                    <option value="E-Commerce">E-Commerce</option>
+                    <option value="Mobile App">Mobile App</option>
+                    <option value="Branding">Branding</option>
+                    <option value="Custom Software">Custom Software</option>
+                    <option value="SEO & Marketing">SEO & Marketing</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Description</label>
+                <textarea
+                  value={projectForm.description}
+                  onChange={(e) => setProjectForm({ ...projectForm, description: e.target.value })}
+                  placeholder="Detailed project summary, engineering highlights, and business impact..."
+                  rows={3}
+                  className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none transition-colors resize-y"
+                  required
+                />
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Project URL (Live Link)</label>
+                  <input
+                    type="text"
+                    value={projectForm.projectUrl}
+                    onChange={(e) => setProjectForm({ ...projectForm, projectUrl: e.target.value })}
+                    placeholder="https://example.com"
+                    className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none transition-colors"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Tech Stack Tags (Comma-separated)</label>
+                  <input
+                    type="text"
+                    value={projectForm.tags}
+                    onChange={(e) => setProjectForm({ ...projectForm, tags: e.target.value })}
+                    placeholder="Next.js, Tailwind CSS, Stripe API"
+                    className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Cover Image</label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleProjectImageUpload}
+                  className="w-full text-xs text-muted-foreground file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-primary file:text-primary-foreground hover:file:opacity-90 file:cursor-pointer"
+                />
+              </div>
+
+              {projectForm.coverImage && (
+                <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-border/60 bg-secondary/30">
+                  <img src={projectForm.coverImage} alt="Cover preview" className="w-full h-full object-cover" />
+                  <button
+                    type="button"
+                    onClick={() => setProjectForm({ ...projectForm, coverImage: "" })}
+                    className="absolute top-2 right-2 w-6 h-6 rounded-full bg-background/80 hover:bg-background flex items-center justify-center text-muted-foreground hover:text-destructive cursor-pointer"
+                  >
+                    <X size={12} />
+                  </button>
+                </div>
+              )}
+
+              <div className="flex justify-end gap-3 pt-4 border-t border-border/40">
+                <button
+                  type="button"
+                  onClick={() => setShowProjectModal(false)}
+                  className="px-5 py-2.5 rounded-xl border border-border/60 hover:bg-secondary text-sm font-semibold transition-colors cursor-pointer"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={savingProject}
+                  className="bg-primary text-primary-foreground font-semibold py-2.5 px-6 rounded-xl hover:opacity-95 transition-opacity disabled:opacity-50 flex items-center gap-2 text-sm cursor-pointer"
+                >
+                  {savingProject ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Saving...
+                    </>
+                  ) : (
+                    "Save Project"
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* SERVICE CREATE/EDIT MODAL */}
+      {showServiceModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm">
+          <div className="w-full max-w-xl bg-background border border-border/60 rounded-2xl shadow-2xl p-6 relative">
+            <button
+              onClick={() => setShowServiceModal(false)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground cursor-pointer"
+            >
+              <X size={20} />
+            </button>
+            <h2 className="font-display text-xl font-bold mb-6">
+              {editingServiceId ? "Edit Service" : "Add New Service"}
+            </h2>
+            <form onSubmit={saveService} className="space-y-4">
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Title</label>
+                <input
+                  type="text"
+                  value={serviceForm.title}
+                  onChange={(e) => setServiceForm({ ...serviceForm, title: e.target.value })}
+                  className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none"
+                  required
+                />
+              </div>
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Description</label>
+                <textarea
+                  value={serviceForm.description}
+                  onChange={(e) => setServiceForm({ ...serviceForm, description: e.target.value })}
+                  rows={3}
+                  className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none"
+                  required
+                />
+              </div>
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Deliverables / Features (Comma-separated)</label>
+                <input
+                  type="text"
+                  value={serviceForm.features}
+                  onChange={(e) => setServiceForm({ ...serviceForm, features: e.target.value })}
+                  className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none"
+                />
+              </div>
+              <div className="flex justify-end gap-3 pt-4 border-t border-border/40">
+                <button
+                  type="button"
+                  onClick={() => setShowServiceModal(false)}
+                  className="px-5 py-2.5 rounded-xl border border-border/60 hover:bg-secondary text-sm font-semibold cursor-pointer"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={savingService}
+                  className="bg-primary text-primary-foreground font-semibold py-2.5 px-6 rounded-xl hover:opacity-95 transition-opacity disabled:opacity-50 text-sm cursor-pointer"
+                >
+                  {savingService ? "Saving..." : "Save Service"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* TESTIMONIAL CREATE/EDIT MODAL */}
+      {showTestimonialModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm">
+          <div className="w-full max-w-xl bg-background border border-border/60 rounded-2xl shadow-2xl p-6 relative">
+            <button
+              onClick={() => setShowTestimonialModal(false)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground cursor-pointer"
+            >
+              <X size={20} />
+            </button>
+            <h2 className="font-display text-xl font-bold mb-6">
+              {editingTestimonialId ? "Edit Testimonial" : "Add New Testimonial"}
+            </h2>
+            <form onSubmit={saveTestimonial} className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Client Name</label>
+                  <input
+                    type="text"
+                    value={testimonialForm.name}
+                    onChange={(e) => setTestimonialForm({ ...testimonialForm, name: e.target.value })}
+                    className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none"
+                    required
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Role / Designation</label>
+                  <input
+                    type="text"
+                    value={testimonialForm.role}
+                    onChange={(e) => setTestimonialForm({ ...testimonialForm, role: e.target.value })}
+                    className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Company</label>
+                <input
+                  type="text"
+                  value={testimonialForm.company}
+                  onChange={(e) => setTestimonialForm({ ...testimonialForm, company: e.target.value })}
+                  className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none"
+                />
+              </div>
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Feedback / Review</label>
+                <textarea
+                  value={testimonialForm.feedback}
+                  onChange={(e) => setTestimonialForm({ ...testimonialForm, feedback: e.target.value })}
+                  rows={3}
+                  className="w-full bg-secondary/20 border border-border/80 focus:border-primary rounded-xl py-2.5 px-4 text-sm outline-none"
+                  required
+                />
+              </div>
+              <div className="flex justify-end gap-3 pt-4 border-t border-border/40">
+                <button
+                  type="button"
+                  onClick={() => setShowTestimonialModal(false)}
+                  className="px-5 py-2.5 rounded-xl border border-border/60 hover:bg-secondary text-sm font-semibold cursor-pointer"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={savingTestimonial}
+                  className="bg-primary text-primary-foreground font-semibold py-2.5 px-6 rounded-xl hover:opacity-95 transition-opacity disabled:opacity-50 text-sm cursor-pointer"
+                >
+                  {savingTestimonial ? "Saving..." : "Save Testimonial"}
                 </button>
               </div>
             </form>
