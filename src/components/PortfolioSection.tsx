@@ -55,7 +55,9 @@ const buildCapabilities = [
 ];
 
 const PortfolioSection = ({ initialProjects }: { initialProjects?: ProjectItem[] }) => {
-  const verifiedProjects = initialProjects && initialProjects.length > 0 ? initialProjects : [];
+  const verifiedProjects = initialProjects && initialProjects.length > 0 
+    ? initialProjects.filter((p) => !p.projectUrl || !p.projectUrl.includes("example.com"))
+    : [];
 
   return (
     <section id="portfolio" className="py-24 md:py-32 bg-gradient-section">

@@ -115,7 +115,11 @@ const capabilityProjects: ProjectItem[] = [
 export default function PortfolioClient({ projects }: { projects: ProjectItem[] }) {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const displayProjects = projects && projects.length > 0 ? projects : capabilityProjects;
+  const cleanProjects = projects && projects.length > 0 
+    ? projects.filter((p) => !p.projectUrl || !p.projectUrl.includes("example.com"))
+    : [];
+
+  const displayProjects = cleanProjects.length > 0 ? cleanProjects : capabilityProjects;
 
   const categories = ["All", ...Array.from(new Set(displayProjects.map((p) => p.category)))];
 
