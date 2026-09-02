@@ -11,30 +11,32 @@ import {
   Mail, 
   MapPin, 
   Check, 
-  Star, 
   ArrowRight, 
-  Clock, 
-  Zap, 
   Globe, 
   Laptop, 
   ChevronRight, 
   ShieldCheck, 
-  Rocket, 
-  Award,
-  Users,
+  Zap, 
+  MessageSquare,
+  Code,
+  Layers,
   Search,
-  MessageSquare
+  FileText,
+  CheckCircle2,
+  HelpCircle,
+  Clock,
+  Layers3
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Web Development Company in Noida | ON Next Web",
-  description: "Website development company serving businesses across Noida & Greater Noida. We engineer custom, fast, and SEO-friendly Next.js web applications.",
+  title: "Website Development Company in Noida | ON Next Web",
+  description: "ON Next Web provides website development services across Noida & Greater Noida, including business websites, ecommerce platforms, and custom web applications.",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-noida",
   },
   openGraph: {
-    title: "Web Development Company in Noida | ON Next Web",
-    description: "Website development company serving businesses across Noida & Greater Noida. We engineer custom, fast, and SEO-friendly Next.js web applications.",
+    title: "Website Development Company in Noida | ON Next Web",
+    description: "ON Next Web provides website development services across Noida & Greater Noida, including business websites, ecommerce platforms, and custom web applications.",
     url: "https://www.onnextweb.in/website-development-company-in-noida",
     type: "website",
     images: [
@@ -42,14 +44,14 @@ export const metadata: Metadata = {
         url: "https://www.onnextweb.in/dark-logo.png",
         width: 1200,
         height: 630,
-        alt: "Web Development Company in Noida | ON Next Web",
+        alt: "Website Development Company in Noida | ON Next Web",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development Company in Noida | ON Next Web",
-    description: "Website development company serving businesses across Noida & Greater Noida.",
+    title: "Website Development Company in Noida | ON Next Web",
+    description: "ON Next Web provides website development services across Noida & Greater Noida.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
@@ -65,7 +67,7 @@ export default function NoidaLandingPage() {
       <div className="bg-primary/10 border-b border-primary/20 text-foreground py-2 text-xs sm:text-sm relative z-50 mt-[72px] md:mt-[80px]">
         <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 font-medium">
-            <span>Serving Businesses Across Noida &amp; Greater Noida IT Corridor!</span>
+            <span>Serving Businesses Across Noida &amp; Greater Noida</span>
           </div>
           <div className="flex items-center gap-4 text-muted-foreground">
             <a href="tel:+918765077474" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
@@ -82,8 +84,7 @@ export default function NoidaLandingPage() {
       </div>
 
       {/* HERO SECTION */}
-      <section className="relative pt-12 pb-24 md:py-32 overflow-hidden">
-        {/* Glow Effects */}
+      <section className="relative pt-12 pb-24 md:py-28 overflow-hidden">
         <div className="absolute top-[20%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-primary/10 blur-[130px] pointer-events-none" />
         <div className="absolute top-[10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-purple-600/10 blur-[120px] pointer-events-none" />
         
@@ -95,7 +96,7 @@ export default function NoidaLandingPage() {
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm">
-                ⚙️ Web Development Services for Noida / Sector 62 &amp; 63
+                Web Development Services for Noida &amp; Greater Noida
               </span>
               
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
@@ -103,50 +104,54 @@ export default function NoidaLandingPage() {
                 Company in <span className="text-gradient">Noida</span>
               </h1>
               
-              <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                ON Next Web provides website development services for businesses across Noida, Greater Noida, Sector 62, Sector 63, and the Noida Expressway IT corridor. We build corporate websites, e-commerce platforms, and custom web applications using modern technologies such as Next.js, React, Node.js, and TypeScript.
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl font-light">
+                ON Next Web provides website development services for startups, small businesses, and growing companies across Noida and Greater Noida. We build fast, responsive business websites, ecommerce platforms, and custom web applications using technologies such as Next.js, React, and Node.js.
               </p>
               
+              <p className="text-sm text-muted-foreground/90 leading-relaxed max-w-2xl bg-surface-elevated/30 border border-border/60 p-4 rounded-xl">
+                Our team operates from New Delhi and provides web development services to businesses across Noida, Greater Noida, and the wider Delhi NCR region.
+              </p>
+
               {/* Trust Badges */}
-              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border/50 max-w-md">
+              <div className="grid grid-cols-3 gap-4 pt-2 border-t border-border/50 max-w-md">
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">Custom</h4>
-                  <p className="text-xs text-muted-foreground">Web Engineering</p>
+                  <h4 className="text-xl font-bold text-foreground">Custom</h4>
+                  <p className="text-xs text-muted-foreground">Tailored Engineering</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">Client Focused</h4>
-                  <p className="text-xs text-muted-foreground">Dedicated Support</p>
+                  <h4 className="text-xl font-bold text-foreground">Direct Support</h4>
+                  <p className="text-xs text-muted-foreground">Developer Communication</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-foreground">100%</h4>
-                  <p className="text-xs text-muted-foreground">Clean Stack</p>
+                  <h4 className="text-xl font-bold text-foreground">100%</h4>
+                  <p className="text-xs text-muted-foreground">Code Ownership</p>
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap gap-4 pt-6">
+              <div className="flex flex-wrap gap-4 pt-4">
                 <a 
-                  href="tel:+918765077474" 
-                  className="bg-primary text-primary-foreground font-medium px-8 py-4 rounded-xl hover:glow-accent hover:bg-primary/95 transition-all duration-300 flex items-center gap-2 group cursor-pointer text-base"
+                  href="#contact-form-section" 
+                  className="bg-primary text-primary-foreground font-medium px-7 py-3.5 rounded-xl hover:glow-accent hover:bg-primary/95 transition-all duration-300 flex items-center gap-2 group cursor-pointer text-base"
                 >
-                  <Phone size={18} />
-                  Call Now
+                  Get a Free Quote
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a 
-                  href="https://wa.me/918765077474?text=Hi%20OnNextWeb,%20I%20am%20looking%20for%20website%20development%20services%20in%20Noida." 
-                  target="_blank" 
-                  rel="nofollow noopener noreferrer" 
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 flex items-center gap-2 cursor-pointer text-base"
+                  href="tel:+918765077474" 
+                  className="border border-border hover:border-primary/50 bg-surface-elevated/40 hover:bg-primary/5 text-foreground px-6 py-3.5 rounded-xl transition-all duration-300 flex items-center gap-2 font-medium cursor-pointer text-base"
                 >
-                  <MessageSquare size={18} />
-                  Chat on WhatsApp
+                  <Phone size={17} className="text-primary" />
+                  Call Now
                 </a>
                 <a 
-                  href="#contact-form-section" 
-                  className="border border-border hover:border-primary/50 bg-surface-elevated/40 hover:bg-primary/5 text-foreground px-6 py-4 rounded-xl transition-all duration-300 flex items-center justify-center font-medium cursor-pointer"
+                  href="https://wa.me/918765077474?text=Hi%20ON%20Next%20Web,%20I%20am%20looking%20for%20website%20development%20services%20in%20Noida." 
+                  target="_blank" 
+                  rel="nofollow noopener noreferrer" 
+                  className="bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 font-medium px-6 py-3.5 rounded-xl transition-all duration-300 flex items-center gap-2 cursor-pointer text-base"
                 >
-                  Get Free Quote
+                  <MessageSquare size={17} />
+                  WhatsApp
                 </a>
               </div>
             </div>
@@ -156,10 +161,10 @@ export default function NoidaLandingPage() {
               <div className="bg-surface-elevated/40 border border-border/80 backdrop-blur-md rounded-2xl p-8 relative overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none" />
                 <LandingPageForm
-                  title="Build Your Noida Web Project"
-                  subtitle="Get a complete design mockup and transparent pricing details within 2 hours."
-                  buttonText="Submit Proposal Request"
-                  placeholderMessage="Manufacturing business catalog, WordPress blog, or e-commerce shop?"
+                  title="Request a Free Website Quote"
+                  subtitle="Share your project requirements to receive a customized technical blueprint and estimated timeline."
+                  buttonText="Get Free Proposal"
+                  placeholderMessage="Tell us about your project (e.g., corporate website, ecommerce store, or custom web portal)"
                   sourcePage="Noida Hero Form"
                 />
               </div>
@@ -169,72 +174,171 @@ export default function NoidaLandingPage() {
         </div>
       </section>
 
-      {/* INTRODUCTION SECTION */}
+      {/* SERVICES SECTION */}
       <section className="py-20 border-t border-border/40 relative">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <div className="text-center space-y-4 mb-16">
-            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Noida Digital Space</span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-              Why Does Your Noida Business Need a Top-Ranked Website?
+        <div className="container mx-auto px-6">
+          <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Comprehensive Offerings</span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
+              Website Development Services in Noida
             </h2>
-            <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
+            <p className="text-muted-foreground text-base leading-relaxed">
+              We design and build custom digital products tailored to your operational goals, customer acquisition channels, and technical requirements.
+            </p>
           </div>
 
-          <div className="prose prose-invert max-w-none text-muted-foreground space-y-6 text-base md:text-lg leading-relaxed">
-            <p>
-              Noida and Greater Noida (including the Noida Expressway) stand among India&apos;s leading industrial and IT corridors. Thousands of corporate offices, export manufacturing units, real estate firms, and educational institutes operate across Sector 62, Sector 63, Sector 18, and Film City. However, without optimized web structures, many of these businesses lose massive amounts of direct local search traffic.
-            </p>
-            <p>
-              Customers routinely search for services with high-intent localized search terms like &quot;<em>website development company in Noida near me</em>&quot; and &quot;<em>best web development company in Noida</em>&quot;. If your brand does not rank on local directories and search indexes, you lose organic conversions directly to competitors. As an expert <strong>website development company in Noida</strong>, OnNextWeb codes custom layouts that load instantly and perform flawlessly.
-            </p>
-            <p>
-              For businesses based in Noida Sector 62 and 63, we integrate secure payment processors and robust CRM capture forms. We avoid heavy pre-built templates, choosing instead to write clean code that ranks at the top of Google search results for local queries.
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Service 1 */}
+            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-8 rounded-2xl space-y-4 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                  <Globe size={24} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground">Business Website Development</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  We build corporate websites, company profiles, service portals, lead-generation pages, and interactive product catalogs. Designed for clarity, brand credibility, and mobile responsiveness.
+                </p>
+              </div>
+              <ul className="space-y-2 text-xs text-muted-foreground pt-4 border-t border-border/40">
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Custom, responsive UI/UX layouts</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Lead capture &amp; CRM integration</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Structured metadata &amp; performance optimization</li>
+              </ul>
+            </div>
+
+            {/* Service 2 */}
+            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-8 rounded-2xl space-y-4 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                  <Laptop size={24} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground">Ecommerce Website Development</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Tailored online storefronts equipped with organized product catalogs, secure checkout flows, payment gateway integrations (Razorpay, Paytm, Stripe), and user-friendly admin panels.
+                </p>
+              </div>
+              <ul className="space-y-2 text-xs text-muted-foreground pt-4 border-t border-border/40">
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Structured product filters &amp; categories</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Payment API &amp; invoice handling</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Order &amp; inventory management tools</li>
+              </ul>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-8 rounded-2xl space-y-4 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                  <Code size={24} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground">Custom Web Application Development</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Bespoke web applications, internal tools, customer portals, booking systems, and analytical dashboards engineered with React, Node.js, and modern database architectures.
+                </p>
+              </div>
+              <ul className="space-y-2 text-xs text-muted-foreground pt-4 border-t border-border/40">
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Role-based user authentication</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Interactive analytics &amp; reporting UI</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Database integration (PostgreSQL, MongoDB)</li>
+              </ul>
+            </div>
+
+            {/* Service 4 */}
+            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-8 rounded-2xl space-y-4 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                  <Zap size={24} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground">Next.js &amp; React Development</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Modern JavaScript framework architecture for applications that require fast page rendering, server-side dynamic capabilities, static generation, and modular component structures.
+                </p>
+              </div>
+              <ul className="space-y-2 text-xs text-muted-foreground pt-4 border-t border-border/40">
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Server-side rendering &amp; static site generation</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Clean component-based architecture</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Seamless API integrations</li>
+              </ul>
+            </div>
+
+            {/* Service 5 */}
+            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-8 rounded-2xl space-y-4 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+              <div className="space-y-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                  <Layers size={24} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground">CMS Development (WordPress &amp; Headless)</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  We configure flexible content management systems including customized WordPress builds and headless CMS solutions like Sanity or Strapi. This enables your team to update content, post articles, and publish media independently.
+                </p>
+              </div>
+              <ul className="grid sm:grid-cols-2 gap-2 text-xs text-muted-foreground pt-4 border-t border-border/40">
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Intuitive admin dashboards for content teams</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Clean visual layout control</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Structured metadata &amp; blogging tools</li>
+                <li className="flex items-center gap-2"><Check size={14} className="text-primary shrink-0" /> Security &amp; asset optimization standards</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-12 bg-surface-elevated/20 border border-border/60 p-6 rounded-xl max-w-4xl mx-auto">
+            <p className="text-muted-foreground text-sm">
+              Looking to explore our complete capabilities? Learn more about <Link href="/services/web-development" className="text-primary underline font-medium">our web development services</Link>, view live examples in <Link href="/portfolio" className="text-primary underline font-medium">our work portfolio</Link>, or check regional services in <Link href="/website-development-company-in-delhi" className="text-primary underline font-medium">Delhi</Link> and <Link href="/website-development-company-in-gurgaon" className="text-primary underline font-medium">Gurgaon</Link>.
             </p>
           </div>
         </div>
       </section>
 
-      {/* WHY CHOOSE ONNEXTWEB (USPs) */}
+      {/* WHY CHOOSE ON NEXT WEB */}
       <section className="py-20 bg-surface/50 border-t border-b border-border/40 relative">
         <div className="container mx-auto px-6">
-          <div className="text-center space-y-4 mb-16">
-            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Performance Factors</span>
+          <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Core Value Principles</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Why Choose OnNextWeb? (Our Quality Benchmarks)
+              Why Choose ON Next Web for Website Development?
             </h2>
-            <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              While local agencies build basic template websites, we craft custom, conversion-driven web architectures designed to scale your business.
+            <p className="text-muted-foreground text-base leading-relaxed">
+              We focus on building websites that combine clean technical architecture, responsive user interfaces, and search-engine-friendly foundations.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                icon: <Code className="text-primary" size={24} />,
+                title: "1. Modern Technology Stack",
+                desc: "We build with Next.js, React, Node.js, and TypeScript, selecting frameworks based on project requirements rather than forcing every client into a rigid template."
+              },
+              {
+                icon: <Layers3 className="text-primary" size={24} />,
+                title: "2. Custom Development",
+                desc: "Every website is tailored to your business model, customer journey, and branding goals instead of relying on generic pre-built designs."
+              },
+              {
                 icon: <Zap className="text-primary" size={24} />,
-                title: "Next.js Static Generation",
-                desc: "Modern frameworks eliminate loading lags. Our sub-1.5s load speeds significantly reduce bounce rates and improve user retention."
+                title: "3. Performance-Focused Development",
+                desc: "We prioritize clean code structure, optimized media assets, semantic HTML, and fast loading layouts across all mobile and desktop viewports."
               },
               {
-                icon: <Globe className="text-primary" size={24} />,
-                title: "Local SEO & Tags Integration",
-                desc: "We align high-intent keywords like 'web design company in Noida' directly with HTML tags and JSON-LD schema layouts."
-              },
-              {
-                icon: <Laptop className="text-primary" size={24} />,
-                title: "Fluid Responsive Visuals",
-                desc: "Custom typography, vibrant gradients, and fluid grid systems optimized for mobile, desktop, and tablet displays."
+                icon: <Search className="text-primary" size={24} />,
+                title: "4. SEO-Friendly Foundations",
+                desc: "Built-in technical SEO essentials: crawlable page hierarchy, semantic tags, canonical URLs, sitemaps, structured JSON-LD schema, and internal linking."
               },
               {
                 icon: <ShieldCheck className="text-primary" size={24} />,
-                title: "100% Repository Access",
-                desc: "Complete Git source code and login credentials handover. We never lock you into proprietary platforms or monthly retainers."
+                title: "5. Complete Code Ownership",
+                desc: "You retain 100% ownership of your project repository, assets, and platform login credentials upon project completion."
+              },
+              {
+                icon: <Clock className="text-primary" size={24} />,
+                title: "6. Dedicated Post-Launch Support",
+                desc: "Every project includes 60 days of post-launch technical assistance for server configuration, performance checkups, and minor adjustments."
               }
             ].map((usp, idx) => (
-              <div key={idx} className="bg-surface-elevated/40 border border-border/80 hover:border-primary/30 p-6 rounded-2xl transition-all duration-300 group">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+              <div key={idx} className="bg-surface-elevated/40 border border-border/80 p-6 rounded-2xl space-y-3">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-display text-lg font-bold mb-3 text-foreground">{usp.title}</h3>
+                <h3 className="font-display text-lg font-bold text-foreground">{usp.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{usp.desc}</p>
               </div>
             ))}
@@ -242,150 +346,94 @@ export default function NoidaLandingPage() {
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* LOCAL RELEVANCE SECTION */}
       <section className="py-20 relative">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center space-y-4 mb-16">
-            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Expertise Fields</span>
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Regional Business Context</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Website Development Services in Noida
+              Website Development for Businesses Across Noida
             </h2>
-            <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Customized design architectures suited to corporate sites, export companies, and retail setups.
+            <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
+              Noida is home to a diverse commercial landscape. We tailor web platforms to match the unique operational and marketing goals of companies across key commercial sectors.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Service 1 */}
-            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/20 p-8 rounded-2xl space-y-4 group transition-all duration-300">
-              <span className="text-xs font-bold text-primary tracking-widest uppercase">Export & Corporates</span>
-              <h3 className="font-display text-2xl font-bold">Business Portfolios & Catalogs</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-surface-elevated/40 border border-border/80 p-6 rounded-2xl space-y-4">
+              <span className="text-xs font-bold text-primary tracking-widest uppercase">Commercial Hub</span>
+              <h3 className="font-display text-xl font-bold">Sector 62 &amp; Sector 63</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Interactive product catalog portfolios engineered for Noida&apos;s manufacturing units and trading companies. We build detailed galleries, search filters, automated lead logs, and smooth animations that reflect your corporate brand.
+                Technology companies, B2B service firms, SaaS businesses, and corporate consultancies operating in Sector 62 and Sector 63 often require lead-generation architecture, CRM integrations, and custom web applications to present their services clearly.
               </p>
-              <ul className="space-y-2 text-sm text-muted-foreground pt-2">
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Dynamic product sorting arrays</li>
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Automated leads router system</li>
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Integrated Google Maps schema</li>
-              </ul>
             </div>
 
-            {/* Service 2 */}
-            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/20 p-8 rounded-2xl space-y-4 group transition-all duration-300">
-              <span className="text-xs font-bold text-primary tracking-widest uppercase">Online Selling</span>
-              <h3 className="font-display text-2xl font-bold">Ecommerce Website Development Noida</h3>
+            <div className="bg-surface-elevated/40 border border-border/80 p-6 rounded-2xl space-y-4">
+              <span className="text-xs font-bold text-primary tracking-widest uppercase">Media &amp; Entertainment</span>
+              <h3 className="font-display text-xl font-bold">Film City &amp; Sector 16</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Scale your independent digital store. We build robust <strong className="text-foreground font-semibold">ecommerce website development Noida</strong> setups featuring secure shopping carts, automated invoices, payment gateway syncs, and custom admin inventories.
+                Media houses, production studios, and publication brands in Film City require high-impact visual portfolios, media-rich layouts, fast asset loading, and flexible content publishing platforms.
               </p>
-              <ul className="space-y-2 text-sm text-muted-foreground pt-2">
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Fast loading cart checkouts pipelines</li>
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Payment API integrations (Razorpay, Paytm)</li>
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Complete inventory statistics dashboard endpoints</li>
-              </ul>
             </div>
 
-            {/* Service 3 */}
-            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/20 p-8 rounded-2xl space-y-4 group transition-all duration-300">
-              <span className="text-xs font-bold text-primary tracking-widest uppercase">Tailored Coding</span>
-              <h3 className="font-display text-2xl font-bold">Custom Web Application Setups</h3>
+            <div className="bg-surface-elevated/40 border border-border/80 p-6 rounded-2xl space-y-4">
+              <span className="text-xs font-bold text-primary tracking-widest uppercase">Industrial &amp; Corporate</span>
+              <h3 className="font-display text-xl font-bold">Noida Expressway &amp; Greater Noida</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Bespoke dashboards and web tools built with React, Node.js, or Next.js. Perfect for real estate listing engines, interactive portal platforms, and complex corporate CRM syncs.
+                Real estate developers, manufacturing units, educational institutions, and logistics firms along the Expressway and Greater Noida need comprehensive corporate portals, product catalogs, and inquiry workflows.
               </p>
-              <ul className="space-y-2 text-sm text-muted-foreground pt-2">
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Secure authentication modules JWT</li>
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Analytical chart setups</li>
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Databases mapping systems (MongoDB, PostgreSQL)</li>
-              </ul>
             </div>
-
-            {/* Service 4 */}
-            <div className="bg-surface-elevated/40 border border-border/80 hover:border-primary/20 p-8 rounded-2xl space-y-4 group transition-all duration-300">
-              <span className="text-xs font-bold text-primary tracking-widest uppercase">CMS Updates</span>
-              <h3 className="font-display text-2xl font-bold">WordPress & Headless CMS Setups</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Flexible content management systems tailored to your needs. We optimize WordPress and headless CMS architectures (like Sanity or Strapi) to maintain fast page speed metrics while allowing easy content updates.
-              </p>
-              <ul className="space-y-2 text-sm text-muted-foreground pt-2">
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Elementor / Custom builders configuration</li>
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> On page plugins setup (Yoast / RankMath)</li>
-                <li className="flex items-center gap-2"><Check size={14} className="text-primary" /> Complete security audit setups</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground text-sm mb-4">Want to see our live product designs? View our comprehensive <Link href="/portfolio" className="text-primary underline font-semibold">Web Development Portfolio & Case Studies</Link> or explore our regional services in <Link href="/website-development-company-in-delhi" className="text-primary underline font-semibold">Delhi</Link> and <Link href="/website-development-company-in-gurgaon" className="text-primary underline font-semibold">Gurgaon</Link>.</p>
           </div>
         </div>
       </section>
 
-      {/* MIDDLE PAGE CALLOUT */}
-      <section className="py-16 bg-gradient-to-r from-primary/10 via-purple-600/5 to-primary/5 border-t border-b border-border/40 relative">
-        <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
-          <h2 className="font-display text-2xl sm:text-3xl font-bold">Want to Boost Your Website Rankings and Leads in Noida?</h2>
-          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            Directly connect with our Noida developer team. Get a customized website blueprint and SEO recommendation sheet without any upfront charges.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-6 pt-4 text-sm font-semibold">
-            <a href="tel:+918765077474" className="flex items-center gap-2 bg-background hover:bg-surface-elevated border border-border px-6 py-3.5 rounded-xl transition-all duration-300">
-              <Phone size={16} className="text-primary" />
-              Call Noida Office: +91 8765077474
-            </a>
-            <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="flex items-center gap-2 bg-emerald-600/10 hover:bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 px-6 py-3.5 rounded-xl transition-all duration-300">
-              <MessageSquare size={16} />
-              WhatsApp: Connect Now
-            </a>
-          </div>
-          
-          <p className="text-xs text-muted-foreground pt-2">
-            Average response time on WhatsApp: <strong>5 minutes</strong>. Let&apos;s start!
-          </p>
-        </div>
-      </section>
-
-      {/* PROCESS SECTION */}
-      <section className="py-20 relative">
+      {/* DEVELOPMENT PROCESS */}
+      <section className="py-20 bg-surface/50 border-t border-b border-border/40 relative">
         <div className="container mx-auto px-6">
-          <div className="text-center space-y-4 mb-16">
-            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Workflow Roadmap</span>
+          <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Structured Delivery</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Our Website Development Process in Noida
+              Our Website Development Process
             </h2>
-            <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              We convert your business requirements into fully functional custom interfaces with strict timeline milestones.
+            <p className="text-muted-foreground text-base leading-relaxed">
+              We convert your business requirements into fully functional custom websites with a structured 6-step workflow.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
                 num: "01",
-                phase: "Consultation & Goals Mapping",
-                desc: "We analyze competitor dynamics and search trends in the Noida Sector 62/63 market to map project scope and features."
+                phase: "Discovery & Requirements",
+                desc: "We analyze your business goals, target audience, competitive landscape, and required features to establish project scope."
               },
               {
                 num: "02",
-                phase: "UI Figma Framework",
-                desc: "We craft modern Figma prototypes, curate color palettes, and organize user flows tailored to your brand identity."
+                phase: "UI/UX Planning",
+                desc: "We craft visual mockups in Figma, setting up color palettes, typography, responsive grids, and intuitive navigation flows."
               },
               {
                 num: "03",
-                phase: "Custom Coding Pipeline",
-                desc: "We translate approved designs into semantic code utilizing Next.js/React frameworks with clean styling."
+                phase: "Development",
+                desc: "We write clean, modular frontend and backend code utilizing technologies like Next.js, React, and Node.js."
               },
               {
                 num: "04",
-                phase: "SEO Target Injection Noida",
-                desc: "We integrate targeted local schemas and keywords like 'website development company in Noida' into page hierarchies."
+                phase: "Technical SEO Setup",
+                desc: "We implement semantic HTML elements, meta tags, canonical setups, XML sitemaps, open graph data, and structured JSON-LD schema."
               },
               {
                 num: "05",
-                phase: "Production Launch Support",
-                desc: "We configure domain mappings, launch analytics tracking, and establish continuous maintenance systems."
+                phase: "Launch",
+                desc: "We conduct quality assurance testing across devices, configure production hosting servers, SSL security, and complete domain deployment."
+              },
+              {
+                num: "06",
+                phase: "Support & Improvements",
+                desc: "We provide 60 days of post-launch technical assistance to ensure smooth operation, handle minor updates, and monitor site stability."
               }
             ].map((step, idx) => (
-              <div key={idx} className="bg-surface-elevated/20 border border-border/60 p-6 rounded-xl relative space-y-4 hover:border-primary/20 transition-all duration-300">
+              <div key={idx} className="bg-surface-elevated/20 border border-border/60 p-6 rounded-xl relative space-y-3">
                 <span className="font-display text-3xl font-extrabold text-primary/30 block">{step.num}</span>
                 <h3 className="font-display text-base font-bold text-foreground">{step.phase}</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">{step.desc}</p>
@@ -395,187 +443,250 @@ export default function NoidaLandingPage() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
+      {/* BUYER GUIDE (REPLACING COMPETITOR BASHING) */}
       <section className="py-20 relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center space-y-4 mb-16">
-            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Proven Output</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Noida Real-World Case Studies
-            </h2>
-            <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              How we redesigned outdated systems and delivered 3x conversion improvements.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Case Study 1 */}
-            <div className="bg-surface-elevated/40 border border-border/80 rounded-2xl overflow-hidden group">
-              <div className="p-8 space-y-4">
-                <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">High Lead Conversion</span>
-                <h3 className="font-display text-xl font-bold">Noida Manufacturing Export Unit (Sector 63)</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  An export client in Noida Sector 63 was using an outdated template site that failed to convert global visitors. OnNextWeb built a custom React frontend linked to automated query routing, delivering a significant increase in qualified overseas lead inquiries.
-                </p>
-                <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
-                  <div>
-                    <span className="block text-foreground font-bold">Core Stack</span>
-                    <span>Next.js + Tailwind</span>
-                  </div>
-                  <div>
-                    <span className="block text-emerald-400 font-bold">Performance</span>
-                    <span className="text-emerald-400 font-semibold">Fast Sub-Second Load</span>
-                  </div>
-                  <div>
-                    <span className="block text-foreground font-bold">Visual Design</span>
-                    <span>Custom grid layout</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Case Study 2 */}
-            <div className="bg-surface-elevated/40 border border-border/80 rounded-2xl overflow-hidden group">
-              <div className="p-8 space-y-4">
-                <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase">Organic Search Growth</span>
-                <h3 className="font-display text-xl font-bold">Regional E-Commerce Store (Sector 18, Noida)</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  A boutique retail brand in Sector 18 needed a dynamic, lightning-fast product catalog. We engineered a static-site generated store using Next.js, fully optimized with structured local schemas to maximize local organic search visibility.
-                </p>
-                <div className="flex gap-6 pt-4 border-t border-border/40 text-xs text-muted-foreground">
-                  <div>
-                    <span className="block text-foreground font-bold">Optimized Load</span>
-                    <span className="text-emerald-400 font-semibold">Sub-1 second</span>
-                  </div>
-                  <div>
-                    <span className="block text-foreground font-bold">Tech Stack</span>
-                    <span>Next.js + Node API</span>
-                  </div>
-                  <div>
-                    <span className="block text-foreground font-bold">SEO Architecture</span>
-                    <span>Structured JSON-LD</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHY BETTER THAN OTHER DELHI AGENCIES */}
-      <section className="py-20 bg-surface/50 border-t border-b border-border/40 relative">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center space-y-4 mb-16">
-            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Competitor Comparison</span>
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Decision Framework</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              How Do We Compare to Other Noida Web Agencies?
+              What to Look for When Choosing a Web Development Company in Noida
             </h2>
-            <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Compare key quality metrics directly before deciding your digital agency partner.
+            <p className="text-muted-foreground text-base leading-relaxed">
+              Evaluating web development partners requires examining objective criteria to ensure your digital project succeeds long-term.
             </p>
           </div>
 
-          <div className="overflow-x-auto border border-border rounded-xl">
-            <table className="w-full text-left border-collapse text-sm">
-              <thead>
-                <tr className="bg-surface-elevated border-b border-border text-foreground font-bold font-display">
-                  <th className="p-4 sm:p-5">Feature Metrics</th>
-                  <th className="p-4 sm:p-5 text-primary">OnNextWeb</th>
-                  <th className="p-4 sm:p-5 text-muted-foreground font-normal">Typical Noida Agencies</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border/60 text-muted-foreground">
-                <tr className="hover:bg-white/[0.02] transition-colors">
-                  <td className="p-4 font-semibold text-foreground">Technology Stacks</td>
-                  <td className="p-4 text-emerald-400 font-medium">React, Next.js, Headless CMS setups</td>
-                  <td className="p-4">Outdated PHP templates / generic plugins</td>
-                </tr>
-                <tr className="hover:bg-white/[0.02] transition-colors">
-                  <td className="p-4 font-semibold text-foreground">Design Standards</td>
-                  <td className="p-4 text-emerald-400 font-medium">Curated Figma prototypes, vibrant gradients</td>
-                  <td className="p-4">Clunky layouts built using outdated builders</td>
-                </tr>
-                <tr className="hover:bg-white/[0.02] transition-colors">
-                  <td className="p-4 font-semibold text-foreground">SEO Logic configuration</td>
-                  <td className="p-4 text-emerald-400 font-medium">Semantic structures, JSON-LD configurations schemas</td>
-                  <td className="p-4">Raw auto settings plugins with zero optimization</td>
-                </tr>
-                <tr className="hover:bg-white/[0.02] transition-colors">
-                  <td className="p-4 font-semibold text-foreground">Code Access & Ownership</td>
-                  <td className="p-4 text-emerald-400 font-medium">100% Repository & login credentials ownership</td>
-                  <td className="p-4">Locking systems to monthly management retainers</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* INDUSTRIES */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center space-y-4 mb-16">
-            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Target Markets</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-              Industries We Serve in Noida NCR
-            </h2>
-            <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              We understand custom user flows for different business sectors.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 max-w-5xl mx-auto text-center">
+          <div className="space-y-6">
             {[
-              { label: "Manufacturing & B2B", icon: "🏭" },
-              { label: "Ecommerce Shops", icon: "🛒" },
-              { label: "Media & Film City", icon: "🎥" },
-              { label: "Institutes & Colleges", icon: "🏫" },
-              { label: "Real Estate Express", icon: "🛣️" },
-              { label: "Consulting & Services", icon: "💼" }
-            ].map((ind, idx) => (
-              <div key={idx} className="bg-surface-elevated/40 border border-border/80 p-6 rounded-2xl hover:border-primary/30 transition-all duration-300 group">
-                <span className="text-3xl block mb-3 group-hover:scale-110 transition-transform">{ind.icon}</span>
-                <span className="font-medium text-sm text-foreground block">{ind.label}</span>
+              {
+                title: "Relevant Development Experience & Technology Selection",
+                desc: "Ensure the agency works with modern, proven technologies (such as React, Next.js, or Node.js) suited to your long-term goals, rather than forcing your project into a rigid, legacy template."
+              },
+              {
+                title: "Mobile Responsiveness & Performance Standards",
+                desc: "A reliable development partner tests layouts thoroughly across mobile, tablet, and desktop viewports, optimizing asset sizes and script loading to maintain responsive user experiences."
+              },
+              {
+                title: "Technical SEO Foundations",
+                desc: "Look for developers who build with semantic HTML5 hierarchy, proper meta tags, clean URL structures, XML sitemaps, and structured JSON-LD schema directly into the codebase during initial development."
+              },
+              {
+                title: "Complete Code & Credential Ownership",
+                desc: "Confirm that your company will retain full repository access, code ownership, and administrative credentials once the website is completed, avoiding unnecessary retainer lock-ins."
+              },
+              {
+                title: "Transparent Scope, Pricing & Support",
+                desc: "Choose a development partner that provides detailed project specifications, clear timeline milestones, and defined post-launch support commitments."
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-surface-elevated/40 border border-border/80 p-6 rounded-xl space-y-2">
+                <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2">
+                  <CheckCircle2 size={18} className="text-primary shrink-0" />
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed pl-6">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* COST SECTION */}
+      <section className="py-20 bg-surface/50 border-t border-b border-border/40 relative">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center space-y-4 mb-12">
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Investment &amp; Pricing</span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
+              How Much Does Website Development Cost in Noida?
+            </h2>
+          </div>
+
+          <div className="bg-surface-elevated/40 border border-border/80 p-8 rounded-2xl space-y-6 text-muted-foreground text-base leading-relaxed">
+            <p>
+              Website development costs in Noida vary depending on the technical scope, design complexity, page count, and integration requirements. A simple business website and a custom ecommerce platform require very different development architectures.
+            </p>
+            <p>
+              Foundational business websites start at <strong className="text-foreground font-semibold">₹19,999</strong>, which covers core company pages, responsive mobile design, lead capture forms, and foundational technical SEO. Custom ecommerce portals, complex SaaS dashboards, and multi-featured web applications are quoted based on specific feature requirements.
+            </p>
+
+            <div className="pt-4 border-t border-border/60">
+              <h3 className="text-lg font-bold text-foreground mb-3 font-display">Key Factors Influencing Website Pricing:</h3>
+              <ul className="grid sm:grid-cols-2 gap-3 text-sm">
+                <li className="flex items-center gap-2"><Check size={16} className="text-primary" /> Number of unique page templates</li>
+                <li className="flex items-center gap-2"><Check size={16} className="text-primary" /> Custom UI/UX vs pre-styled frameworks</li>
+                <li className="flex items-center gap-2"><Check size={16} className="text-primary" /> Ecommerce checkout &amp; payment gateways</li>
+                <li className="flex items-center gap-2"><Check size={16} className="text-primary" /> Database &amp; custom API integrations</li>
+                <li className="flex items-center gap-2"><Check size={16} className="text-primary" /> User authentication &amp; role dashboards</li>
+                <li className="flex items-center gap-2"><Check size={16} className="text-primary" /> Content management &amp; admin controls</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TIMELINE SECTION */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center space-y-4 mb-12">
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Project Timelines</span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
+              How Long Does Website Development Take?
+            </h2>
+          </div>
+
+          <div className="bg-surface-elevated/40 border border-border/80 p-8 rounded-2xl space-y-6 text-muted-foreground text-base leading-relaxed">
+            <p>
+              Website development timelines depend on project complexity, number of pages, custom features, content readiness, and review cycles.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6 pt-2">
+              <div className="bg-background/60 border border-border/60 p-5 rounded-xl space-y-2">
+                <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2">
+                  <Clock size={18} className="text-primary" />
+                  Standard Business Websites
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Typically completed within <strong className="text-foreground">7 to 10 business days</strong> following initial requirement confirmation and asset collection.
+                </p>
+              </div>
+
+              <div className="bg-background/60 border border-border/60 p-5 rounded-xl space-y-2">
+                <h3 className="font-display text-lg font-bold text-foreground flex items-center gap-2">
+                  <Clock size={18} className="text-primary" />
+                  Custom Web Apps &amp; Ecommerce
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Typically completed within <strong className="text-foreground">15 to 25 business days</strong>, inclusive of QA testing, API integration, and database setup.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SOLUTION EXAMPLES (CAPABILITY SHOWCASE) */}
+      <section className="py-20 bg-surface/50 border-t border-b border-border/40 relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Capability Showcase</span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
+              What We Can Build for Noida Businesses
+            </h2>
+            <p className="text-muted-foreground text-base leading-relaxed">
+              Explore capability solution examples demonstrating the types of digital platforms we design and engineer for growing businesses across Noida &amp; Greater Noida.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Example 1 */}
+            <div className="bg-surface-elevated/40 border border-border/80 rounded-2xl p-8 space-y-4">
+              <span className="text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full uppercase">B2B Solution Example</span>
+              <h3 className="font-display text-xl font-bold text-foreground">Manufacturing Product Catalog Platform</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Designed for industrial suppliers and export companies requiring categorized product showcases, technical specification sheets, and automated lead inquiry forms.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-border/40 text-xs text-muted-foreground">
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Next.js Rendering</span>
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Product Filters</span>
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Lead Routing</span>
+              </div>
+            </div>
+
+            {/* Example 2 */}
+            <div className="bg-surface-elevated/40 border border-border/80 rounded-2xl p-8 space-y-4">
+              <span className="text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full uppercase">Retail Solution Example</span>
+              <h3 className="font-display text-xl font-bold text-foreground">Ecommerce Retail Storefront</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Tailored for independent brands needing digital storefronts with fast page loading, shopping cart management, Razorpay/Paytm integration, and mobile checkout.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-border/40 text-xs text-muted-foreground">
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Secure Checkout</span>
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Payment API Sync</span>
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Inventory Admin</span>
+              </div>
+            </div>
+
+            {/* Example 3 */}
+            <div className="bg-surface-elevated/40 border border-border/80 rounded-2xl p-8 space-y-4">
+              <span className="text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full uppercase">Corporate Solution Example</span>
+              <h3 className="font-display text-xl font-bold text-foreground">Corporate Lead Generation Portal</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Engineered for professional service providers and IT firms needing clean service pages, case study sections, semantic technical SEO foundations, and conversion-focused CTAs.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-border/40 text-xs text-muted-foreground">
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Structured Data</span>
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Service Pages</span>
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Fast Navigation</span>
+              </div>
+            </div>
+
+            {/* Example 4 */}
+            <div className="bg-surface-elevated/40 border border-border/80 rounded-2xl p-8 space-y-4">
+              <span className="text-xs font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full uppercase">Web App Solution Example</span>
+              <h3 className="font-display text-xl font-bold text-foreground">Custom Business Application &amp; Portal</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Built for real estate agencies, educational institutes, or logistics operations requiring custom client portals, user dashboards, and role-based data views.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-border/40 text-xs text-muted-foreground">
+                <span className="bg-background px-2.5 py-1 rounded border border-border">React + Node.js</span>
+                <span className="bg-background px-2.5 py-1 rounded border border-border">JWT Auth</span>
+                <span className="bg-background px-2.5 py-1 rounded border border-border">Custom DB Schema</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ SECTION */}
-      <section className="py-20 bg-surface/50 border-t border-border/40 relative">
+      <section className="py-20 relative">
         <div className="container mx-auto px-6 max-w-3xl">
           <div className="text-center space-y-4 mb-16">
-            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">FAQ Area</span>
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Information Hub</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
               Frequently Asked Questions
             </h2>
             <p className="text-muted-foreground text-sm">
-              Answers to common queries regarding web development options in Noida.
+              Answers to common questions regarding website development services for Noida &amp; Greater Noida businesses.
             </p>
           </div>
 
           <div className="space-y-4">
             {[
               {
-                q: "1. How much does a website cost in Noida?",
-                a: "Our local dynamic packages start at ₹19,999. Custom React/Next.js applications, complex API integrations, and corporate portals are quoted dynamically based on the project scope."
+                q: "1. How much does website development cost in Noida?",
+                a: "Website development costs depend on project scope, design complexity, and required features. Foundational business websites start at ₹19,999, while custom ecommerce platforms and web applications are quoted based on specific technical requirements."
               },
               {
-                q: "2. How do you implement SEO for Noida businesses?",
-                a: "We deploy search-engine friendly semantic HTML layouts, compress all visual assets, and index schema tags dynamically. We integrate local search terms like 'best web development company in Noida' naturally to maximize search engine discovery."
+                q: "2. How long does it take to develop a business website?",
+                a: "Standard business websites typically take between 7 to 10 business days to complete. Complex custom applications and ecommerce stores generally require 15 to 25 business days depending on design approvals and integration complexity."
               },
               {
-                q: "3. What is the typical project delivery timeline?",
-                a: "Corporate web layouts are completed within 7 to 10 working days. Complex SaaS dashboard builds and custom e-commerce structures usually take 15 to 25 days, inclusive of QA testing."
+                q: "3. Does ON Next Web have an office in Noida?",
+                a: "ON Next Web is based in New Delhi (Jamia Nagar, Okhla) and provides website development services to businesses across Noida, Greater Noida, and the wider Delhi NCR region. We conduct project discussions via phone, email, video conferencing, or arranged in-person meetings as required."
               },
               {
-                q: "4. Can I manage website updates from a dashboard?",
-                a: "Yes. We integrate easy-to-use content dashboards (such as Headless CMS or admin control panels) allowing you to add blogs, update services, and manage forms without touching code."
+                q: "4. Do you develop ecommerce websites for Noida businesses?",
+                a: "Yes. We build custom ecommerce websites with product catalogs, shopping carts, secure payment gateway integrations (such as Razorpay and Paytm), order notifications, and inventory control dashboards."
               },
               {
-                q: "5. Do you provide post-launch technical support?",
-                a: "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle any minor adjustments."
+                q: "5. Can you build a custom web application?",
+                a: "Yes. We develop custom web applications, client portals, internal dashboards, and management tools using React, Next.js, Node.js, and modern database platforms like MongoDB or PostgreSQL."
+              },
+              {
+                q: "6. Do you work with Next.js and React?",
+                a: "Yes. Next.js and React are core technologies in our development stack. We use them to build fast, scalable, and responsive web applications with modern architecture."
+              },
+              {
+                q: "7. Will my website be SEO-friendly?",
+                a: "Yes. We build every website with technical SEO foundations including semantic HTML5 structure, optimized page speed, clean URL architecture, meta tags, sitemaps, and structured JSON-LD schema."
+              },
+              {
+                q: "8. Will I be able to update my website content myself?",
+                a: "Yes. If requested, we can integrate user-friendly content management systems (such as WordPress or a headless CMS like Sanity) that allow your team to update text, images, and blog posts without coding knowledge."
+              },
+              {
+                q: "9. Do you provide website maintenance and support?",
+                a: "Yes. We include 60 days of complimentary technical support following project launch to resolve any initial technical issues. We also offer ongoing maintenance plans for server updates, backups, and feature enhancements."
               }
             ].map((faq, idx) => (
               <details 
@@ -606,13 +717,13 @@ export default function NoidaLandingPage() {
             
             {/* Left Content */}
             <div className="space-y-6">
-              <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase font-mono">Locations Contact</span>
+              <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Start Your Project</span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Let&apos;s Build Your <br />
-                <span className="text-gradient">Next Project</span> Together!
+                Start Your Website <br />
+                <span className="text-gradient">Project</span> Today
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                Connect with our tech team. We provide full development support across Noida & Greater Noida. Get a high-converting layout roadmap.
+                Connect with our technical team to discuss your website requirements. We provide website development services across Noida, Greater Noida, and the Delhi NCR region.
               </p>
 
               {/* Direct Details */}
@@ -625,7 +736,7 @@ export default function NoidaLandingPage() {
                     <Phone size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Call or WhatsApp</p>
+                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Phone / WhatsApp</p>
                     <p className="font-semibold text-foreground">+91 8765077474</p>
                   </div>
                 </a>
@@ -638,7 +749,7 @@ export default function NoidaLandingPage() {
                     <Mail size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Email Support</p>
+                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Email Address</p>
                     <p className="font-semibold text-foreground">info.onnextweb@gmail.com</p>
                   </div>
                 </a>
@@ -648,20 +759,15 @@ export default function NoidaLandingPage() {
                     <MapPin size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Serving Noida & Greater Noida</p>
+                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground/50">Headquarters Address</p>
                     <p className="font-semibold text-foreground leading-relaxed">
-                      Dedicated Service Coverage Across Sector 62, 63 & Noida Expressway
+                      C-25 Abul Fazal, Jamia Nagar, Okhla, New Delhi – 110025
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Serving businesses across Noida, Greater Noida, and Delhi NCR
                     </p>
                   </div>
                 </div>
-              </div>
-
-              {/* Consultation Evaluation Callout */}
-              <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 text-xs text-muted-foreground space-y-2">
-                <p className="font-semibold text-foreground flex items-center gap-2">
-                  Technical On-Page SEO Consultation:
-                </p>
-                <p>Submit your project inquiry today for a technical SEO and performance evaluation tailored to your business requirements.</p>
               </div>
 
               {/* Action Links */}
@@ -669,7 +775,7 @@ export default function NoidaLandingPage() {
                 <a href="tel:+918765077474" className="bg-primary text-primary-foreground text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg hover:glow-accent transition-all duration-300">
                   Call Now
                 </a>
-                <a href="https://wa.me/918765077474" target="_blank" rel="nofollow noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-300">
+                <a href="https://wa.me/918765077474?text=Hi%20ON%20Next%20Web,%20I%20am%20looking%20for%20website%20development%20services%20in%20Noida." target="_blank" rel="nofollow noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-300">
                   WhatsApp Chat
                 </a>
               </div>
@@ -679,8 +785,9 @@ export default function NoidaLandingPage() {
             <div className="bg-surface-elevated/40 border border-border/80 p-8 rounded-2xl space-y-6">
               <LandingPageForm
                 title="Request a Free Proposal"
+                subtitle="Share your website requirements to receive a customized quote and timeline."
                 buttonText="Send Free Proposal Request"
-                placeholderMessage="Describe your project details (e.g. static pages, custom database scaling, or dynamic CMS systems)"
+                placeholderMessage="Describe your project (e.g., business website, ecommerce store, custom web app, or redesign)"
                 sourcePage="Noida Bottom Form"
               />
             </div>
@@ -699,42 +806,74 @@ export default function NoidaLandingPage() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How much does a website cost in Noida?",
+                "name": "How much does website development cost in Noida?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our web development solutions start at ₹19,999 for foundational business websites. Custom Next.js applications, complex API integrations, and enterprise web portals are quoted dynamically based on technical scope."
+                  "text": "Website development costs depend on project scope, design complexity, and required features. Foundational business websites start at ₹19,999, while custom ecommerce platforms and web applications are quoted based on specific technical requirements."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How do you implement SEO for Noida businesses?",
+                "name": "How long does it take to develop a business website?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We deploy search-engine friendly semantic HTML layouts, optimize Core Web Vitals, and structure JSON-LD metadata. We ensure search engines can easily index your services for Noida and regional markets."
+                  "text": "Standard business websites typically take between 7 to 10 business days to complete. Complex custom applications and ecommerce stores generally require 15 to 25 business days depending on design approvals and integration complexity."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What is the typical project delivery timeline?",
+                "name": "Does ON Next Web have an office in Noida?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Standard corporate web layouts are completed within 7 to 10 working days. Custom SaaS platforms and complex e-commerce builds usually require 15 to 25 days, inclusive of QA testing."
+                  "text": "ON Next Web is based in New Delhi (Jamia Nagar, Okhla) and provides website development services to businesses across Noida, Greater Noida, and the wider Delhi NCR region. We conduct project discussions via phone, email, video conferencing, or arranged in-person meetings as required."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Can I manage website updates from a dashboard?",
+                "name": "Do you develop ecommerce websites for Noida businesses?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We integrate easy-to-use content dashboards allowing you to post blogs, update services, and manage form submissions independently."
+                  "text": "Yes. We build custom ecommerce websites with product catalogs, shopping carts, secure payment gateway integrations (such as Razorpay and Paytm), order notifications, and inventory control dashboards."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Do you provide post-launch technical support?",
+                "name": "Can you build a custom web application?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We offer 60 days of complimentary technical support post-launch to monitor performance, configure servers, and handle minor adjustments."
+                  "text": "Yes. We develop custom web applications, client portals, internal dashboards, and management tools using React, Next.js, Node.js, and modern database platforms like MongoDB or PostgreSQL."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you work with Next.js and React?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Next.js and React are core technologies in our development stack. We use them to build fast, scalable, and responsive web applications with modern architecture."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will my website be SEO-friendly?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We build every website with technical SEO foundations including semantic HTML5 structure, optimized page speed, clean URL architecture, meta tags, sitemaps, and structured JSON-LD schema."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will I be able to update my website content myself?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. If requested, we can integrate user-friendly content management systems (such as WordPress or a headless CMS like Sanity) that allow your team to update text, images, and blog posts without coding knowledge."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you provide website maintenance and support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We include 60 days of complimentary technical support following project launch to resolve any initial technical issues. We also offer ongoing maintenance plans for server updates, backups, and feature enhancements."
                 }
               }
             ]
@@ -756,11 +895,17 @@ export default function NoidaLandingPage() {
               "name": "ON Next Web",
               "url": "https://www.onnextweb.in"
             },
-            "areaServed": {
-              "@type": "City",
-              "name": "Noida"
-            },
-            "serviceType": "Web Development & Custom Software Engineering",
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Noida"
+              },
+              {
+                "@type": "City",
+                "name": "Greater Noida"
+              }
+            ],
+            "serviceType": "Website Development & Custom Web Applications",
             "url": "https://www.onnextweb.in/website-development-company-in-noida"
           })
         }}
