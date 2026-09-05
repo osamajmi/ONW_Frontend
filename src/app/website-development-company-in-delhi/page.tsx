@@ -99,12 +99,12 @@ export default function DelhiLandingPage() {
               </span>
               
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
-                Website Development <br className="hidden sm:inline" />
+                Web Development <br className="hidden sm:inline" />
                 Company in <span className="text-gradient">Delhi</span>
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                ON Next Web provides custom website development services for businesses in Delhi and across Delhi NCR. We build responsive corporate websites, e-commerce stores, and custom web applications using modern web technologies like Next.js, React, Node.js, and TypeScript.
+                OnNextWeb is a web development company in Delhi specializing in fast, custom website development for businesses across Delhi NCR. We build corporate websites, eCommerce stores and scalable web applications using modern technologies such as Next.js and React, with a strong focus on performance, SEO and lead generation.
               </p>
               
               {/* Trust Badges */}

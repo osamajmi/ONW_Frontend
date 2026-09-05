@@ -6,13 +6,13 @@ interface LogoProps {
 
 const Logo = ({ className = "" }: LogoProps) => {
   return (
-    <div className={`flex items-center select-none py-1 ${className}`}>
+    <div className={`flex items-center select-none ${className}`}>
       {/* ── Dark mode original brand logo (mix-blend-screen removes dark background box) ── */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/dark-logo.png"
         alt="ON Next Web"
-        className="dark-logo hidden dark:block object-contain h-13 sm:h-15 md:h-16 w-auto mix-blend-screen transition-all duration-300"
+        className="dark-logo hidden dark:block object-contain h-[42px] sm:h-[48px] md:h-[54px] w-auto mix-blend-screen transition-all duration-300"
         loading="eager"
       />
 
@@ -21,7 +21,7 @@ const Logo = ({ className = "" }: LogoProps) => {
       <img
         src="/light-logo.png"
         alt="ON Next Web"
-        className="light-logo block dark:hidden object-contain h-13 sm:h-15 md:h-16 w-auto mix-blend-multiply transition-all duration-300"
+        className="light-logo block dark:hidden object-contain h-[42px] sm:h-[48px] md:h-[54px] w-auto mix-blend-multiply transition-all duration-300"
         loading="eager"
       />
     </div>

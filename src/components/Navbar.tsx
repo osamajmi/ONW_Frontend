@@ -49,12 +49,12 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 bg-background transition-all duration-500 ${
         scrolled
-          ? "py-3 border-b border-primary/10 shadow-[0_4px_24px_rgba(0,0,0,0.15)]"
-          : "py-4 border-b border-transparent"
+          ? "py-2 border-b border-primary/10 shadow-[0_4px_24px_rgba(0,0,0,0.15)]"
+          : "py-2.5 sm:py-3 border-b border-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6">
-        <Link href="/" className="flex items-center shrink-0 hover:opacity-90 transition-opacity duration-300 py-1 relative z-20">
+        <Link href="/" className="flex items-center shrink-0 hover:opacity-90 transition-opacity duration-300 relative z-20">
           <Logo />
         </Link>
  
