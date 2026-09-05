@@ -29,14 +29,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Website Development Company in Noida | ON Next Web",
-  description: "ON Next Web provides website development services across Noida & Greater Noida, including business websites, ecommerce platforms, and custom web applications.",
+  title: "Web Development Company in Noida | OnNextWeb",
+  description: "OnNextWeb is a web development company in Noida offering custom websites, eCommerce development and scalable web applications for businesses across Noida and Greater Noida.",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-noida",
   },
   openGraph: {
-    title: "Website Development Company in Noida | ON Next Web",
-    description: "ON Next Web provides website development services across Noida & Greater Noida, including business websites, ecommerce platforms, and custom web applications.",
+    title: "Web Development Company in Noida | OnNextWeb",
+    description: "OnNextWeb is a web development company in Noida offering custom websites, eCommerce development and scalable web applications for businesses across Noida and Greater Noida.",
     url: "https://www.onnextweb.in/website-development-company-in-noida",
     type: "website",
     images: [
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
         url: "https://www.onnextweb.in/dark-logo.png",
         width: 1200,
         height: 630,
-        alt: "Website Development Company in Noida | ON Next Web",
+        alt: "Web Development Company in Noida | OnNextWeb",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Company in Noida | ON Next Web",
-    description: "ON Next Web provides website development services across Noida & Greater Noida.",
+    title: "Web Development Company in Noida | OnNextWeb",
+    description: "OnNextWeb is a web development company in Noida offering custom websites, eCommerce development and scalable web applications for businesses across Noida and Greater Noida.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
@@ -100,12 +100,12 @@ export default function NoidaLandingPage() {
               </span>
               
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
-                Website Development <br className="hidden sm:inline" />
+                Web Development <br className="hidden sm:inline" />
                 Company in <span className="text-gradient">Noida</span>
               </h1>
               
               <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl font-light">
-                ON Next Web provides website development services for startups, small businesses, and growing companies across Noida and Greater Noida. We build fast, responsive business websites, ecommerce platforms, and custom web applications using technologies such as Next.js, React, and Node.js.
+                OnNextWeb is a web development company in Noida providing custom website development for startups, businesses and growing companies across Noida and Greater Noida. We build fast corporate websites, eCommerce platforms and scalable web applications using modern technologies including Next.js, React and Node.js.
               </p>
               
               <p className="text-sm text-muted-foreground/90 leading-relaxed max-w-2xl bg-surface-elevated/30 border border-border/60 p-4 rounded-xl">
