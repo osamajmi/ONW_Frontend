@@ -27,14 +27,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Web Development Company in Delhi | ON Next Web",
-  description: "Website development company serving businesses in Delhi & Delhi NCR. High-speed custom Next.js websites built for performance and SEO.",
+  title: "Web Development Company in Delhi | OnNextWeb",
+  description: "OnNextWeb is a web development company in Delhi offering custom websites, eCommerce, web apps and business website development services.",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-delhi",
   },
   openGraph: {
-    title: "Web Development Company in Delhi | ON Next Web",
-    description: "Website development company serving businesses in Delhi & Delhi NCR. High-speed custom Next.js websites built for performance and SEO.",
+    title: "Web Development Company in Delhi | OnNextWeb",
+    description: "OnNextWeb is a web development company in Delhi offering custom websites, eCommerce, web apps and business website development services.",
     url: "https://www.onnextweb.in/website-development-company-in-delhi",
     type: "website",
     images: [
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
         url: "https://www.onnextweb.in/dark-logo.png",
         width: 1200,
         height: 630,
-        alt: "Web Development Company in Delhi | ON Next Web",
+        alt: "Web Development Company in Delhi | OnNextWeb",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development Company in Delhi | ON Next Web",
-    description: "Website development company serving businesses in Delhi.",
+    title: "Web Development Company in Delhi | OnNextWeb",
+    description: "OnNextWeb is a web development company in Delhi offering custom websites, eCommerce, web apps and business website development services.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
 };
