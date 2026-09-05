@@ -148,7 +148,7 @@ export default function WebDevelopmentServicePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-xs font-semibold">
               <Link href="/website-development-company-in-delhi" className="bg-background border border-border px-5 py-3 rounded-xl hover:border-primary transition-all">
-                Website Development Company in Delhi →
+                Web Development Company in Delhi →
               </Link>
               <Link href="/website-development-company-in-gurgaon" className="bg-background border border-border px-5 py-3 rounded-xl hover:border-primary transition-all">
                 Web Development Company in Gurgaon →
