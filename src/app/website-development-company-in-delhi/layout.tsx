@@ -1,4 +1,5 @@
 import LocationServiceSchema from "@/components/LocationServiceSchema";
+import LocationSeoSupport from "@/components/LocationSeoSupport";
 
 export default function DelhiLocationLayout({ children }: { children: React.ReactNode }) {
   const pageUrl = "https://www.onnextweb.in/website-development-company-in-delhi";
@@ -11,6 +12,7 @@ export default function DelhiLocationLayout({ children }: { children: React.Reac
         serviceName="Website Development Services in Delhi"
       />
       {children}
+      <LocationSeoSupport city="Delhi" />
     </>
   );
 }
