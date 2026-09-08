@@ -1,124 +1,48 @@
 import { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.onnextweb.in";
-const API_URL  = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-
-  // ── Static pages ──────────────────────────────────────────────────────────
+  // Static pages do not currently have a reliable content-updated timestamp.
+  // Omitting lastModified is more accurate than reporting "now" on every request.
   const staticUrls: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE_URL}/`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/about-us`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/services`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/services/web-development`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/custom-software-development`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/seo-services`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/portfolio`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/website-development-company-in-delhi`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/website-development-company-in-gurgaon`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/website-development-company-in-noida`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/custom-software-development-company-in-india`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/digital-marketing-company-in-delhi`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/privacy-policy`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${BASE_URL}/terms-of-service`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${BASE_URL}/sitemap`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
+    { url: `${BASE_URL}/`, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${BASE_URL}/about-us`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/services`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/services/web-development`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/services/custom-software-development`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/services/seo-services`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/portfolio`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/blog`, changeFrequency: "daily", priority: 0.8 },
+    { url: `${BASE_URL}/website-development-company-in-delhi`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/website-development-company-in-gurgaon`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/website-development-company-in-noida`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/custom-software-development-company-in-india`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/digital-marketing-company-in-delhi`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/privacy-policy`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE_URL}/terms-of-service`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE_URL}/sitemap`, changeFrequency: "monthly", priority: 0.5 },
   ];
 
-  // ── Dynamic blog pages ────────────────────────────────────────────────────
   let blogUrls: MetadataRoute.Sitemap = [];
   try {
     const res = await fetch(`${API_URL}/api/blogs`, {
-      next: { revalidate: 3600 }, // revalidate every hour
+      next: { revalidate: 3600 },
     });
+
     if (res.ok) {
       const blogs = await res.json();
-      blogUrls = blogs.map((blog: { _id: string; slug?: string; updatedAt?: string; createdAt?: string }) => ({
-        url: `${BASE_URL}/blog/${blog.slug || blog._id}`,
-        lastModified: new Date(blog.updatedAt || blog.createdAt || Date.now()),
-        changeFrequency: "weekly" as const,
-        priority: 0.6,
-      }));
+      blogUrls = blogs.map((blog: { _id: string; slug?: string; updatedAt?: string; createdAt?: string }) => {
+        const modifiedAt = blog.updatedAt || blog.createdAt;
+
+        return {
+          url: `${BASE_URL}/blog/${blog.slug || blog._id}`,
+          ...(modifiedAt ? { lastModified: new Date(modifiedAt) } : {}),
+          changeFrequency: "weekly" as const,
+          priority: 0.6,
+        };
+      });
     }
   } catch (error) {
     console.error("Sitemap blog fetch failed:", error);
@@ -126,4 +50,3 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [...staticUrls, ...blogUrls];
 }
-
