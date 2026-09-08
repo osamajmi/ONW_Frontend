@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const revalidate = 0;
+export const revalidate = 300;
 import Navbar from "@/components/Navbar";
 
 import HeroSection from "@/components/HeroSection";
@@ -22,21 +22,21 @@ async function getHomeData() {
   let testimonials = [];
 
   try {
-    const sRes = await fetch(`${API_URL}/api/services`, { cache: "no-store" });
+    const sRes = await fetch(`${API_URL}/api/services`, { next: { revalidate: 300 } });
     if (sRes.ok) services = await sRes.json();
   } catch (error) {
     console.error("Error loading services for home:", error);
   }
 
   try {
-    const pRes = await fetch(`${API_URL}/api/projects`, { cache: "no-store" });
+    const pRes = await fetch(`${API_URL}/api/projects`, { next: { revalidate: 300 } });
     if (pRes.ok) projects = await pRes.json();
   } catch (error) {
     console.error("Error loading projects for home:", error);
   }
 
   try {
-    const tRes = await fetch(`${API_URL}/api/testimonials`, { cache: "no-store" });
+    const tRes = await fetch(`${API_URL}/api/testimonials`, { next: { revalidate: 300 } });
     if (tRes.ok) testimonials = await tRes.json();
   } catch (error) {
     console.error("Error loading testimonials for home:", error);
@@ -62,6 +62,8 @@ export async function generateMetadata(): Promise<Metadata> {
         openGraph: {
           title: seo.ogTitle || seo.title,
           description: seo.ogDescription || seo.description,
+          url: "https://www.onnextweb.in",
+          type: "website",
           images: seo.ogImage ? [{ url: seo.ogImage }] : [],
         },
       };
@@ -70,10 +72,16 @@ export async function generateMetadata(): Promise<Metadata> {
     console.error("Error loading home page SEO:", error);
   }
   return {
-    title: "Website Development & Custom Software Company in India | ON Next Web",
-    description: "Bespoke website development, custom software engineering, and digital marketing agency in Delhi, Gurgaon, Noida, and India. High-performance Next.js web applications.",
+    title: "Web Development Company in India | ON Next Web",
+    description: "ON Next Web builds high-performance websites and custom software for businesses in Delhi, Gurgaon, Noida and across India using Next.js, React and modern web technologies.",
     alternates: {
       canonical: "https://www.onnextweb.in",
+    },
+    openGraph: {
+      title: "Web Development Company in India | ON Next Web",
+      description: "High-performance website development and custom software for businesses across India.",
+      url: "https://www.onnextweb.in",
+      type: "website",
     },
   };
 }
@@ -96,7 +104,7 @@ export default async function Home() {
       <section className="py-12 bg-surface-elevated/30 border-t border-b border-border/40">
         <div className="container mx-auto px-6 text-center space-y-4">
           <p className="text-xs font-semibold tracking-widest text-primary uppercase">Serving Delhi NCR & Worldwide</p>
-          <h2 className="text-xl md:text-2xl font-bold font-display">Our Regional Tech Hubs</h2>
+          <h2 className="text-xl md:text-2xl font-bold font-display">Web Development Services Across Delhi NCR & India</h2>
           <div className="flex flex-wrap justify-center gap-4 text-sm font-medium pt-2">
             <Link href="/website-development-company-in-delhi" className="px-4 py-2 rounded-xl bg-background border border-border/80 hover:border-primary text-muted-foreground hover:text-primary transition-all">
               Website Development Company in Delhi
