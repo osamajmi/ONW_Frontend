@@ -177,15 +177,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "ON Next Web",
-              "url": "https://www.onnextweb.in",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://www.onnextweb.in/blog?q={search_term_string}"
-                },
-                "query-input": "required name=search_term_string"
-              }
+              "url": "https://www.onnextweb.in"
             })
           }}
         />
