@@ -881,36 +881,6 @@ export default function NoidaLandingPage() {
         }}
       />
 
-      {/* Service Schema for Noida */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Website Development Services in Noida",
-            "provider": {
-              "@type": "Organization",
-              "@id": "https://www.onnextweb.in/#organization",
-              "name": "ON Next Web",
-              "url": "https://www.onnextweb.in"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Noida"
-              },
-              {
-                "@type": "City",
-                "name": "Greater Noida"
-              }
-            ],
-            "serviceType": "Website Development & Custom Web Applications",
-            "url": "https://www.onnextweb.in/website-development-company-in-noida"
-          })
-        }}
-      />
-
       {/* BreadcrumbList Schema */}
       <script
         type="application/ld+json"
