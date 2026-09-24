@@ -27,14 +27,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Web Development Company in Gurgaon | ON Next Web",
-  description: "Website development company serving businesses in Gurgaon & Delhi NCR. We build custom, high-speed Next.js web applications to scale your digital presence.",
+  title: "Website Development Company in Gurgaon | ON Next Web",
+  description: "Website development company in Gurgaon for business websites, ecommerce and custom web apps. Next.js & React development for Gurgaon and Delhi NCR.",
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-gurgaon",
   },
   openGraph: {
-    title: "Web Development Company in Gurgaon | ON Next Web",
-    description: "Website development company serving businesses in Gurgaon & Delhi NCR. We build custom, high-speed Next.js web applications to scale your digital presence.",
+    title: "Website Development Company in Gurgaon | ON Next Web",
+    description: "Website development company in Gurgaon for business websites, ecommerce and custom web apps. Next.js & React development for Gurgaon and Delhi NCR.",
     url: "https://www.onnextweb.in/website-development-company-in-gurgaon",
     type: "website",
     images: [
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
         url: "https://www.onnextweb.in/dark-logo.png",
         width: 1200,
         height: 630,
-        alt: "Web Development Company in Gurgaon | ON Next Web",
+        alt: "Website Development Company in Gurgaon | ON Next Web",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development Company in Gurgaon | ON Next Web",
+    title: "Website Development Company in Gurgaon | ON Next Web",
     description: "Website development company serving businesses in Gurgaon.",
     images: ["https://www.onnextweb.in/dark-logo.png"],
   },
@@ -739,30 +739,6 @@ export default function GurgaonLandingPage() {
                 }
               }
             ]
-          })
-        }}
-      />
-
-      {/* Service Schema for Gurgaon */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Website Development Services in Gurgaon",
-            "provider": {
-              "@type": "Organization",
-              "@id": "https://www.onnextweb.in/#organization",
-              "name": "ON Next Web",
-              "url": "https://www.onnextweb.in"
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Gurgaon"
-            },
-            "serviceType": "Web Development & Custom Software Engineering",
-            "url": "https://www.onnextweb.in/website-development-company-in-gurgaon"
           })
         }}
       />
