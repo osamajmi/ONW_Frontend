@@ -19,6 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/website-development-company-in-gurgaon`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/website-development-company-in-noida`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/custom-software-development-company-in-india`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/resources/software-development-outsourcing-india`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/digital-marketing-company-in-delhi`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/privacy-policy`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/terms-of-service`, changeFrequency: "monthly", priority: 0.5 },
