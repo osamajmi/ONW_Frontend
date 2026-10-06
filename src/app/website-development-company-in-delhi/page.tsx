@@ -90,6 +90,8 @@ export default function DelhiLandingPage() {
         <div className="container mx-auto px-6 relative z-10">
           <Breadcrumbs items={[{ label: "Locations", href: "/#locations" }, { label: "Delhi" }]} />
 
+          <p className="text-muted-foreground text-sm max-w-3xl mx-auto mt-4 text-center">Explore our <Link href="/services/web-development" className="text-primary underline font-medium">web development services</Link> for broader website projects or <Link href="/custom-software-development-company-in-india" className="text-primary underline font-medium">custom software development</Link> for application-heavy requirements.</p>
+
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content */}
