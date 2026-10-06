@@ -25,6 +25,12 @@ const getIconComponent = (iconName: string) => {
   return IconComp || Icons.Globe;
 };
 
+const serviceHrefByTitle: Record<string, string> = {
+  "Web Development": "/services/web-development",
+  "Custom Software Development": "/services/custom-software-development",
+  "SEO & Digital Marketing": "/services/seo-services",
+};
+
 export default function ServicesClient({ services }: { services: ServiceItem[] }) {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden flex flex-col justify-between">
@@ -82,34 +88,74 @@ export default function ServicesClient({ services }: { services: ServiceItem[] }
                 delay={idx * 0.08}
                 className="glow-card rounded-2xl p-8 flex flex-col justify-between group cursor-default h-full"
               >
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                    <Icon size={24} className="group-hover:rotate-12 transition-transform duration-300" />
-                  </div>
+                {serviceHrefByTitle[service.title] ? (
+                  <Link
+                    href={serviceHrefByTitle[service.title]}
+                    className="flex h-full flex-col justify-between rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    aria-label={"Explore " + service.title}
+                  >
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                        <Icon size={24} className="group-hover:rotate-12 transition-transform duration-300" />
+                      </div>
 
-                  <h2 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
-                    {service.title}
-                  </h2>
+                      <h2 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h2>
 
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                        {service.description}
+                      </p>
+                    </div>
 
-                {service.features && service.features.length > 0 && (
-                  <div className="space-y-2 mt-auto border-t border-border/40 pt-4">
-                    <h4 className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider mb-2">
-                      Key Deliverables
-                    </h4>
-                    <ul className="space-y-1.5 text-xs text-muted-foreground">
-                      {service.features.map((feat, i) => (
-                        <li key={i} className="flex items-center gap-1.5 group-hover:text-foreground transition-colors duration-300">
-                          <ShieldCheck size={12} className="text-primary flex-shrink-0" />
-                          {feat}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {service.features && service.features.length > 0 && (
+                      <div className="space-y-2 mt-auto border-t border-border/40 pt-4">
+                        <h4 className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider mb-2">
+                          Key Deliverables
+                        </h4>
+                        <ul className="space-y-1.5 text-xs text-muted-foreground">
+                          {service.features.map((feat, i) => (
+                            <li key={i} className="flex items-center gap-1.5 group-hover:text-foreground transition-colors duration-300">
+                              <ShieldCheck size={12} className="text-primary flex-shrink-0" />
+                              {feat}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </Link>
+                ) : (
+                  <>
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                        <Icon size={24} className="group-hover:rotate-12 transition-transform duration-300" />
+                      </div>
+
+                      <h2 className="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h2>
+
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                        {service.description}
+                      </p>
+                    </div>
+
+                    {service.features && service.features.length > 0 && (
+                      <div className="space-y-2 mt-auto border-t border-border/40 pt-4">
+                        <h4 className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider mb-2">
+                          Key Deliverables
+                        </h4>
+                        <ul className="space-y-1.5 text-xs text-muted-foreground">
+                          {service.features.map((feat, i) => (
+                            <li key={i} className="flex items-center gap-1.5 group-hover:text-foreground transition-colors duration-300">
+                              <ShieldCheck size={12} className="text-primary flex-shrink-0" />
+                              {feat}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </>
                 )}
               </AnimatedSection>
             );
