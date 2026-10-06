@@ -104,7 +104,7 @@ export default function GurgaonLandingPage() {
               </h1>
               
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                ON Next Web provides custom website development services for businesses in Gurgaon, Cyber City, Golf Course Road, and the wider Delhi NCR region. We build corporate websites, e-commerce platforms, and custom web applications using modern technologies such as Next.js, React, Node.js, and TypeScript.
+                ON Next Web provides custom website development services for businesses in Gurgaon, Cyber City, Golf Course Road, and the wider Delhi NCR region. We build corporate websites, e-commerce platforms, and custom web applications using modern technologies such as Next.js, React, Node.js, and TypeScript. For businesses comparing development options, explore our <Link href="/services/web-development" className="text-primary underline font-medium">web development services</Link> and <Link href="/custom-software-development-company-in-india" className="text-primary underline font-medium">custom software development</Link> solutions.
               </p>
               
               {/* Trust Badges */}
