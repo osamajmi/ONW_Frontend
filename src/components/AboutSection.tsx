@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 const stats = [
   { value: 150, suffix: "+", label: "Projects Delivered" },
   { value: 50, suffix: "+", label: "Happy Clients" },
-  { value: 8, suffix: "+", label: "Years of Experience" },
+  { value: 12, suffix: "+", label: "Years of Experience" },
   { value: 12, suffix: "", label: "Team Members" },
 ];
 
@@ -64,9 +64,7 @@ const AboutSection = () => (
             <span className="text-gradient">Excellence</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            We are a team of designers, developers, and strategists who
-            build premium digital products. Every pixel matters. Every
-            interaction counts.
+            We are a team of designers, developers, and strategists with 12+ years of experience delivering website development, custom software development, mobile app development, SEO and digital marketing, UI/UX design, and branding solutions.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             From concept to launch, we partner with ambitious brands to
