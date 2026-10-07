@@ -28,7 +28,14 @@ import {
 
 export const metadata: Metadata = {
   title: "Website Development Company in Gurgaon | ON Next Web",
-  description: "Website development company in Gurgaon for business websites, ecommerce and custom web apps. Next.js & React development for Gurgaon and Delhi NCR.",
+  description: "Website development company in Gurgaon for business websites, ecommerce and web apps. Next.js & React development for Gurgaon & Delhi NCR.",
+  keywords: [
+    "website development company in Gurgaon",
+    "web development company in Gurgaon",
+    "website development services Gurgaon",
+    "web development company Delhi NCR",
+    "website developer Gurgaon",
+  ],
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-gurgaon",
   },
