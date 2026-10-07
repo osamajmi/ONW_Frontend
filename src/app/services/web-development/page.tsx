@@ -25,6 +25,14 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Web Development Services in India | ON Next Web",
   description: "Transform your business with high-speed, SEO-friendly custom web development services in India. Built with Next.js, React, and modern tech stacks. Get a free proposal!",
+  keywords: [
+    "website development company",
+    "web development company",
+    "website development services",
+    "web development services",
+    "web application development",
+    "website development agency",
+  ],
   alternates: {
     canonical: "https://www.onnextweb.in/services/web-development",
   },
