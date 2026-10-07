@@ -64,9 +64,7 @@ const AboutSection = () => (
             <span className="text-gradient">Excellence</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            We are a team of designers, developers, and strategists who
-            build premium digital products. Every pixel matters. Every
-            interaction counts.
+            We are a team of designers, developers, and strategists who build premium digital products across website development, custom software, mobile apps, SEO and digital marketing, UI/UX design, ecommerce, and branding.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             From concept to launch, we partner with ambitious brands to

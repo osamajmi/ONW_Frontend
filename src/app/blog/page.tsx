@@ -15,7 +15,23 @@ export async function generateMetadata(): Promise<Metadata> {
       return {
         title: seo.title,
         description: seo.description,
-        keywords: seo.keywords,
+        keywords: Array.from(new Set([
+          ...(Array.isArray(seo.keywords)
+            ? seo.keywords
+            : typeof seo.keywords === "string"
+              ? seo.keywords.split(",").map((keyword: string) => keyword.trim()).filter(Boolean)
+              : [])),
+          "web development",
+          "website development company",
+          "custom software development",
+          "mobile app development",
+          "SEO services",
+          "digital marketing",
+          "UI/UX design",
+          "branding",
+          "ecommerce development",
+          "web application development",
+        ])),
         alternates: {
           canonical: "https://www.onnextweb.in/blog",
         },

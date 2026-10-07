@@ -21,6 +21,14 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Custom Software Development Services | ON Next Web",
   description: "Accelerate operational efficiency with custom software development services. We build scalable SaaS platforms, ERP systems, and web apps. Contact us!",
+  keywords: [
+    "custom software development services",
+    "custom software development company",
+    "software development services",
+    "custom software engineering",
+    "software development agency",
+    "bespoke software development",
+  ],
   alternates: {
     canonical: "https://www.onnextweb.in/services/custom-software-development",
   },
