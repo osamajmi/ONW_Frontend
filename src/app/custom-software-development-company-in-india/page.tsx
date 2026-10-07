@@ -28,13 +28,13 @@ import {
 
 export const metadata: Metadata = {
   title: "Custom Software Development Company in India | ON Next Web",
-  description: "Build premium digital products with India's top custom software development company. Custom ERP, SaaS solutions, and mobile apps built to scale. Hire us!",
+  description: "Custom software development company in India for SaaS, CRM, ERP, web applications and business automation. Explore our development process and request a project proposal.",
   alternates: {
     canonical: "https://www.onnextweb.in/custom-software-development-company-in-india",
   },
   openGraph: {
     title: "Custom Software Development Company in India | ON Next Web",
-    description: "Build premium digital products with India's top custom software development company. Custom ERP, SaaS solutions, and mobile apps built to scale. Hire us!",
+    description: "Custom software development company in India for SaaS, CRM, ERP, web applications and business automation. Explore our development process and request a project proposal.",
     url: "https://www.onnextweb.in/custom-software-development-company-in-india",
     type: "website",
     images: [
@@ -169,6 +169,37 @@ export default function IndiaCustomSoftwarePage() {
             </p>
             <p>
               From our offshore delivery center in India, we ensure seamless communication and rapid delivery cycles utilizing Agile methodologies. We provide clear sprint transparency, payment integrations, custom dashboard setups, and continuous support.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* COMMERCIAL INTENT SECTION */}
+      <section className="py-20 border-t border-border/40 relative">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="max-w-3xl space-y-5">
+            <span className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">Custom Software Partner Selection</span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
+              What to look for in a custom software development company in India
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              The right development partner should fit the product, not just the budget. Before selecting a custom software development company in India, compare technical architecture, relevant delivery experience, communication, testing, source-code ownership, security responsibilities and post-launch support.
+            </p>
+            <div className="grid md:grid-cols-2 gap-5 pt-4">
+              {[
+                ["Relevant product experience", "Look for examples that match your workflow, integrations, user roles or technical complexity rather than generic portfolio claims."],
+                ["Clear delivery process", "Requirements, milestones, acceptance criteria and change handling should be understandable before development starts."],
+                ["Code and IP ownership", "Confirm repository access, intellectual-property terms, deployment credentials and what happens after launch."],
+                ["Security and scalability", "Discuss authentication, permissions, backups, environments, monitoring and how the architecture can evolve with usage."],
+              ].map(([title, desc]) => (
+                <div key={title} className="rounded-xl border border-border/80 bg-surface-elevated/30 p-6">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-2">{title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed pt-2">
+              If you are comparing outsourcing models, see our <Link href="/resources/software-development-outsourcing-india" className="text-primary font-semibold hover:underline">software development outsourcing in India guide</Link>. For implementation details, explore our <Link href="/services/custom-software-development" className="text-primary font-semibold hover:underline">custom software development services</Link> or our <Link href="/services/mobile-app-development" className="text-primary font-semibold hover:underline">mobile app development services</Link>.
             </p>
           </div>
         </div>
@@ -669,6 +700,26 @@ export default function IndiaCustomSoftwarePage() {
           </div>
         </div>
       </section>
+
+      {/* Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Custom Software Development Services in India",
+            serviceType: "Custom Software Development",
+            provider: {
+              "@type": "Organization",
+              name: "ON Next Web",
+              url: "https://www.onnextweb.in"
+            },
+            areaServed: "India",
+            url: "https://www.onnextweb.in/custom-software-development-company-in-india"
+          })
+        }}
+      />
 
       {/* FAQ Schema Inject */}
       <script
