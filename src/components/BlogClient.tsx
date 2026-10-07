@@ -106,8 +106,26 @@ export default function BlogClient({ initialBlogs }: { initialBlogs: BlogPost[] 
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed"
           >
-            Expert perspectives on next-generation web engineering, e-commerce scaling, search optimizations, and product designs.
+            Expert insights on website and web application development, custom software development, mobile app development, SEO and digital marketing, UI/UX design, ecommerce, and branding.
           </motion.p>
+          <div className="flex flex-wrap justify-center gap-2 mt-6 text-xs">
+            {[
+              { label: "Web Development", href: "/services/web-development" },
+              { label: "Custom Software", href: "/services/custom-software-development" },
+              { label: "Mobile App Development", href: "/services/mobile-app-development" },
+              { label: "SEO Services", href: "/services/seo-services" },
+              { label: "UI/UX Design", href: "/services/ui-ux-design" },
+              { label: "Branding", href: "/services/branding" },
+            ].map((topic) => (
+              <Link
+                key={topic.href}
+                href={topic.href}
+                className="px-3 py-1.5 rounded-full border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
+              >
+                {topic.label}
+              </Link>
+            ))}
+          </div>
         </div>
 
         {/* ================= SEARCH & CATEGORY BAR ================= */}
