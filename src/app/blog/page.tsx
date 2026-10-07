@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 export const revalidate = 3600;
 import BlogClient from "@/components/BlogClient";
+import { keywordDrivenBlog } from "@/data/keywordDrivenBlog";
 
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.onnextweb.in";
@@ -52,5 +53,7 @@ export default async function Blog() {
     console.error("Error loading blog posts:", error);
   }
 
-  return <BlogClient initialBlogs={blogs} />;
+  const hasStaticArticle = blogs.some((blog: { slug?: string }) => blog.slug === keywordDrivenBlog.slug);
+  const visibleBlogs = hasStaticArticle ? blogs : [keywordDrivenBlog, ...blogs];
+  return <BlogClient initialBlogs={visibleBlogs} />;
 }
