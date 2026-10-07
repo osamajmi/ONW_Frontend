@@ -27,8 +27,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Web Development Company in Delhi | OnNextWeb",
-  description: "OnNextWeb is a web development company in Delhi offering custom websites, eCommerce, web apps and business website development services.",
+  title: "Website Development Company in Delhi | OnNextWeb",
+  description: "Website development company in Delhi for business websites, ecommerce and web apps. Custom website development for Delhi and Delhi NCR businesses.",
+  keywords: [
+    "website development company in Delhi",
+    "web development company in Delhi",
+    "website development services Delhi",
+    "web development services Delhi",
+    "website developer Delhi",
+  ],
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-delhi",
   },

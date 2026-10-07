@@ -30,7 +30,14 @@ import {
 
 export const metadata: Metadata = {
   title: "Website Development Company in Noida | ON Next Web",
-  description: "ON Next Web provides website development services across Noida & Greater Noida, including business websites, ecommerce platforms, and custom web applications.",
+  description: "Website development company in Noida & Greater Noida for business websites, ecommerce and custom web applications. Serving Delhi NCR.",
+  keywords: [
+    "website development company in Noida",
+    "web development company in Noida",
+    "website development services Noida",
+    "web development services Noida",
+    "website developer Noida",
+  ],
   alternates: {
     canonical: "https://www.onnextweb.in/website-development-company-in-noida",
   },
