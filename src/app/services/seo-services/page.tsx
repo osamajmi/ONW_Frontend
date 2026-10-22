@@ -21,6 +21,15 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Technical & On-Page SEO Services in India | ON Next Web",
   description: "Secure Page 1 Google search visibility with technical SEO services in India. Crawl error auditing, Next.js speed optimization, schema injection, and search intent keyword strategy.",
+  keywords: [
+    "SEO services",
+    "technical SEO services",
+    "SEO services agency",
+    "SEO marketing agency",
+    "digital marketing services",
+    "digital marketing agency",
+    "SEO and digital marketing services",
+  ],
   alternates: {
     canonical: "https://www.onnextweb.in/services/seo-services",
   },
