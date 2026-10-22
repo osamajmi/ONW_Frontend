@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 import BlogDetailClient from "@/components/BlogDetailClient";
 import { permanentRedirect } from "next/navigation";
+import { keywordDrivenBlog } from "@/data/keywordDrivenBlog";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -56,6 +57,8 @@ export default async function BlogDetail({ params }: PageProps) {
   } catch (error) {
     console.error("Error loading blog details:", error);
   }
+
+  if (!blog && slug === keywordDrivenBlog.slug) blog = keywordDrivenBlog;
 
   // ─── 301 Permanent Redirect Strategy ──────────────────────────────────────────
   // If the request parameter matches MongoDB 24-character hex ID, redirect to clean slug URL

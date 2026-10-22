@@ -27,8 +27,11 @@ const getIconComponent = (iconName: string) => {
 
 const serviceHrefByTitle: Record<string, string> = {
   "Web Development": "/services/web-development",
+  "Mobile App Development": "/services/mobile-app-development",
+  "UI/UX Design": "/services/ui-ux-design",
   "Custom Software Development": "/services/custom-software-development",
   "SEO & Digital Marketing": "/services/seo-services",
+  "Branding": "/services/branding",
 };
 
 export default function ServicesClient({ services }: { services: ServiceItem[] }) {
