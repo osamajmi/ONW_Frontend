@@ -60,7 +60,7 @@ export async function generateMetadata(): Promise<Metadata> {
             ? seo.keywords
             : typeof seo.keywords === "string"
               ? seo.keywords.split(",").map((keyword: string) => keyword.trim()).filter(Boolean)
-              : [])),
+              : []),
           "website development company",
           "web development company",
           "website development services",
