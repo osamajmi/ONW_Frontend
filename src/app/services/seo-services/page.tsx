@@ -20,7 +20,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Technical & On-Page SEO Services in India | ON Next Web",
-  description: "Secure Page 1 Google search visibility with technical SEO services in India. Crawl error auditing, Next.js speed optimization, schema injection, and search intent keyword strategy.",
+  description: "Improve your website’s search visibility with technical SEO audits, on-page optimization, schema markup, site-speed fixes, and keyword strategy for businesses across India.",
   keywords: [
     "SEO services",
     "technical SEO services",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Technical & On-Page SEO Services in India | ON Next Web",
-    description: "Secure Page 1 Google search visibility with technical SEO services in India.",
+    description: "Technical SEO audits, on-page optimization, schema markup, and site-speed improvements to help businesses across India strengthen organic search visibility.",
     url: "https://www.onnextweb.in/services/seo-services",
     type: "website",
     images: [{ url: "https://www.onnextweb.in/dark-logo.png" }],
