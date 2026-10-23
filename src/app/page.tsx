@@ -157,6 +157,9 @@ export default async function Home() {
             <Link href="/digital-marketing-company-in-delhi" className="px-4 py-2 rounded-xl bg-background border border-border/80 hover:border-primary text-muted-foreground hover:text-primary transition-all">
               Digital Marketing Company in Delhi
             </Link>
+            <Link href="/services/seo-services" className="px-4 py-2 rounded-xl bg-background border border-border/80 hover:border-primary text-muted-foreground hover:text-primary transition-all">
+              SEO Services in India
+            </Link>
           </div>
         </div>
       </section>
