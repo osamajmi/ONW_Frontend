@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const revalidate = 3600;
 import BlogDetailClient from "@/components/BlogDetailClient";
-import { permanentRedirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { keywordDrivenBlog } from "@/data/keywordDrivenBlog";
 
 interface PageProps {
@@ -34,11 +34,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   } catch (error) {
     console.error("Error loading dynamic blog post SEO:", error);
   }
+  if (slug === keywordDrivenBlog.slug) {
+    return {
+      title: `${keywordDrivenBlog.title} | OnNextWeb Blog`,
+      description: keywordDrivenBlog.summary,
+      alternates: {
+        canonical: `https://www.onnextweb.in/blog/${keywordDrivenBlog.slug}`,
+      },
+    };
+  }
+
+  // Missing posts should not advertise a self-canonical URL as indexable content.
   return {
-    title: "Blog Post | OnNextWeb",
-    description: "Read the article details.",
-    alternates: {
-      canonical: `https://www.onnextweb.in/blog/${slug}`,
+    title: "Article Not Found | OnNextWeb",
+    description: "The requested article could not be found.",
+    robots: {
+      index: false,
+      follow: true,
     },
   };
 }
@@ -59,6 +71,10 @@ export default async function BlogDetail({ params }: PageProps) {
   }
 
   if (!blog && slug === keywordDrivenBlog.slug) blog = keywordDrivenBlog;
+
+  // Return a real HTTP 404 for missing/deleted blog posts instead of rendering
+  // an "Article Not Found" page with a successful HTTP status.
+  if (!blog) notFound();
 
   // ─── 301 Permanent Redirect Strategy ──────────────────────────────────────────
   // If the request parameter matches MongoDB 24-character hex ID, redirect to clean slug URL
